@@ -1,0 +1,125 @@
+# CONTENT_ARCHITECTURE.md
+
+## Content Model Philosophy
+
+Content should be modular, reusable, and scalable. Each module should support three layers:
+
+1. Theory
+2. Experience
+3. Reverse Engineering
+
+## Orientation Module Structure
+
+### Purpose
+
+Introduce the course, establish credibility, and frame the seven capabilities as a coherent system.
+
+### Core Sections
+
+- What is changing in instructional design?
+- Why these seven capabilities?
+- How this course works
+- How progress is tracked
+- What learners will do in each module
+
+## Standard Module Structure
+
+### Layer 1: Theory
+
+- capability definition
+- why it matters
+- industry trends
+- demand signals
+- instructional design implications
+- L&D framework tie-ins
+
+### Layer 2: Experience
+
+- interactive demo, simulation, tool, or guided activity
+- applied decision-making or exploration
+- feedback or insight layer
+
+### Layer 3: Reverse Engineering
+
+- instructional strategy
+- theory alignment
+- content structure
+- prompt architecture
+- technical implementation notes
+- design rationale
+
+## L&D Theory Bridge
+
+Each module should explicitly connect to traditional learning frameworks when relevant, such as:
+
+- ADDIE
+- SAM
+- Bloom's Taxonomy
+- Kirkpatrick
+- Gagné's Nine Events
+- 70-20-10
+- experiential learning
+- performance improvement / HPI
+- learner-centered design
+
+## Suggested Theory Pairings by Module
+
+### AI Literacy
+
+- ADDIE (modernized workflow support)
+- Bloom's Taxonomy (generation vs evaluation)
+- learner-centered design
+
+### Performance Consulting
+
+- HPI / performance improvement
+- Kirkpatrick
+- needs analysis
+
+### Learning Analytics
+
+- Kirkpatrick
+- evaluation strategy
+- evidence-based iteration
+
+### Simulation Design
+
+- experiential learning
+- deliberate practice
+- Bloom's application/evaluation
+- scenario-based learning
+
+### Adaptive Learning
+
+- mastery learning
+- differentiated instruction
+- learner variability
+
+### Content Systems
+
+- curriculum architecture
+- modular design
+- reusable learning objects
+
+### Human-Centered Change
+
+- change management
+- inclusive design
+- ethical design
+- psychological safety / trust
+
+## Assessment / Reflection Pattern
+
+Each module should end with one of the following:
+
+- quick reflection prompt
+- scenario judgment item
+- short self-assessment
+- design decision challenge
+- knowledge check
+
+## Tone Requirements
+
+- credible, thoughtful, modern
+- approachable without sounding simplistic
+- reflective of both strategic L&D and hands-on design practice
