@@ -10,6 +10,10 @@ export default function Dashboard() {
 
   const progress = (completedModules.length / modules.length) * 100;
 
+  const nextModule = modules
+    .sort((a, b) => a.order - b.order)
+    .find((m) => !completedModules.includes(m.slug));
+
   return (
     <main className="max-w-4xl mx-auto p-8">
       <h1 className="text-3xl font-bold mb-6">
@@ -31,16 +35,33 @@ export default function Dashboard() {
         </p>
       </div>
 
+      {nextModule && (
+        <div className="mb-8">
+          <a
+            href={
+              nextModule.slug === "orientation"
+                ? "/course/orientation"
+                : `/course/module/${nextModule.slug}`
+            }
+            className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-500 transition">
+            Continue Learning →
+          </a>
+        </div>
+      )}
+
       <div className="space-y-4">
         {modules
           .sort((a, b) => a.order - b.order)
-          .map((module) => (
+          .map((module, index) => (
             <ModuleCard
               key={module.slug}
               slug={module.slug}
               title={module.title}
               description={module.description}
               estimatedTime={module.estimatedTime}
+              order={index}
+              allModules={modules.map((m) => m.slug)}
+              practiceLabel={module.practiceLabel}
             />
           ))}
       </div>

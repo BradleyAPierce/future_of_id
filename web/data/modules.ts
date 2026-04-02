@@ -16,6 +16,7 @@ export const modules = [
     order: 1,
     estimatedTime: "20 min",
     type: "module",
+    practiceLabel: "AI Practice",
   },
   {
     slug: "performance-consulting",
