@@ -19,9 +19,9 @@ AI must prioritize project documents in the following order:
 
 ### Tier 1 — Core System Contracts (Always Follow)
 
-1. CONTENT_ARCHITECTURE.md → defines module structure and learning model
-2. SITE_MAP.md → defines routing and page hierarchy
-3. TECH_ARCHITECTURE.md → defines stack and technical boundaries
+1. docs/architecture/CONTENT_ARCHITECTURE.md → defines module structure and learning model
+2. docs/architecture/SITE_MAP.md → defines routing and page hierarchy
+3. docs/architecture/TECH_ARCHITECTURE.md → defines stack and technical boundaries
 
 These files represent the **non-negotiable structure of the system**.
 
@@ -29,8 +29,8 @@ These files represent the **non-negotiable structure of the system**.
 
 ### Tier 2 — Strategic Constraints
 
-4. DECISIONS.md → locked decisions and constraints
-5. BLUEPRINT.md → vision, learning architecture, and experience intent
+4. docs/strategy/DECISIONS.md → locked decisions and constraints
+5. docs/strategy/BLUEPRINT.md → vision, learning architecture, and experience intent
 
 Use these to guide implementation decisions and resolve ambiguity.
 
@@ -38,9 +38,9 @@ Use these to guide implementation decisions and resolve ambiguity.
 
 ### Tier 3 — Supporting Context
 
-6. ROADMAP.md → sequencing and development phases
+6. docs/strategy/ROADMAP.md → sequencing and development phases
 7. README.md → high-level overview and positioning
-8. INITIAL_REPO_STRUCTURE.md → initial structural reference
+8. docs/reference/INITIAL_REPO_STRUCTURE.md → initial structural reference
 
 These are helpful but should not override Tier 1 or Tier 2.
 
@@ -109,7 +109,7 @@ If conflicts occur:
 
 At the start of a development session, the user should instruct:
 
-"Read SYSTEM-INSTRUCTIONS.md and follow it along with COPILOT-INSTRUCTIONS.md."
+"Read docs/SYSTEM-INSTRUCTIONS.md and follow it along with docs/COPILOT-INSTRUCTIONS.md."
 
 AI tools will not automatically remember this file across sessions and must be prompted to reference it.
 

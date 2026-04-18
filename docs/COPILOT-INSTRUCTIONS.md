@@ -6,14 +6,14 @@ This project is a **Next.js + TypeScript** learning platform for `future_of_id`,
 
 Copilot must align its work with the direction established in:
 
-- `BLUEPRINT.md`
-- `TECH_ARCHITECTURE.md`
-- `PROJECT-BRAIN.md`
-- `CONTENT_ARCHITECTURE.md`
-- `SITE_MAP.md`
-- `DECISIONS.md`
-- `ROADMAP.md`
-- `INITIAL_REPO_STRUCTURE.md`
+- `docs/strategy/BLUEPRINT.md`
+- `docs/architecture/TECH_ARCHITECTURE.md`
+- `docs/strategy/PROJECT-BRAIN.md`
+- `docs/architecture/CONTENT_ARCHITECTURE.md`
+- `docs/architecture/SITE_MAP.md`
+- `docs/strategy/DECISIONS.md`
+- `docs/strategy/ROADMAP.md`
+- `docs/reference/INITIAL_REPO_STRUCTURE.md`
 - `README.md`
 
 When making decisions, prefer consistency with those files over inventing new patterns.

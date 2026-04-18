@@ -1,12 +1,21 @@
 future_of_id/
 ├── README.md
-├── BLUEPRINT.md
-├── SITE_MAP.md
-├── CONTENT_ARCHITECTURE.md
-├── TECH_ARCHITECTURE.md
-├── ROADMAP.md
-├── DECISIONS.md
-├── INITIAL_REPO_STRUCTURE.md
+├── test.txt
+├── docs/
+│   ├── SYSTEM-INSTRUCTIONS.md
+│   ├── COPILOT-INSTRUCTIONS.md
+│   ├── architecture/
+│   │   ├── CONTENT_ARCHITECTURE.md
+│   │   ├── SITE_MAP.md
+│   │   └── TECH_ARCHITECTURE.md
+│   ├── strategy/
+│   │   ├── BLUEPRINT.md
+│   │   ├── DECISIONS.md
+│   │   ├── PROJECT-BRAIN.md
+│   │   ├── ROADMAP.md
+│   │   └── STRATEGY.md
+│   └── reference/
+│       └── INITIAL_REPO_STRUCTURE.md
 ├── package.json
 ├── tsconfig.json
 ├── next.config.ts
