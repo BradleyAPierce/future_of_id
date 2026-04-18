@@ -22,12 +22,14 @@ future_of_id/
 ├── public/
 │   ├── images/
 │   └── icons/
-├── src/
+├── web/
 │   ├── app/
+│   │   ├── layout.tsx
 │   │   ├── page.tsx
 │   │   ├── about/
 │   │   │   └── page.tsx
 │   │   ├── course/
+│   │   │   ├── layout.tsx
 │   │   │   ├── page.tsx
 │   │   │   ├── dashboard/
 │   │   │   │   └── page.tsx
@@ -35,31 +37,25 @@ future_of_id/
 │   │   │   │   └── page.tsx
 │   │   │   └── module/
 │   │   │       └── [slug]/
-│   │   │           ├── page.tsx
-│   │   │           ├── experience/
-│   │   │           │   └── page.tsx
-│   │   │           └── reverse-engineering/
-│   │   │               └── page.tsx
+│   │   │           └── page.tsx
 │   ├── components/
-│   │   ├── layout/
-│   │   ├── navigation/
-│   │   ├── course/
-│   │   ├── modules/
-│   │   ├── progress/
-│   │   └── ui/
-│   ├── content/
-│   │   ├── orientation/
-│   │   └── modules/
 │   ├── data/
-│   │   ├── modules.ts
-│   │   ├── navigation.ts
-│   │   └── site.ts
 │   ├── lib/
-│   │   ├── ai/
-│   │   ├── progress/
-│   │   ├── analytics/
-│   │   └── utils/
-│   ├── styles/
-│   └── types/
-└── supabase/
-    └── migrations/
+│   ├── public/
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── next.config.ts
+│   ├── tsconfig.json
+│   ├── postcss.config.mjs
+│   └── eslint.config.mjs
+
+## Notes
+
+This structure represents the intended architectural layout of the application.
+
+It intentionally excludes:
+- `node_modules`
+- `.next`
+- environment and build artifacts
+
+These are part of the runtime environment, not the system design.

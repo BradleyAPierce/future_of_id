@@ -20,6 +20,14 @@ When making decisions, prefer consistency with those files over inventing new pa
 
 If documentation and existing code disagree, do not assume the code is correct by default. Inspect both, identify the conflict, and choose the path that best matches the long-term architecture and documented intent.
 
+## Local Development Anchor
+
+- The active Next.js app for this project lives under `web/`
+- Local development runs at `http://localhost:3000`
+- The primary route to use when inspecting the current product experience is `http://localhost:3000/course/dashboard`
+- For route work, read and edit files under `web/app/*`
+- Prefer the course and dashboard routes as the default working surface unless the task explicitly targets another page
+
 ---
 
 ## Core Engineering Principles
@@ -89,12 +97,10 @@ Copilot should not behave like a rapid code generator that invents architecture 
 
 Keep responsibilities distinct:
 
-- `src/app/*` for routes, layouts, pages, loading states, errors, and route-level composition
-- `src/components/*` for reusable UI and presentation building blocks
-- `src/content/*` for module content, long-form instructional material, and structured learning content
-- `src/data/*` for static configuration, metadata, navigation, and site-level definitions
-- `src/lib/*` for utilities, services, integrations, domain logic, and shared helpers
-- `src/types/*` for shared TypeScript types and domain models
+- `web/app/*` for routes, layouts, pages, loading states, errors, and route-level composition
+- `web/components/*` for reusable UI and presentation building blocks
+- `web/data/*` for static configuration, metadata, navigation, and site-level definitions
+- `web/lib/*` for utilities, services, integrations, domain logic, and shared helpers
 
 Do not mix content, rendering logic, domain rules, and data shaping in the same file unless the scope is very small and clearly justified.
 

@@ -67,6 +67,14 @@ For any meaningful feature or change:
 3. Implement using existing patterns where possible
 4. Explain reasoning when making structural decisions
 
+## Local Development Anchor
+
+- The active Next.js application lives under `web/`
+- Local development typically runs at `http://localhost:3000`
+- The primary working route for the current product experience is `http://localhost:3000/course/dashboard`
+- Route and page changes should be made against `web/app/*`, not unused or assumed app paths elsewhere
+- When evaluating course flows, prioritize the course and dashboard routes under `web/app/course/*`
+
 ---
 
 ## Architectural Discipline
