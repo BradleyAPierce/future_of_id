@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { use } from "react";
 import LessonIntro from "@/components/course/LessonIntro";
 import LessonSection from "@/components/course/LessonSection";
+import ReflectionFeedbackAI from "@/components/course/ReflectionFeedbackAI";
 import BackToTopButton from "@/components/ui/BackToTopButton";
 import { moduleContentBySlug } from "@/data/moduleContent";
 import { modules } from "@/data/modules";
@@ -132,6 +133,10 @@ export default function ModulePage({ params }: ModulePageProps) {
             <p className="text-gray-400 leading-relaxed">
               {moduleContent.reflection.prompt}
             </p>
+
+            {slug === "ai-literacy" && (
+              <ReflectionFeedbackAI moduleSlug={slug} />
+            )}
           </div>
         )}
       </section>
