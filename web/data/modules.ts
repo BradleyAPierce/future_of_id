@@ -1,3 +1,13 @@
+export type ModuleMetadata = {
+  slug: string;
+  title: string;
+  description: string;
+  order: number;
+  estimatedTime: string;
+  type: 'orientation' | 'module';
+  practiceLabel?: string;
+};
+
 export const modules = [
   {
     slug: "orientation",
