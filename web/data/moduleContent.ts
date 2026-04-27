@@ -965,4 +965,164 @@ export const moduleContentBySlug: Record<string, ModuleContent> = {
         "Where does your current learning content workflow create duplication or manual rework, and what content structure or automation step would reduce that friction without reducing quality?",
     },
   },
+  "human-centered-change": {
+    slug: "human-centered-change",
+    intro: {
+      overview:
+        "Human-centered change, ethics, and learner trust focuses on the conditions that make modern learning systems adoptable, responsible, and credible. This module examines how instructional designers make design decisions about transparency, bias, psychological safety, and AI-enabled support so learners understand what is happening, why it matters, and how their trust is protected.",
+      outcomes: [
+        "Explain why adoption depends on learner trust, not only system capability.",
+        "Identify ethical design decisions in AI-enabled and data-informed learning environments.",
+        "Evaluate transparency, bias, privacy, and psychological safety tradeoffs in a learning experience.",
+        "Connect change management principles to responsible implementation of modern learning systems.",
+      ],
+    },
+    layers: {
+      theory: {
+        title: "Theory",
+        badge: "Layer 1",
+        intro:
+          "This layer frames trust as a design requirement: learners are more likely to adopt new learning systems when the experience is transparent, fair, safe, and clearly connected to their goals.",
+        sections: [
+          {
+            id: "definition",
+            title: "Capability Definition",
+            description:
+              "Human-centered change, ethics, and learner trust is the practice of designing learning experiences that people can understand, question, safely use, and responsibly adopt. For instructional designers, this means accounting for the human impact of AI, analytics, automation, and organizational change before the solution is launched.",
+          },
+          {
+            id: "why-it-matters",
+            title: "Why It Matters",
+            description:
+              "A learning system can be technically capable and still fail if learners do not trust it. Adoption depends on whether people believe the experience is useful, fair, respectful, safe, and worth changing their behavior for. Trust is built through design choices, not messaging alone.",
+          },
+          {
+            id: "change-management",
+            title: "Change Management in Learning Systems",
+            description:
+              "Learning experiences often ask people to change how they work, decide, practice, or use tools. Human-centered change design clarifies what is changing, who is affected, what support they need, what resistance is reasonable, and how the learning experience helps people move from awareness to adoption.",
+          },
+          {
+            id: "learner-trust-ai",
+            title: "Learner Trust in AI-Enabled Environments",
+            description:
+              "AI-enabled learning environments need visible boundaries. Learners should know when AI is being used, what it can and cannot do, how recommendations or feedback are generated, when human review is involved, and what choices they have if the system feels wrong or unclear.",
+          },
+          {
+            id: "ethical-design-decisions",
+            title: "Ethical Design Decisions",
+            description:
+              "Ethical design decisions include what data is collected, how learner performance is interpreted, how bias is checked, how feedback is phrased, how much automation is appropriate, and how the system avoids penalizing learners for context the design does not understand.",
+          },
+          {
+            id: "psychological-safety",
+            title: "Psychological Safety",
+            description:
+              "Psychological safety means learners can practice, make mistakes, ask questions, and receive feedback without unnecessary shame or surveillance. Designers create safety through clear expectations, respectful feedback, opt-out paths, visible support, and careful handling of sensitive performance data.",
+          },
+          {
+            id: "theory-bridge",
+            title: "L&D Theory Bridge",
+            items: [
+              {
+                label: "Change management",
+                description:
+                  "Change management helps designers plan for adoption by considering communication, readiness, stakeholder support, reinforcement, and the gap between a new capability and actual behavior change.",
+              },
+              {
+                label: "Ethical instructional design",
+                description:
+                  "Ethical instructional design asks who benefits, who may be harmed, what assumptions are embedded in the experience, and how learner agency, dignity, privacy, and fairness are protected.",
+              },
+              {
+                label: "Psychological safety",
+                description:
+                  "Psychological safety supports learning by making it possible to try, fail, reflect, and improve. It is especially important when learners are practicing judgment, using AI feedback, or exposing performance gaps.",
+              },
+              {
+                label: "Responsible AI use",
+                description:
+                  "Responsible AI use requires transparency, human oversight, bias awareness, data restraint, and clear accountability. The designer must decide where AI support is helpful and where human judgment must remain central.",
+              },
+            ],
+          },
+        ],
+      },
+      experience: {
+        title: "Experience",
+        badge: "Layer 2",
+        intro:
+          "This layer gives learners practice reviewing an AI-enabled learning experience for trust, ethics, and adoption risks before it is released.",
+        sections: [
+          {
+            id: "activity",
+            title: "Trust and Ethics Review",
+            description:
+              "Review a proposed AI-supported learning feature and identify where learners may need more transparency, choice, context, or human support. Focus on what the learner sees, what the system infers, and what happens when the learner disagrees with the feedback or recommendation.",
+          },
+          {
+            id: "decision-making",
+            title: "Applied Decision-Making",
+            description:
+              "Decide which design safeguards are necessary: a disclosure, a human review step, a bias check, a data minimization choice, a manager communication plan, an opt-out path, or revised feedback language. The goal is to improve adoption by making the system more trustworthy, not just more powerful.",
+          },
+          {
+            id: "feedback",
+            title: "Feedback and Insight",
+            description:
+              "Evaluate the design against trust criteria: learners understand how the system works, sensitive data is handled carefully, feedback supports psychological safety, AI limits are visible, and the change is supported by communication and reinforcement.",
+          },
+        ],
+      },
+      reverseEngineering: {
+        title: "Reverse Engineering",
+        badge: "Layer 3",
+        intro:
+          "This layer shows how the module turns ethics and change from abstract values into concrete design checks that can be applied before a learning system launches.",
+        sections: [
+          {
+            id: "instructional-strategy",
+            title: "Instructional Strategy",
+            description:
+              "The module moves from trust concepts to design review. Learners first identify why adoption depends on human confidence, then evaluate a learning feature through the lenses of transparency, bias, psychological safety, and responsible AI use.",
+          },
+          {
+            id: "theory-alignment",
+            title: "Theory Alignment",
+            description:
+              "The structure aligns with change management by focusing on adoption conditions, with ethical instructional design by examining harm and agency, and with psychological safety by treating learner confidence and dignity as part of the learning environment.",
+          },
+          {
+            id: "content-structure",
+            title: "Content Structure",
+            description:
+              "The content is organized around the trust design workflow: define the capability, clarify why trust affects adoption, examine change impacts, identify AI transparency needs, evaluate ethical tradeoffs, add safeguards, and reflect on responsible implementation.",
+          },
+          {
+            id: "prompt-architecture",
+            title: "Prompt Architecture",
+            description:
+              "The implied review prompt pattern is: describe the learning system, identify who is affected, name the data and AI touchpoints, surface trust risks, evaluate bias or safety concerns, choose safeguards, and define how learners will understand and challenge the system.",
+          },
+          {
+            id: "implementation-notes",
+            title: "Technical Implementation Notes",
+            description:
+              "The module content remains structured as data so ethical design prompts, trust review criteria, and reverse engineering notes can be rendered through the shared module route without embedding instructional copy in UI components.",
+          },
+          {
+            id: "design-rationale",
+            title: "Design Rationale",
+            description:
+              "The experience emphasizes practical safeguards because ethical learning design happens through decisions about data, feedback, transparency, and support. Trust is treated as something designers can intentionally build, test, and maintain.",
+          },
+        ],
+      },
+    },
+    reflection: {
+      title: "Reflection",
+      prompt:
+        "Where could an AI-enabled learning experience lose learner trust, and what design safeguard would you add before asking learners to rely on it?",
+    },
+  },
 };
