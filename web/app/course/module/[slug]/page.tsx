@@ -134,9 +134,7 @@ export default function ModulePage({ params }: ModulePageProps) {
               {moduleContent.reflection.prompt}
             </p>
 
-            {slug === "ai-literacy" && (
-              <ReflectionFeedbackAI moduleSlug={slug} />
-            )}
+            <ReflectionFeedbackAI moduleSlug={slug} />
           </div>
         )}
       </section>
