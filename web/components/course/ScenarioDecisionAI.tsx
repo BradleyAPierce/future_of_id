@@ -9,6 +9,8 @@ type ScenarioDecisionAIProps = {
   scenarios: {
     id: string;
     title: string;
+    progressionLabel: string;
+    focus: string;
     scenario: string;
   }[];
 };
@@ -24,6 +26,10 @@ export default function ScenarioDecisionAI({
   moduleSlug,
   scenarios,
 }: ScenarioDecisionAIProps) {
+  if (scenarios.length === 0) {
+    return null;
+  }
+
   const [selectedScenarioId, setSelectedScenarioId] = useState(
     scenarios[0]?.id ?? "",
   );
@@ -35,6 +41,10 @@ export default function ScenarioDecisionAI({
   const selectedScenario = scenarios.find(
     (scenario) => scenario.id === selectedScenarioId,
   );
+  const selectedScenarioIndex = scenarios.findIndex(
+    (scenario) => scenario.id === selectedScenarioId,
+  );
+  const nextScenario = scenarios[selectedScenarioIndex + 1];
   const trimmedResponse = response.trim();
   const canSubmit =
     Boolean(selectedScenario) &&
@@ -42,7 +52,12 @@ export default function ScenarioDecisionAI({
     !isLoading;
 
   function handleScenarioChange(scenarioId: string) {
+    if (scenarioId === selectedScenarioId) {
+      return;
+    }
+
     setSelectedScenarioId(scenarioId);
+    setResponse("");
     setError(null);
     setFeedback(null);
   }
@@ -88,7 +103,12 @@ export default function ScenarioDecisionAI({
     <div className="mt-6 space-y-4 rounded-lg border border-gray-700 p-4">
       <div className="space-y-3">
         <p className="text-sm font-medium uppercase tracking-wide text-blue-300">
-          Choose a scenario
+          Practice sequence
+        </p>
+        <p className="text-sm leading-relaxed text-gray-400">
+          These scenarios build in complexity from realistic practice design to
+          governed AI conversations and adaptive simulation logic. You can move
+          in order or select the decision point most relevant to your work.
         </p>
         <div className="flex flex-col gap-2 sm:flex-row">
           {scenarios.map((scenarioOption) => (
@@ -101,7 +121,15 @@ export default function ScenarioDecisionAI({
                   ? "border-blue-400 bg-blue-500/10 text-white"
                   : "border-gray-700 text-gray-400 hover:bg-gray-900"
               }`}>
-              {scenarioOption.title}
+              <span className="block text-xs font-medium uppercase tracking-wide text-blue-300">
+                {scenarioOption.progressionLabel}
+              </span>
+              <span className="mt-1 block font-medium text-white">
+                {scenarioOption.focus}
+              </span>
+              <span className="mt-1 block text-gray-400">
+                {scenarioOption.title}
+              </span>
             </button>
           ))}
         </div>
@@ -140,25 +168,53 @@ export default function ScenarioDecisionAI({
       {error && <p className="text-sm text-red-400">{error}</p>}
 
       {feedback && (
-        <div className="space-y-4 rounded-lg bg-gray-900 p-4">
-          <p className="text-gray-300">{feedback.summary}</p>
+        <>
+          <div className="space-y-4 rounded-lg bg-gray-900 p-4">
+            <p className="text-gray-300">{feedback.summary}</p>
 
-          <ul className="list-disc space-y-2 pl-5 text-gray-400">
-            {feedback.strengths.map((strength) => (
-              <li key={strength}>{strength}</li>
-            ))}
-          </ul>
+            <ul className="list-disc space-y-2 pl-5 text-gray-400">
+              {feedback.strengths.map((strength) => (
+                <li key={strength}>{strength}</li>
+              ))}
+            </ul>
 
-          <p className="text-gray-300">
-            <span className="font-medium text-white">Gap: </span>
-            {feedback.gap}
-          </p>
+            <p className="text-gray-300">
+              <span className="font-medium text-white">Gap: </span>
+              {feedback.gap}
+            </p>
 
-          <p className="text-gray-300">
-            <span className="font-medium text-white">Next step: </span>
-            {feedback.nextStep}
-          </p>
-        </div>
+            <p className="text-gray-300">
+              <span className="font-medium text-white">Next step: </span>
+              {feedback.nextStep}
+            </p>
+          </div>
+
+          <div className="space-y-3 rounded-lg border border-gray-800 p-4">
+            <p className="text-sm font-medium uppercase tracking-wide text-blue-300">
+              Apply the feedback
+            </p>
+
+            <p className="text-sm leading-relaxed text-gray-400">
+              Before moving on, revise your decision in one sentence: what would
+              you keep, and what would you adjust based on this feedback?
+            </p>
+
+            <p className="text-sm leading-relaxed text-gray-400">
+              {nextScenario
+                ? `Next, try ${nextScenario.focus} to continue into the next design tension.`
+                : "After this scenario, compare your three decisions: how did your design priorities shift as complexity increased?"}
+            </p>
+
+            {nextScenario && (
+              <button
+                type="button"
+                onClick={() => handleScenarioChange(nextScenario.id)}
+                className="rounded-lg border border-gray-700 px-4 py-2 text-sm font-medium text-white transition hover:bg-gray-900">
+                Move to {nextScenario.focus}
+              </button>
+            )}
+          </div>
+        </>
       )}
     </div>
   );

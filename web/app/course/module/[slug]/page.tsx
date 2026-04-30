@@ -10,7 +10,7 @@ import ScenarioDecisionAI from "@/components/course/ScenarioDecisionAI";
 import BackToTopButton from "@/components/ui/BackToTopButton";
 import { moduleContentBySlug } from "@/data/moduleContent";
 import { modules } from "@/data/modules";
-import { SCENARIO_DECISIONS } from "@/lib/ai/scenarioFeedback";
+import { SCENARIO_DECISIONS_BY_MODULE } from "@/lib/ai/scenarioFeedback";
 import { useCourseProgress } from "@/lib/useCourseProgress";
 
 interface ModulePageProps {
@@ -38,6 +38,7 @@ export default function ModulePage({ params }: ModulePageProps) {
     moduleContent.layers.experience,
     moduleContent.layers.reverseEngineering,
   ];
+  const scenarioDecisions = SCENARIO_DECISIONS_BY_MODULE[slug] ?? [];
 
   const completed = isCompleted(slug);
 
@@ -124,10 +125,10 @@ export default function ModulePage({ params }: ModulePageProps) {
               </div>
             ))}
 
-            {slug === "simulation-design" && index === 1 && (
+            {scenarioDecisions.length > 0 && index === 1 && (
               <ScenarioDecisionAI
                 moduleSlug={slug}
-                scenarios={SCENARIO_DECISIONS}
+                scenarios={scenarioDecisions}
               />
             )}
           </LessonSection>
