@@ -6,9 +6,11 @@ import { use } from "react";
 import LessonIntro from "@/components/course/LessonIntro";
 import LessonSection from "@/components/course/LessonSection";
 import ReflectionFeedbackAI from "@/components/course/ReflectionFeedbackAI";
+import ScenarioDecisionAI from "@/components/course/ScenarioDecisionAI";
 import BackToTopButton from "@/components/ui/BackToTopButton";
 import { moduleContentBySlug } from "@/data/moduleContent";
 import { modules } from "@/data/modules";
+import { SCENARIO_DECISIONS } from "@/lib/ai/scenarioFeedback";
 import { useCourseProgress } from "@/lib/useCourseProgress";
 
 interface ModulePageProps {
@@ -121,6 +123,13 @@ export default function ModulePage({ params }: ModulePageProps) {
                 )}
               </div>
             ))}
+
+            {slug === "simulation-design" && index === 1 && (
+              <ScenarioDecisionAI
+                moduleSlug={slug}
+                scenarios={SCENARIO_DECISIONS}
+              />
+            )}
           </LessonSection>
         ))}
 
