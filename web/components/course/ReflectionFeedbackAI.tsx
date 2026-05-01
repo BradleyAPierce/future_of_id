@@ -63,18 +63,18 @@ export default function ReflectionFeedbackAI({
   }
 
   return (
-    <div className="mt-6 space-y-4 rounded-lg border border-gray-700 p-4">
+    <div className="mt-6 space-y-6 rounded-lg border border-[var(--accent)] bg-[color-mix(in_srgb,var(--accent)_12%,var(--surface-elevated))] p-4 text-[var(--text)] shadow-sm">
       <textarea
         value={response}
         onChange={(event) => setResponse(event.target.value)}
         rows={5}
         maxLength={1200}
         placeholder="Write your reflection response..."
-        className="w-full rounded-lg border border-gray-700 bg-transparent p-3 text-white placeholder:text-gray-500 focus:border-blue-400 focus:outline-none"
+        className="w-full rounded-lg border border-[var(--border)] bg-[var(--bg)] p-3 text-[var(--text)] placeholder:text-[var(--muted)] focus:border-[var(--primary)] focus:outline-none"
       />
 
       <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-        <p className="text-sm text-gray-500">
+        <p className="text-sm text-[var(--muted)]">
           {trimmedResponse.length} / 1200 characters
         </p>
 
@@ -82,25 +82,25 @@ export default function ReflectionFeedbackAI({
           type="button"
           onClick={handleSubmit}
           disabled={!canSubmit}
-          className="rounded-lg bg-white px-5 py-3 font-medium text-black transition hover:bg-gray-200 disabled:cursor-not-allowed disabled:bg-gray-700 disabled:text-gray-400">
+          className="rounded-lg bg-[var(--primary-hover)] px-5 py-3 font-medium text-[var(--bg)] transition hover:bg-[var(--primary)] disabled:cursor-not-allowed disabled:bg-[var(--border)] disabled:text-[var(--muted)]">
           {isLoading ? "Getting Feedback..." : "Get AI Feedback"}
         </button>
       </div>
 
-      {error && <p className="text-sm text-red-400">{error}</p>}
+      {error && <p className="text-sm text-[var(--danger-hover)]">{error}</p>}
 
       {feedback && (
-        <div className="space-y-4 rounded-lg bg-gray-900 p-4">
-          <p className="text-gray-300">{feedback.summary}</p>
+        <div className="space-y-5 rounded-lg bg-[var(--surface)] p-4 shadow-sm">
+          <p className="text-[var(--text)]">{feedback.summary}</p>
 
-          <ul className="list-disc space-y-2 pl-5 text-gray-400">
+          <ul className="list-disc space-y-2 rounded-lg border border-[var(--success)] bg-[color-mix(in_srgb,var(--success)_12%,transparent)] p-4 pl-8 text-[var(--success-hover)]">
             {feedback.strengths.map((strength) => (
               <li key={strength}>{strength}</li>
             ))}
           </ul>
 
-          <p className="text-gray-300">
-            <span className="font-medium text-white">Next step: </span>
+          <p className="rounded-lg border border-[var(--accent)] bg-[color-mix(in_srgb,var(--accent)_12%,transparent)] p-4 text-[var(--accent-hover)]">
+            <span className="font-medium text-[var(--text)]">Next step: </span>
             {feedback.nextStep}
           </p>
         </div>

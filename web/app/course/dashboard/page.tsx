@@ -1,70 +1,119 @@
 "use client";
 
 import { modules } from "@/data/modules";
-import ModuleCard from "@/components/course/ModuleCard";
 import { useCourseProgress } from "@/lib/useCourseProgress";
 import ProgressBar from "@/components/course/ProgressBar";
+import Button from "@/components/ui/Button";
+import Card from "@/components/ui/Card";
 
 export default function Dashboard() {
   const { completedModules } = useCourseProgress();
+  const sortedModules = [...modules].sort((a, b) => a.order - b.order);
 
   const progress = (completedModules.length / modules.length) * 100;
 
-  const nextModule = modules
-    .sort((a, b) => a.order - b.order)
-    .find((m) => !completedModules.includes(m.slug));
+  const nextModule = sortedModules.find((m) => !completedModules.includes(m.slug));
 
   return (
-    <main className="max-w-4xl mx-auto p-8">
-      <h1 className="text-3xl font-bold mb-6">
-        Future of Instructional Design
-      </h1>
+    <div className="space-y-14 bg-[var(--bg)] text-[var(--text)]">
+      <section className="rounded-3xl border border-[var(--primary)] bg-[var(--surface-elevated)] p-6 shadow-md sm:p-8 lg:p-10">
+        <div className="max-w-3xl space-y-5">
+          <p className="text-sm font-medium uppercase tracking-wide text-[var(--muted)]">
+            Capability Lab
+          </p>
 
-      <p className="mb-8 text-gray-400">
-        A guided experience exploring the seven capabilities shaping the next
-        generation of instructional design.
-      </p>
+          <h1 className="text-4xl font-semibold tracking-tight text-[var(--text)] md:text-5xl">
+            Future of Instructional Design
+          </h1>
 
-      <div className="mb-8">
-        <p className="text-sm text-gray-400 mb-2">Course Progress</p>
-
-        <ProgressBar progress={progress} />
-
-        <p className="text-sm text-gray-500 mt-2">
-          {Math.round(progress)}% complete
-        </p>
-      </div>
-
-      {nextModule && (
-        <div className="mb-8">
-          <a
-            href={
-              nextModule.slug === "orientation"
-                ? "/course/orientation"
-                : `/course/module/${nextModule.slug}`
-            }
-            className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-500 transition">
-            Continue Learning →
-          </a>
+          <p className="text-lg leading-relaxed text-[var(--muted)]">
+            A guided learning experience for practicing the AI, analytics,
+            systems, and human-centered capabilities shaping modern
+            instructional design.
+          </p>
         </div>
-      )}
 
-      <div className="space-y-4">
-        {modules
-          .sort((a, b) => a.order - b.order)
-          .map((module, index) => (
-            <ModuleCard
-              key={module.slug}
-              slug={module.slug}
-              title={module.title}
-              description={module.description}
-              estimatedTime={module.estimatedTime}
-              order={index}
-              allModules={modules.map((m) => m.slug)}
-              practiceLabel={module.practiceLabel}
-            />
-          ))}
-      </div>
-    </main>
+        <div className="mt-8 grid gap-6 md:grid-cols-[1fr_auto] md:items-end">
+          <div>
+            <p className="mb-2 text-sm text-[var(--muted)]">Course Progress</p>
+            <ProgressBar progress={progress} />
+            <p className="mt-2 text-sm text-[var(--muted)]">
+              {Math.round(progress)}% complete
+            </p>
+          </div>
+
+          {nextModule && (
+            <Button
+              href={
+                nextModule.slug === "orientation"
+                  ? "/course/orientation"
+                  : `/course/module/${nextModule.slug}`
+              }>
+              Continue
+            </Button>
+          )}
+        </div>
+      </section>
+
+      <section className="space-y-12">
+        <div>
+          <h2 className="text-2xl font-semibold text-[var(--text)]">
+            Course Modules
+          </h2>
+          <p className="mt-2 text-[var(--muted)]">
+            Explore each capability through theory, practice, reverse
+            engineering, and AI-supported reflection.
+          </p>
+        </div>
+
+        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+          {sortedModules.map((module) => {
+            const isCompleted = completedModules.includes(module.slug);
+            const href =
+              module.slug === "orientation"
+                ? "/course/orientation"
+                : `/course/module/${module.slug}`;
+
+            return (
+              <Card key={module.slug} className="flex min-h-full flex-col">
+                <div className="flex-1 space-y-4">
+                  <div className="flex items-center justify-between gap-3">
+                    <p className="text-sm font-medium text-[var(--muted)]">
+                      {module.type === "orientation"
+                        ? "Orientation"
+                        : `Module ${module.order}`}
+                    </p>
+                    {isCompleted && (
+                      <span className="rounded-full border border-[var(--success)] px-2 py-1 text-xs text-[var(--success)]">
+                        Complete
+                      </span>
+                    )}
+                  </div>
+
+                  <div>
+                    <h3 className="text-xl font-semibold leading-tight text-[var(--text)]">
+                      {module.title}
+                    </h3>
+                    <p className="mt-3 text-sm leading-relaxed text-[var(--muted)]">
+                      {module.description}
+                    </p>
+                  </div>
+
+                  <p className="text-sm text-[var(--muted)]">
+                    Estimated time: {module.estimatedTime}
+                  </p>
+                </div>
+
+                <div className="mt-6">
+                  <Button href={href} variant={isCompleted ? "secondary" : "primary"}>
+                    {isCompleted ? "Continue" : "Start Module"}
+                  </Button>
+                </div>
+              </Card>
+            );
+          })}
+        </div>
+      </section>
+    </div>
   );
 }

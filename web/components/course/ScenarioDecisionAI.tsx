@@ -100,12 +100,12 @@ export default function ScenarioDecisionAI({
   }
 
   return (
-    <div className="mt-6 space-y-4 rounded-lg border border-gray-700 p-4">
+    <div className="mt-6 space-y-6 rounded-lg border border-[var(--border)] bg-[var(--surface)] p-4 text-[var(--text)] shadow-sm">
       <div className="space-y-3">
-        <p className="text-sm font-medium uppercase tracking-wide text-blue-300">
+        <p className="text-sm font-medium uppercase tracking-wide text-[var(--primary-hover)]">
           Practice sequence
         </p>
-        <p className="text-sm leading-relaxed text-gray-400">
+        <p className="text-sm leading-relaxed text-[var(--muted)]">
           These scenarios build in complexity from realistic practice design to
           governed AI conversations and adaptive simulation logic. You can move
           in order or select the decision point most relevant to your work.
@@ -118,16 +118,16 @@ export default function ScenarioDecisionAI({
               onClick={() => handleScenarioChange(scenarioOption.id)}
               className={`rounded-lg border px-4 py-3 text-left text-sm transition ${
                 selectedScenarioId === scenarioOption.id
-                  ? "border-blue-400 bg-blue-500/10 text-white"
-                  : "border-gray-700 text-gray-400 hover:bg-gray-900"
+                  ? "border-[var(--primary)] bg-[color-mix(in_srgb,var(--primary)_14%,transparent)] text-[var(--text)]"
+                  : "border-[var(--border)] text-[var(--muted)] hover:border-[var(--primary)] hover:bg-[var(--surface-elevated)]"
               }`}>
-              <span className="block text-xs font-medium uppercase tracking-wide text-blue-300">
+              <span className="block text-xs font-medium uppercase tracking-wide text-[var(--primary-hover)]">
                 {scenarioOption.progressionLabel}
               </span>
-              <span className="mt-1 block font-medium text-white">
+              <span className="mt-1 block font-medium text-[var(--text)]">
                 {scenarioOption.focus}
               </span>
-              <span className="mt-1 block text-gray-400">
+              <span className="mt-1 block text-[var(--muted)]">
                 {scenarioOption.title}
               </span>
             </button>
@@ -135,11 +135,11 @@ export default function ScenarioDecisionAI({
         </div>
       </div>
 
-      <div className="rounded-lg bg-gray-900 p-4">
-        <p className="text-sm font-medium uppercase tracking-wide text-blue-300">
+      <div className="rounded-lg border border-[var(--primary)] bg-[color-mix(in_srgb,var(--primary)_14%,var(--surface-elevated))] p-5 shadow-sm">
+        <p className="text-sm font-medium uppercase tracking-wide text-[var(--primary-hover)]">
           Scenario
         </p>
-        <p className="mt-2 text-gray-300">{selectedScenario?.scenario}</p>
+        <p className="mt-3 text-[var(--text)]">{selectedScenario?.scenario}</p>
       </div>
 
       <textarea
@@ -148,11 +148,11 @@ export default function ScenarioDecisionAI({
         rows={5}
         maxLength={1200}
         placeholder="Describe your design decision..."
-        className="w-full rounded-lg border border-gray-700 bg-transparent p-3 text-white placeholder:text-gray-500 focus:border-blue-400 focus:outline-none"
+        className="w-full rounded-lg border border-[var(--border)] bg-[var(--bg)] p-3 text-[var(--text)] placeholder:text-[var(--muted)] focus:border-[var(--primary)] focus:outline-none"
       />
 
       <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-        <p className="text-sm text-gray-500">
+        <p className="text-sm text-[var(--muted)]">
           {trimmedResponse.length} / 1200 characters
         </p>
 
@@ -160,46 +160,46 @@ export default function ScenarioDecisionAI({
           type="button"
           onClick={handleSubmit}
           disabled={!canSubmit}
-          className="rounded-lg bg-white px-5 py-3 font-medium text-black transition hover:bg-gray-200 disabled:cursor-not-allowed disabled:bg-gray-700 disabled:text-gray-400">
+          className="rounded-lg bg-[var(--primary-hover)] px-5 py-3 font-medium text-[var(--bg)] transition hover:bg-[var(--primary)] disabled:cursor-not-allowed disabled:bg-[var(--border)] disabled:text-[var(--muted)]">
           {isLoading ? "Getting Feedback..." : "Get AI Feedback"}
         </button>
       </div>
 
-      {error && <p className="text-sm text-red-400">{error}</p>}
+      {error && <p className="text-sm text-[var(--danger-hover)]">{error}</p>}
 
       {feedback && (
         <>
-          <div className="space-y-4 rounded-lg bg-gray-900 p-4">
-            <p className="text-gray-300">{feedback.summary}</p>
+          <div className="space-y-6 rounded-lg bg-[var(--surface-elevated)] p-4 shadow-sm">
+            <p className="text-[var(--text)]">{feedback.summary}</p>
 
-            <ul className="list-disc space-y-2 pl-5 text-gray-400">
+            <ul className="list-disc space-y-2 rounded-lg border border-[var(--success)] bg-[color-mix(in_srgb,var(--success)_12%,transparent)] p-4 pl-8 text-[var(--success-hover)]">
               {feedback.strengths.map((strength) => (
                 <li key={strength}>{strength}</li>
               ))}
             </ul>
 
-            <p className="text-gray-300">
-              <span className="font-medium text-white">Gap: </span>
+            <p className="rounded-lg border border-[var(--danger)] bg-[color-mix(in_srgb,var(--danger)_14%,transparent)] p-4 text-[var(--danger-hover)]">
+              <span className="font-medium text-[var(--text)]">Gap: </span>
               {feedback.gap}
             </p>
 
-            <p className="text-gray-300">
-              <span className="font-medium text-white">Next step: </span>
+            <p className="rounded-lg border border-[var(--accent)] bg-[color-mix(in_srgb,var(--accent)_12%,transparent)] p-4 text-[var(--accent-hover)]">
+              <span className="font-medium text-[var(--text)]">Next step: </span>
               {feedback.nextStep}
             </p>
           </div>
 
-          <div className="space-y-3 rounded-lg border border-gray-800 p-4">
-            <p className="text-sm font-medium uppercase tracking-wide text-blue-300">
+          <div className="space-y-3 rounded-lg border border-[var(--border)] p-4">
+            <p className="text-sm font-medium uppercase tracking-wide text-[var(--primary-hover)]">
               Apply the feedback
             </p>
 
-            <p className="text-sm leading-relaxed text-gray-400">
+            <p className="text-sm leading-relaxed text-[var(--muted)]">
               Before moving on, revise your decision in one sentence: what would
               you keep, and what would you adjust based on this feedback?
             </p>
 
-            <p className="text-sm leading-relaxed text-gray-400">
+            <p className="text-sm leading-relaxed text-[var(--muted)]">
               {nextScenario
                 ? `Next, try ${nextScenario.focus} to continue into the next design tension.`
                 : "After this scenario, compare your three decisions: how did your design priorities shift as complexity increased?"}
@@ -209,7 +209,7 @@ export default function ScenarioDecisionAI({
               <button
                 type="button"
                 onClick={() => handleScenarioChange(nextScenario.id)}
-                className="rounded-lg border border-gray-700 px-4 py-2 text-sm font-medium text-white transition hover:bg-gray-900">
+                className="rounded-lg bg-[var(--success-hover)] px-4 py-2 text-sm font-medium text-[var(--bg)] transition hover:bg-[var(--success)]">
                 Move to {nextScenario.focus}
               </button>
             )}

@@ -4,8 +4,8 @@ interface ProgressBarProps {
 
 export default function ProgressBar({ progress }: ProgressBarProps) {
   return (
-    <div className="w-full bg-gray-800 rounded-lg h-3 overflow-hidden">
-      <div className="bg-blue-500 h-3" style={{ width: `${progress}%` }} />
+    <div className="h-3 w-full overflow-hidden rounded-lg bg-[var(--border)]">
+      <div className="h-3 bg-[var(--success)]" style={{ width: `${progress}%` }} />
     </div>
   );
 }

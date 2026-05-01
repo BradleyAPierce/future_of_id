@@ -35,6 +35,7 @@ export const modules = [
     order: 2,
     estimatedTime: "20 min",
     type: "module",
+    practiceLabel: "AI Practice",
   },
   {
     slug: "learning-analytics",
@@ -43,6 +44,7 @@ export const modules = [
     order: 3,
     estimatedTime: "20 min",
     type: "module",
+    practiceLabel: "AI Practice",
   },
   {
     slug: "simulation-design",
@@ -52,6 +54,7 @@ export const modules = [
     order: 4,
     estimatedTime: "20 min",
     type: "module",
+    practiceLabel: "AI Practice",
   },
   {
     slug: "adaptive-learning",
@@ -60,6 +63,7 @@ export const modules = [
     order: 5,
     estimatedTime: "20 min",
     type: "module",
+    practiceLabel: "AI Practice",
   },
   {
     slug: "content-systems",
@@ -68,6 +72,7 @@ export const modules = [
     order: 6,
     estimatedTime: "20 min",
     type: "module",
+    practiceLabel: "AI Practice",
   },
   {
     slug: "human-centered-change",
@@ -76,5 +81,6 @@ export const modules = [
     order: 7,
     estimatedTime: "20 min",
     type: "module",
+    practiceLabel: "AI Practice",
   },
 ];
