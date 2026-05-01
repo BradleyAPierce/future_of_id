@@ -14,7 +14,7 @@ const MAX_RESPONSE_LENGTH = 1200;
 const SCENARIO_RESPONSE_VALIDATION_ERROR =
   "Scenario response needs a more specific answer before feedback can be generated.";
 
-export const SALES_ONBOARDING_SCENARIO =
+const SALES_ONBOARDING_SCENARIO =
   "You are designing a scenario-based learning experience for a new sales onboarding program. The experience should help new sales representatives practice making realistic decisions, interpreting customer cues, and choosing next steps during an early customer conversation.";
 
 const AI_CONVERSATION_GOVERNANCE_SCENARIO =
@@ -210,9 +210,6 @@ export const SCENARIO_DECISIONS_BY_MODULE: Record<string, ScenarioDecision[]> = 
     },
   ],
 };
-
-export const SCENARIO_DECISIONS =
-  SCENARIO_DECISIONS_BY_MODULE["simulation-design"];
 
 type ServiceError = {
   message: string;
