@@ -68,7 +68,8 @@ export const moduleBannersBySlug: Record<string, PageBannerConfig> = {
   },
   "simulation-design": {
     title: "Scenario, Simulation, and Conversation Design",
-    subtitle: "Designing realistic practice environments for skill development.",
+    subtitle:
+      "Designing realistic practice environments for skill development.",
     imageUrl:
       "https://raw.githubusercontent.com/BradleyAPierce/future-of-id-images/main/simulation-design-banner-overlay-web640x287.jpg",
     pills: ["Module 4", "AI Practice"],
@@ -77,7 +78,21 @@ export const moduleBannersBySlug: Record<string, PageBannerConfig> = {
     title: "Adaptive and Personalized Learning Architecture",
     subtitle: "Designing learning systems that adapt to learner needs.",
     imageUrl:
-      "https://raw.githubusercontent.com/BradleyAPierce/future-of-id-images/main/adaptive-earning-banner-overlay-web640x287.jpg",
+      "https://raw.githubusercontent.com/BradleyAPierce/future-of-id-images/main/adaptive-learning-banner-overlay-web640x287.jpg",
     pills: ["Module 5", "AI Practice"],
+  },
+  "content-systems": {
+    title: "Content Systems Thinking and Workflow Automation",
+    subtitle: "Building scalable learning content systems.",
+    imageUrl:
+      "https://raw.githubusercontent.com/BradleyAPierce/future-of-id-images/main/content-systems-banner-overlay-web640x287.jpg",
+    pills: ["Module 6", "AI Practice"],
+  },
+  "human-centered-change": {
+    title: "Human-Centered Change, Ethics, and Learner Trust",
+    subtitle: "Designing learning that supports change and builds trust.",
+    imageUrl:
+      "https://raw.githubusercontent.com/BradleyAPierce/future-of-id-images/main/human-centered-change-banner-overlay-web640x287.jpg",
+    pills: ["Module 7", "AI Practice"],
   },
 };
