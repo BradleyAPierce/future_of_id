@@ -8,8 +8,10 @@ import LessonSection from "@/components/course/LessonSection";
 import ReflectionFeedbackAI from "@/components/course/ReflectionFeedbackAI";
 import ScenarioDecisionAI from "@/components/course/ScenarioDecisionAI";
 import BackToTopButton from "@/components/ui/BackToTopButton";
+import PageBanner from "@/components/ui/PageBanner";
 import { moduleContentBySlug } from "@/data/moduleContent";
 import { modules } from "@/data/modules";
+import { DEFAULT_BANNER_IMAGE, moduleBannersBySlug } from "@/data/pageBanners";
 import { SCENARIO_DECISIONS_BY_MODULE } from "@/lib/ai/scenarioFeedback";
 import { useCourseProgress } from "@/lib/useCourseProgress";
 
@@ -39,26 +41,28 @@ export default function ModulePage({ params }: ModulePageProps) {
     moduleContent.layers.reverseEngineering,
   ];
   const scenarioDecisions = SCENARIO_DECISIONS_BY_MODULE[slug] ?? [];
+  const moduleBanner = moduleBannersBySlug[slug] ?? {
+    title: currentModule.title,
+    subtitle: currentModule.description,
+    imageUrl: DEFAULT_BANNER_IMAGE,
+    pills: [
+      `Module ${currentModule.order}`,
+      ...(currentModule.practiceLabel ? [currentModule.practiceLabel] : []),
+    ],
+  };
 
   const completed = isCompleted(slug);
 
   return (
     <div className="space-y-14">
       <section className="space-y-4">
-        {/* badges */}
-        <div className="flex flex-wrap gap-3">
-          <span className="inline-block rounded-full border border-[var(--border)] bg-[var(--surface)] px-3 py-1 text-xs font-semibold text-[var(--text)]">
-            Module {currentModule.order}
-          </span>
+        <PageBanner
+          imageUrl={moduleBanner.imageUrl}
+          title={moduleBanner.title}
+          subtitle={moduleBanner.subtitle}
+          pills={moduleBanner.pills}
+        />
 
-          {currentModule.practiceLabel && (
-            <span className="inline-block rounded-full border border-[var(--primary)] bg-[color-mix(in_srgb,var(--primary)_12%,transparent)] px-3 py-1 text-xs font-semibold text-[var(--primary)]">
-              {currentModule.practiceLabel}
-            </span>
-          )}
-        </div>
-
-        {/* estimated time */}
         <p className="text-sm text-[var(--muted)]">
           Estimated time: {currentModule.estimatedTime}
         </p>

@@ -5,6 +5,8 @@ import { useCourseProgress } from "@/lib/useCourseProgress";
 import ProgressBar from "@/components/course/ProgressBar";
 import Button from "@/components/ui/Button";
 import Card from "@/components/ui/Card";
+import PageBanner from "@/components/ui/PageBanner";
+import { dashboardBanner } from "@/data/pageBanners";
 
 export default function Dashboard() {
   const { completedModules } = useCourseProgress();
@@ -16,24 +18,16 @@ export default function Dashboard() {
 
   return (
     <div className="space-y-14 bg-[var(--bg)] text-[var(--text)]">
-      <section className="rounded-3xl border border-[var(--primary)] bg-[var(--surface-elevated)] p-6 shadow-md sm:p-8 lg:p-10">
-        <div className="max-w-3xl space-y-5">
-          <p className="text-sm font-medium uppercase tracking-wide text-[var(--muted)]">
-            Capability Lab
-          </p>
+      <div className="space-y-6">
+        <PageBanner
+          imageUrl={dashboardBanner.imageUrl}
+          title={dashboardBanner.title}
+          subtitle={dashboardBanner.subtitle}
+          pills={dashboardBanner.pills}
+        />
 
-          <h1 className="text-4xl font-semibold tracking-tight text-[var(--text)] md:text-5xl">
-            Future of Instructional Design
-          </h1>
-
-          <p className="text-lg leading-relaxed text-[var(--muted)]">
-            A guided learning experience for practicing the AI, analytics,
-            systems, and human-centered capabilities shaping modern
-            instructional design.
-          </p>
-        </div>
-
-        <div className="mt-8 grid gap-6 md:grid-cols-[1fr_auto] md:items-end">
+        <section className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-6 shadow-sm">
+          <div className="grid gap-6 md:grid-cols-[1fr_auto] md:items-end">
           <div>
             <p className="mb-2 text-sm text-[var(--muted)]">Course Progress</p>
             <ProgressBar progress={progress} />
@@ -52,8 +46,9 @@ export default function Dashboard() {
               Continue
             </Button>
           )}
-        </div>
-      </section>
+          </div>
+        </section>
+      </div>
 
       <section className="space-y-12">
         <div>

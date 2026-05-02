@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { useCourseProgress } from "@/lib/useCourseProgress";
+import PageBanner from "@/components/ui/PageBanner";
+import { orientationBanner } from "@/data/pageBanners";
 
 export default function OrientationPage() {
   const { markComplete, isCompleted } = useCourseProgress();
@@ -42,19 +44,12 @@ export default function OrientationPage() {
 
   return (
     <div className="space-y-14 text-[var(--text)]">
-      <section className="rounded-3xl border border-[var(--primary)] bg-[var(--surface-elevated)] p-8 shadow-md lg:p-10">
-          <p className="text-sm font-semibold uppercase tracking-wide text-[var(--primary)]">
-          Orientation
-        </p>
-        <h1 className="mt-4 max-w-3xl text-4xl font-semibold tracking-tight text-[var(--text)] md:text-5xl">
-          The Future of Instructional Design
-        </h1>
-        <p className="mt-5 max-w-3xl text-lg leading-relaxed text-[var(--muted)]">
-          A guided experience for exploring the capabilities instructional
-          designers need as AI, analytics, systems thinking, and human-centered
-          change reshape the field.
-        </p>
-      </section>
+      <PageBanner
+        imageUrl={orientationBanner.imageUrl}
+        title={orientationBanner.title}
+        subtitle={orientationBanner.subtitle}
+        pills={orientationBanner.pills}
+      />
 
       <section className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-6 shadow-sm">
         <h2 className="flex items-center gap-3 text-2xl font-semibold text-[var(--text)]">

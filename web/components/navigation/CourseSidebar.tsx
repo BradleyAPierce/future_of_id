@@ -49,6 +49,12 @@ export default function CourseSidebar({
             className={linkClasses(pathname === "/course/orientation")}>
             Orientation
           </Link>
+          <Link
+            href="/about"
+            onClick={onCloseMobileNav}
+            className={linkClasses(pathname === "/about")}>
+            About
+          </Link>
         </div>
 
         <div className="space-y-2">
