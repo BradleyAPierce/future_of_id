@@ -547,22 +547,22 @@ export const moduleContentBySlug: Record<string, ModuleContent> = {
               {
                 label: "Experiential learning",
                 description:
-                  "Experiential learning emphasizes concrete experience, reflection, and application. Scenarios and simulations support this cycle by giving your learners an experience they can examine before returning to the workplace.",
+                  "Scenarios give your learners something to act on first, so reflection and application come from experience, not explanation.",
               },
               {
                 label: "Deliberate practice",
                 description:
-                  "Deliberate practice requires focused attempts, clear criteria, feedback, and refinement. Simulation design supports this when your learners practice a targeted decision or behavior rather than simply moving through a story.",
+                  "Simulation design supports deliberate practice when you focus on a specific decision, define what good looks like, and give feedback the learner can use to improve.",
               },
               {
                 label: "Bloom's application/evaluation",
                 description:
-                  "Scenario-based practice asks your learners to apply concepts, evaluate options, justify choices, and adapt decisions based on consequences instead of only recalling information.",
+                  "Use scenarios when your learners need to apply a concept, compare options, justify a choice, or adapt after seeing a consequence.",
               },
               {
                 label: "Scenario-based learning",
                 description:
-                  "Scenario-based learning connects knowledge to context. It helps your learners recognize when a concept matters, how to use it, and what tradeoffs appear in realistic conditions.",
+                  "Build the scenario around the moment where the knowledge matters: the role, pressure, tradeoffs, and decision your learners need to handle.",
               },
             ],
           },
