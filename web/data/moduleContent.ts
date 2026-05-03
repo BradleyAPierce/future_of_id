@@ -809,7 +809,7 @@ export const moduleContentBySlug: Record<string, ModuleContent> = {
     slug: "content-systems",
     intro: {
       overview:
-        "Content systems thinking helps instructional designers move from one-off course production to reusable, maintainable learning content workflows. This module focuses on modular content design, content architecture, workflow automation, and the separation of content from presentation so learning materials can scale without becoming fragile or duplicated.",
+        "Content systems thinking moves you from one-off course builds to structured content you can reuse and update across programs. This module covers modular content design, content architecture, workflow automation, and separating content from presentation. The goal is to scale content without duplicating it or breaking it when it changes.",
       outcomes: [
         "Explain how modular content design supports scalable learning production.",
         "Identify reusable learning objects and content patterns within a course workflow.",
@@ -822,43 +822,43 @@ export const moduleContentBySlug: Record<string, ModuleContent> = {
         title: "Theory",
         badge: "Layer 1",
         intro:
-          "This layer frames content systems thinking as a practical capability for designing learning content that can be reused, updated, rendered, and scaled across modules and formats.",
+          "This layer shows how to structure learning content so you can reuse, update, publish, and scale it across modules and formats.",
         sections: [
           {
             id: "definition",
             title: "Capability Definition",
             description:
-              "Content systems thinking is the practice of designing instructional content as structured, reusable data instead of isolated page copy. For learning teams, this means defining content types, patterns, metadata, relationships, and workflows so content can move across experiences without being rewritten each time.",
+              "Content systems thinking means designing instructional content as structured, reusable data instead of isolated page copy. For learning teams, this means defining content types, fields, and reuse rules so you don't rewrite the same content for every course.",
           },
           {
             id: "why-it-matters",
             title: "Why It Matters",
             description:
-              "As learning libraries grow, one-off content becomes harder to update, localize, personalize, measure, and govern. A content system helps designers preserve instructional quality while reducing duplication, version drift, manual handoffs, and UI-specific copy that cannot be reused elsewhere.",
+              "As your learning library grows, one-off content makes updates, localization, personalization, and measurement harder to manage. A content system preserves instructional quality while reducing duplication, version drift, manual handoffs, and UI-specific copy you can't reuse.",
           },
           {
             id: "modular-content-design",
             title: "Modular Content Design",
             description:
-              "Modular content design breaks learning material into purposeful chunks such as overviews, outcomes, explanations, examples, practice prompts, feedback, reflections, and reverse engineering notes. Each module should be complete enough to make sense, but structured enough to be reused or rearranged.",
+              "Modular content design breaks learning material into purposeful chunks such as overviews, outcomes, explanations, examples, practice prompts, feedback, reflections, and reverse engineering notes. Make each module complete enough to stand on its own, but structured so you can reuse or rearrange it.",
           },
           {
             id: "reusable-learning-objects",
             title: "Reusable Learning Objects",
             description:
-              "Reusable learning objects are instructional assets designed for more than one placement or context. They require clear boundaries, labels, dependencies, and metadata so teams know what the object teaches, where it fits, and what should change when the source is updated.",
+              "Design reusable learning objects so you can use them in more than one context. Define clear boundaries, labels, dependencies, and metadata so teams know what the object teaches, where it fits, and what changes when you update it.",
           },
           {
             id: "content-architecture",
             title: "Content Architecture",
             description:
-              "Content architecture defines the structure behind the learning experience: content types, fields, relationships, naming conventions, and governance rules. It lets designers separate what the content means from how a specific page or component displays it.",
+              "Content architecture defines how your content is structured: content types, fields, relationships, naming conventions, and governance rules. It separates what the content means from how a page or component displays it.",
           },
           {
             id: "workflow-automation",
             title: "Workflow Automation",
             description:
-              "Workflow automation can support drafting, review routing, version checks, publishing, tagging, QA, localization preparation, and content transformation. The design question is where automation removes repeatable friction while keeping human review in place for instructional quality and context.",
+              "Use workflow automation for drafting, review routing, version checks, publishing, tagging, QA, and localization prep. Use automation where it removes repeatable work while keeping human review for instructional quality and context.",
           },
           {
             id: "theory-bridge",
@@ -867,22 +867,22 @@ export const moduleContentBySlug: Record<string, ModuleContent> = {
               {
                 label: "Reusable learning objects",
                 description:
-                  "Reusable learning object thinking helps designers create instructional chunks that can be reused across pathways, modules, and formats without losing meaning or context.",
+                  "Reusable learning objects let you use the same instructional content across modules and formats without rewriting it.",
               },
               {
                 label: "Information architecture",
                 description:
-                  "Information architecture supports findability, structure, and relationships. In L&D, it helps learners and teams navigate content consistently across larger learning ecosystems.",
+                  "Information architecture helps you organize content so teams can find it, use it, and update it without guessing.",
               },
               {
                 label: "Single source of truth",
                 description:
-                  "Single-source content reduces duplication and version drift by keeping core instructional material in one structured location that different interfaces or outputs can consume.",
+                  "Single-source content keeps core material in one place so you don't update the same content across multiple versions.",
               },
               {
                 label: "Workflow design",
                 description:
-                  "Workflow design clarifies how content moves from request to draft, review, approval, publication, measurement, and revision. It makes quality less dependent on individual memory or manual coordination.",
+                  "Workflow design defines how content moves from request to draft, review, approval, publication, and revision. It reduces reliance on memory and manual coordination to maintain quality.",
               },
             ],
           },
@@ -892,7 +892,7 @@ export const moduleContentBySlug: Record<string, ModuleContent> = {
         title: "Experience",
         badge: "Layer 2",
         intro:
-          "This layer gives learners practice turning a messy course asset into a modular content system that can be reused and maintained.",
+          "This layer gives you practice turning a messy course asset into a modular content system that can be reused and maintained.",
         sections: [
           {
             id: "activity",
@@ -924,19 +924,19 @@ export const moduleContentBySlug: Record<string, ModuleContent> = {
             id: "instructional-strategy",
             title: "Instructional Strategy",
             description:
-              "The module moves from systems concepts to practical content workflow decisions. Learners identify content patterns, decide what should be structured, and evaluate where automation or reuse would improve maintainability without flattening instructional intent.",
+              "The module moves from content structure to workflow decisions. You identify content patterns, decide what should be structured, and evaluate where automation or reuse would make updates easier without weakening instructional quality.",
           },
           {
             id: "theory-alignment",
             title: "Theory Alignment",
             description:
-              "The structure aligns with reusable learning object theory by breaking content into meaningful chunks, with information architecture by defining relationships and labels, and with workflow design by connecting content structure to repeatable production practices.",
+              "This structure uses reusable learning objects, information architecture, and workflow design to help you break content into chunks, define labels and relationships, and connect content structure to repeatable production work.",
           },
           {
             id: "content-structure",
             title: "Content Structure",
             description:
-              "The content is organized around the content systems workflow: define the capability, identify why scale creates problems, modularize learning content, define reusable objects, separate content from UI, evaluate automation opportunities, and reflect on maintainability.",
+              "The content follows the work itself: define the capability, identify where scale creates problems, modularize learning content, define reusable objects, separate content from UI, evaluate automation opportunities, and reflect on maintenance.",
           },
           {
             id: "prompt-architecture",
@@ -954,7 +954,7 @@ export const moduleContentBySlug: Record<string, ModuleContent> = {
             id: "design-rationale",
             title: "Design Rationale",
             description:
-              "The experience emphasizes real content operations because systems thinking is only useful when it changes how teams produce, review, update, and reuse learning materials. The goal is a workflow that is faster because it is clearer, not because quality checks were removed.",
+              "This module focuses on real content operations because a content system only matters if it changes how teams produce, review, update, and reuse learning materials. The goal is a clearer workflow that moves faster without removing quality checks.",
           },
         ],
       },
