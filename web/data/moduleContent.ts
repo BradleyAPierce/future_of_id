@@ -37,7 +37,7 @@ export const moduleContentBySlug: Record<string, ModuleContent> = {
     slug: "ai-literacy",
     intro: {
       overview:
-        "AI literacy is the ability to understand what AI systems can do, where they fail, and how to use them responsibly in learning design work. This module focuses on AI as a design partner, not a replacement for instructional judgment.",
+        "AI literacy means knowing what AI can do, where it fails, and how to use it responsibly in design work. This module treats AI as a design partner, not a replacement for instructional judgment.",
       outcomes: [
         "Explain how AI is changing instructional design workflows.",
         "Identify appropriate and inappropriate uses of AI in learning design.",
@@ -50,37 +50,37 @@ export const moduleContentBySlug: Record<string, ModuleContent> = {
         title: "Theory",
         badge: "Layer 1",
         intro:
-          "This layer establishes the core concepts behind AI literacy for instructional designers: capability, limits, workflow impact, and responsible judgment.",
+          "This layer explains the core ideas behind AI literacy for instructional designers: what AI does well, where it fails, how it changes your workflow, and where your judgment matters.",
         sections: [
           {
             id: "definition",
             title: "Capability Definition",
             description:
-              "AI literacy means knowing how to work with AI systems critically and intentionally. For instructional designers, this includes understanding how AI can support analysis, ideation, drafting, feedback, personalization, and evaluation while recognizing that design accountability remains human.",
+              "AI literacy means using AI while actively checking its accuracy, usefulness, and risk. For instructional designers, AI can support analysis, ideation, drafting, feedback, personalization, and evaluation, but designers remain responsible for the final decisions.",
           },
           {
             id: "why-it-matters",
             title: "Why It Matters",
             description:
-              "Instructional designers are increasingly expected to move faster, work across more systems, and create learning that responds to changing business needs. AI can accelerate parts of that work, but only when designers can judge quality, reduce bias, protect learner trust, and connect outputs to real performance goals.",
+              "Instructional designers are expected to deliver faster, work across multiple systems, and create learning that improves job performance. AI can speed up parts of the work, but designers still need to judge quality, reduce bias, protect trust, and tie outputs to real performance.",
           },
           {
             id: "industry-trends",
-            title: "Industry Trends",
+            title: "How the Work Is Changing",
             description:
-              "AI is shifting learning design from static content production toward workflow orchestration, rapid prototyping, adaptive support, and AI-assisted analysis. The most valuable skill is not simply prompting a tool; it is knowing how to frame the problem, evaluate the output, and integrate AI into an instructional system.",
+              "AI reduces time spent creating content and increases time spent testing ideas, supporting your learners, and analyzing results. The most valuable skill is framing the problem, evaluating AI output, and deciding how to use it in your workflow.",
           },
           {
             id: "demand-signals",
             title: "Demand Signals",
             description:
-              "Organizations are looking for learning professionals who can use AI responsibly to improve speed, scale, personalization, and evidence-based design. Roles increasingly reference AI fluency, data-informed decision-making, automation awareness, and the ability to guide stakeholders through responsible adoption.",
+              "Organizations expect learning teams to use AI to work faster without lowering quality. Many roles now expect you to use AI, work with data, understand automation, and guide teams in using these tools responsibly.",
           },
           {
             id: "instructional-design-implications",
             title: "Instructional Design Implications",
             description:
-              "AI changes the designer's workflow, but it does not remove the need for analysis, sequencing, learner empathy, accessibility, assessment strategy, or evaluation. Strong designers use AI to expand options and reduce production friction while preserving instructional intent.",
+              "AI changes the workflow, but designers still handle analysis, sequencing, accessibility, assessment, and evaluation. Strong designers use AI to explore ideas faster and reduce production time without losing focus on learning outcomes.",
           },
           {
             id: "theory-bridge",
@@ -89,17 +89,17 @@ export const moduleContentBySlug: Record<string, ModuleContent> = {
               {
                 label: "ADDIE",
                 description:
-                  "AI can support each phase of ADDIE, especially analysis, design alternatives, draft development, and evaluation review. The model still provides the human decision structure for when and why AI is used.",
+                  "Use AI to support analysis, explore design options, draft content, and review evaluation data. ADDIE still guides when and why you use AI.",
               },
               {
                 label: "Bloom's Taxonomy",
                 description:
-                  "AI can generate examples and explanations, but learners still need opportunities to analyze, evaluate, and create. AI literacy helps designers avoid mistaking generated content for higher-order learning.",
+                  "AI can generate examples, but your learners still need to analyze, evaluate, and create. AI literacy prevents designers from confusing generated content with real learning.",
               },
               {
                 label: "Learner-Centered Design",
                 description:
-                  "AI should serve learner needs rather than tool novelty. Designers must consider learner context, accessibility, trust, privacy, and the support learners need to use AI-generated guidance productively.",
+                  "Use AI to support the end learner, not to showcase the tool. Designers must consider learner context, accessibility, trust, and privacy, and ensure learners can actually use the guidance provided.",
               },
             ],
           },
