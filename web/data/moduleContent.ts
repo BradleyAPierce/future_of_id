@@ -649,7 +649,7 @@ export const moduleContentBySlug: Record<string, ModuleContent> = {
     slug: "adaptive-learning",
     intro: {
       overview:
-        "Adaptive and personalized learning architecture helps instructional designers create learning systems that respond to learner needs, readiness, progress, and context. This module focuses on the design decisions behind adaptation: what should change, why it should change, what evidence justifies the change, and when personalization is worth the added complexity.",
+        "Adaptive and personalized learning lets you design experiences that respond to your learners' readiness, progress, and context. This module focuses on the decisions behind adaptation: what to change, why it matters, what evidence supports that decision, and whether the added complexity is actually worth it.",
       outcomes: [
         "Explain how adaptive learning and personalization differ from static course design.",
         "Identify learner variables that can inform pathways, support, recommendations, or practice.",
@@ -662,43 +662,43 @@ export const moduleContentBySlug: Record<string, ModuleContent> = {
         title: "Theory",
         badge: "Layer 1",
         intro:
-          "This layer frames adaptive learning as an architecture problem: designing rules, evidence, pathways, and supports that help learners progress without losing instructional coherence.",
+          "This layer treats adaptive learning as a design problem: define rules, evidence, pathways, and supports that help your learners progress without breaking the flow of the experience.",
         sections: [
           {
             id: "definition",
             title: "Capability Definition",
             description:
-              "Adaptive and personalized learning architecture is the practice of designing learning experiences that adjust based on learner state, performance, preferences, needs, or context. The goal is not to make every experience unique; it is to provide the right support, challenge, or pathway when the evidence suggests a learner needs it.",
+              "Adaptive and personalized learning means designing experiences that adjust based on your learners' performance, progress, and context. Don't try to make every experience unique. Provide the right support, challenge, or pathway when your evidence shows your learners need it.",
           },
           {
             id: "why-it-matters",
             title: "Why It Matters",
             description:
-              "Learners often enter with different prior knowledge, confidence, roles, goals, constraints, and performance gaps. Adaptive design helps reduce unnecessary friction by routing learners toward appropriate practice, remediation, enrichment, or support while keeping the experience tied to shared outcomes.",
+              "Your learners enter with different levels of prior knowledge, confidence, role context, goals, and performance gaps. Adaptive design reduces friction by directing your learners to the right practice, remediation, or support while keeping everyone focused on the same outcomes.",
           },
           {
             id: "learner-variability",
             title: "Learner Variability",
             description:
-              "Learner variability includes differences in prior knowledge, skill level, role context, language, accessibility needs, motivation, confidence, and available time. Useful personalization starts by identifying which differences actually affect the learning goal and which should not drive separate pathways.",
+              "Learner variability includes differences in prior knowledge, skill level, role context, language, accessibility needs, motivation, confidence, and available time. Start by identifying which differences actually affect the learning goal and ignore the ones that don't need separate pathways.",
           },
           {
             id: "diagnostics-and-learner-state",
             title: "Diagnostics and Learner State",
             description:
-              "Adaptive systems need evidence about the learner's current state. That evidence might come from diagnostic questions, self-assessment, role selection, confidence ratings, quiz performance, practice behavior, or prior completion data. The designer must decide which signals are trustworthy enough to shape the experience.",
+              "You need clear evidence of where your learners are right now. That evidence might come from diagnostic questions, self-assessment, role selection, confidence ratings, quiz performance, practice behavior, or prior completion data. Decide which signals you trust enough to shape the experience.",
           },
           {
             id: "pathways-and-recommendations",
             title: "Pathways and Recommendations",
             description:
-              "Pathways sequence learning based on need, while recommendations guide learners toward useful next actions. Both require clear rules: what triggers the adaptation, what changes for the learner, and how the system avoids over-personalizing in ways that hide essential content or reinforce weak assumptions.",
+              "Pathways sequence learning based on gaps or readiness, while recommendations point your learners to their next step. Define clear rules: what triggers the change, what changes for your learners, and how you prevent over-personalization that hides essential content or reinforces weak assumptions.",
           },
           {
             id: "adaptation-tradeoffs",
             title: "Adaptation Tradeoffs",
             description:
-              "Adaptation adds design, content, data, maintenance, and QA complexity. It is most valuable when learners differ in meaningful ways, when the stakes justify differentiated support, and when the system has enough evidence to make a better decision than a well-designed common path.",
+              "Adaptation adds real complexity: more design work, more content, more data, and more maintenance. Adaptation works best when your learners differ in meaningful ways, when the stakes justify extra support, and when you have enough evidence to make a better decision than a strong common path.",
           },
           {
             id: "theory-bridge",
@@ -707,12 +707,12 @@ export const moduleContentBySlug: Record<string, ModuleContent> = {
               {
                 label: "Mastery learning",
                 description:
-                  "Mastery learning emphasizes reaching a defined level of competence before moving on. Adaptive pathways can support mastery by routing learners to remediation, additional practice, or enrichment based on evidence of progress.",
+                  "Mastery learning emphasizes reaching a defined level of competence before moving on. Use adaptive pathways to support mastery by directing your learners to remediation, additional practice, or enrichment based on their progress.",
               },
               {
                 label: "Differentiated instruction",
                 description:
-                  "Differentiated instruction adjusts content, process, practice, or support based on learner needs. Adaptive architecture translates that principle into system rules and content pathways.",
+                  "Differentiated instruction adjusts content, practice, or support based on what your learners actually need. Adaptive design turns that idea into clear rules and pathways you can actually build.",
               },
               {
                 label: "Learner variability",
@@ -722,7 +722,7 @@ export const moduleContentBySlug: Record<string, ModuleContent> = {
               {
                 label: "Learner-centered design",
                 description:
-                  "Learner-centered design keeps adaptation focused on learner progress rather than technical novelty. Personalization should make the experience clearer, more relevant, or better supported.",
+                  "Focus adaptation on your learners' progress, not on adding technical novelty. Personalization should make the experience clearer, more relevant, or better supported.",
               },
             ],
           },

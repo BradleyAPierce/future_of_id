@@ -75,7 +75,7 @@ export default function ReflectionFeedbackAI({
 
       <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
         <p className="text-sm text-[var(--muted)]">
-          {trimmedResponse.length} / 1200 characters
+          {trimmedResponse.length} / 1200 characters ({MIN_RESPONSE_LENGTH} minimum)
         </p>
 
         <button

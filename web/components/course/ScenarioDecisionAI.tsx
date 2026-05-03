@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-const MIN_RESPONSE_LENGTH = 10;
+const MIN_RESPONSE_LENGTH = 20;
 
 type ScenarioDecisionAIProps = {
   moduleSlug: string;
@@ -153,7 +153,7 @@ export default function ScenarioDecisionAI({
 
       <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
         <p className="text-sm text-[var(--muted)]">
-          {trimmedResponse.length} / 1200 characters
+          {trimmedResponse.length} / 1200 characters ({MIN_RESPONSE_LENGTH} minimum)
         </p>
 
         <button
