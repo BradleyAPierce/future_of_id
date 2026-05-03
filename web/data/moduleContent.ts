@@ -186,7 +186,7 @@ export const moduleContentBySlug: Record<string, ModuleContent> = {
     slug: "performance-consulting",
     intro: {
       overview:
-        "Performance consulting shifts instructional designers from taking course requests at face value to investigating the business problem, the performance gap, and the conditions that influence behavior. This module focuses on asking better questions, aligning learning work to measurable outcomes, and knowing when training is only part of the solution.",
+        "Performance consulting means you don't take course requests at face value. You investigate the business problem, define the performance gap, and identify the conditions influencing behavior. In this module, you'll ask targeted questions, align work to measurable outcomes, and decide when training is not the solution.",
       outcomes: [
         "Distinguish a course request from an underlying performance problem.",
         "Use stakeholder discovery questions to clarify business goals and constraints.",
@@ -199,37 +199,37 @@ export const moduleContentBySlug: Record<string, ModuleContent> = {
         title: "Theory",
         badge: "Layer 1",
         intro:
-          "This layer frames performance consulting as a strategic L&D capability: diagnosing the real problem before designing the learning solution.",
+          "This layer shows how to diagnose the real problem before you design a learning solution.",
         sections: [
           {
             id: "definition",
             title: "Capability Definition",
             description:
-              "Performance consulting is the practice of partnering with stakeholders to define the desired business result, identify the performance required to achieve it, and determine whether learning, process, tools, incentives, or environmental changes are needed. The designer's role expands from building content to improving performance conditions.",
+              "In practice, performance consulting means you define the business result, identify the required performance, and decide whether learning, process changes, tools, incentives, or environment will drive that result. Your role shifts from building content to improving the conditions that drive performance.",
           },
           {
             id: "business-alignment",
             title: "Business Alignment",
             description:
-              "Business alignment means connecting learning work to the operational goal it is meant to support. Instead of starting with a requested course, the consultant clarifies what needs to change, who needs to perform differently, what success looks like, and how the organization will know the work mattered.",
+              "Start with the operational goal. Then connect your work directly to the result it must support. Don't start with a course request. Clarify what needs to change, who must perform differently, what success looks like, and how it will be measured.",
           },
           {
             id: "stakeholder-discovery",
             title: "Stakeholder Discovery",
             description:
-              "Strong discovery conversations surface the business context behind the request. Useful questions explore the current state, desired state, audience, constraints, consequences, prior attempts, available evidence, and the decisions stakeholders are willing to make if training alone will not solve the problem.",
+              "Use discovery questions to understand the business context behind the request. Ask about the current state, desired state, audience, constraints, consequences, prior attempts, and available evidence. Then ask what decisions stakeholders are willing to make if training won't solve the problem.",
           },
           {
             id: "needs-analysis",
             title: "Needs Analysis",
             description:
-              "Needs analysis separates symptoms from causes. A request for training may reveal a knowledge gap, but it may also reveal unclear expectations, broken workflows, low manager support, poor tools, misaligned incentives, or missing feedback loops.",
+              "Use needs analysis to separate symptoms from root causes. A training request might point to a knowledge gap or to unclear expectations, broken workflows, weak manager support, poor tools, misaligned incentives, or missing feedback loops.",
           },
           {
             id: "performance-gaps",
             title: "Performance Gaps",
             description:
-              "A performance gap is the difference between what people are currently doing and what they need to do to produce the desired result. Defining that gap in observable terms helps designers avoid vague goals and build interventions around real workplace behavior.",
+              "A performance gap is the difference between current behavior and the behavior required to achieve the desired result. Define the gap in observable terms so you avoid vague goals and design for real workplace behavior.",
           },
           {
             id: "theory-bridge",
@@ -238,22 +238,22 @@ export const moduleContentBySlug: Record<string, ModuleContent> = {
               {
                 label: "HPI / performance improvement",
                 description:
-                  "Human Performance Improvement helps designers look beyond training by examining environment, process, information, tools, motivation, and feedback. It supports a broader solution set than instruction alone.",
+                  "Use Human Performance Improvement to examine factors beyond training, including environment, process, information, tools, motivation, and feedback. This approach expands your solution options beyond instruction.",
               },
               {
                 label: "Kirkpatrick",
                 description:
-                  "Kirkpatrick helps connect learning work to behavior and results. Performance consulting strengthens evaluation by defining desired outcomes before the solution is built.",
+                  "Use Kirkpatrick to connect learning decisions to behavior and results. Performance consulting makes evaluation stronger because you define the outcome before choosing the solution.",
               },
               {
                 label: "Needs analysis",
                 description:
-                  "Needs analysis gives structure to discovery. It helps determine whether a gap is caused by knowledge, skill, motivation, process, tools, expectations, or other workplace conditions.",
+                  "Use needs analysis to keep discovery focused. Check whether the gap comes from knowledge, skill, motivation, process, tools, expectations, or other workplace conditions.",
               },
               {
                 label: "ROI thinking",
                 description:
-                  "ROI thinking encourages designers to consider value, cost, evidence, and business impact. It does not require every project to produce a financial calculation, but it does require clarity about what improvement is worth pursuing.",
+                  "Use ROI thinking to evaluate value, cost, evidence, and business impact. Not every project needs a financial calculation, but every project needs a clear definition of what improvement is worth pursuing.",
               },
             ],
           },
@@ -295,19 +295,19 @@ export const moduleContentBySlug: Record<string, ModuleContent> = {
             id: "instructional-strategy",
             title: "Instructional Strategy",
             description:
-              "The module begins with a conceptual shift, then moves into diagnostic practice. Learners are asked to slow down the request, inspect the problem, and make a reasoned recommendation before thinking about course design.",
+              "The module shifts your focus from course design to problem diagnosis, then walks you through how to analyze real requests. You slow down the request, inspect the problem, and make a clear recommendation before designing anything.",
           },
           {
             id: "theory-alignment",
             title: "Theory Alignment",
             description:
-              "The structure aligns with HPI by treating performance as a system influenced by more than knowledge. It aligns with Kirkpatrick by connecting learning decisions to behavior and results, and with needs analysis by requiring evidence before solution design.",
+              "This structure reflects HPI by treating performance as a system shaped by more than knowledge. It uses Kirkpatrick to connect learning decisions to behavior and results, and needs analysis to require evidence before solution design.",
           },
           {
             id: "content-structure",
             title: "Content Structure",
             description:
-              "The content is organized around the consulting flow: define the capability, clarify business alignment, investigate stakeholder context, analyze needs, identify performance gaps, practice triage, and reflect on how to respond to future requests.",
+              "We organize the content around the consulting flow: define the capability, clarify business alignment, investigate stakeholder context, analyze needs, identify performance gaps, practice triage, and reflect on how to respond to future requests.",
           },
           {
             id: "prompt-architecture",
@@ -325,7 +325,7 @@ export const moduleContentBySlug: Record<string, ModuleContent> = {
             id: "design-rationale",
             title: "Design Rationale",
             description:
-              "The experience emphasizes stakeholder discovery because performance consulting depends on the quality of the questions asked before design begins. This helps learners practice credibility-building behaviors they can use in real L&D conversations.",
+              "This module prioritizes stakeholder discovery because the quality of your questions determines whether you solve the right problem. This helps you practice the credibility-building behaviors you need in real L&D conversations.",
           },
         ],
       },
