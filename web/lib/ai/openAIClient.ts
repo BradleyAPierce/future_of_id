@@ -9,8 +9,13 @@ type Result<T> =
   | { ok: true; data: T }
   | { ok: false; error: ServiceError };
 
+type ChatCompletionJsonOptions = {
+  maxTokens?: number;
+};
+
 export async function createChatCompletionJson(
   messages: OpenAIMessage[],
+  options: ChatCompletionJsonOptions = {},
 ): Promise<Result<string>> {
   const apiKey = process.env.OPENAI_API_KEY;
 
@@ -33,7 +38,7 @@ export async function createChatCompletionJson(
         body: JSON.stringify({
           model: "gpt-4o-mini",
           temperature: 0.2,
-          max_tokens: 150,
+          max_tokens: options.maxTokens ?? 150,
           response_format: { type: "json_object" },
           messages,
         }),

@@ -11,6 +11,7 @@ import {
 
 const MIN_RESPONSE_LENGTH = 20;
 const MAX_RESPONSE_LENGTH = 1200;
+const SCENARIO_FEEDBACK_MAX_TOKENS = 240;
 const SCENARIO_RESPONSE_VALIDATION_ERROR =
   "Scenario response needs a more specific answer before feedback can be generated.";
 
@@ -313,7 +314,9 @@ export async function generateScenarioFeedback(
     moduleSlug: request.moduleSlug,
     response: request.response,
   });
-  const completion = await createChatCompletionJson(messages);
+  const completion = await createChatCompletionJson(messages, {
+    maxTokens: SCENARIO_FEEDBACK_MAX_TOKENS,
+  });
 
   if (!completion.ok) {
     return completion;
