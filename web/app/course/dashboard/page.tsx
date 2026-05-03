@@ -56,7 +56,7 @@ export default function Dashboard() {
             Course Modules
           </h2>
           <p className="mt-2 text-[var(--muted)]">
-            Explore each capability through clear explanations, hands-on
+            Explore each topic through clear explanations, hands-on
             practice, real examples, and guided reflection using AI.
           </p>
         </div>

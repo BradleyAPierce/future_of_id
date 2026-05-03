@@ -52,7 +52,7 @@ export const modules = [
     slug: "simulation-design",
     title: "Scenario, Simulation, and Conversation Design",
     description:
-      "Designing realistic practice environments for skill development.",
+      "Design realistic scenarios and conversations that help people practice job skills.",
     order: 4,
     estimatedTime: "20 min",
     type: "module",
@@ -80,9 +80,9 @@ export const modules = [
   },
   {
     slug: "human-centered-change",
-    title: "Human-Centered Change, Ethics, and Learner Trust",
+    title: "Human-Centered Change, Ethics, and Trust",
     description:
-      "Design learning that helps people adopt new ways of working while protecting trust and clarity.",
+      "Design learning experiences that support real behavior change and build trust with your learners.",
     order: 7,
     estimatedTime: "20 min",
     type: "module",
