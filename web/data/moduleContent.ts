@@ -489,7 +489,7 @@ export const moduleContentBySlug: Record<string, ModuleContent> = {
     slug: "simulation-design",
     intro: {
       overview:
-        "Scenario, simulation, and conversation design helps instructional designers create realistic practice environments where learners can make decisions, receive feedback, and experience consequences before applying skills in higher-stakes settings. This module focuses on the design choices that make practice authentic, useful, and appropriately complex.",
+        "Scenario, simulation, and conversation design helps instructional designers create realistic practice environments where your learners can make decisions, receive feedback, and experience consequences before applying skills in higher-stakes settings. This module shows you how to design realistic practice where decisions matter, constraints are visible, and feedback helps people improve before the stakes are real.",
       outcomes: [
         "Explain how scenario-based learning, simulations, and conversation design support skill transfer.",
         "Design decision points that reflect realistic constraints, consequences, and learner judgment.",
@@ -502,43 +502,43 @@ export const moduleContentBySlug: Record<string, ModuleContent> = {
         title: "Theory",
         badge: "Layer 1",
         intro:
-          "This layer frames realistic practice design as a way to help learners build judgment, not just consume information about what they should do.",
+          "This layer shows how realistic practice helps your learners build judgment, not just consume information about what they should do.",
         sections: [
           {
             id: "definition",
             title: "Capability Definition",
             description:
-              "Scenario, simulation, and conversation design is the practice of creating structured environments where learners respond to realistic situations. The designer defines the context, decision points, constraints, feedback, and consequences so learners can practice how they will think and act in real work.",
+              "Scenario, simulation, and conversation design is how you build practice around real decisions where your learners have to choose what to do, see what happens, and adjust. The designer defines the context, decision points, constraints, feedback, and consequences so your learners can practice how they will think and act in real work.",
           },
           {
             id: "why-it-matters",
             title: "Why It Matters",
             description:
-              "Many valuable workplace skills depend on timing, judgment, communication, and tradeoffs. Realistic practice gives learners a safe space to try decisions, see consequences, recover from mistakes, and build confidence before the stakes involve customers, teams, compliance, safety, trust, or business outcomes.",
+              "Most workplace skills aren't about knowing; they require making the right call in the moment, often with incomplete information. Realistic practice lets your learners make decisions, see the consequences, and adjust before those decisions affect customers, teams, or revenue.",
           },
           {
             id: "scenario-based-learning",
             title: "Scenario-Based Learning",
             description:
-              "Scenario-based learning places learners in a meaningful role and asks them to make decisions in context. Strong scenarios include a clear situation, relevant pressure, plausible options, and consequences that reveal why one response is more effective than another.",
+              "Scenario-based learning places your learners in a meaningful role and asks them to make decisions in context. Strong scenarios include a clear situation, relevant pressure, plausible options, and consequences that reveal why one response is more effective than another.",
           },
           {
             id: "branching-logic",
             title: "Branching Logic",
             description:
-              "Branching logic lets learner choices influence what happens next. Effective branching is not about creating endless paths; it is about selecting the few decisions that meaningfully change the conversation, reveal a misconception, create a consequence, or open a recovery path.",
+              "Branching logic lets choices influence what happens next. Don't build endless branches. Focus on the few decisions that actually change the outcome, where a choice exposes a mistake, creates a consequence, or forces the learner to recover.",
           },
           {
             id: "conversation-design",
             title: "Conversation Design",
             description:
-              "Conversation design focuses on how learners practice dialogue, questioning, coaching, negotiation, empathy, or de-escalation. AI-driven conversations can make this practice more responsive, but they still require clear goals, guardrails, feedback criteria, and an understanding of what a strong response looks like.",
+              "Conversation design focuses on how your learners practice dialogue, questioning, coaching, negotiation, empathy, or de-escalation. AI-driven conversations can react to what the learner says, but they only work if you define what a strong response looks like and how feedback should be applied.",
           },
           {
             id: "fidelity-tradeoffs",
             title: "Fidelity Tradeoffs",
             description:
-              "Low-fidelity practice can isolate a specific decision and reduce cognitive load. High-fidelity simulation can increase realism and emotional pressure. The design choice depends on the skill, the learner's readiness, the stakes of the task, and the amount of complexity needed to support transfer.",
+              "Choose fidelity based on what the learner needs to practice. Use low-fidelity practice to isolate a decision. Use higher fidelity only when context and pressure actually affect the outcome.",
           },
           {
             id: "theory-bridge",
@@ -547,22 +547,22 @@ export const moduleContentBySlug: Record<string, ModuleContent> = {
               {
                 label: "Experiential learning",
                 description:
-                  "Experiential learning emphasizes concrete experience, reflection, and application. Scenarios and simulations support this cycle by giving learners an experience they can examine before returning to the workplace.",
+                  "Experiential learning emphasizes concrete experience, reflection, and application. Scenarios and simulations support this cycle by giving your learners an experience they can examine before returning to the workplace.",
               },
               {
                 label: "Deliberate practice",
                 description:
-                  "Deliberate practice requires focused attempts, clear criteria, feedback, and refinement. Simulation design supports this when learners practice a targeted decision or behavior rather than simply moving through a story.",
+                  "Deliberate practice requires focused attempts, clear criteria, feedback, and refinement. Simulation design supports this when your learners practice a targeted decision or behavior rather than simply moving through a story.",
               },
               {
                 label: "Bloom's application/evaluation",
                 description:
-                  "Scenario-based practice asks learners to apply concepts, evaluate options, justify choices, and adapt decisions based on consequences instead of only recalling information.",
+                  "Scenario-based practice asks your learners to apply concepts, evaluate options, justify choices, and adapt decisions based on consequences instead of only recalling information.",
               },
               {
                 label: "Scenario-based learning",
                 description:
-                  "Scenario-based learning connects knowledge to context. It helps learners recognize when a concept matters, how to use it, and what tradeoffs appear in realistic conditions.",
+                  "Scenario-based learning connects knowledge to context. It helps your learners recognize when a concept matters, how to use it, and what tradeoffs appear in realistic conditions.",
               },
             ],
           },
@@ -572,25 +572,25 @@ export const moduleContentBySlug: Record<string, ModuleContent> = {
         title: "Experience",
         badge: "Layer 2",
         intro:
-          "This layer gives learners practice shaping a realistic scenario or AI-driven conversation around a workplace decision that matters.",
+          "This layer gives your learners practice shaping a realistic scenario or AI-driven conversation around a workplace decision that matters.",
         sections: [
           {
             id: "activity",
             title: "Practice Environment Design",
             description:
-              "Select a workplace skill and define the practice environment around it: learner role, situation, pressure, available information, decision point, possible responses, and the consequence or feedback each response should trigger.",
+              "Start with a real workplace decision. Then define the role, situation, pressure, available information, and what happens when the learner responds.",
           },
           {
             id: "decision-making",
             title: "Applied Decision-Making",
             description:
-              "Decide where the experience needs branching, where a linear scenario is enough, and where an AI-driven conversation would add value. The goal is to choose interaction patterns that serve the target performance instead of adding complexity for its own sake.",
+              "Decide where the experience needs branching, where a linear scenario is enough, and where an AI-driven conversation would add value. Only add branching or AI conversation when it changes how the learner practices the decision. If it doesn't, keep it simple.",
           },
           {
             id: "feedback",
             title: "Feedback and Insight",
             description:
-              "Evaluate the practice design against key criteria: the decision is authentic, the choices are plausible, the feedback explains consequences, the fidelity level is appropriate, and the learner can connect the experience back to workplace action.",
+              "Check your design: Is this a real decision? Would someone actually consider these options? Does the feedback explain what happens and why it matters?",
           },
         ],
       },
