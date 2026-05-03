@@ -16,29 +16,29 @@ export default function OrientationPage() {
     "Scenario, Simulation, and Conversation Design",
     "Adaptive and Personalized Learning Architecture",
     "Content Systems Thinking and Workflow Automation",
-    "Human-Centered Change, Ethics, and Learner Trust",
+    "Human-Centered Change, Ethics, and Trust",
   ];
 
   const experienceSteps = [
     {
       title: "Start with a capability",
       description:
-        "Each module introduces one capability shaping the future of instructional design.",
+        "Each module focuses on one capability you can apply in your instructional design work.",
     },
     {
       title: "Connect ideas to practice",
       description:
-        "Modules combine conceptual insights, examples, and practical ideas you can apply to your work.",
+        "Each module includes examples and practical approaches you can use in your work.",
     },
     {
       title: "Choose your path",
       description:
-        "Explore sequentially or focus on the capabilities most relevant to your current role and goals.",
+        "You can follow the modules in order or focus on the capabilities most relevant to your role.",
     },
     {
       title: "Practice with AI support",
       description:
-        "As the experience evolves, interactive exercises, simulations, and AI-supported tools are integrated into the course.",
+        "You’ll use interactive exercises, simulations, and AI-supported tools to practice each capability.",
     },
   ];
 
@@ -69,14 +69,17 @@ export default function OrientationPage() {
           <span>What this is</span>
         </h2>
         <ul className="mt-5 space-y-3 text-[var(--muted)]">
-          <li>• A capability-focused course for modern instructional design.</li>
           <li>
-            • A shift from course production alone toward systems thinking and
-            performance impact.
+            • This course focuses on the core capabilities instructional
+            designers need to design, build, and improve learning today.
           </li>
           <li>
-            • A practical entry point for integrating intelligent technologies
-            with strong learning design judgment.
+            • You’ll move beyond course production and learn how to design
+            learning that supports real job performance.
+          </li>
+          <li>
+            • You’ll learn how to start using AI and automation tools while
+            maintaining strong instructional design judgment.
           </li>
         </ul>
       </section>
@@ -100,8 +103,8 @@ export default function OrientationPage() {
             <span>How this works</span>
           </h2>
           <p className="mt-2 text-[var(--muted)]">
-            Each module moves from ideas to application through a consistent
-            structure.
+            Each module shows you how to apply ideas directly to your
+            instructional design work.
           </p>
         </div>
 
@@ -145,7 +148,7 @@ export default function OrientationPage() {
             <span>What you’ll explore</span>
           </h2>
           <p className="mt-2 text-[var(--muted)]">
-            Seven capability areas form the foundation of the experience.
+            The experience is organized around seven key capability areas.
           </p>
         </div>
 
@@ -175,13 +178,12 @@ export default function OrientationPage() {
               d="M5 12h14m0 0-5-5m5 5-5 5M4 5h7m-7 14h7"
             />
           </svg>
-          <span>Start your journey</span>
+          <span>Start with AI literacy</span>
         </h2>
 
         <p className="mt-4 max-w-2xl leading-relaxed text-[var(--muted)]">
-          Start with the first module on AI literacy and agent-enabled learning
-          design to understand how AI is transforming the practice of
-          instructional design.
+          Start with the AI literacy module to learn how to apply AI directly
+          in your instructional design work.
         </p>
 
         <div className="mt-8 flex flex-col gap-4 sm:flex-row">

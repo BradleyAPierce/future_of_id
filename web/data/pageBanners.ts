@@ -20,7 +20,7 @@ export const dashboardBanner: PageBannerConfig = {
 export const orientationBanner: PageBannerConfig = {
   title: "The Future of Instructional Design",
   subtitle:
-    "A guided experience for exploring the capabilities instructional designers need as AI, analytics, systems thinking, and human-centered change reshape the field.",
+    "This experience helps instructional designers build practical capabilities in AI, analytics, and modern learning design so they can improve real performance, not just create courses.",
   imageUrl:
     "https://raw.githubusercontent.com/BradleyAPierce/future-of-id-images/main/orientation-banner-overlay-web640x287.jpg",
   pills: ["Orientation"],
