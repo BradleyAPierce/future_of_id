@@ -598,43 +598,43 @@ export const moduleContentBySlug: Record<string, ModuleContent> = {
         title: "Reverse Engineering",
         badge: "Layer 3",
         intro:
-          "This layer makes the design logic visible so learners can see how scenario, simulation, and conversation experiences are built from performance needs rather than narrative decoration.",
+          "This layer shows the build decisions behind the module: what problem we were solving, what we chose to make concrete, what we kept simple, what we left out, and where AI helped without replacing instructional judgment.",
         sections: [
           {
             id: "instructional-strategy",
             title: "Instructional Strategy",
             description:
-              "The module moves from concept to design judgment. Learners first understand why realistic practice supports transfer, then identify the decision moments, feedback loops, and fidelity choices that make a practice environment instructionally useful.",
+              "We built this module around one performance problem: knowing the right answer is not enough when the real task requires judgment in the moment. We chose decision practice instead of a broad tour of simulation types so instructional designers can see how context, pressure, options, consequences, and feedback shape what an end learner actually does.",
           },
           {
             id: "theory-alignment",
             title: "Theory Alignment",
             description:
-              "The structure aligns with experiential learning by creating a concrete practice context, with deliberate practice by focusing on specific decisions and feedback, and with Bloom's higher-order levels by requiring learners to apply and evaluate choices under constraints.",
+              "We used theory as a design check, not as decoration. The design only works if the end learner has to compare options, make a choice, see a consequence, and explain why the response fits the situation.",
           },
           {
             id: "content-structure",
             title: "Content Structure",
             description:
-              "The content is organized around the simulation design workflow: define the capability, clarify the value of realistic practice, identify decision points, choose branching or conversation patterns, evaluate fidelity tradeoffs, and reflect on safe practice design.",
+              "We kept the structure close to the work an instructional designer would actually do: define the capability, name the workplace decision, decide what the end learner sees, choose how much branching is worth building, and define feedback before adding complexity. We avoided cataloging every simulation format and limited branching to choices that change the outcome; adding more paths would have made the lesson feel busy instead of useful.",
           },
           {
             id: "prompt-architecture",
             title: "Prompt Architecture",
             description:
-              "The implied design prompt pattern is: define the target performance, describe the learner role and context, identify the critical decision, draft plausible responses, map consequences, set feedback criteria, and decide whether AI conversation adds meaningful practice value.",
+              "AI helped pressure-test draft scenario prompts, especially whether the choices, consequences, and feedback were specific enough. It did not decide the instructional target or replace SME judgment. We used it to refine realism: name the target performance, sharpen the end learner's role and pressure, adjust plausible choices, map consequences, set feedback criteria, and then decide whether AI conversation adds anything the end learner actually needs.",
           },
           {
             id: "implementation-notes",
             title: "Technical Implementation Notes",
             description:
-              "The module content remains structured as data so scenario concepts, conversation design prompts, and reverse engineering notes can be rendered through the shared module route without embedding instructional copy in UI components.",
+              "We kept the build lightweight on purpose. The design challenge was not custom technology; it was writing scenarios with enough role, pressure, consequence, and feedback detail for critique to feel specific. The real work was helping the AI respond to the instructional designer's scenario decision instead of giving generic writing feedback.",
           },
           {
             id: "design-rationale",
             title: "Design Rationale",
             description:
-              "The experience emphasizes design tradeoffs because effective simulations are not defined by how elaborate they are. They are effective when they create focused, safe, feedback-rich practice for the decisions learners actually need to make.",
+              "We avoided making simulation design sound like bigger is always better. Branching, AI conversation, and high fidelity all add cost and maintenance, so we limited complexity to places where it changes how the end learner practices. This approach breaks if the decision is fake or the consequence is vague. A reliable starting point is to name the decision that matters, make the consequences visible, and add complexity only when it changes practice.",
           },
         ],
       },
