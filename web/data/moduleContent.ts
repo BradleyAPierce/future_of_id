@@ -595,46 +595,128 @@ export const moduleContentBySlug: Record<string, ModuleContent> = {
         ],
       },
       reverseEngineering: {
-        title: "Reverse Engineering",
+        title: "Reverse Build",
         badge: "Layer 3",
         intro:
-          "This layer shows the build decisions behind the module: what problem we were solving, what we chose to make concrete, what we kept simple, what we left out, and where AI helped without replacing instructional judgment.",
+          "We focused this module on one problem: new sales reps don't struggle because they lack knowledge; they struggle because they don't know what to say next. You see it in the first few minutes of a customer conversation. They hesitate, over-explain, or go in the wrong direction. So instead of trying to cover the full sales process, we kept this tight. This module is about practicing that moment where a rep has to make a call and move the conversation forward.",
         sections: [
           {
-            id: "instructional-strategy",
-            title: "Instructional Strategy",
+            id: "key-design-decisions",
+            title: "Key Design Decisions",
             description:
-              "We built this module around one performance problem: knowing the right answer is not enough when the real task requires judgment in the moment. We chose decision practice instead of a broad tour of simulation types so instructional designers can see how context, pressure, options, consequences, and feedback shape what an end learner actually does.",
+              "A few decisions shaped everything here. We did consider building a full end-to-end simulation, but it added complexity without improving the core skill, so we cut it.",
+            items: [
+              {
+                label: "Narrow the scope",
+                description:
+                  "We stayed in the early conversation instead of building a full simulation. That's where most breakdowns happen.",
+              },
+              {
+                label: "Build around one decision at a time",
+                description:
+                  "Not a full conversation tree. Just moments where the learner has to decide what to do next.",
+              },
+              {
+                label: "Keep branching limited",
+                description:
+                  "We only added branches where a choice actually changes what happens. Anything else just adds noise.",
+              },
+              {
+                label: "Keep it realistic, not dramatic",
+                description:
+                  "No over-the-top scenarios. Just situations that feel like something a rep would actually run into.",
+              },
+            ],
           },
           {
-            id: "theory-alignment",
-            title: "Theory Alignment",
+            id: "proven-practice-vs-new-approach",
+            title: "Proven Practice vs New Approach",
             description:
-              "We used theory as a design check, not as decoration. The design only works if the end learner has to compare options, make a choice, see a consequence, and explain why the response fits the situation.",
+              "There's nothing new about scenario-based learning. This is built on practices that already work: scenarios, decision points, and feedback tied to consequences. The difference is we cut everything that didn't force a real decision. Instead of trying to build something immersive, we focused on making sure the learner has to make a decision and see what happens next. AI is optional here. You don't need it to do this well. In a lot of cases, solid scenario design gets you most of the way there.",
           },
           {
-            id: "content-structure",
-            title: "Content Structure",
+            id: "tradeoffs-and-constraints",
+            title: "Tradeoffs and Constraints",
             description:
-              "We kept the structure close to the work an instructional designer would actually do: define the capability, name the workplace decision, decide what the end learner sees, choose how much branching is worth building, and define feedback before adding complexity. We avoided cataloging every simulation format and limited branching to choices that change the outcome; adding more paths would have made the lesson feel busy instead of useful.",
+              "This didn't come together in a clean sequence. Most of the work was going back and fixing weak decisions after we saw how the scenario actually played out. The first version of this didn't work. The decisions were too obvious, so there was nothing to actually think through.",
+            items: [
+              {
+                label: "No full conversation simulation",
+                description:
+                  "Too much complexity, not enough added value.",
+              },
+              {
+                label: "Limited number of decisions",
+                description:
+                  "More choices can feel realistic, but they make feedback harder to follow. If we added more branches, the feedback would get messy fast and the build time would spike.",
+              },
+              {
+                label: "Controlled fidelity",
+                description:
+                  "Enough detail to feel real, but not so much that it slows everything down.",
+              },
+              {
+                label: "Buildable structure",
+                description:
+                  "Most teams don't have time to create large simulations, so we kept the structure simple enough to reuse.",
+              },
+            ],
           },
           {
-            id: "prompt-architecture",
-            title: "Prompt Architecture",
+            id: "how-ai-supported-the-build",
+            title: "How AI Supported the Build",
             description:
-              "AI helped pressure-test draft scenario prompts, especially whether the choices, consequences, and feedback were specific enough. It did not decide the instructional target or replace SME judgment. We used it to refine realism: name the target performance, sharpen the end learner's role and pressure, adjust plausible choices, map consequences, set feedback criteria, and then decide whether AI conversation adds anything the end learner actually needs.",
+              "AI helped in a few specific ways. But the first outputs were generic. Most of the real work was rewriting choices and consequences so they sounded like something a real customer would actually say, and making sure the feedback explained what changed. AI didn't decide what a good response looks like. That still comes from the designer and the SME.",
+            items: [
+              {
+                label: "Scenario drafts",
+                description:
+                  "AI helped draft early versions of scenarios.",
+              },
+              {
+                label: "Response options",
+                description:
+                  "AI helped generate different response options.",
+              },
+              {
+                label: "Realism checks",
+                description:
+                  "AI helped stress-test whether choices felt realistic.",
+              },
+            ],
           },
           {
-            id: "implementation-notes",
-            title: "Technical Implementation Notes",
+            id: "what-another-designer-can-reuse",
+            title: "What Another Designer Can Reuse",
             description:
-              "We kept the build lightweight on purpose. The design challenge was not custom technology; it was writing scenarios with enough role, pressure, consequence, and feedback detail for critique to feel specific. The real work was helping the AI respond to the instructional designer's scenario decision instead of giving generic writing feedback.",
+              "If you're building something like this, you don't need to overcomplicate it. You can do a lot with just a few moves.",
+            items: [
+              {
+                label: "Start with one decision that actually matters.",
+              },
+              {
+                label: "Build the scenario around that moment.",
+              },
+              {
+                label: "Only branch when the outcome changes.",
+              },
+              {
+                label:
+                  "Write feedback that explains what happens, not just what's correct.",
+              },
+            ],
           },
           {
-            id: "design-rationale",
-            title: "Design Rationale",
+            id: "where-this-could-break",
+            title: "Where This Could Break",
             description:
-              "We avoided making simulation design sound like bigger is always better. Branching, AI conversation, and high fidelity all add cost and maintenance, so we limited complexity to places where it changes how the end learner practices. This approach breaks if the decision is fake or the consequence is vague. A reliable starting point is to name the decision that matters, make the consequences visible, and add complexity only when it changes practice.",
+              "This approach doesn't work everywhere. This starts to fall apart if the decision isn't real, the scenario doesn't feel believable, or the learner already knows how to handle the situation. It also breaks if you overbuild it. More branching, more AI, and more realism can sound better, but they can make the experience harder to follow and harder to maintain.",
+          },
+          {
+            id: "reflection",
+            title: "Reflection",
+            description:
+              "What's one decision you keep explaining in your training—but never actually let people practice? And what's stopping you from building that experience?",
           },
         ],
       },
