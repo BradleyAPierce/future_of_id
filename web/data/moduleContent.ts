@@ -340,7 +340,7 @@ export const moduleContentBySlug: Record<string, ModuleContent> = {
     slug: "learning-analytics",
     intro: {
       overview:
-        "Learning analytics helps instructional designers move from assumptions to evidence. This module focuses on using data to understand learner behavior, evaluate design decisions, and make practical improvements that connect learning activity to outcomes and business value.",
+        "Learning analytics helps instructional designers replace assumptions with evidence. This module shows how to use data to understand your learners' behavior, evaluate design decisions, and make improvements tied to performance and business outcomes.",
       outcomes: [
         "Explain how learning analytics supports evidence-based design decisions.",
         "Distinguish useful learning measures from vanity metrics.",
@@ -353,37 +353,37 @@ export const moduleContentBySlug: Record<string, ModuleContent> = {
         title: "Theory",
         badge: "Layer 1",
         intro:
-          "This layer frames learning analytics as a design capability: using evidence to ask better questions, evaluate impact, and improve learning systems over time.",
+          "This layer shows how to use evidence to evaluate impact and improve the learning experiences you design over time.",
         sections: [
           {
             id: "definition",
             title: "Capability Definition",
             description:
-              "Learning analytics is the practice of collecting, interpreting, and applying data about learner activity, performance, behavior, and outcomes. For instructional designers, the goal is not reporting for its own sake; it is using evidence to improve decisions about content, practice, support, assessment, and impact.",
+              "Learning analytics involves collecting, interpreting, and applying data about your learners' activity, performance, behavior, and outcomes. For instructional designers, the goal is to use evidence to improve decisions about content, practice, support, assessment, and performance outcomes.",
           },
           {
             id: "why-it-matters",
             title: "Why It Matters",
             description:
-              "Modern L&D teams are expected to show whether learning experiences are working and where they should improve. Analytics helps designers identify friction, validate assumptions, prioritize revisions, and connect learning work to measurable value instead of relying only on completion counts or satisfaction scores.",
+              "Modern L&D teams need to show whether learning experiences are working and where they should improve. Analytics helps designers identify friction, validate assumptions, prioritize revisions, and connect learning activity to measurable performance instead of relying only on completion rates or satisfaction scores.",
           },
           {
             id: "measurement-strategy",
             title: "Measurement Strategy",
             description:
-              "A measurement strategy defines what evidence is needed before the experience is built. Strong strategies connect the business goal, desired performance, learning objectives, practice opportunities, assessment evidence, and post-launch indicators into one decision-making system.",
+              "A measurement strategy defines what evidence you need before you build the experience. Strong strategies connect business goals, performance expectations, learning objectives, practice, assessment, and post-launch data so you can make better design decisions.",
           },
           {
             id: "dashboard-interpretation",
             title: "Dashboard Interpretation",
             description:
-              "Dashboards are useful only when designers know what decisions they support. Completion, time spent, quiz scores, drop-off points, practice attempts, confidence ratings, and performance metrics each tell a partial story. The designer's task is to interpret patterns in context rather than treating any single metric as proof of success.",
+              "Dashboards only matter when you know what decisions they support. Completion, time spent, quiz scores, drop-off points, practice attempts, confidence ratings, and performance metrics each show only part of what is happening. Your job is to compare multiple signals before deciding whether the design is working.",
           },
           {
             id: "evidence-based-iteration",
             title: "Evidence-Based Iteration",
             description:
-              "Analytics becomes valuable when it leads to better design choices. Evidence may suggest that instructions need clarification, practice is too easy or too difficult, feedback is not specific enough, learners need job support, or the assessment does not match the desired performance.",
+              "Analytics is valuable only when it leads to better design decisions. The data may show that instructions need clarification, practice is too easy or too difficult, feedback lacks specificity, your learners need job support, or the assessment does not match the target performance.",
           },
           {
             id: "theory-bridge",
@@ -392,17 +392,17 @@ export const moduleContentBySlug: Record<string, ModuleContent> = {
               {
                 label: "Kirkpatrick",
                 description:
-                  "Kirkpatrick helps organize analytics across reaction, learning, behavior, and results. It reminds designers to look beyond whether learners liked the experience and toward whether behavior and outcomes changed.",
+                  "Use Kirkpatrick to sort evidence across reaction, learning, behavior, and results. It reminds designers to look beyond whether learners liked the experience and toward whether behavior and outcomes changed.",
               },
               {
                 label: "Evaluation strategy",
                 description:
-                  "Evaluation strategy defines what evidence will be collected, when it will be collected, and how it will inform decisions. It keeps analytics tied to purpose instead of producing disconnected reports.",
+                  "An evaluation strategy defines what evidence you will collect, when you will collect it, and how you will use it to make decisions. It keeps analytics focused on decisions instead of producing disconnected reports.",
               },
               {
                 label: "Evidence-based iteration",
                 description:
-                  "Evidence-based iteration treats learning design as an improvement cycle. Data reveals where the design is supporting learners, where it is creating friction, and what revision is most likely to improve outcomes.",
+                  "Use data to continuously improve your learning design. Data shows where your design supports your learners, where it creates friction, and which changes are most likely to improve performance.",
               },
             ],
           },
@@ -412,7 +412,7 @@ export const moduleContentBySlug: Record<string, ModuleContent> = {
         title: "Experience",
         badge: "Layer 2",
         intro:
-          "This layer gives learners practice reading analytics evidence and turning it into a focused design recommendation.",
+          "This layer gives you practice reading analytics evidence and turning it into a focused design recommendation.",
         sections: [
           {
             id: "activity",
@@ -444,7 +444,7 @@ export const moduleContentBySlug: Record<string, ModuleContent> = {
             id: "instructional-strategy",
             title: "Instructional Strategy",
             description:
-              "The module moves from analytics concepts to evidence interpretation and then to design action. Learners are not asked to become data analysts; they are asked to use data responsibly as instructional decision-makers.",
+              "The module moves from reading evidence to choosing a design action. You do not need to become a data analyst. You need to use data responsibly when making instructional design decisions.",
           },
           {
             id: "theory-alignment",
@@ -474,7 +474,7 @@ export const moduleContentBySlug: Record<string, ModuleContent> = {
             id: "design-rationale",
             title: "Design Rationale",
             description:
-              "The experience emphasizes interpretation because analytics quality depends on judgment. The goal is to help learners explain what a metric can and cannot tell them, then make a design recommendation that is proportional to the evidence.",
+              "This module emphasizes interpretation because metrics only become useful when you apply judgment. The goal is to help you explain what a metric can and cannot tell you, then recommend a design change that fits the evidence.",
           },
         ],
       },
