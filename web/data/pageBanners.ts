@@ -13,7 +13,7 @@ export const DEFAULT_BANNER_IMAGE =
 export const dashboardBanner: PageBannerConfig = {
   title: "Future of Instructional Design",
   subtitle:
-    "A guided learning experience for practicing AI, analytics, systems, and human-centered capabilities shaping modern instructional design.",
+    "A guided learning experience to help instructional designers build practical skills in AI, analytics, systems thinking, and human-centered design.",
   imageUrl: DEFAULT_BANNER_IMAGE,
 };
 
