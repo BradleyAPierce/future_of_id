@@ -6,6 +6,7 @@ import { use } from "react";
 import LessonIntro from "@/components/course/LessonIntro";
 import LessonSection from "@/components/course/LessonSection";
 import ReflectionFeedbackAI from "@/components/course/ReflectionFeedbackAI";
+import ReverseBuildModalCards from "@/components/course/ReverseBuildModalCards";
 import ScenarioDecisionAI from "@/components/course/ScenarioDecisionAI";
 import BackToTopButton from "@/components/ui/BackToTopButton";
 import PageBanner from "@/components/ui/PageBanner";
@@ -220,36 +221,7 @@ export default function ModulePage({ params }: ModulePageProps) {
               ))}
 
             {index === 2 && (
-              <div className="grid gap-4 md:grid-cols-2">
-                {layer.sections.map((section) => (
-                  <div
-                    key={section.id}
-                    className="space-y-3 rounded-lg border border-[var(--accent)] bg-[var(--surface-elevated)] p-5">
-                    <h4 className="text-lg font-semibold text-[var(--text)]">
-                      {section.title}
-                    </h4>
-
-                    {section.description && <p>{section.description}</p>}
-
-                    {section.items && section.items.length > 0 && (
-                      <ul className="space-y-3">
-                        {section.items.map((item) => (
-                          <li
-                            key={item.label}
-                            className="rounded-lg border border-[var(--border)] bg-[var(--surface)] p-4">
-                            <p className="font-medium text-[var(--text)]">
-                              {item.label}
-                            </p>
-                            {item.description && (
-                              <p className="mt-1">{item.description}</p>
-                            )}
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                  </div>
-                ))}
-              </div>
+              <ReverseBuildModalCards sections={layer.sections} />
             )}
 
             {scenarioDecisions.length > 0 && index === 1 && (

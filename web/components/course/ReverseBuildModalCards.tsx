@@ -1,0 +1,162 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+import type { ModuleLayerSection } from "@/data/moduleContent";
+
+type ReverseBuildModalCardsProps = {
+  sections: ModuleLayerSection[];
+};
+
+export default function ReverseBuildModalCards({
+  sections,
+}: ReverseBuildModalCardsProps) {
+  const [activeSection, setActiveSection] = useState<ModuleLayerSection | null>(
+    null,
+  );
+  const closeButtonRef = useRef<HTMLButtonElement | null>(null);
+  const lastFocusedElementRef = useRef<HTMLElement | null>(null);
+
+  useEffect(() => {
+    if (!activeSection) {
+      return;
+    }
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        closeModal();
+      }
+    }
+
+    window.addEventListener("keydown", handleKeyDown);
+    window.requestAnimationFrame(() => closeButtonRef.current?.focus());
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [activeSection]);
+
+  function openModal(section: ModuleLayerSection) {
+    lastFocusedElementRef.current =
+      document.activeElement instanceof HTMLElement
+        ? document.activeElement
+        : null;
+    setActiveSection(section);
+  }
+
+  function closeModal() {
+    setActiveSection(null);
+    window.requestAnimationFrame(() => lastFocusedElementRef.current?.focus());
+  }
+
+  return (
+    <>
+      <div className="grid gap-4 md:grid-cols-2">
+        {sections.map((section) => {
+          const itemCount = section.items?.length ?? 0;
+
+          return (
+            <article
+              key={section.id}
+              className="flex min-h-[220px] flex-col rounded-lg border border-[var(--accent)] bg-[var(--surface-elevated)] p-5 shadow-sm">
+              <div className="flex-1 space-y-3">
+                <div className="flex flex-wrap items-start justify-between gap-3">
+                  <h4 className="text-lg font-semibold text-[var(--text)]">
+                    {section.title}
+                  </h4>
+
+                  {itemCount > 0 && (
+                    <span className="rounded-full border border-[var(--accent)] bg-[color-mix(in_srgb,var(--accent)_10%,transparent)] px-3 py-1 text-xs font-medium text-[var(--accent-hover)]">
+                      {itemCount} {itemCount === 1 ? "note" : "notes"}
+                    </span>
+                  )}
+                </div>
+
+                {section.description && (
+                  <p
+                    className="text-sm leading-relaxed text-[var(--muted)]"
+                    style={{
+                      display: "-webkit-box",
+                      WebkitBoxOrient: "vertical",
+                      WebkitLineClamp: 3,
+                      overflow: "hidden",
+                    }}>
+                    {section.description}
+                  </p>
+                )}
+              </div>
+
+              <button
+                type="button"
+                onClick={() => openModal(section)}
+                className="mt-5 w-fit rounded-lg border border-[var(--accent)] px-4 py-2 text-sm font-semibold text-[var(--accent-hover)] transition hover:bg-[color-mix(in_srgb,var(--accent)_10%,transparent)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)]">
+                View Design Notes
+              </button>
+            </article>
+          );
+        })}
+      </div>
+
+      {activeSection && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/55 p-4"
+          onClick={(event) => {
+            if (event.target === event.currentTarget) {
+              closeModal();
+            }
+          }}>
+          <section
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="reverse-build-modal-title"
+            className="max-h-[80vh] w-full max-w-[720px] overflow-y-auto rounded-xl border border-[var(--accent)] bg-[var(--surface)] p-6 text-[var(--text)] shadow-2xl">
+            <div className="mb-5 flex items-start justify-between gap-4">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-wide text-[var(--accent-hover)]">
+                  Reverse Build
+                </p>
+                <h4
+                  id="reverse-build-modal-title"
+                  className="mt-2 text-2xl font-semibold text-[var(--text)]">
+                  {activeSection.title}
+                </h4>
+              </div>
+
+              <button
+                ref={closeButtonRef}
+                type="button"
+                onClick={closeModal}
+                className="rounded-lg border border-[var(--border)] px-3 py-2 text-sm font-semibold text-[var(--text)] transition hover:border-[var(--accent)] hover:bg-[var(--surface-elevated)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)]">
+                Close
+              </button>
+            </div>
+
+            <div className="space-y-5 leading-relaxed text-[var(--muted)]">
+              {activeSection.description && <p>{activeSection.description}</p>}
+
+              {activeSection.items && activeSection.items.length > 0 && (
+                <ul className="space-y-3">
+                  {activeSection.items.map((item) => (
+                    <li
+                      key={item.label}
+                      className="rounded-lg border border-[var(--border)] bg-[var(--surface-elevated)] p-4">
+                      <p className="font-medium text-[var(--text)]">
+                        {item.label}
+                      </p>
+                      {item.description && (
+                        <p className="mt-1">{item.description}</p>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          </section>
+        </div>
+      )}
+    </>
+  );
+}
