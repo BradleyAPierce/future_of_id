@@ -600,8 +600,7 @@ export const moduleContentBySlug: Record<string, ModuleContent> = {
           {
             id: "what-another-designer-can-reuse",
             title: "What Another Designer Can Reuse",
-            description:
-              "The most reusable element is the consulting pattern.",
+            description: "The most reusable element is the consulting pattern.",
             items: [
               {
                 label: "Define the business outcome",
@@ -620,8 +619,7 @@ export const moduleContentBySlug: Record<string, ModuleContent> = {
               },
               {
                 label: "Test assumptions before accepting the request",
-                description:
-                  "Separate what is known from what is assumed.",
+                description: "Separate what is known from what is assumed.",
               },
               {
                 label: "Recommend the smallest useful intervention",
@@ -820,7 +818,7 @@ export const moduleContentBySlug: Record<string, ModuleContent> = {
               {
                 label: "We prioritized behavior over activity",
                 description:
-                  "The scenario pushes beyond \"did they finish?\" toward \"did anything change on the job?\"",
+                  'The scenario pushes beyond "did they finish?" toward "did anything change on the job?"',
               },
             ],
           },
@@ -1155,8 +1153,7 @@ export const moduleContentBySlug: Record<string, ModuleContent> = {
             items: [
               {
                 label: "No full conversation simulation",
-                description:
-                  "Too much complexity, not enough added value.",
+                description: "Too much complexity, not enough added value.",
               },
               {
                 label: "Limited number of decisions",
@@ -1183,13 +1180,11 @@ export const moduleContentBySlug: Record<string, ModuleContent> = {
             items: [
               {
                 label: "Scenario drafts",
-                description:
-                  "AI helped draft early versions of scenarios.",
+                description: "AI helped draft early versions of scenarios.",
               },
               {
                 label: "Response options",
-                description:
-                  "AI helped generate different response options.",
+                description: "AI helped generate different response options.",
               },
               {
                 label: "Realism checks",
@@ -1353,7 +1348,7 @@ export const moduleContentBySlug: Record<string, ModuleContent> = {
         title: "Reverse Build",
         badge: "Layer 3",
         intro:
-          "Most teams ask for \"adaptive learning\" without being able to define what should actually change, or why. The result is usually one of two extremes: a single static path that ignores real learner differences, or an overbuilt experience with unnecessary branching, weak logic, and no clear evidence behind it. This module was designed to correct that problem. Instead of teaching adaptive learning as a feature or system, it focuses on the core design work: deciding which learner differences matter, what evidence you trust, and when a change in the experience is actually justified. The goal is not to make every experience personalized. The goal is to make better decisions about when adaptation improves learning, and when it doesn't.",
+          'Most teams ask for "adaptive learning" without being able to define what should actually change, or why. The result is usually one of two extremes: a single static path that ignores real learner differences, or an overbuilt experience with unnecessary branching, weak logic, and no clear evidence behind it. This module was designed to correct that problem. Instead of teaching adaptive learning as a feature or system, it focuses on the core design work: deciding which learner differences matter, what evidence you trust, and when a change in the experience is actually justified. The goal is not to make every experience personalized. The goal is to make better decisions about when adaptation improves learning, and when it doesn\'t.',
         sections: [
           {
             id: "what-this-module-is-solving",
@@ -1706,12 +1701,14 @@ export const moduleContentBySlug: Record<string, ModuleContent> = {
                   "This works for one-off delivery, but it creates problems when content needs to scale, repeat, or stay aligned across multiple experiences.",
               },
               {
-                label: "New approach: Identify repeated content before building",
+                label:
+                  "New approach: Identify repeated content before building",
                 description:
                   "This module pushes designers to find repeated explanations, prompts, examples, and feedback before creating more content.",
               },
               {
-                label: "New approach: Define reusable chunks with clear boundaries",
+                label:
+                  "New approach: Define reusable chunks with clear boundaries",
                 description:
                   "Content can live beyond a single course when designers define what it means, where it belongs, and when it should be reused.",
               },
@@ -1725,8 +1722,7 @@ export const moduleContentBySlug: Record<string, ModuleContent> = {
           {
             id: "tradeoffs-and-constraints",
             title: "Tradeoffs and Constraints",
-            description:
-              "This approach comes with real tradeoffs.",
+            description: "This approach comes with real tradeoffs.",
             items: [
               {
                 label: "Slower upfront, faster later",
@@ -1758,8 +1754,7 @@ export const moduleContentBySlug: Record<string, ModuleContent> = {
           {
             id: "how-ai-supported-the-build",
             title: "How AI Supported the Build",
-            description:
-              "AI was used as a support tool, not a decision-maker.",
+            description: "AI was used as a support tool, not a decision-maker.",
             items: [
               {
                 label: "Pattern identification",
@@ -1786,8 +1781,7 @@ export const moduleContentBySlug: Record<string, ModuleContent> = {
           {
             id: "what-another-designer-can-reuse",
             title: "What Another Designer Can Reuse",
-            description:
-              "You don't need a full system to apply this approach.",
+            description: "You don't need a full system to apply this approach.",
             items: [
               {
                 label: "Reusable content patterns",
@@ -2176,7 +2170,7 @@ export const moduleContentBySlug: Record<string, ModuleContent> = {
             id: "reflection-question",
             title: "Reflection Question",
             description:
-              "Where in your current or upcoming learning experience could a learner reasonably think: \"I don't understand what this system is doing,\" \"This feels unfair or inaccurate,\" or \"I'm not sure how much I should trust this\"? What is one design change you would make before launch to address that moment?",
+              'Where in your current or upcoming learning experience could a learner reasonably think: "I don\'t understand what this system is doing," "This feels unfair or inaccurate," or "I\'m not sure how much I should trust this"? What is one design change you would make before launch to address that moment?',
           },
         ],
       },
