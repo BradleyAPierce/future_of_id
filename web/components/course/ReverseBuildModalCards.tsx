@@ -1,7 +1,9 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import type { ModuleLayerSection } from "@/types/moduleContent";
+import Badge from "@/components/ui/Badge";
+import Button from "@/components/ui/Button";
 
 type ReverseBuildModalCardsProps = {
   sections: ModuleLayerSection[];
@@ -15,6 +17,11 @@ export default function ReverseBuildModalCards({
   );
   const closeButtonRef = useRef<HTMLButtonElement | null>(null);
   const lastFocusedElementRef = useRef<HTMLElement | null>(null);
+
+  const closeModal = useCallback(() => {
+    setActiveSection(null);
+    window.requestAnimationFrame(() => lastFocusedElementRef.current?.focus());
+  }, []);
 
   useEffect(() => {
     if (!activeSection) {
@@ -37,7 +44,7 @@ export default function ReverseBuildModalCards({
       document.body.style.overflow = previousOverflow;
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, [activeSection]);
+  }, [activeSection, closeModal]);
 
   function openModal(section: ModuleLayerSection) {
     lastFocusedElementRef.current =
@@ -45,11 +52,6 @@ export default function ReverseBuildModalCards({
         ? document.activeElement
         : null;
     setActiveSection(section);
-  }
-
-  function closeModal() {
-    setActiveSection(null);
-    window.requestAnimationFrame(() => lastFocusedElementRef.current?.focus());
   }
 
   return (
@@ -69,9 +71,9 @@ export default function ReverseBuildModalCards({
                   </h4>
 
                   {itemCount > 0 && (
-                    <span className="rounded-full border border-[var(--accent)] bg-[color-mix(in_srgb,var(--accent)_10%,transparent)] px-3 py-1 text-xs font-medium text-[var(--accent-hover)]">
+                    <Badge tone="accent">
                       {itemCount} {itemCount === 1 ? "note" : "notes"}
-                    </span>
+                    </Badge>
                   )}
                 </div>
 
@@ -89,12 +91,14 @@ export default function ReverseBuildModalCards({
                 )}
               </div>
 
-              <button
+              <Button
                 type="button"
                 onClick={() => openModal(section)}
-                className="mt-5 w-fit rounded-lg border border-[var(--accent)] px-4 py-2 text-sm font-semibold text-[var(--accent-hover)] transition hover:bg-[color-mix(in_srgb,var(--accent)_10%,transparent)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)]">
+                variant="accent"
+                size="sm"
+                className="mt-5 w-fit">
                 View Design Notes
-              </button>
+              </Button>
             </article>
           );
         })}
@@ -125,13 +129,14 @@ export default function ReverseBuildModalCards({
                 </h4>
               </div>
 
-              <button
+              <Button
                 ref={closeButtonRef}
                 type="button"
                 onClick={closeModal}
-                className="rounded-lg border border-[var(--border)] px-3 py-2 text-sm font-semibold text-[var(--text)] transition hover:border-[var(--accent)] hover:bg-[var(--surface-elevated)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)]">
+                variant="secondary"
+                size="sm">
                 Close
-              </button>
+              </Button>
             </div>
 
             <div className="space-y-5 leading-relaxed text-[var(--muted)]">

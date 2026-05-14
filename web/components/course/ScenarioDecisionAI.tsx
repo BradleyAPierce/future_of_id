@@ -1,6 +1,10 @@
 "use client";
 
 import { useState } from "react";
+import Button from "@/components/ui/Button";
+import FeedbackPanel from "@/components/ui/FeedbackPanel";
+import Surface from "@/components/ui/Surface";
+import TextAreaField from "@/components/ui/TextAreaField";
 
 const MIN_RESPONSE_LENGTH = 20;
 
@@ -26,10 +30,6 @@ export default function ScenarioDecisionAI({
   moduleSlug,
   scenarios,
 }: ScenarioDecisionAIProps) {
-  if (scenarios.length === 0) {
-    return null;
-  }
-
   const [selectedScenarioId, setSelectedScenarioId] = useState(
     scenarios[0]?.id ?? "",
   );
@@ -37,6 +37,10 @@ export default function ScenarioDecisionAI({
   const [feedback, setFeedback] = useState<ScenarioFeedback | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
+
+  if (scenarios.length === 0) {
+    return null;
+  }
 
   const selectedScenario = scenarios.find(
     (scenario) => scenario.id === selectedScenarioId,
@@ -100,7 +104,7 @@ export default function ScenarioDecisionAI({
   }
 
   return (
-    <div className="mt-6 space-y-6 rounded-lg border border-[var(--border)] bg-[var(--surface)] p-4 text-[var(--text)] shadow-sm">
+    <Surface padding="sm" className="mt-6 space-y-6 rounded-lg">
       <div className="space-y-3">
         <p className="text-sm font-medium uppercase tracking-wide text-[var(--primary-hover)]">
           Practice sequence
@@ -135,20 +139,19 @@ export default function ScenarioDecisionAI({
         </div>
       </div>
 
-      <div className="rounded-lg border border-[var(--primary)] bg-[color-mix(in_srgb,var(--primary)_14%,var(--surface-elevated))] p-5 shadow-sm">
+      <Surface tone="primary" padding="md" className="rounded-lg">
         <p className="text-sm font-medium uppercase tracking-wide text-[var(--primary-hover)]">
           Scenario
         </p>
         <p className="mt-3 text-[var(--text)]">{selectedScenario?.scenario}</p>
-      </div>
+      </Surface>
 
-      <textarea
+      <TextAreaField
         value={response}
-        onChange={(event) => setResponse(event.target.value)}
+        onChange={setResponse}
         rows={5}
         maxLength={1200}
         placeholder="Describe your design decision..."
-        className="w-full rounded-lg border border-[var(--border)] bg-[var(--bg)] p-3 text-[var(--text)] placeholder:text-[var(--muted)] focus:border-[var(--primary)] focus:outline-none"
       />
 
       <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
@@ -156,40 +159,42 @@ export default function ScenarioDecisionAI({
           {trimmedResponse.length} / 1200 characters ({MIN_RESPONSE_LENGTH} minimum)
         </p>
 
-        <button
+        <Button
           type="button"
           onClick={handleSubmit}
           disabled={!canSubmit}
-          className="rounded-lg bg-[var(--primary-hover)] px-5 py-3 font-medium text-[var(--bg)] transition hover:bg-[var(--primary)] disabled:cursor-not-allowed disabled:bg-[var(--border)] disabled:text-[var(--muted)]">
+          variant="primary">
           {isLoading ? "Getting Feedback..." : "Get AI Feedback"}
-        </button>
+        </Button>
       </div>
 
       {error && <p className="text-sm text-[var(--danger-hover)]">{error}</p>}
 
       {feedback && (
         <>
-          <div className="space-y-6 rounded-lg bg-[var(--surface-elevated)] p-4 shadow-sm">
+          <Surface tone="elevated" padding="sm" className="space-y-6 rounded-lg">
             <p className="text-[var(--text)]">{feedback.summary}</p>
 
-            <ul className="list-disc space-y-2 rounded-lg border border-[var(--success)] bg-[color-mix(in_srgb,var(--success)_12%,transparent)] p-4 pl-8 text-[var(--success-hover)]">
-              {feedback.strengths.map((strength) => (
-                <li key={strength}>{strength}</li>
-              ))}
-            </ul>
+            <FeedbackPanel tone="success">
+              <ul className="list-disc space-y-2 pl-4">
+                {feedback.strengths.map((strength) => (
+                  <li key={strength}>{strength}</li>
+                ))}
+              </ul>
+            </FeedbackPanel>
 
-            <p className="rounded-lg border border-[var(--danger)] bg-[color-mix(in_srgb,var(--danger)_14%,transparent)] p-4 text-[var(--danger-hover)]">
+            <FeedbackPanel tone="danger">
               <span className="font-medium text-[var(--text)]">Gap: </span>
               {feedback.gap}
-            </p>
+            </FeedbackPanel>
 
-            <p className="rounded-lg border border-[var(--accent)] bg-[color-mix(in_srgb,var(--accent)_12%,transparent)] p-4 text-[var(--accent-hover)]">
+            <FeedbackPanel tone="accent">
               <span className="font-medium text-[var(--text)]">Next step: </span>
               {feedback.nextStep}
-            </p>
-          </div>
+            </FeedbackPanel>
+          </Surface>
 
-          <div className="space-y-3 rounded-lg border border-[var(--border)] p-4">
+          <Surface padding="sm" className="space-y-3 rounded-lg shadow-none">
             <p className="text-sm font-medium uppercase tracking-wide text-[var(--primary-hover)]">
               Apply the feedback
             </p>
@@ -213,9 +218,9 @@ export default function ScenarioDecisionAI({
                 Move to {nextScenario.focus}
               </button>
             )}
-          </div>
+          </Surface>
         </>
       )}
-    </div>
+    </Surface>
   );
 }

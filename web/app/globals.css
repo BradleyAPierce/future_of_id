@@ -20,6 +20,15 @@
   --danger: #8D5F5A;
   --danger-hover: #754E4A;
 
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+
+  --shadow-sm: 0 1px 2px rgb(31 31 31 / 0.06);
+  --shadow-md: 0 10px 24px rgb(31 31 31 / 0.10);
+  --shadow-lg: 0 18px 40px rgb(31 31 31 / 0.16);
+
   --background: var(--bg);
   --foreground: var(--text);
 }
@@ -72,5 +81,5 @@ body {
   min-height: 100vh;
   background: var(--bg);
   color: var(--text);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
 }
