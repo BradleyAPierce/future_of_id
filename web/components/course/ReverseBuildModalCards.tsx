@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import type { ModuleLayerSection } from "@/data/moduleContent";
+import type { ModuleLayerSection } from "@/types/moduleContent";
 
 type ReverseBuildModalCardsProps = {
   sections: ModuleLayerSection[];

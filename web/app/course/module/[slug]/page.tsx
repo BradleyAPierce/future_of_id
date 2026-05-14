@@ -10,7 +10,7 @@ import ReverseBuildModalCards from "@/components/course/ReverseBuildModalCards";
 import ScenarioDecisionAI from "@/components/course/ScenarioDecisionAI";
 import BackToTopButton from "@/components/ui/BackToTopButton";
 import PageBanner from "@/components/ui/PageBanner";
-import { moduleContentBySlug } from "@/data/moduleContent";
+import { moduleContentBySlug } from "@/content/modules";
 import { modules } from "@/data/modules";
 import { DEFAULT_BANNER_IMAGE, moduleBannersBySlug } from "@/data/pageBanners";
 import { SCENARIO_DECISIONS_BY_MODULE } from "@/lib/ai/scenarioFeedback";

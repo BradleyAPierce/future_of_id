@@ -1,4 +1,4 @@
-import { moduleContentBySlug } from "@/data/moduleContent";
+import { moduleContentBySlug } from "@/content/modules";
 import { modules } from "@/data/modules";
 import { createChatCompletionJson } from "./openAIClient";
 import { buildReflectionFeedbackMessages } from "./reflectionFeedbackPrompt";
