@@ -1,4 +1,5 @@
 import type { ModuleContent } from "@/types/moduleContent";
+import Surface from "@/components/ui/Surface";
 import ReflectionFeedbackAI from "./ReflectionFeedbackAI";
 
 type ModuleReflection = NonNullable<ModuleContent["reflection"]>;
@@ -13,8 +14,8 @@ export default function ModuleReflectionSection({
   reflection,
 }: ModuleReflectionSectionProps) {
   return (
-    <div className="rounded-xl border border-[var(--accent)] bg-[color-mix(in_srgb,var(--accent)_8%,var(--surface-elevated))] p-8 shadow-sm">
-      <div className="mb-4 flex items-center gap-3">
+    <Surface tone="accent" padding="lg" className="space-y-5 rounded-[var(--radius-xl)]">
+      <div className="flex items-center gap-3">
         <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[var(--accent)] bg-[color-mix(in_srgb,var(--accent)_12%,transparent)]">
           <svg
             aria-hidden="true"
@@ -40,6 +41,6 @@ export default function ModuleReflectionSection({
       </p>
 
       <ReflectionFeedbackAI moduleSlug={moduleSlug} />
-    </div>
+    </Surface>
   );
 }

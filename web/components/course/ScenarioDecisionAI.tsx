@@ -211,12 +211,14 @@ export default function ScenarioDecisionAI({
             </p>
 
             {nextScenario && (
-              <button
+              <Button
                 type="button"
                 onClick={() => handleScenarioChange(nextScenario.id)}
-                className="rounded-lg bg-[var(--success-hover)] px-4 py-2 text-sm font-medium text-[var(--bg)] transition hover:bg-[var(--success)]">
+                variant="secondary"
+                size="sm"
+                className="w-fit">
                 Move to {nextScenario.focus}
-              </button>
+              </Button>
             )}
           </Surface>
         </>

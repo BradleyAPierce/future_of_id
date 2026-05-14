@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import Badge from "@/components/ui/Badge";
 
 interface LessonSectionProps {
   title: string;
@@ -73,45 +74,40 @@ export default function LessonSection({
 }: LessonSectionProps) {
   const accentStyles = {
     default: "border border-[var(--border)] bg-[var(--surface)]",
-    blue: "border border-[var(--primary)] bg-[color-mix(in_srgb,var(--primary)_10%,var(--surface))]",
-    amber: "border border-[var(--accent)] bg-[color-mix(in_srgb,var(--accent)_10%,var(--surface))]",
+    blue: "border border-[var(--primary)] bg-[color-mix(in_srgb,var(--primary)_7%,var(--surface))]",
+    amber: "border border-[var(--accent)] bg-[color-mix(in_srgb,var(--accent)_7%,var(--surface))]",
   };
 
-  const badgeStyles = {
-    default: "bg-[var(--surface-elevated)] text-[var(--text)] border border-[var(--border)]",
-    blue: "bg-[color-mix(in_srgb,var(--primary)_12%,transparent)] text-[var(--primary)] border border-[var(--primary)]",
-    amber: "bg-[color-mix(in_srgb,var(--accent)_12%,transparent)] text-[var(--accent)] border border-[var(--accent)]",
-  };
+  const badgeTone = {
+    default: "default",
+    blue: "primary",
+    amber: "accent",
+  } as const;
 
   return (
     <div
-      className={`rounded-xl ${
-        emphasis === "dominant" ? "p-8 shadow-md" : "p-6"
+      className={`rounded-[var(--radius-xl)] ${
+        emphasis === "dominant" ? "p-7 shadow-[var(--shadow-md)]" : "p-6 shadow-[var(--shadow-sm)]"
       } ${accentStyles[accent]}`}>
-      {badge && (
-        <div className="flex flex-wrap items-center gap-3 mb-4">
-          <span
-            className={`inline-block text-xs font-semibold px-3 py-1 rounded-full ${badgeStyles[accent]}`}>
-            {badge}
-          </span>
-        </div>
-      )}
-
-      <div className="mb-4 flex items-center gap-3">
-        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[var(--border)] bg-[var(--surface-elevated)]">
+      <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-start">
+        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[var(--border)] bg-[var(--surface-elevated)]">
           <SectionIcon accent={accent} />
         </span>
-        <h3
-          className={`font-semibold text-[var(--text)] ${
-            emphasis === "dominant" ? "text-3xl" : "text-2xl"
-          }`}>
-          {title}
-        </h3>
+
+        <div className="min-w-0 space-y-2">
+          {badge && <Badge tone={badgeTone[accent]}>{badge}</Badge>}
+          <h3
+            className={`font-semibold leading-tight text-[var(--text)] ${
+              emphasis === "dominant" ? "text-2xl md:text-3xl" : "text-2xl"
+            }`}>
+            {title}
+          </h3>
+        </div>
       </div>
 
       <div
-        className={`leading-relaxed text-[var(--muted)] ${
-          emphasis === "dominant" ? "space-y-6" : "space-y-4"
+        className={`leading-7 text-[var(--muted)] ${
+          emphasis === "dominant" ? "space-y-5" : "space-y-4"
         }`}>
         {children}
       </div>

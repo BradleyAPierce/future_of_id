@@ -9,14 +9,14 @@ export default function ModuleSectionAccordion({
   section,
 }: ModuleSectionAccordionProps) {
   return (
-    <details className="group rounded-lg border border-[var(--border)] bg-[var(--surface-elevated)] p-2 open:border-[var(--primary)] open:bg-[color-mix(in_srgb,var(--primary)_8%,var(--surface-elevated))]">
-      <summary className="flex cursor-pointer list-none items-center gap-3 rounded-md p-3 transition hover:bg-[var(--surface)] focus:outline-none focus:ring-2 focus:ring-[var(--primary)]">
+    <details className="group rounded-[var(--radius-lg)] border border-[var(--border)] bg-[var(--surface-elevated)] p-2 open:border-[var(--primary)] open:bg-[color-mix(in_srgb,var(--primary)_6%,var(--surface-elevated))]">
+      <summary className="flex cursor-pointer list-none items-center gap-3 rounded-[var(--radius-md)] p-3 transition hover:bg-[var(--surface)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg)]">
         <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-[var(--primary)] text-base font-semibold text-[var(--primary)] transition group-open:border-[var(--primary-hover)] group-open:text-[var(--primary-hover)]">
           <span className="group-open:hidden">+</span>
           <span className="hidden group-open:inline">−</span>
         </span>
 
-        <span className="flex-1 text-lg font-semibold text-[var(--text)]">
+        <span className="flex-1 text-base font-semibold leading-snug text-[var(--text)] sm:text-lg">
           {section.title}
         </span>
 
@@ -31,8 +31,10 @@ export default function ModuleSectionAccordion({
         </svg>
       </summary>
 
-      <div className="px-3 pb-3 pt-2 space-y-3">
-        {section.description && <p>{section.description}</p>}
+      <div className="space-y-4 px-3 pb-4 pt-3">
+        {section.description && (
+          <p className="leading-7 text-[var(--muted)]">{section.description}</p>
+        )}
 
         <ModuleSectionItems items={section.items} />
       </div>

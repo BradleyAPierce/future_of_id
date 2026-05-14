@@ -1,11 +1,11 @@
 "use client";
 
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { use } from "react";
 import LessonIntro from "@/components/course/LessonIntro";
 import ModuleContentFlow from "@/components/course/ModuleContentFlow";
 import BackToTopButton from "@/components/ui/BackToTopButton";
+import Button from "@/components/ui/Button";
 import PageBanner from "@/components/ui/PageBanner";
 import { moduleContentBySlug } from "@/content/modules";
 import { modules } from "@/data/modules";
@@ -74,32 +74,28 @@ export default function ModulePage({ params }: ModulePageProps) {
         scenarioDecisions={scenarioDecisions}
       />
 
-      <section className="flex flex-col sm:flex-row gap-4">
-        <button
+      <section className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+        <Button
           type="button"
           onClick={() => markComplete(slug)}
           disabled={completed}
-          className={`rounded-lg px-5 py-3 font-medium transition ${
-            completed
-               ? "cursor-default bg-[var(--success)] text-[var(--bg)]"
-               : "bg-[var(--primary)] text-[var(--bg)] hover:bg-[var(--primary-hover)]"
-          }`}>
+          variant={completed ? "secondary" : "primary"}>
           {completed ? "✓ Module Completed" : "Mark Module Complete"}
-        </button>
+        </Button>
 
         {nextModule && (
-          <Link
+          <Button
             href={`/course/module/${nextModule.slug}`}
-            className="rounded-lg border border-[var(--border)] px-5 py-3 text-center font-medium text-[var(--text)] transition hover:border-[var(--primary)] hover:bg-[var(--surface-elevated)]">
+            variant="secondary">
             Next Module →
-          </Link>
+          </Button>
         )}
 
-        <Link
+        <Button
           href="/course/dashboard"
-          className="rounded-lg border border-[var(--border)] px-5 py-3 text-center font-medium text-[var(--text)] transition hover:border-[var(--primary)] hover:bg-[var(--surface-elevated)]">
+          variant="secondary">
           Back to Dashboard
-        </Link>
+        </Button>
       </section>
       <BackToTopButton />
     </div>

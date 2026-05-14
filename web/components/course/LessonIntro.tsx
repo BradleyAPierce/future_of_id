@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import Surface from "@/components/ui/Surface";
 
 interface LessonIntroProps {
   title: string;
@@ -12,7 +13,7 @@ export default function LessonIntro({
   children,
 }: LessonIntroProps) {
   return (
-    <div className="space-y-4 rounded-xl border border-[var(--border)] bg-[var(--surface)] p-6">
+    <Surface padding="lg" className="space-y-4">
       <h2 className="text-2xl font-semibold text-[var(--text)]">{title}</h2>
 
       <p className="leading-relaxed text-[var(--text)]">{description}</p>
@@ -20,6 +21,6 @@ export default function LessonIntro({
       {children && (
         <div className="text-sm leading-relaxed text-[var(--muted)]">{children}</div>
       )}
-    </div>
+    </Surface>
   );
 }

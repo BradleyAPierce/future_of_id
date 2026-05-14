@@ -29,7 +29,7 @@ export default function ModuleContentFlow({
   ];
 
   return (
-    <section className="space-y-14">
+    <section className="space-y-12">
       <ModuleOutcomesAccordion outcomes={moduleContent.intro.outcomes} />
 
       {orderedLayers.map(({ kind, layer }) => (
