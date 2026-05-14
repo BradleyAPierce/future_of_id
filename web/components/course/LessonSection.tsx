@@ -73,9 +73,32 @@ export default function LessonSection({
   emphasis = "default",
 }: LessonSectionProps) {
   const accentStyles = {
-    default: "border border-[var(--border)] bg-[var(--surface)]",
-    blue: "border border-[var(--primary)] bg-[color-mix(in_srgb,var(--primary)_7%,var(--surface))]",
-    amber: "border border-[var(--accent)] bg-[color-mix(in_srgb,var(--accent)_7%,var(--surface))]",
+    default: "border-[var(--border)] bg-[var(--surface)]",
+    blue: "border-[var(--primary)] bg-[var(--surface)]",
+    amber: "border-[var(--accent)] bg-[var(--surface)]",
+  };
+
+  const headerStyles = {
+    default:
+      "border-b-[var(--border)] bg-[linear-gradient(90deg,var(--surface-elevated),var(--surface))]",
+    blue:
+      "border-b-[var(--primary)] bg-[linear-gradient(90deg,color-mix(in_srgb,var(--primary)_14%,var(--surface-elevated)),var(--surface))]",
+    amber:
+      "border-b-[var(--accent)] bg-[linear-gradient(90deg,color-mix(in_srgb,var(--accent)_16%,var(--surface-elevated)),var(--surface))]",
+  };
+
+  const bodyRailStyles = {
+    default: "border-l-[var(--border)]",
+    blue: "border-l-[var(--primary)]",
+    amber: "border-l-[var(--accent)]",
+  };
+
+  const iconFrameStyles = {
+    default: "border-[var(--border)] bg-[var(--surface)]",
+    blue:
+      "border-[var(--primary)] bg-[color-mix(in_srgb,var(--primary)_12%,transparent)]",
+    amber:
+      "border-[var(--accent)] bg-[color-mix(in_srgb,var(--accent)_14%,transparent)]",
   };
 
   const badgeTone = {
@@ -85,32 +108,33 @@ export default function LessonSection({
   } as const;
 
   return (
-    <div
-      className={`rounded-[var(--radius-xl)] ${
-        emphasis === "dominant" ? "p-7 shadow-[var(--shadow-md)]" : "p-6 shadow-[var(--shadow-sm)]"
-      } ${accentStyles[accent]}`}>
-      <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-start">
-        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[var(--border)] bg-[var(--surface-elevated)]">
-          <SectionIcon accent={accent} />
-        </span>
+    <section
+      className={`overflow-hidden rounded-[var(--radius-xl)] border shadow-[var(--shadow-md)] ${accentStyles[accent]}`}>
+      <div className={`border-b p-5 sm:p-6 ${headerStyles[accent]}`}>
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
+          <span
+            className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-full border ${iconFrameStyles[accent]}`}>
+            <SectionIcon accent={accent} />
+          </span>
 
-        <div className="min-w-0 space-y-2">
-          {badge && <Badge tone={badgeTone[accent]}>{badge}</Badge>}
-          <h3
-            className={`font-semibold leading-tight text-[var(--text)] ${
-              emphasis === "dominant" ? "text-2xl md:text-3xl" : "text-2xl"
-            }`}>
-            {title}
-          </h3>
+          <div className="min-w-0 space-y-3">
+            {badge && <Badge tone={badgeTone[accent]}>{badge}</Badge>}
+            <h3
+              className={`font-semibold leading-tight text-[var(--text)] ${
+                emphasis === "dominant" ? "text-2xl md:text-3xl" : "text-2xl"
+              }`}>
+              {title}
+            </h3>
+          </div>
         </div>
       </div>
 
       <div
-        className={`leading-7 text-[var(--muted)] ${
+        className={`border-l-4 p-5 leading-7 text-[var(--muted)] sm:p-6 ${
           emphasis === "dominant" ? "space-y-5" : "space-y-4"
-        }`}>
+        } ${bodyRailStyles[accent]}`}>
         {children}
       </div>
-    </div>
+    </section>
   );
 }

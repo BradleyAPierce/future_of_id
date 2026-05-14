@@ -10,14 +10,14 @@ export default function ModuleExperienceSections({
   sections,
 }: ModuleExperienceSectionsProps) {
   return (
-    <>
+    <div className="grid gap-4">
       {sections.map((section) => (
         <Surface
           key={section.id}
-          tone="elevated"
-          padding="md"
-          className="space-y-4 rounded-[var(--radius-lg)] border-l-4 border-l-[var(--primary)] shadow-none">
-          <h4 className="text-lg font-semibold text-[var(--text)]">
+          tone="primary"
+          padding="lg"
+          className="space-y-4 rounded-[var(--radius-xl)] border-l-[6px] border-l-[var(--primary)] shadow-[var(--shadow-sm)]">
+          <h4 className="text-xl font-semibold leading-tight text-[var(--text)]">
             {section.title}
           </h4>
 
@@ -28,6 +28,6 @@ export default function ModuleExperienceSections({
           <ModuleSectionItems items={section.items} />
         </Surface>
       ))}
-    </>
+    </div>
   );
 }

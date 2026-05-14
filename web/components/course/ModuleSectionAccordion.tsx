@@ -9,8 +9,8 @@ export default function ModuleSectionAccordion({
   section,
 }: ModuleSectionAccordionProps) {
   return (
-    <details className="group rounded-[var(--radius-lg)] border border-[var(--border)] bg-[var(--surface-elevated)] p-2 open:border-[var(--primary)] open:bg-[color-mix(in_srgb,var(--primary)_6%,var(--surface-elevated))]">
-      <summary className="flex cursor-pointer list-none items-center gap-3 rounded-[var(--radius-md)] p-3 transition hover:bg-[var(--surface)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg)]">
+    <details className="group overflow-hidden rounded-[var(--radius-lg)] border border-[var(--border)] bg-[var(--surface)] shadow-[var(--shadow-sm)] open:border-[var(--primary)]">
+      <summary className="flex cursor-pointer list-none items-center gap-3 p-4 transition hover:bg-[var(--surface-elevated)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg)] sm:p-5">
         <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-[var(--primary)] text-base font-semibold text-[var(--primary)] transition group-open:border-[var(--primary-hover)] group-open:text-[var(--primary-hover)]">
           <span className="group-open:hidden">+</span>
           <span className="hidden group-open:inline">−</span>
@@ -31,7 +31,7 @@ export default function ModuleSectionAccordion({
         </svg>
       </summary>
 
-      <div className="space-y-4 px-3 pb-4 pt-3">
+      <div className="space-y-4 border-t border-[var(--border)] bg-[var(--surface-elevated)] px-4 pb-5 pt-4 sm:px-5">
         {section.description && (
           <p className="leading-7 text-[var(--muted)]">{section.description}</p>
         )}

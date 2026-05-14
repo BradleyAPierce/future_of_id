@@ -10,11 +10,11 @@ export default function ModuleSectionItems({ items }: ModuleSectionItemsProps) {
   }
 
   return (
-    <ul className="space-y-3">
+    <ul className="overflow-hidden rounded-[var(--radius-lg)] border border-[var(--border)] bg-[var(--surface)]">
       {items.map((item) => (
         <li
           key={item.label}
-          className="rounded-[var(--radius-md)] border border-[var(--border)] bg-[color-mix(in_srgb,var(--surface)_72%,var(--surface-elevated))] p-4">
+          className="border-b border-[var(--border)] p-4 last:border-b-0">
           <p className="font-medium text-[var(--text)]">{item.label}</p>
           {item.description && (
             <p className="mt-2 leading-7 text-[var(--muted)]">

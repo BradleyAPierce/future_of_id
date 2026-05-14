@@ -104,7 +104,10 @@ export default function ScenarioDecisionAI({
   }
 
   return (
-    <Surface padding="sm" className="mt-6 space-y-6 rounded-lg">
+    <Surface
+      tone="primary"
+      padding="md"
+      className="mt-6 space-y-6 rounded-[var(--radius-xl)] shadow-[var(--shadow-sm)]">
       <div className="space-y-3">
         <p className="text-sm font-medium uppercase tracking-wide text-[var(--primary-hover)]">
           Practice sequence
@@ -120,10 +123,10 @@ export default function ScenarioDecisionAI({
               key={scenarioOption.id}
               type="button"
               onClick={() => handleScenarioChange(scenarioOption.id)}
-              className={`rounded-lg border px-4 py-3 text-left text-sm transition ${
+              className={`rounded-[var(--radius-lg)] border px-4 py-3 text-left text-sm shadow-[var(--shadow-sm)] transition ${
                 selectedScenarioId === scenarioOption.id
-                  ? "border-[var(--primary)] bg-[color-mix(in_srgb,var(--primary)_14%,transparent)] text-[var(--text)]"
-                  : "border-[var(--border)] text-[var(--muted)] hover:border-[var(--primary)] hover:bg-[var(--surface-elevated)]"
+                  ? "border-[var(--primary)] bg-[var(--surface)] text-[var(--text)] shadow-[var(--shadow-md)]"
+                  : "border-[var(--border)] bg-[var(--surface)] text-[var(--muted)] hover:border-[var(--primary)] hover:bg-[var(--surface-elevated)] hover:shadow-[var(--shadow-md)]"
               }`}>
               <span className="block text-xs font-medium uppercase tracking-wide text-[var(--primary-hover)]">
                 {scenarioOption.progressionLabel}
@@ -139,7 +142,10 @@ export default function ScenarioDecisionAI({
         </div>
       </div>
 
-      <Surface tone="primary" padding="md" className="rounded-lg">
+      <Surface
+        tone="elevated"
+        padding="md"
+        className="rounded-[var(--radius-lg)] border-l-4 border-l-[var(--primary)]">
         <p className="text-sm font-medium uppercase tracking-wide text-[var(--primary-hover)]">
           Scenario
         </p>
@@ -172,7 +178,10 @@ export default function ScenarioDecisionAI({
 
       {feedback && (
         <>
-          <Surface tone="elevated" padding="sm" className="space-y-6 rounded-lg">
+          <Surface
+            tone="elevated"
+            padding="sm"
+            className="space-y-6 rounded-[var(--radius-lg)]">
             <p className="text-[var(--text)]">{feedback.summary}</p>
 
             <FeedbackPanel tone="success">
@@ -194,7 +203,9 @@ export default function ScenarioDecisionAI({
             </FeedbackPanel>
           </Surface>
 
-          <Surface padding="sm" className="space-y-3 rounded-lg shadow-none">
+          <Surface
+            padding="sm"
+            className="space-y-3 rounded-[var(--radius-lg)] shadow-none">
             <p className="text-sm font-medium uppercase tracking-wide text-[var(--primary-hover)]">
               Apply the feedback
             </p>

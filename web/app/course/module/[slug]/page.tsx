@@ -7,6 +7,7 @@ import ModuleContentFlow from "@/components/course/ModuleContentFlow";
 import BackToTopButton from "@/components/ui/BackToTopButton";
 import Button from "@/components/ui/Button";
 import PageBanner from "@/components/ui/PageBanner";
+import Surface from "@/components/ui/Surface";
 import { moduleContentBySlug } from "@/content/modules";
 import { modules } from "@/data/modules";
 import { DEFAULT_BANNER_IMAGE, moduleBannersBySlug } from "@/data/pageBanners";
@@ -56,14 +57,16 @@ export default function ModulePage({ params }: ModulePageProps) {
           pills={moduleBanner.pills}
         />
 
-        <p className="text-sm text-[var(--muted)]">
-          Estimated time: {currentModule.estimatedTime}
-        </p>
-
-        {/* LESSON INTRO */}
         <LessonIntro
           title={currentModule.title}
-          description={currentModule.description}>
+          description={currentModule.description}
+          metadata={[
+            currentModule.type === "orientation"
+              ? "Orientation"
+              : `Module ${currentModule.order}`,
+            `Estimated time: ${currentModule.estimatedTime}`,
+            ...(currentModule.practiceLabel ? [currentModule.practiceLabel] : []),
+          ]}>
           {moduleContent.intro.overview}
         </LessonIntro>
       </section>
@@ -74,29 +77,33 @@ export default function ModulePage({ params }: ModulePageProps) {
         scenarioDecisions={scenarioDecisions}
       />
 
-      <section className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-        <Button
-          type="button"
-          onClick={() => markComplete(slug)}
-          disabled={completed}
-          variant={completed ? "secondary" : "primary"}>
-          {completed ? "✓ Module Completed" : "Mark Module Complete"}
-        </Button>
-
-        {nextModule && (
+      <Surface
+        padding="md"
+        className="rounded-[var(--radius-xl)] border-t-4 border-t-[var(--primary)]">
+        <section className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
           <Button
-            href={`/course/module/${nextModule.slug}`}
-            variant="secondary">
-            Next Module →
+            type="button"
+            onClick={() => markComplete(slug)}
+            disabled={completed}
+            variant={completed ? "secondary" : "primary"}>
+            {completed ? "✓ Module Completed" : "Mark Module Complete"}
           </Button>
-        )}
 
-        <Button
-          href="/course/dashboard"
-          variant="secondary">
-          Back to Dashboard
-        </Button>
-      </section>
+          {nextModule && (
+            <Button
+              href={`/course/module/${nextModule.slug}`}
+              variant="secondary">
+              Next Module →
+            </Button>
+          )}
+
+          <Button
+            href="/course/dashboard"
+            variant="secondary">
+            Back to Dashboard
+          </Button>
+        </section>
+      </Surface>
       <BackToTopButton />
     </div>
   );
