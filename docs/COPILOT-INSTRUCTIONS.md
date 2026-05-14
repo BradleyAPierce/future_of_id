@@ -12,6 +12,7 @@ Copilot must align its work with the direction established in:
 - `docs/architecture/CONTENT_ARCHITECTURE.md`
 - `docs/architecture/SITE_MAP.md`
 - `docs/strategy/DECISIONS.md`
+- `docs/architecture/DESIGN_SYSTEM.md`
 - `docs/strategy/ROADMAP.md`
 - `docs/reference/INITIAL_REPO_STRUCTURE.md`
 - `README.md`
@@ -125,6 +126,12 @@ Components should primarily:
 - remain composable and reusable where appropriate
 
 Components should not silently own unrelated data rules or contain large volumes of embedded content that belongs in `content` or `data`.
+
+### UI and Design-System Alignment
+
+UI work must follow `docs/architecture/DESIGN_SYSTEM.md`.
+
+Use that guidance when creating or changing dashboard layouts, module pages, cards, buttons, surfaces, typography, spacing, motion, or interaction patterns. Prefer reusable visual patterns over one-off styling patches, and keep instructional clarity ahead of decoration.
 
 ---
 
