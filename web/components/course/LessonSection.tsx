@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import Badge from "@/components/ui/Badge";
 
 interface LessonSectionProps {
   title: string;
@@ -72,49 +73,68 @@ export default function LessonSection({
   emphasis = "default",
 }: LessonSectionProps) {
   const accentStyles = {
-    default: "border border-[var(--border)] bg-[var(--surface)]",
-    blue: "border border-[var(--primary)] bg-[color-mix(in_srgb,var(--primary)_10%,var(--surface))]",
-    amber: "border border-[var(--accent)] bg-[color-mix(in_srgb,var(--accent)_10%,var(--surface))]",
+    default: "border-[var(--border)] bg-[var(--surface)]",
+    blue: "border-[var(--primary)] bg-[var(--surface)]",
+    amber: "border-[var(--accent)] bg-[var(--surface)]",
   };
 
-  const badgeStyles = {
-    default: "bg-[var(--surface-elevated)] text-[var(--text)] border border-[var(--border)]",
-    blue: "bg-[color-mix(in_srgb,var(--primary)_12%,transparent)] text-[var(--primary)] border border-[var(--primary)]",
-    amber: "bg-[color-mix(in_srgb,var(--accent)_12%,transparent)] text-[var(--accent)] border border-[var(--accent)]",
+  const headerStyles = {
+    default:
+      "border-b-[var(--border)] bg-[linear-gradient(90deg,var(--surface-elevated),var(--surface))]",
+    blue:
+      "border-b-[var(--primary)] bg-[linear-gradient(90deg,color-mix(in_srgb,var(--primary)_14%,var(--surface-elevated)),var(--surface))]",
+    amber:
+      "border-b-[var(--accent)] bg-[linear-gradient(90deg,color-mix(in_srgb,var(--accent)_16%,var(--surface-elevated)),var(--surface))]",
   };
+
+  const bodyRailStyles = {
+    default: "border-l-[var(--border)]",
+    blue: "border-l-[var(--primary)]",
+    amber: "border-l-[var(--accent)]",
+  };
+
+  const iconFrameStyles = {
+    default: "border-[var(--border)] bg-[var(--surface)]",
+    blue:
+      "border-[var(--primary)] bg-[color-mix(in_srgb,var(--primary)_12%,transparent)]",
+    amber:
+      "border-[var(--accent)] bg-[color-mix(in_srgb,var(--accent)_14%,transparent)]",
+  };
+
+  const badgeTone = {
+    default: "default",
+    blue: "primary",
+    amber: "accent",
+  } as const;
 
   return (
-    <div
-      className={`rounded-xl ${
-        emphasis === "dominant" ? "p-8 shadow-md" : "p-6"
-      } ${accentStyles[accent]}`}>
-      {badge && (
-        <div className="flex flex-wrap items-center gap-3 mb-4">
+    <section
+      className={`overflow-hidden rounded-[var(--radius-xl)] border shadow-[var(--shadow-md)] ${accentStyles[accent]}`}>
+      <div className={`border-b p-5 sm:p-6 ${headerStyles[accent]}`}>
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
           <span
-            className={`inline-block text-xs font-semibold px-3 py-1 rounded-full ${badgeStyles[accent]}`}>
-            {badge}
+            className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-full border ${iconFrameStyles[accent]}`}>
+            <SectionIcon accent={accent} />
           </span>
-        </div>
-      )}
 
-      <div className="mb-4 flex items-center gap-3">
-        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[var(--border)] bg-[var(--surface-elevated)]">
-          <SectionIcon accent={accent} />
-        </span>
-        <h3
-          className={`font-semibold text-[var(--text)] ${
-            emphasis === "dominant" ? "text-3xl" : "text-2xl"
-          }`}>
-          {title}
-        </h3>
+          <div className="min-w-0 space-y-3">
+            {badge && <Badge tone={badgeTone[accent]}>{badge}</Badge>}
+            <h3
+              className={`font-semibold leading-tight text-[var(--text)] ${
+                emphasis === "dominant" ? "text-2xl md:text-3xl" : "text-2xl"
+              }`}>
+              {title}
+            </h3>
+          </div>
+        </div>
       </div>
 
       <div
-        className={`leading-relaxed text-[var(--muted)] ${
-          emphasis === "dominant" ? "space-y-6" : "space-y-4"
-        }`}>
+        className={`border-l-4 p-5 leading-7 text-[var(--muted)] sm:p-6 ${
+          emphasis === "dominant" ? "space-y-5" : "space-y-4"
+        } ${bodyRailStyles[accent]}`}>
         {children}
       </div>
-    </div>
+    </section>
   );
 }

@@ -1,4 +1,5 @@
 import type { ModuleLayerSection } from "@/types/moduleContent";
+import Surface from "@/components/ui/Surface";
 import ModuleSectionItems from "./ModuleSectionItems";
 
 type ModuleExperienceSectionsProps = {
@@ -9,20 +10,24 @@ export default function ModuleExperienceSections({
   sections,
 }: ModuleExperienceSectionsProps) {
   return (
-    <>
+    <div className="grid gap-4">
       {sections.map((section) => (
-        <div
+        <Surface
           key={section.id}
-          className="space-y-3 rounded-lg border border-[var(--primary)] bg-[var(--surface-elevated)] p-5">
-          <h4 className="text-lg font-semibold text-[var(--text)]">
+          tone="primary"
+          padding="lg"
+          className="space-y-4 rounded-[var(--radius-xl)] border-l-[6px] border-l-[var(--primary)] shadow-[var(--shadow-sm)]">
+          <h4 className="text-xl font-semibold leading-tight text-[var(--text)]">
             {section.title}
           </h4>
 
-          {section.description && <p>{section.description}</p>}
+          {section.description && (
+            <p className="leading-7 text-[var(--muted)]">{section.description}</p>
+          )}
 
           <ModuleSectionItems items={section.items} />
-        </div>
+        </Surface>
       ))}
-    </>
+    </div>
   );
 }

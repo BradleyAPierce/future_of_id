@@ -10,8 +10,8 @@ export default function ModuleOutcomesAccordion({
   }
 
   return (
-    <details className="group rounded-xl border border-[var(--border)] bg-[var(--surface)] p-2 open:border-[var(--primary)] open:bg-[var(--surface-elevated)]">
-      <summary className="flex cursor-pointer list-none items-center gap-4 rounded-lg p-4 transition hover:bg-[var(--surface-elevated)] focus:outline-none focus:ring-2 focus:ring-[var(--primary)]">
+    <details className="group overflow-hidden rounded-[var(--radius-xl)] border border-[var(--border)] border-l-[6px] border-l-[var(--success)] bg-[var(--surface)] shadow-[var(--shadow-sm)] open:border-[var(--success)]">
+      <summary className="flex cursor-pointer list-none items-center gap-4 bg-[color-mix(in_srgb,var(--success)_8%,var(--surface))] p-5 transition hover:bg-[color-mix(in_srgb,var(--success)_12%,var(--surface))] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg)] sm:p-6">
         <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-[var(--primary)] text-lg font-semibold text-[var(--primary)] transition group-open:border-[var(--primary-hover)] group-open:text-[var(--primary-hover)]">
           <span className="group-open:hidden">+</span>
           <span className="hidden group-open:inline">−</span>
@@ -50,7 +50,7 @@ export default function ModuleOutcomesAccordion({
         </svg>
       </summary>
 
-      <div className="px-4 pb-4 pt-2">
+      <div className="border-t border-[var(--border)] bg-[var(--surface)] px-5 pb-6 pt-5 sm:px-6">
         <p className="leading-relaxed text-[var(--muted)]">
           By the end of this module, you should be able to:
         </p>
