@@ -3,6 +3,7 @@
 import { modules } from "@/data/modules";
 import { useCourseProgress } from "@/lib/useCourseProgress";
 import ProgressBar from "@/components/course/ProgressBar";
+import Badge from "@/components/ui/Badge";
 import Button from "@/components/ui/Button";
 import Card from "@/components/ui/Card";
 import PageBanner from "@/components/ui/PageBanner";
@@ -79,9 +80,7 @@ export default function Dashboard() {
                         : `Module ${module.order}`}
                     </p>
                     {isCompleted && (
-                      <span className="rounded-full border border-[var(--success)] px-2 py-1 text-xs text-[var(--success)]">
-                        Complete
-                      </span>
+                      <Badge tone="success">Complete</Badge>
                     )}
                   </div>
 

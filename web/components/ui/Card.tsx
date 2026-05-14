@@ -1,3 +1,5 @@
+import Surface from "./Surface";
+
 type CardProps = {
   children: React.ReactNode;
   className?: string;
@@ -5,9 +7,11 @@ type CardProps = {
 
 export default function Card({ children, className = "" }: CardProps) {
   return (
-    <div
-      className={`rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-5 text-[var(--text)] shadow-sm transition hover:border-[var(--primary)] hover:shadow-md ${className}`}>
+    <Surface
+      padding="md"
+      interactive
+      className={`rounded-2xl ${className}`}>
       {children}
-    </div>
+    </Surface>
   );
 }
