@@ -26,6 +26,7 @@ AI must prioritize project documents in the following order:
 1. `docs/architecture/CONTENT_ARCHITECTURE.md` → module structure and learning model  
 2. `docs/architecture/SITE_MAP.md` → routing and page hierarchy  
 3. `docs/architecture/TECH_ARCHITECTURE.md` → stack and technical boundaries  
+4. `docs/architecture/DESIGN_SYSTEM.md` → visual, UX, and interface consistency rules
 
 These define the **core structure of the system** and must always be followed.
 
@@ -33,8 +34,8 @@ These define the **core structure of the system** and must always be followed.
 
 ### Tier 2 — Strategic Constraints
 
-4. `docs/strategy/DECISIONS.md` → locked constraints and decisions  
-5. `docs/strategy/BLUEPRINT.md` → product vision and experience design  
+5. `docs/strategy/DECISIONS.md` → locked constraints and decisions
+6. `docs/strategy/BLUEPRINT.md` → product vision and experience design
 
 Used to guide implementation decisions and resolve ambiguity.
 
@@ -42,9 +43,9 @@ Used to guide implementation decisions and resolve ambiguity.
 
 ### Tier 3 — Supporting Context
 
-6. `docs/strategy/ROADMAP.md` → development phases and sequencing  
-7. `docs/reference/INITIAL_REPO_STRUCTURE.md` → structural reference  
-8. `README.md` → project overview  
+7. `docs/strategy/ROADMAP.md` → development phases and sequencing
+8. `docs/reference/INITIAL_REPO_STRUCTURE.md` → structural reference
+9. `README.md` → project overview
 
 Helpful context, but must not override Tier 1 or Tier 2.
 
