@@ -1,0 +1,7 @@
+{
+  "name": "future_of_id",
+  "private": true,
+  "scripts": {
+    "build": "npm --prefix web run build"
+  }
+}

@@ -219,6 +219,10 @@ Then visit:
 
 http://localhost:3000/course/dashboard
 
+To build from the repository root (`future_of_id`), run:
+
+npm run build
+
 ⸻
 
 Why the Repo Is Public
