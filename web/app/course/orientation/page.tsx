@@ -16,29 +16,29 @@ export default function OrientationPage() {
     "Scenario, Simulation, and Conversation Design",
     "Adaptive and Personalized Learning Architecture",
     "Content Systems Thinking and Workflow Automation",
-    "Human-Centered Change, Ethics, and Trust",
+    "Human-Centered Change, Ethics, and Learner Trust",
   ];
 
   const experienceSteps = [
     {
-      title: "Start with a capability",
+      title: "Theory",
       description:
-        "Each module focuses on one capability you can apply in your instructional design work.",
+        "Start with the capability, why it matters, and the L&D foundations it extends.",
     },
     {
-      title: "Connect ideas to practice",
+      title: "Experience",
       description:
-        "Each module includes examples and practical approaches you can use in your work.",
+        "Apply the idea through a scenario, simulation, or decision activity. Some modules include AI-supported feedback.",
     },
     {
-      title: "Choose your path",
+      title: "Reverse Build / Design Notes",
       description:
-        "You can follow the modules in order or focus on the capabilities most relevant to your role.",
+        "Open the build notes to see the design decisions, tradeoffs, prompts, and constraints behind the experience.",
     },
     {
-      title: "Practice with AI support",
+      title: "Reflection",
       description:
-        "You’ll use interactive exercises, simulations, and AI-supported tools to practice each capability.",
+        "Capture what you would apply in your work and mark progress when you are ready to move on.",
     },
   ];
 
@@ -70,18 +70,51 @@ export default function OrientationPage() {
         </h2>
         <ul className="mt-5 space-y-3 text-[var(--muted)]">
           <li>
-            • This course focuses on the core capabilities instructional
-            designers need to design, build, and improve learning today.
+            • Future of ID is for instructional designers, curriculum
+            developers, and L&D professionals who want to strengthen how they
+            design for performance, practice, evidence, content systems,
+            AI-supported work, and learner trust.
           </li>
           <li>
-            • You’ll move beyond course production and learn how to design
-            learning that supports real job performance.
+            • The shift is not from instructional designer to technologist. It
+            is from course producer to learning systems designer: someone who
+            can choose the right tools, design better practice, connect learning
+            to performance, and improve outcomes with sound judgment.
           </li>
           <li>
-            • You’ll learn how to start using AI and automation tools while
-            maintaining strong instructional design judgment.
+            • The course builds on foundations that still matter: learning
+            science, analysis, practice design, accessibility, evaluation, and
+            stakeholder collaboration.
           </li>
         </ul>
+      </section>
+
+      <section className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-6 shadow-sm">
+        <h2 className="flex items-center gap-3 text-2xl font-semibold text-[var(--text)]">
+          <svg
+            aria-hidden="true"
+            className="h-6 w-6 text-[var(--primary)]"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth="1.8">
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M4 12h3l2-5 4 10 2-5h5M4 5h16M4 19h16"
+            />
+          </svg>
+          <span>Why this matters now</span>
+        </h2>
+        <p className="mt-5 leading-relaxed text-[var(--muted)]">
+          Instructional design work is expanding faster than traditional
+          professional development pathways can keep up. Learning teams are
+          being asked to use AI responsibly, connect work to performance,
+          interpret data, design realistic practice, adapt learning paths,
+          manage reusable content, and protect trust in AI-supported
+          experiences. The point is not to chase tools. It is to make better
+          design decisions when the work gets more complex.
+        </p>
       </section>
 
       <section className="space-y-6">
@@ -103,8 +136,8 @@ export default function OrientationPage() {
             <span>How this works</span>
           </h2>
           <p className="mt-2 text-[var(--muted)]">
-            Each module shows you how to apply ideas directly to your
-            instructional design work.
+            Each module uses the same guided flow so you can move from idea to
+            practice without losing the design rationale.
           </p>
         </div>
 
@@ -147,8 +180,12 @@ export default function OrientationPage() {
             </svg>
             <span>What you’ll explore</span>
           </h2>
-          <p className="mt-2 text-[var(--muted)]">
-            The experience is organized around seven key capability areas.
+          <p className="mt-2 max-w-4xl leading-relaxed text-[var(--muted)]">
+            These seven capabilities were selected because each one extends a
+            traditional instructional design strength into an area where modern
+            learning work is becoming more complex. Together, they create a
+            system: judgment, performance, evidence, practice, adaptation,
+            maintainability, and trust.
           </p>
         </div>
 
@@ -182,8 +219,9 @@ export default function OrientationPage() {
         </h2>
 
         <p className="mt-4 max-w-2xl leading-relaxed text-[var(--muted)]">
-          Start with the AI literacy module to learn how to apply AI directly
-          in your instructional design work.
+          Start with AI literacy because it sets the judgment standard for the
+          rest of the course: use new tools without handing over the quality
+          decisions that belong to the designer.
         </p>
 
         <div className="mt-8 flex flex-col gap-4 sm:flex-row">
