@@ -1,5 +1,6 @@
 import { landingContent } from "@/content/landing";
 import LandingCardGrid from "@/components/landing/LandingCardGrid";
+import LandingCapabilityPreview from "@/components/landing/LandingCapabilityPreview";
 import LandingFinalCta from "@/components/landing/LandingFinalCta";
 import LandingHeader from "@/components/landing/LandingHeader";
 import LandingHero from "@/components/landing/LandingHero";
@@ -54,6 +55,14 @@ export default function Home() {
               columns="three"
               tone="primary"
             />
+          </LandingSection>
+
+          <LandingSection
+            id="capabilities"
+            eyebrow={landingContent.capabilities.eyebrow}
+            title={landingContent.capabilities.title}
+            intro={landingContent.capabilities.intro}>
+            <LandingCapabilityPreview items={landingContent.capabilities.items} />
           </LandingSection>
 
           <LandingSection
