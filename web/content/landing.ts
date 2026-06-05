@@ -9,55 +9,66 @@ export type LandingCard = {
   label?: string;
 };
 
+export type LandingCapability = {
+  label: string;
+  title: string;
+  description: string;
+  focus: string;
+};
+
 export const landingContent = {
   header: {
     navItems: [
       { label: "What it is", href: "#what-it-is" },
-      { label: "What it is not", href: "#what-it-is-not" },
       { label: "Different paths", href: "#different-paths" },
+      { label: "Capabilities", href: "#capabilities" },
       { label: "Principles", href: "#platform-principles" },
       { label: "About", href: "/about" },
     ],
-    cta: { label: "Explore Modules", href: "/course/dashboard" },
+    cta: { label: "Start Orientation", href: "/course/orientation" },
   },
   hero: {
-    eyebrow: "Practical instructional design implementation",
+    eyebrow: "For instructional designers, L&D teams, and career changers",
     title: "Future of ID",
     description:
-      "A practical learning platform with modules, AI-supported practice, Reverse Builds, and documented design decisions from real instructional design work.",
+      "A practical learning platform for moving from course production to next-generation learning systems design.",
     support:
-      "This is not a prediction or a mandate. It shares one practitioner's evolving path through real projects, workflow decisions, constraints, and lessons learned.",
+      "Study seven modern capabilities through guided modules, AI-supported practice, Reverse Builds, and transparent design decisions from real instructional design work.",
     imageUrl:
       "https://raw.githubusercontent.com/BradleyAPierce/future-of-id-images/main/dashboard-banner-overlay-web640x287.jpg",
-    primaryCta: { label: "Explore the Modules", href: "/course/dashboard" },
-    secondaryCta: { label: "Read the Philosophy", href: "#platform-principles" },
-    proofPoints: ["Real workflows", "Design tradeoffs", "Reverse Builds"],
+    primaryCta: { label: "Start Orientation", href: "/course/orientation" },
+    secondaryCta: { label: "Preview Capabilities", href: "#capabilities" },
+    proofPoints: [
+      "Systems thinking",
+      "AI-supported practice",
+      "Reverse Builds",
+    ],
   },
   whatIs: {
     eyebrow: "What Future of ID Is",
-    title: "A practical record of instructional design work in motion.",
+    title: "A field guide for the next shape of instructional design work.",
     intro:
-      "Future of ID focuses on implementation: the decisions, tools, workflows, constraints, and revisions behind modern learning experiences.",
+      "Future of ID helps experienced IDs, L&D professionals, and career-transition learners strengthen the judgment required to design learning systems, not just deliver course assets.",
     items: [
       {
-        title: "A practical learning platform",
+        title: "A practical learning pathway",
         description:
-          "The course gives instructional designers a structured way to explore AI literacy, analytics, performance consulting, scenarios, adaptive learning, content systems, and trust.",
+          "The course gives instructional designers a structured way to explore AI literacy, performance consulting, analytics, scenarios, adaptive learning, content systems, and trust.",
       },
       {
-        title: "A transparent design record",
+        title: "A transparent implementation record",
         description:
-          "Reverse Build sections show what shaped the work, what was simplified, where AI helped, and where human judgment stayed central.",
+          "Reverse Builds show what shaped the work, what was simplified, where AI helped, and where human judgment stayed central.",
       },
       {
-        title: "A working implementation space",
+        title: "A systems design lens",
         description:
-          "The platform documents real build choices instead of treating AI and learning systems as abstract topics.",
+          "The platform connects learning science, workflow decisions, evidence, learner support, and technical constraints into one design conversation.",
       },
       {
-        title: "A place to compare approaches",
+        title: "A place to calibrate your path",
         description:
-          "The goal is to help instructional designers decide what level of AI adoption and technical depth makes sense for their own context.",
+          "The goal is to help you decide what level of AI adoption, technical depth, and system ownership makes sense for your role and context.",
       },
     ] satisfies LandingCard[],
   },
@@ -91,36 +102,36 @@ export const landingContent = {
   },
   paths: {
     eyebrow: "Different Paths",
-    title: "Instructional designers will not all use AI the same way.",
+    title: "There is more than one credible future for instructional designers.",
     intro:
-      "Roles, teams, tools, industries, and interests vary. Future of ID treats technical depth as a set of options, not a single correct ladder.",
+      "Roles, teams, industries, and interests vary. Future of ID treats technical depth as a set of strategic choices, not a single ladder everyone must climb.",
     items: [
       {
-        label: "Writing and review",
-        title: "AI-assisted writing workflows",
+        label: "Foundation",
+        title: "AI-assisted writing and review",
         description:
           "Use AI to draft, revise, compare, and improve objectives, scripts, quizzes, storyboards, and support materials.",
       },
       {
-        label: "Authoring tools",
+        label: "Production",
         title: "Course development workflows",
         description:
           "Improve work in tools like Storyline, Rise, Captivate, or iSpring without needing to build custom systems.",
       },
       {
-        label: "Practice design",
+        label: "Experience",
         title: "Scenarios and feedback",
         description:
           "Design decisions, response options, consequences, and feedback that help people practice real workplace judgment.",
       },
       {
-        label: "Learner support",
+        label: "Support",
         title: "AI-assisted guidance",
         description:
           "Explore feedback systems, coaching prompts, chatbot support, and learner-facing safeguards where they are appropriate.",
       },
       {
-        label: "Technical systems",
+        label: "Architecture",
         title: "Custom learning architecture",
         description:
           "Investigate APIs, guardrails, orchestration, content systems, and platform-level workflows when the problem calls for that depth.",
@@ -129,30 +140,30 @@ export const landingContent = {
   },
   whyExists: {
     eyebrow: "Why This Exists",
-    title: "There is a gap between AI commentary and implementation reality.",
+    title: "The profession needs a clearer bridge from commentary to implementation.",
     intro:
-      "AI can make content generation faster, but speed does not remove the need for design judgment. Instructional designers still need to decide what matters, evaluate outputs, protect trust, and connect learning work to performance.",
+      "AI can make content generation faster, but speed does not remove the need for design judgment. Instructional designers still need to define what matters, evaluate outputs, protect trust, and connect learning work to performance.",
     items: [
       {
-        title: "The work is uneven",
+        title: "The work is expanding unevenly",
         description:
           "Different organizations are adopting AI and learning technology at different speeds, with different risks and constraints.",
       },
       {
-        title: "The details are often hidden",
+        title: "The implementation details are often hidden",
         description:
           "Many conversations skip the build decisions, failed attempts, tradeoffs, and maintenance problems that shape real work.",
       },
       {
         title: "The point is practical clarity",
         description:
-          "Future of ID documents what was built, what was learned, and what another instructional designer might adapt.",
+          "Future of ID documents what was built, what was learned, and what another designer might adapt for their own learning ecosystem.",
       },
     ] satisfies LandingCard[],
   },
   principles: {
     eyebrow: "Platform Principles",
-    title: "Documented, not performed for attention.",
+    title: "Built for judgment, not novelty.",
     intro:
       "These principles guide the course, the Reverse Build sections, and the way AI is discussed across the platform.",
     items: [
@@ -162,7 +173,7 @@ export const landingContent = {
           "The platform shares what has been built, tested, changed, and learned through implementation.",
       },
       {
-        title: "Built, not theorized",
+        title: "Implemented, not theorized",
         description:
           "The work itself is the evidence. Concepts matter when they change real design decisions.",
       },
@@ -180,9 +191,9 @@ export const landingContent = {
   },
   inside: {
     eyebrow: "Inside the Platform",
-    title: "What you will find inside.",
+    title: "A course structure that turns concepts into design decisions.",
     intro:
-      "The course is organized around practical capabilities and design layers that connect explanation, practice, build decisions, and reflection.",
+      "Each module connects explanation, scenario practice, Reverse Build notes, and reflection so you can see both the learning concept and the system choices behind it.",
     items: [
       {
         title: "Guided modules",
@@ -206,12 +217,69 @@ export const landingContent = {
       },
     ] satisfies LandingCard[],
   },
+  capabilities: {
+    eyebrow: "Seven Capabilities",
+    title: "A strategic preview of the modern ID capability stack.",
+    intro:
+      "These seven areas extend familiar instructional design strengths into the systems work learning teams are being asked to own: judgment, performance, evidence, practice, adaptation, maintainability, and trust.",
+    items: [
+      {
+        label: "01",
+        title: "AI Literacy and Agent-Enabled Learning Design",
+        description:
+          "Use AI as a design partner without surrendering quality standards, learner context, accessibility, or human review.",
+        focus: "Judgment",
+      },
+      {
+        label: "02",
+        title: "Performance Consulting and Business Alignment",
+        description:
+          "Move upstream from course requests to performance gaps, stakeholder outcomes, workplace constraints, and measurable value.",
+        focus: "Performance",
+      },
+      {
+        label: "03",
+        title: "Learning Analytics and Evidence-Based Design",
+        description:
+          "Use signals from learner behavior, practice, and outcomes to improve learning experiences over time.",
+        focus: "Evidence",
+      },
+      {
+        label: "04",
+        title: "Scenario, Simulation, and Conversation Design",
+        description:
+          "Create practice environments where learners make decisions, receive feedback, and build workplace judgment.",
+        focus: "Practice",
+      },
+      {
+        label: "05",
+        title: "Adaptive and Personalized Learning Architecture",
+        description:
+          "Design pathways that respond to learner goals, confidence, readiness, and progress without losing instructional coherence.",
+        focus: "Adaptation",
+      },
+      {
+        label: "06",
+        title: "Content Systems Thinking and Workflow Automation",
+        description:
+          "Structure learning content so it can be reused, updated, governed, and maintained across programs.",
+        focus: "Maintainability",
+      },
+      {
+        label: "07",
+        title: "Human-Centered Change, Ethics, and Learner Trust",
+        description:
+          "Protect transparency, agency, inclusion, and trust as AI-supported learning experiences become more complex.",
+        focus: "Trust",
+      },
+    ] satisfies LandingCapability[],
+  },
   finalCta: {
-    eyebrow: "Start Where It Helps",
-    title: "Explore the work, then choose your own depth.",
+    eyebrow: "Start With Orientation",
+    title: "Enter the course with the full system in view.",
     description:
-      "Future of ID is one practitioner path through changing instructional design work. Use it to study real decisions, borrow what fits, and decide what level of AI-enabled practice makes sense for your own context.",
-    primaryCta: { label: "Explore the Modules", href: "/course/dashboard" },
-    secondaryCta: { label: "Learn About the Creator", href: "/about" },
+      "The orientation frames the shift from course builder to learning systems designer, then points you into the seven capability modules. Use the course to study real decisions, borrow what fits, and choose the level of AI-enabled practice that makes sense for your context.",
+    primaryCta: { label: "Start Orientation", href: "/course/orientation" },
+    secondaryCta: { label: "View Course Dashboard", href: "/course/dashboard" },
   },
 };
