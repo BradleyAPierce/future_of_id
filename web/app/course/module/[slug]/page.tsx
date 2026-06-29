@@ -8,7 +8,7 @@ import ModuleCompletionPanel from "@/components/course/ModuleCompletionPanel";
 import BackToTopButton from "@/components/ui/BackToTopButton";
 import { moduleContentBySlug } from "@/content/modules";
 import { modules } from "@/data/modules";
-import { SCENARIO_DECISIONS_BY_MODULE } from "@/lib/ai/scenarioFeedback";
+import { SCENARIO_DECISIONS_BY_MODULE } from "@/data/scenarioDecisions";
 import { useCourseProgress } from "@/lib/useCourseProgress";
 
 interface ModulePageProps {

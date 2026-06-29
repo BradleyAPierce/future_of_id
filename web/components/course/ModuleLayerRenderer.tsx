@@ -1,4 +1,4 @@
-import type { ScenarioDecision } from "@/lib/ai/scenarioFeedback";
+import type { ScenarioDecision } from "@/data/scenarioDecisions";
 import type { ModuleLayer } from "@/types/moduleContent";
 import LessonSection from "./LessonSection";
 import ModuleExperienceSections from "./ModuleExperienceSections";

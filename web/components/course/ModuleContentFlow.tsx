@@ -1,4 +1,4 @@
-import type { ScenarioDecision } from "@/lib/ai/scenarioFeedback";
+import type { ScenarioDecision } from "@/data/scenarioDecisions";
 import type { ModuleContent, ModuleLayer } from "@/types/moduleContent";
 import ModuleLayerRenderer, {
   type ModuleLayerKind,
