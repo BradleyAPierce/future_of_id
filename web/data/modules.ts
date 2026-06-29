@@ -8,7 +8,7 @@ export type ModuleMetadata = {
   practiceLabel?: string;
 };
 
-export const modules = [
+export const modules: ModuleMetadata[] = [
   {
     slug: "orientation",
     title: "The Future of Instructional Design",

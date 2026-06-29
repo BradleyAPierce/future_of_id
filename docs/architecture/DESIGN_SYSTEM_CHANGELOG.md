@@ -75,3 +75,7 @@ Planned work:
 - Confirm component naming between Figma and `web/components/*`
 - Decide which Figma-only components need React extraction
 - Begin dashboard/module page refactor from component architecture
+
+### v1.0.2 — React Implementation Begins
+
+Introduced the first shared React component (SectionHeader) aligned directly with the Future of ID Design System. This marks the transition from documenting the design system to implementing it in production.

@@ -2,10 +2,10 @@
 
 import { modules } from "@/data/modules";
 import { useCourseProgress } from "@/lib/useCourseProgress";
+import ModuleCard from "@/components/course/ModuleCard";
 import ProgressBar from "@/components/course/ProgressBar";
 import Badge from "@/components/ui/Badge";
 import Button from "@/components/ui/Button";
-import Card from "@/components/ui/Card";
 import PageBanner from "@/components/ui/PageBanner";
 import SectionHeader from "@/components/ui/SectionHeader";
 import Surface from "@/components/ui/Surface";
@@ -156,69 +156,19 @@ export default function Dashboard() {
                 ? "/course/orientation"
                 : `/course/module/${module.slug}`;
             const isUpNext = nextModule?.slug === module.slug;
-            const statusTone = isCompleted
-              ? "success"
+            const status = isCompleted
+              ? "complete"
               : isUpNext
-                ? "primary"
-                : "default";
-            const statusLabel = isCompleted
-              ? "Complete"
-              : isUpNext
-                ? "Up Next"
-                : "Available";
-            const ctaLabel = isCompleted
-              ? "Review"
-              : isUpNext
-                ? "Continue"
-                : module.type === "orientation"
-                  ? "Start Orientation"
-                  : "Start Module";
+                ? "upNext"
+                : "available";
 
             return (
-              <Card
+              <ModuleCard
                 key={module.slug}
-                className={`flex min-h-full flex-col ${
-                  isUpNext
-                    ? "border-[var(--primary)] bg-[color-mix(in_srgb,var(--primary)_7%,var(--surface))]"
-                    : ""
-                }`}>
-                <div className="flex-1 space-y-5">
-                  <div className="flex items-center justify-between gap-3">
-                    <Badge tone="default">
-                      {module.type === "orientation" ? "Orientation" : `Module ${module.order}`}
-                    </Badge>
-
-                    <Badge tone={statusTone}>{statusLabel}</Badge>
-                  </div>
-
-                  <div>
-                    <h3 className="text-xl font-semibold leading-tight text-[var(--text)]">
-                      {module.title}
-                    </h3>
-                    <p className="mt-3 text-sm leading-relaxed text-[var(--muted)]">
-                      {module.description}
-                    </p>
-                  </div>
-
-                  <div className="flex flex-wrap gap-2">
-                    <Badge tone={module.practiceLabel ? "primary" : "default"}>
-                      {module.estimatedTime}
-                    </Badge>
-                    {module.practiceLabel && (
-                      <Badge tone="accent">{module.practiceLabel}</Badge>
-                    )}
-                  </div>
-                </div>
-
-                <div className="mt-6">
-                  <Button
-                    href={href}
-                    variant={isUpNext ? "primary" : "secondary"}
-                    className="w-full sm:w-fit">
-                    {ctaLabel}
-                  </Button>
-                </div>
-              </Card>
+                module={module}
+                status={status}
+                href={href}
+              />
             );
           })}
         </div>
