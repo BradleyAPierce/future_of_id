@@ -4,18 +4,12 @@
 
 This project is a **Next.js + TypeScript** learning platform for `future_of_id`, built to teach the future of instructional design through a modular, portfolio-grade product experience.
 
-Copilot must align its work with the direction established in:
+Copilot must align its work with the source-of-truth hierarchy in `docs/SYSTEM-INSTRUCTIONS.md`:
 
-- `docs/strategy/BLUEPRINT.md`
-- `docs/architecture/TECH_ARCHITECTURE.md`
-- `docs/strategy/PROJECT-BRAIN.md`
-- `docs/architecture/CONTENT_ARCHITECTURE.md`
-- `docs/architecture/SITE_MAP.md`
-- `docs/strategy/DECISIONS.md`
-- `docs/architecture/DESIGN_SYSTEM.md`
-- `docs/strategy/ROADMAP.md`
-- `docs/reference/INITIAL_REPO_STRUCTURE.md`
-- `README.md`
+- Tier 1: `docs/architecture/CONTENT_ARCHITECTURE.md`, `docs/architecture/SITE_MAP.md`, `docs/architecture/TECH_ARCHITECTURE.md`, `docs/architecture/DESIGN_SYSTEM.md`, `docs/COMPONENT_ARCHITECTURE_V1.md`
+- Tier 2: `docs/strategy/DECISIONS.md`, `docs/strategy/BLUEPRINT.md`, `docs/strategy/FUTURE_READY_CAPABILITY_MODEL.md`
+- Tier 3: `docs/strategy/ROADMAP.md`, `docs/LANDING_PAGE_STRATEGY.md`, `docs/reference/INITIAL_REPO_STRUCTURE.md`, `README.md`
+- Evidence records: `docs/decisions/*` and `docs/validation/*`
 
 When making decisions, prefer consistency with those files over inventing new patterns.
 
@@ -131,7 +125,9 @@ Components should not silently own unrelated data rules or contain large volumes
 
 UI work must follow `docs/architecture/DESIGN_SYSTEM.md`.
 
-Use that guidance when creating or changing dashboard layouts, module pages, cards, buttons, surfaces, typography, spacing, motion, or interaction patterns. Prefer reusable visual patterns over one-off styling patches, and keep instructional clarity ahead of decoration.
+Use that guidance when creating or changing dashboard layouts, module pages, cards, buttons, surfaces, typography, spacing, motion, or interaction patterns. The design system governs visual and UX principles, tokens, typography, spacing, surfaces, and interaction feel.
+
+Reusable component decisions must also follow `docs/COMPONENT_ARCHITECTURE_V1.md`. The component architecture governs component inventory, variants, states, and Figma-to-React mapping. Prefer reusable visual patterns over one-off styling patches, and keep instructional clarity ahead of decoration.
 
 ---
 
@@ -183,6 +179,7 @@ Follow the hybrid content approach already defined in the repo.
 - Keep long-form instructional content modular and easy to evolve
 - Do not hardcode learning content into reusable UI components
 - Treat module content as a system that should scale across orientation and future capabilities
+- Use **Reverse Build** as the user-facing product term for the design-rationale layer; use reverse engineering only when explaining the process behind that layer
 - Keep content portable so that instructional material can evolve without rewriting core UI
 
 ### Content Modeling Expectations

@@ -26,7 +26,8 @@ AI must prioritize project documents in the following order:
 1. `docs/architecture/CONTENT_ARCHITECTURE.md` → module structure and learning model  
 2. `docs/architecture/SITE_MAP.md` → routing and page hierarchy  
 3. `docs/architecture/TECH_ARCHITECTURE.md` → stack and technical boundaries  
-4. `docs/architecture/DESIGN_SYSTEM.md` → visual, UX, and interface consistency rules
+4. `docs/architecture/DESIGN_SYSTEM.md` → visual, UX, token, typography, spacing, surface, and interaction-feel rules
+5. `docs/COMPONENT_ARCHITECTURE_V1.md` → reusable component inventory, variants, states, and Figma-to-React mapping
 
 These define the **core structure of the system** and must always be followed.
 
@@ -34,8 +35,9 @@ These define the **core structure of the system** and must always be followed.
 
 ### Tier 2 — Strategic Constraints
 
-5. `docs/strategy/DECISIONS.md` → locked constraints and decisions
-6. `docs/strategy/BLUEPRINT.md` → product vision and experience design
+6. `docs/strategy/DECISIONS.md` → locked constraints and decisions
+7. `docs/strategy/BLUEPRINT.md` → product vision and experience design
+8. `docs/strategy/FUTURE_READY_CAPABILITY_MODEL.md` → rationale for the seven-capability framework
 
 Used to guide implementation decisions and resolve ambiguity.
 
@@ -43,9 +45,15 @@ Used to guide implementation decisions and resolve ambiguity.
 
 ### Tier 3 — Supporting Context
 
-7. `docs/strategy/ROADMAP.md` → development phases and sequencing
-8. `docs/reference/INITIAL_REPO_STRUCTURE.md` → structural reference
-9. `README.md` → project overview
+9. `docs/strategy/ROADMAP.md` → development phases and sequencing
+10. `docs/LANDING_PAGE_STRATEGY.md` → public landing-page positioning and messaging
+11. `docs/reference/INITIAL_REPO_STRUCTURE.md` → historical structural reference
+12. `README.md` → project overview
+
+### Evidence and Decision Records
+
+- `docs/decisions/*` → architecture decision records
+- `docs/validation/*` → validation notes and test evidence
 
 Helpful context, but must not override Tier 1 or Tier 2.
 
@@ -92,7 +100,9 @@ All modules must follow the 3-layer structure:
 
 1. Theory  
 2. Experience  
-3. Reverse Engineering  
+3. Reverse Build
+
+Reverse Build is the user-facing product term for the layer that reveals the reverse engineering, design rationale, instructional strategy, prompt architecture, and implementation decisions behind each experience.
 
 Content must be:
 
@@ -131,7 +141,7 @@ Follow:
 - `/course/module/[slug]/experience`  
 - `/course/module/[slug]/reverse-engineering`  
 
-Do not deviate from routing patterns.
+Do not deviate from routing patterns. Technical route names may remain unchanged even when user-facing labels use **Reverse Build**.
 
 ---
 
@@ -239,7 +249,18 @@ If conflicts occur:
 
 ---
 
-## 12. AI Behavior Expectations
+## 12. Shared Terminology
+
+- **Capability** = one conceptual framework area in the seven-capability model
+- **Module** = one guided course delivery unit
+- **Platform** = the full Future of ID product
+- **Guided course** = the first major product surface inside the platform
+- **Design system** = visual and UX principles, tokens, typography, spacing, surfaces, and interaction feel
+- **Component architecture** = reusable component inventory, variants, states, and Figma-to-React mapping
+
+---
+
+## 13. AI Behavior Expectations
 
 AI must:
 
@@ -258,7 +279,7 @@ AI must NOT:
 
 ---
 
-## 13. Definition of Success
+## 14. Definition of Success
 
 A solution is correct ONLY if:
 
@@ -270,7 +291,7 @@ A solution is correct ONLY if:
 
 ---
 
-## 14. How to Use This File
+## 15. How to Use This File
 
 At the start of development sessions, instruct:
 
@@ -280,7 +301,7 @@ This ensures consistent AI behavior across tools.
 
 ---
 
-## 15. Final Directive
+## 16. Final Directive
 
 This project is a **system-first build**.
 

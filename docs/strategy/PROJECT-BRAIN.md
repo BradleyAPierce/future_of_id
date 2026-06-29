@@ -1,5 +1,7 @@
 # 🧠 Project Brain: Future of Instructional Design Platform
 
+> Historical note: This is an early project-brain document. It preserves useful operating principles, but some implementation details and audience references are stale. Use `docs/SYSTEM-INSTRUCTIONS.md`, `docs/COPILOT-INSTRUCTIONS.md`, `README.md`, and `docs/strategy/ROADMAP.md` for current guidance.
+
 ## 1. Project Purpose
 
 This project is an AI-powered learning platform designed to demonstrate the future of Instructional Design. It combines modern web development with AI-assisted learning experiences to create modular, scalable, and interactive training environments.

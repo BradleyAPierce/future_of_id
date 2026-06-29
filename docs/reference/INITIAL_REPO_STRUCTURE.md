@@ -1,3 +1,7 @@
+# INITIAL_REPO_STRUCTURE.md
+
+> Historical reference: This file records the intended initial repository layout. It is not the active source of truth for current structure. Use `README.md` and the live `web/` tree for current paths.
+
 future_of_id/
 ├── README.md
 ├── test.txt
@@ -51,7 +55,7 @@ future_of_id/
 
 ## Notes
 
-This structure represents the intended architectural layout of the application.
+This structure represents the intended initial architectural layout of the application.
 
 It intentionally excludes:
 - `node_modules`

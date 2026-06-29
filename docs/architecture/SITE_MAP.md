@@ -9,7 +9,7 @@
 - `/course/dashboard` — Learner progress dashboard
 - `/course/module/[slug]` — Individual module pages
 - `/course/module/[slug]/experience` — Optional deep-linked interaction view
-- `/course/module/[slug]/reverse-engineering` — Optional focused build breakdown
+- `/course/module/[slug]/reverse-engineering` — Optional focused Reverse Build breakdown; route name may remain technical unless intentionally renamed later
 - `/course/resources` — Supporting resources / references / downloads
 - `/course/completion` — Course completion summary
 
@@ -58,7 +58,7 @@
 4. L&D model connections
 5. core content sections
 6. interactive experience embed/launch
-7. reverse engineering section preview
+7. Reverse Build section preview
 8. reflection/checkpoint
 9. complete module CTA
 10. next module CTA

@@ -41,7 +41,7 @@ Every module is designed not only to teach a concept, but also to expose the und
 
 The Core Learning Model
 
-Every module follows the same 3-layer structure:
+Every module follows the same core 3-layer structure:
 
 1. Theory
 
@@ -63,7 +63,7 @@ A transparent breakdown of how the experience was designed and built:
 - implementation constraints
 - reusable systems and workflows
 
-The project is based on the belief that instructional designers learn more effectively when they can examine real systems, not just consume explanations about them.
+The project is based on the belief that instructional designers learn more effectively when they can examine real systems, not just consume explanations about them. Reflection is a recurring checkpoint and closure pattern across the guided course.
 
 ⸻
 
@@ -135,14 +135,14 @@ Currently Implemented
 - dashboard with learner progress tracking
 - Module 1 content and interaction system
 - reusable course component system
-- reflection workflows and AI feedback architecture
+- reflection workflows and shared AI feedback architecture
 - structured content/data separation
 - Reverse Build instructional framework
 
 In Progress
 
 - additional module development
-- richer AI-supported interactions
+- richer AI-supported interactions across modules
 - improved UI system and visual polish
 - expanded analytics and learner feedback systems
 - Supabase-backed persistence layer
@@ -164,10 +164,11 @@ Content Architecture
 - modular content modeling
 - scalable component patterns
 
-Planned / Expanding
+Active / Expanding
 
-- OpenAI integrations
-- Supabase
+- OpenAI-powered scenario and reflection feedback architecture
+- richer AI interaction patterns
+- Supabase persistence
 - analytics and event tracking
 - adaptive interaction layers
 
@@ -176,22 +177,29 @@ Planned / Expanding
 Repository Structure
 
 web/
-├── app/ # Next.js routes and page composition
-├── components/ # Reusable UI and interaction components
+├── app/ # Next.js routes, layouts, and API route handlers
+├── components/ # Reusable UI, layout, landing, course, and interaction components
+├── content/ # Modular instructional and landing/about content
 ├── data/ # Structured module metadata and configuration
-├── content/ # Long-form instructional content
 ├── lib/ # Shared utilities, AI orchestration, domain logic
-├── styles/ # Global styling and design foundations
 └── types/ # Shared TypeScript types
 
 Additional project documentation:
 
-- BLUEPRINT.md
-- CONTENT_ARCHITECTURE.md
-- TECH_ARCHITECTURE.md
-- PROJECT-BRAIN.md
-- ROADMAP.md
-- DECISIONS.md
+- `docs/SYSTEM-INSTRUCTIONS.md`
+- `docs/COPILOT-INSTRUCTIONS.md`
+- `docs/strategy/BLUEPRINT.md`
+- `docs/strategy/DECISIONS.md`
+- `docs/strategy/ROADMAP.md`
+- `docs/strategy/FUTURE_READY_CAPABILITY_MODEL.md`
+- `docs/architecture/CONTENT_ARCHITECTURE.md`
+- `docs/architecture/SITE_MAP.md`
+- `docs/architecture/TECH_ARCHITECTURE.md`
+- `docs/architecture/DESIGN_SYSTEM.md`
+- `docs/COMPONENT_ARCHITECTURE_V1.md`
+- `docs/LANDING_PAGE_STRATEGY.md`
+- `docs/decisions/*`
+- `docs/validation/*`
 
 These documents intentionally expose the architectural and instructional thinking behind the project.
 

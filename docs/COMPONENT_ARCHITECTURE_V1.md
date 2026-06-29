@@ -6,6 +6,8 @@ This document defines the reusable component system for **Future of ID**. It con
 
 The goal is not to create decorative screens. The goal is to create a scalable product system that can support the full guided learning experience: landing pages, course dashboard, module pages, reflections, AI feedback, progress tracking, and future expansion.
 
+This document operationalizes `docs/architecture/DESIGN_SYSTEM.md`. The design system governs visual/UX principles and tokens; this component architecture governs reusable component inventory, variants, states, and Figma-to-React mapping.
+
 ---
 
 ## 1. Foundation Status
@@ -90,6 +92,45 @@ Every component should follow these principles:
 6. **Accessible by default** — semantic structure, readable contrast, visible focus states.
 7. **React-ready** — Figma components should map cleanly to future React components.
 8. **Content-aware** — components should support instructional content, not force content into rigid layouts.
+9. **Primitive before composition** — visual primitives such as Surface, Button, and Badge should be reused by composed learning components instead of duplicated.
+
+### 2.1 Component Hierarchy
+
+Surface is the foundational visual primitive for Future of ID.
+
+Surface owns the shared visual properties that higher-level components need:
+
+- Background
+- Border
+- Radius
+- Spacing
+- Elevation
+- Tone
+
+Higher-level components should compose Surface rather than redefining these properties independently. This keeps visual behavior consistent as the system expands.
+
+Example hierarchy:
+
+```text
+Surface
+↓
+Card
+↓
+ModuleCard
+CapabilityCard
+ReflectionPanel
+ReverseBuildPanel
+AIFeedbackPanel
+Dashboard widgets
+```
+
+This hierarchy mirrors the current implementation learning from the design system work. It improves long-term scalability because changes to core visual behavior can be made at the primitive level instead of repeated across every composed component.
+
+### 2.2 Architecture Note
+
+This refinement was introduced after implementation analysis during the Design System Hardening Sprint.
+
+The architecture was adjusted to better match the real implementation rather than forcing the implementation to match an earlier conceptual model. This keeps the component architecture useful as a source of truth while preserving historical context from the original v1.0 plan.
 
 ---
 
@@ -107,7 +148,40 @@ The system is organized into five tiers:
 
 ## 4. Core UI Components
 
-### 4.1 Button
+### 4.1 Surface
+
+**Purpose:** Provides the foundational visual container for Future of ID interfaces.
+
+**React Mapping:** `web/components/ui/Surface.tsx`
+
+**Responsibilities:**
+- Visual foundation
+- Tone
+- Elevation
+- Spacing
+- Border
+- Radius
+
+**Variants:**
+- Default
+- Elevated
+- Primary
+- Accent
+- Success
+- Danger
+
+**States:**
+- Default
+- Hover, for interactive surfaces only
+
+**Design Notes:**
+- Surface owns background, border, radius, spacing, elevation, and tonal treatment.
+- Higher-level components should compose Surface rather than replace it.
+- Surface should remain visually quiet; it is the foundation for instructional clarity, not decoration.
+
+---
+
+### 4.2 Button
 
 **Purpose:** Represents actions and decisions.
 
@@ -146,11 +220,11 @@ The system is organized into five tiers:
 
 ---
 
-### 4.2 Card
+### 4.3 Card
 
 **Purpose:** Groups related content into a reusable surface.
 
-**React Mapping:** `<Card />`
+**React Mapping:** `web/components/ui/Card.tsx`
 
 **Variants:**
 - Default
@@ -166,6 +240,8 @@ The system is organized into five tiers:
 - `selected`
 
 **Design Notes:**
+- Card is a composed component built on Surface.
+- Card should not redefine visual primitives already owned by Surface.
 - Default cards use `Surface` with `Border`.
 - Elevated cards may use `Surface` plus elevation.
 - Radius should generally use `Large`.
@@ -173,7 +249,7 @@ The system is organized into five tiers:
 
 ---
 
-### 4.3 Badge
+### 4.4 Badge
 
 **Purpose:** Communicates status, category, level, or metadata.
 
@@ -196,7 +272,7 @@ The system is organized into five tiers:
 
 ---
 
-### 4.4 Input
+### 4.5 Input
 
 **Purpose:** Captures short learner input.
 
@@ -221,7 +297,7 @@ The system is organized into five tiers:
 
 ---
 
-### 4.5 Textarea
+### 4.6 Textarea
 
 **Purpose:** Captures longer reflections, scenario responses, or learner explanations.
 
@@ -240,14 +316,14 @@ The system is organized into five tiers:
 
 ---
 
-### 4.6 Tabs
+### 4.7 Tabs
 
 **Purpose:** Switches between related content views without leaving the page.
 
 **React Mapping:** `<Tabs />`
 
 **Use Cases:**
-- Theory / Experience / Reverse Engineering
+- Theory / Experience / Reverse Build
 - Overview / Activity / Reflection
 - Prompt / Feedback / Notes
 
@@ -257,7 +333,7 @@ The system is organized into five tiers:
 
 ---
 
-### 4.7 Modal
+### 4.8 Modal
 
 **Purpose:** Presents focused information or actions above the current page.
 
@@ -275,7 +351,7 @@ The system is organized into five tiers:
 
 ---
 
-### 4.8 Alert
+### 4.9 Alert
 
 **Purpose:** Communicates important system or learning-state messages.
 
@@ -294,7 +370,7 @@ The system is organized into five tiers:
 
 ---
 
-### 4.9 Tooltip
+### 4.10 Tooltip
 
 **Purpose:** Provides brief supplemental explanation.
 
@@ -312,7 +388,7 @@ The system is organized into five tiers:
 
 ---
 
-### 4.10 Skeleton / Loading
+### 4.11 Skeleton / Loading
 
 **Purpose:** Shows loading state while content or AI feedback is generated.
 
@@ -577,11 +653,11 @@ The system is organized into five tiers:
 
 ---
 
-### 6.7 Reverse Engineering Panel
+### 6.7 Reverse Build Panel
 
 **Purpose:** Explains how a learning experience was designed and built.
 
-**React Mapping:** `<ReverseEngineeringPanel />`
+**React Mapping:** `<ReverseBuildPanel />`
 
 **Content Areas:**
 - Instructional strategy
@@ -592,7 +668,7 @@ The system is organized into five tiers:
 
 **Design Notes:**
 - This is a signature component for Future of ID.
-- It helps the course teach by making the design process visible.
+- It helps the course teach by making the reverse engineering and design process visible.
 
 ---
 
@@ -837,19 +913,20 @@ The system is organized into five tiers:
 
 ---
 
-## 9. Recommended Build Order
+## 9. Recommended Component Refinement Order
 
 ### Sprint 1 — Core Composition System
 
-1. Button
-2. Card
-3. Badge
-4. Page Header
-5. Section Header
-6. Container
-7. Card Grid
+1. Surface
+2. Button
+3. Card
+4. Badge
+5. Page Header
+6. Section Header
+7. Container
+8. Card Grid
 
-**Why first:** These unlock almost every page and component.
+**Why first:** These unlock almost every page and component. Some already exist in production and should be refined rather than rebuilt.
 
 ---
 
@@ -860,7 +937,7 @@ The system is organized into five tiers:
 3. Lesson Section
 4. Reflection Panel
 5. Knowledge Check
-6. Reverse Engineering Panel
+6. Reverse Build Panel
 
 **Why second:** These define the instructional identity of Future of ID.
 
@@ -940,6 +1017,9 @@ When generating components in Figma, AI should follow these rules:
 ### Suggested Naming Convention
 
 ```text
+Surface/Default
+Surface/Elevated
+Surface/Primary
 Button/Primary/Default
 Button/Primary/Hover
 Button/Primary/Disabled
@@ -958,20 +1038,21 @@ AIFeedbackPanel/Generating
 The future React component library should mirror the design system:
 
 ```text
-src/components/ui/Button.tsx
-src/components/ui/Card.tsx
-src/components/ui/Badge.tsx
-src/components/layout/PageHeader.tsx
-src/components/layout/SectionHeader.tsx
-src/components/course/ModuleCard.tsx
-src/components/course/CapabilityCard.tsx
-src/components/course/LessonSection.tsx
-src/components/course/ReflectionPanel.tsx
-src/components/course/KnowledgeCheck.tsx
-src/components/ai/AIFeedbackPanel.tsx
-src/components/ai/AICoachPanel.tsx
-src/components/dashboard/CurrentModuleWidget.tsx
-src/components/dashboard/CapabilityProgress.tsx
+web/components/ui/Surface.tsx
+web/components/ui/Button.tsx
+web/components/ui/Card.tsx
+web/components/ui/Badge.tsx
+web/components/layout/PageHeader.tsx
+web/components/layout/SectionHeader.tsx
+web/components/course/ModuleCard.tsx
+web/components/course/CapabilityCard.tsx
+web/components/course/LessonSection.tsx
+web/components/course/ReflectionPanel.tsx
+web/components/course/KnowledgeCheck.tsx
+web/components/ai/AIFeedbackPanel.tsx
+web/components/ai/AICoachPanel.tsx
+web/components/dashboard/CurrentModuleWidget.tsx
+web/components/dashboard/CapabilityProgress.tsx
 ```
 
 Implementation should preserve the project architecture principle: route files compose sections; reusable components handle presentation; content and data remain separate from UI logic.

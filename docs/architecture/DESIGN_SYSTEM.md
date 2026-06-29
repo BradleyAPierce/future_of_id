@@ -8,6 +8,8 @@ It should guide future design-system, dashboard, module page, and component work
 
 This is not a component inventory or a final UI audit. It is the shared design contract for how future UI work should feel, function, and fit the architecture.
 
+This document governs visual/UX principles, tokens, typography, spacing, surfaces, and interaction feel. `docs/COMPONENT_ARCHITECTURE_V1.md` governs reusable component inventory, variants, states, and Figma-to-React mapping.
+
 ---
 
 ## 2. Design System Philosophy
@@ -211,6 +213,8 @@ The current layered model should remain visible:
 3. Reverse Build
 4. Reflection
 
+Reverse Build is the learner-facing name for the layer that exposes the reverse engineering, design rationale, and implementation choices behind the experience.
+
 The UI should help these layers feel connected rather than like unrelated content blocks.
 
 ---
@@ -306,3 +310,4 @@ UI work is successful when:
 - visual polish strengthens instructional credibility
 - accessibility and responsive behavior are preserved
 - the design system supports future growth without forcing a redesign each time a new module or page is added
+- component-level variants, states, and Figma-to-React mapping are handled in `docs/COMPONENT_ARCHITECTURE_V1.md`

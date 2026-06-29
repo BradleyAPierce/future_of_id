@@ -9,7 +9,7 @@
 - This project is a **guided learning course with progress tracking**, not just an article series.
 - The experience will teach the future of instructional design by using modern instructional design methods.
 - The 7 capability framework is locked.
-- The course will include theory, interaction, and reverse engineering in every module.
+- The guided course will include theory, interaction/experience, and Reverse Build in every module. Reverse Build is the user-facing layer that exposes reverse engineering and design rationale.
 - The experience should appeal to both experienced L&D professionals and newer/career-transition learners.
 - The project should support the creator's growth as a full-stack developer and portfolio builder.
 

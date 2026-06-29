@@ -6,7 +6,7 @@ Content should be modular, reusable, and scalable. Each module should support th
 
 1. Theory
 2. Experience
-3. Reverse Engineering
+3. Reverse Build
 
 ## Orientation Module Structure
 
@@ -39,7 +39,9 @@ Introduce the course, establish credibility, and frame the seven capabilities as
 - applied decision-making or exploration
 - feedback or insight layer
 
-### Layer 3: Reverse Engineering
+### Layer 3: Reverse Build
+
+Reverse Build is the user-facing product layer that exposes the reverse engineering, design rationale, and implementation decisions behind the experience.
 
 - instructional strategy
 - theory alignment

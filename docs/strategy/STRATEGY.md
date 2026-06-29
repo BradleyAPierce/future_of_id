@@ -1,5 +1,7 @@
 # future_of_id — Product Strategy & Vision Notes
-*Captured from planning conversation — April 2026*
+*Historical strategy snapshot captured from planning conversation — April 2026*
+
+> Historical note: This document preserves strategic context from an earlier planning moment. Some current-state details below are stale; use `README.md`, `docs/strategy/ROADMAP.md`, ADRs, and validation logs for current implementation status.
 
 ---
 
@@ -34,7 +36,7 @@ This project serves two audiences simultaneously:
 
 ---
 
-## Current State (April 2026)
+## Current State (April 2026 Historical Snapshot)
 
 ### What's Built
 - Solid Next.js / TypeScript / Tailwind architecture

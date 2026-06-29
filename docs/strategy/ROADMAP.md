@@ -1,61 +1,44 @@
 # ROADMAP.md
 
-## Phase 0 — Strategy and Blueprint
+## Current Roadmap Status
 
-- finalize 7 capabilities
-- create master blueprint docs
-- define module pattern
-- define site map
-- define tech architecture
-- define MVP scope
+This roadmap reflects the current product phase after the initial strategy, app foundation, guided course shell, landing/about surfaces, module content structure, and first AI feedback architecture have been established.
 
-## Phase 1 — Repo and App Foundation
+## Completed / Foundation
 
-- create repo
-- initialize Next.js app
-- configure TypeScript, Tailwind, linting
-- create base routes
-- set up design tokens / initial design system
-- create module metadata structure
+- finalized seven capability framework
+- created blueprint, decision, architecture, and strategy docs
+- initialized Next.js app under `web/`
+- established App Router, TypeScript, Tailwind, and linting foundation
+- created core course routes, landing page, About page, dashboard, orientation, and module route structure
+- created structured module metadata and content files
+- established reusable UI/course component foundation
+- implemented initial local progress tracking
+- implemented shared AI feedback architecture for scenario and reflection feedback
 
-## Phase 2 — Guided Course Shell
+## Current Phase — Documentation, Design, and Component Alignment
 
-- landing page
-- course overview
-- orientation module
-- dashboard
-- module template
-- progress tracking scaffold
+- align system and Copilot instructions with the current documentation structure
+- standardize product terminology around Reverse Build while preserving reverse engineering as explanatory process language
+- clarify design system vs component architecture ownership
+- refine reusable component guidance against the current `web/components/*` structure
+- validate component patterns before broader Figma MCP component-generation work
+- continue polishing dashboard, module pages, Reverse Build patterns, and AI feedback surfaces
 
-## Phase 3 — First Complete Module
+## Next Phase — Module Expansion and Product Polish
 
-Recommended first full module: `scenario, simulation, and conversation design`
+- expand and refine content for all seven capability modules
+- improve module completion, reflection, and next-step flows
+- strengthen AI-supported practice and feedback patterns across modules
+- improve navigation and learner flow across landing, course, dashboard, and module pages
+- add clearer completion states and course progress affordances
 
-Why:
+## Later Phase — Persistence, Analytics, and Public Readiness
 
-- highly engaging
-- aligned with project vision
-- demonstrates both instructional and technical depth
-- strong showcase value for L&D audience
-
-## Phase 4 — Supporting Modules
-
-- create theory pages for all modules
-- add low/medium fidelity interactions
-- build reverse engineering sections
-
-## Phase 5 — Progress + Polish
-
-- store progress in Supabase
-- build completion states
-- improve navigation and learner flow
-- polish UI and transitions
-
-## Phase 6 — Thought Leadership + Promotion
-
-- convert modules into supporting blog posts / LinkedIn content
-- add About / creator POV page
-- refine public narrative
+- add Supabase-backed persistence when the shell and learning flows are stable
+- add analytics/event tracking for meaningful course and module behavior
+- refine public narrative and sharing readiness
+- add supporting resources, downloads, or references where they strengthen the guided course
 
 ## Future Phases
 
@@ -64,3 +47,4 @@ Why:
 - downloadable companion resources
 - portfolio case study pages
 - learner accounts with richer saved state
+- community or code-library surfaces after the guided course is strong
