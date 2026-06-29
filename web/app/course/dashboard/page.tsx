@@ -4,11 +4,9 @@ import { modules } from "@/data/modules";
 import { useCourseProgress } from "@/lib/useCourseProgress";
 import ModuleCard from "@/components/course/ModuleCard";
 import CurrentModuleWidget from "@/components/dashboard/CurrentModuleWidget";
-import ProgressBar from "@/components/course/ProgressBar";
-import Badge from "@/components/ui/Badge";
+import LearningProgressPanel from "@/components/dashboard/LearningProgressPanel";
 import PageBanner from "@/components/ui/PageBanner";
 import SectionHeader from "@/components/ui/SectionHeader";
-import Surface from "@/components/ui/Surface";
 import { dashboardBanner } from "@/data/pageBanners";
 
 export default function Dashboard() {
@@ -37,51 +35,12 @@ export default function Dashboard() {
         />
 
         <section className="grid gap-5 lg:grid-cols-[minmax(0,1.25fr)_minmax(320px,0.75fr)]">
-          <Surface padding="lg" className="space-y-5">
-            <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
-              <div>
-                <p className="text-sm font-semibold uppercase tracking-wide text-[var(--primary)]">
-                  Course Progress
-                </p>
-                <h2 className="mt-2 text-3xl font-semibold text-[var(--text)]">
-                  {Math.round(progress)}% complete
-                </h2>
-                <p className="mt-2 text-sm leading-relaxed text-[var(--muted)]">
-                  {completedCount} of {modules.length} course steps complete.
-                  {remainingCount > 0
-                    ? ` ${remainingCount} still to go.`
-                    : " You have completed the full course path."}
-                </p>
-              </div>
-
-              <Badge tone={remainingCount === 0 ? "success" : "primary"}>
-                {remainingCount === 0 ? "Complete" : `${remainingCount} remaining`}
-              </Badge>
-            </div>
-
-            <ProgressBar progress={progress} />
-
-            <div className="grid gap-3 sm:grid-cols-3">
-              <div className="rounded-[var(--radius-md)] border border-[var(--border)] bg-[var(--surface-elevated)] p-4">
-                <p className="text-2xl font-semibold text-[var(--text)]">
-                  {completedCount}
-                </p>
-                <p className="mt-1 text-sm text-[var(--muted)]">Completed</p>
-              </div>
-              <div className="rounded-[var(--radius-md)] border border-[var(--border)] bg-[var(--surface-elevated)] p-4">
-                <p className="text-2xl font-semibold text-[var(--text)]">
-                  {remainingCount}
-                </p>
-                <p className="mt-1 text-sm text-[var(--muted)]">Remaining</p>
-              </div>
-              <div className="rounded-[var(--radius-md)] border border-[var(--border)] bg-[var(--surface-elevated)] p-4">
-                <p className="text-2xl font-semibold text-[var(--text)]">
-                  {modules.length}
-                </p>
-                <p className="mt-1 text-sm text-[var(--muted)]">Total steps</p>
-              </div>
-            </div>
-          </Surface>
+          <LearningProgressPanel
+            progress={progress}
+            completedCount={completedCount}
+            remainingCount={remainingCount}
+            totalCount={modules.length}
+          />
 
           <CurrentModuleWidget
             module={nextModule}

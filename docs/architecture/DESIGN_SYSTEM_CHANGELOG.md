@@ -78,4 +78,19 @@ Planned work:
 
 ### v1.0.2 — React Implementation Begins
 
-Introduced the first shared React component (SectionHeader) aligned directly with the Future of ID Design System. This marks the transition from documenting the design system to implementing it in production.
+**Date:** [Insert Date]
+
+- First React component (SectionHeader) extracted to align directly with the Future of ID Design System.
+- Dashboard module presentation extracted into reusable ModuleCard.
+- Dashboard "Up Next / Course Complete" panel extracted into reusable CurrentModuleWidget.
+- useCourseProgress refactored to use useSyncExternalStore, eliminating the final lint blocker while preserving the localStorage architecture.
+- Full project now passes lint and production build.
+- Marks the transition from design-system creation to systematic React implementation.
+
+### v1.0.3 — Dashboard Component Architecture Complete
+
+- Dashboard transitioned from inline UI to component composition.
+- LearningProgressPanel extracted.
+- DashboardStat extracted.
+- Dashboard now acts primarily as orchestration.
+- Dashboard established as the reference implementation for Future of ID page architecture.
