@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import SectionHeader from "@/components/ui/SectionHeader";
 
 type LandingSectionProps = {
   id: string;
@@ -17,17 +18,7 @@ export default function LandingSection({
 }: LandingSectionProps) {
   return (
     <section id={id} className="scroll-mt-28 space-y-6">
-      <div className="max-w-3xl">
-        <p className="text-sm font-semibold uppercase tracking-wide text-[var(--primary)]">
-          {eyebrow}
-        </p>
-        <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[var(--text)] md:text-4xl">
-          {title}
-        </h2>
-        <p className="mt-4 text-lg leading-relaxed text-[var(--muted)]">
-          {intro}
-        </p>
-      </div>
+      <SectionHeader eyebrow={eyebrow} title={title} description={intro} />
 
       {children}
     </section>

@@ -7,6 +7,7 @@ import Badge from "@/components/ui/Badge";
 import Button from "@/components/ui/Button";
 import Card from "@/components/ui/Card";
 import PageBanner from "@/components/ui/PageBanner";
+import SectionHeader from "@/components/ui/SectionHeader";
 import Surface from "@/components/ui/Surface";
 import { dashboardBanner } from "@/data/pageBanners";
 
@@ -135,24 +136,17 @@ export default function Dashboard() {
       </div>
 
       <section className="space-y-6">
-        <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-wide text-[var(--primary)]">
-              Learning Path
+        <SectionHeader
+          eyebrow="Learning Path"
+          title="Course Modules"
+          description="Explore each topic through clear explanations, hands-on practice, real examples, and guided reflection using AI."
+          variant="compact"
+          action={
+            <p className="text-sm text-[var(--muted)]">
+              {sortedModules.length} guided steps
             </p>
-            <h2 className="mt-2 text-2xl font-semibold text-[var(--text)]">
-              Course Modules
-            </h2>
-            <p className="mt-2 max-w-2xl text-[var(--muted)]">
-              Explore each topic through clear explanations, hands-on practice,
-              real examples, and guided reflection using AI.
-            </p>
-          </div>
-
-          <p className="text-sm text-[var(--muted)]">
-            {sortedModules.length} guided steps
-          </p>
-        </div>
+          }
+        />
 
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {sortedModules.map((module) => {
