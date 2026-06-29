@@ -94,3 +94,65 @@ Planned work:
 - DashboardStat extracted.
 - Dashboard now acts primarily as orchestration.
 - Dashboard established as the reference implementation for Future of ID page architecture.
+
+### v1.1 — React Design System Alignment
+
+Date: June 2026
+
+Status: Complete
+
+Summary
+
+The Future of ID React application has been aligned with the Design System and Component Architecture.
+
+This milestone marks the transition from establishing the design system to implementing it throughout the production application.
+
+Major Architectural Changes
+
+- Introduced reusable SectionHeader
+- Extracted reusable ModuleCard
+- Componentized dashboard architecture
+- Componentized module page architecture
+- Introduced reusable CurrentModuleWidget
+- Introduced reusable LearningProgressPanel
+- Introduced reusable DashboardStat
+- Introduced reusable ModuleCompletionPanel
+- Introduced reusable ModulePageHeader
+- Introduced presentation-only AIFeedbackPanel
+- Standardized AI feedback rendering
+- Separated scenario content from AI service logic
+- Eliminated remaining lint warnings
+- Upgraded hero/banner images to next/image
+- Full production build passes
+- Full lint passes
+
+Architectural Outcome
+
+The Dashboard and Module pages now primarily function as orchestration layers that compose reusable components.
+
+The React architecture now mirrors the documented Design System and Component Architecture.
+
+This establishes a stable foundation for future feature development.
+
+### v1.2 — Architecture Stabilization Complete
+
+Status
+
+Complete
+
+Summary
+
+The Future of ID platform has completed its architecture stabilization phase.
+
+The application now has:
+
+- Stable product architecture
+- Stable design system
+- Stable component architecture
+- Stable React implementation patterns
+- Stable AI presentation architecture
+- Clean lint/build pipeline
+- Production-ready dashboard
+- Production-ready module page architecture
+
+Future development should prioritize learning experience quality, instructional content, AI capability, and product polish over additional architectural refactoring.
