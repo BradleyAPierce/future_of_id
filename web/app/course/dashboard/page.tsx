@@ -3,9 +3,9 @@
 import { modules } from "@/data/modules";
 import { useCourseProgress } from "@/lib/useCourseProgress";
 import ModuleCard from "@/components/course/ModuleCard";
+import CurrentModuleWidget from "@/components/dashboard/CurrentModuleWidget";
 import ProgressBar from "@/components/course/ProgressBar";
 import Badge from "@/components/ui/Badge";
-import Button from "@/components/ui/Button";
 import PageBanner from "@/components/ui/PageBanner";
 import SectionHeader from "@/components/ui/SectionHeader";
 import Surface from "@/components/ui/Surface";
@@ -83,55 +83,13 @@ export default function Dashboard() {
             </div>
           </Surface>
 
-          <Surface
-            tone={nextModule ? "primary" : "success"}
-            padding="lg"
-            className="flex flex-col justify-between gap-6">
-            <div className="space-y-3">
-              <Badge tone={nextModule ? "primary" : "success"}>
-                {nextModule ? "Up Next" : "Course Complete"}
-              </Badge>
-
-              {nextModule ? (
-                <>
-                  <div>
-                    <p className="text-sm font-medium text-[var(--muted)]">
-                      {nextModule.type === "orientation"
-                        ? "Orientation"
-                        : `Module ${nextModule.order}`}
-                    </p>
-                    <h2 className="mt-2 text-2xl font-semibold leading-tight text-[var(--text)]">
-                      {nextModule.title}
-                    </h2>
-                  </div>
-
-                  <p className="text-sm leading-relaxed text-[var(--muted)]">
-                    {nextModule.description}
-                  </p>
-
-                  <p className="text-sm font-medium text-[var(--text)]">
-                    Estimated time: {nextModule.estimatedTime}
-                  </p>
-                </>
-              ) : (
-                <>
-                  <h2 className="text-2xl font-semibold leading-tight text-[var(--text)]">
-                    You have completed the course path.
-                  </h2>
-                  <p className="text-sm leading-relaxed text-[var(--muted)]">
-                    Revisit any module below when you want to review a capability
-                    or return to a practice activity.
-                  </p>
-                </>
-              )}
-            </div>
-
-            {nextModule && (
-              <Button href={nextModuleHref} className="w-fit">
-                Continue Course
-              </Button>
-            )}
-          </Surface>
+          <CurrentModuleWidget
+            module={nextModule}
+            status={nextModule ? "upNext" : "complete"}
+            progress={progress}
+            href={nextModule ? nextModuleHref : undefined}
+            ctaLabel="Continue Course"
+          />
         </section>
       </div>
 
