@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import AIFeedbackPanel from "@/components/ai/AIFeedbackPanel";
 import Button from "@/components/ui/Button";
-import FeedbackPanel from "@/components/ui/FeedbackPanel";
 import Surface from "@/components/ui/Surface";
 import TextAreaField from "@/components/ui/TextAreaField";
 
@@ -93,22 +93,12 @@ export default function ReflectionFeedbackAI({
       {error && <p className="text-sm text-[var(--danger-hover)]">{error}</p>}
 
       {feedback && (
-        <Surface padding="sm" className="space-y-5 rounded-lg">
-          <p className="text-[var(--text)]">{feedback.summary}</p>
-
-          <FeedbackPanel tone="success">
-            <ul className="list-disc space-y-2 pl-4">
-              {feedback.strengths.map((strength) => (
-                <li key={strength}>{strength}</li>
-              ))}
-            </ul>
-          </FeedbackPanel>
-
-          <FeedbackPanel tone="accent">
-            <span className="font-medium text-[var(--text)]">Next step: </span>
-            {feedback.nextStep}
-          </FeedbackPanel>
-        </Surface>
+        <AIFeedbackPanel
+          type="reflection"
+          summary={feedback.summary}
+          strengths={feedback.strengths}
+          nextStep={feedback.nextStep}
+        />
       )}
     </Surface>
   );
