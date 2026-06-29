@@ -73,14 +73,13 @@ export default function ReflectionFeedbackAI({
         onChange={setResponse}
         rows={5}
         maxLength={1200}
+        minLength={MIN_RESPONSE_LENGTH}
+        error={error}
+        showCharacterCount
         placeholder="Write your reflection response..."
       />
 
-      <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-        <p className="text-sm text-[var(--muted)]">
-          {trimmedResponse.length} / 1200 characters ({MIN_RESPONSE_LENGTH} minimum)
-        </p>
-
+      <div className="flex justify-end">
         <Button
           type="button"
           onClick={handleSubmit}
@@ -89,8 +88,6 @@ export default function ReflectionFeedbackAI({
           {isLoading ? "Getting Feedback..." : "Get AI Feedback"}
         </Button>
       </div>
-
-      {error && <p className="text-sm text-[var(--danger-hover)]">{error}</p>}
 
       {feedback && (
         <AIFeedbackPanel
