@@ -156,3 +156,21 @@ The application now has:
 - Production-ready module page architecture
 
 Future development should prioritize learning experience quality, instructional content, AI capability, and product polish over additional architectural refactoring.
+
+### v1.2 — Design System Activated
+
+Not “CSS updated.”
+
+Instead:
+
+The approved Future of ID Design System is now the active visual language of the production application.
+
+Include:
+
+- Global design tokens aligned with Figma.
+- Deep Teal palette activated.
+- Legacy warm/muddy palette removed.
+- Components now inherit the design system through shared CSS variables.
+- Marks the transition from architectural implementation to visual implementation.
+
+That’s an architectural milestone, not just a styling change.
