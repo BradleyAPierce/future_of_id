@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 type PageBannerProps = {
   title: string;
   subtitle?: string;
@@ -13,10 +15,12 @@ export default function PageBanner({
 }: PageBannerProps) {
   return (
     <section className="relative min-h-[320px] overflow-hidden rounded-3xl border border-[var(--border)] shadow-md">
-      <img
+      <Image
         src={imageUrl}
         alt=""
         aria-hidden="true"
+        fill
+        sizes="100vw"
         className="absolute inset-0 h-full w-full object-cover"
       />
       <div className="absolute inset-0 bg-black/40" />

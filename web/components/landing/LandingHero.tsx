@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { landingContent } from "@/content/landing";
 import Badge from "@/components/ui/Badge";
 import Button from "@/components/ui/Button";
@@ -9,10 +10,13 @@ type LandingHeroProps = {
 export default function LandingHero({ content }: LandingHeroProps) {
   return (
     <section className="relative min-h-[560px] overflow-hidden border-b border-[var(--border)] md:min-h-[620px]">
-      <img
+      <Image
         src={content.imageUrl}
         alt=""
         aria-hidden="true"
+        fill
+        priority
+        sizes="100vw"
         className="absolute inset-0 h-full w-full object-cover"
       />
       <div className="absolute inset-0 bg-black/55" />
