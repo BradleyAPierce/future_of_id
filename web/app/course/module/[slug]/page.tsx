@@ -4,10 +4,9 @@ import { notFound } from "next/navigation";
 import { use } from "react";
 import LessonIntro from "@/components/course/LessonIntro";
 import ModuleContentFlow from "@/components/course/ModuleContentFlow";
+import ModuleCompletionPanel from "@/components/course/ModuleCompletionPanel";
 import BackToTopButton from "@/components/ui/BackToTopButton";
-import Button from "@/components/ui/Button";
 import PageBanner from "@/components/ui/PageBanner";
-import Surface from "@/components/ui/Surface";
 import { moduleContentBySlug } from "@/content/modules";
 import { modules } from "@/data/modules";
 import { DEFAULT_BANNER_IMAGE, moduleBannersBySlug } from "@/data/pageBanners";
@@ -77,33 +76,12 @@ export default function ModulePage({ params }: ModulePageProps) {
         scenarioDecisions={scenarioDecisions}
       />
 
-      <Surface
-        padding="md"
-        className="rounded-[var(--radius-xl)] border-t-4 border-t-[var(--primary)]">
-        <section className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-          <Button
-            type="button"
-            onClick={() => markComplete(slug)}
-            disabled={completed}
-            variant={completed ? "secondary" : "primary"}>
-            {completed ? "✓ Module Completed" : "Mark Module Complete"}
-          </Button>
-
-          {nextModule && (
-            <Button
-              href={`/course/module/${nextModule.slug}`}
-              variant="secondary">
-              Next Module →
-            </Button>
-          )}
-
-          <Button
-            href="/course/dashboard"
-            variant="secondary">
-            Back to Dashboard
-          </Button>
-        </section>
-      </Surface>
+      <ModuleCompletionPanel
+        isCompleted={completed}
+        onMarkComplete={() => markComplete(slug)}
+        nextModule={nextModule}
+        nextModuleHref={nextModule ? `/course/module/${nextModule.slug}` : undefined}
+      />
       <BackToTopButton />
     </div>
   );
