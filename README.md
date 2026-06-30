@@ -197,7 +197,7 @@ Additional project documentation:
 - `docs/architecture/TECH_ARCHITECTURE.md`
 - `docs/architecture/DESIGN_SYSTEM.md`
 - `docs/COMPONENT_ARCHITECTURE_V1.md`
-- `docs/LANDING_PAGE_STRATEGY.md`
+- `docs/strategy/LANDING_PAGE_STRATEGY.md`
 - `docs/decisions/*`
 - `docs/validation/*`
 

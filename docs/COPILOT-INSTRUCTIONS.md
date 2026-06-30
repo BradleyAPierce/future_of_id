@@ -8,7 +8,7 @@ Copilot must align its work with the source-of-truth hierarchy in `docs/SYSTEM-I
 
 - Tier 1: `docs/architecture/CONTENT_ARCHITECTURE.md`, `docs/architecture/SITE_MAP.md`, `docs/architecture/TECH_ARCHITECTURE.md`, `docs/architecture/DESIGN_SYSTEM.md`, `docs/COMPONENT_ARCHITECTURE_V1.md`
 - Tier 2: `docs/strategy/DECISIONS.md`, `docs/strategy/BLUEPRINT.md`, `docs/strategy/FUTURE_READY_CAPABILITY_MODEL.md`
-- Tier 3: `docs/strategy/ROADMAP.md`, `docs/LANDING_PAGE_STRATEGY.md`, `docs/reference/INITIAL_REPO_STRUCTURE.md`, `README.md`
+- Tier 3: `docs/strategy/ROADMAP.md`, `docs/strategy/LANDING_PAGE_STRATEGY.md`, `docs/reference/INITIAL_REPO_STRUCTURE.md`, `README.md`
 - Evidence records: `docs/decisions/*` and `docs/validation/*`
 
 When making decisions, prefer consistency with those files over inventing new patterns.

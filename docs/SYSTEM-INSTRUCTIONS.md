@@ -46,7 +46,7 @@ Used to guide implementation decisions and resolve ambiguity.
 ### Tier 3 — Supporting Context
 
 9. `docs/strategy/ROADMAP.md` → development phases and sequencing
-10. `docs/LANDING_PAGE_STRATEGY.md` → public landing-page positioning and messaging
+10. `docs/strategy/LANDING_PAGE_STRATEGY.md` → public landing-page positioning and messaging
 11. `docs/reference/INITIAL_REPO_STRUCTURE.md` → historical structural reference
 12. `README.md` → project overview
 
