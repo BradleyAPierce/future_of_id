@@ -16,6 +16,14 @@ export type LandingCapability = {
   focus: string;
 };
 
+export type LandingLearningLoopStep = {
+  label: string;
+  meaning: string;
+  description: string;
+  order: number;
+  icon?: string;
+};
+
 export const landingContent = {
   header: {
     navItems: [
@@ -43,6 +51,42 @@ export const landingContent = {
       "AI-supported practice",
       "Reverse Builds",
     ],
+  },
+  learningLoop: {
+    eyebrow: "How the Platform Teaches",
+    title: "A learning loop built for design judgment.",
+    intro:
+      "Future of ID connects explanation, practice, design rationale, and reflection so learners can see both the concept and the choices behind the experience.",
+    steps: [
+      {
+        label: "Theory",
+        meaning: "Explain",
+        description:
+          "Start with the concept, why it matters, and how it connects to instructional design work.",
+        order: 1,
+      },
+      {
+        label: "Experience",
+        meaning: "Apply",
+        description:
+          "Use scenarios, decisions, or guided activities to practice the idea in context.",
+        order: 2,
+      },
+      {
+        label: "Reverse Build",
+        meaning: "Reveal",
+        description:
+          "Inspect the design rationale, tradeoffs, and implementation choices behind the learning experience.",
+        order: 3,
+      },
+      {
+        label: "Reflection",
+        meaning: "Transfer",
+        description:
+          "Connect the lesson to your own tools, role, constraints, and future design decisions.",
+        order: 4,
+      },
+    ] satisfies LandingLearningLoopStep[],
   },
   whatIs: {
     eyebrow: "What Future of ID Is",

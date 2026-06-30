@@ -5,6 +5,7 @@ import LandingFinalCta from "@/components/landing/LandingFinalCta";
 import LandingHeader from "@/components/landing/LandingHeader";
 import LandingHero from "@/components/landing/LandingHero";
 import LandingSection from "@/components/landing/LandingSection";
+import LearningLoopSection from "@/components/landing/LearningLoopSection";
 
 export default function Home() {
   return (
@@ -18,6 +19,8 @@ export default function Home() {
         <LandingHero content={landingContent.hero} />
 
         <div className="mx-auto max-w-6xl space-y-16 px-5 py-16 sm:px-6 lg:px-8 lg:py-20">
+          <LearningLoopSection content={landingContent.learningLoop} />
+
           <LandingSection
             id="what-it-is"
             eyebrow={landingContent.whatIs.eyebrow}
