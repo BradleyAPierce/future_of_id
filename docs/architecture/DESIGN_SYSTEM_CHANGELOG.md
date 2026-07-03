@@ -174,3 +174,30 @@ Include:
 - Marks the transition from architectural implementation to visual implementation.
 
 That’s an architectural milestone, not just a styling change.
+
+### v1.3 — Experience Architecture Established
+
+**Date:** July 2026
+
+**Status:** Complete
+
+**Summary**
+
+Future of ID formally introduced an Experience Architecture layer to complement the existing Product Blueprint, Technical Architecture, Content Architecture, and Design System.
+
+This milestone shifts the project's design focus from foundational architecture toward intentional learner experience design.
+
+**Major Decisions**
+
+- Introduced `docs/strategy/EXPERIENCE_ARCHITECTURE.md` as the strategy document governing the learner journey.
+- Clarified ownership between `EXPERIENCE_ARCHITECTURE.md` and `docs/experience/EXPERIENCE_PHILOSOPHY.md`.
+- Established learner autonomy as a core product principle.
+- Confirmed that modules are internally guided, but the overall course path is open.
+- Defined progress as informative rather than restrictive.
+- Confirmed that all capabilities remain accessible regardless of completion state.
+- Established MVP experience constraints around local browser storage and the absence of learner accounts.
+- Shifted product discussions toward memorable learning moments rather than additional application architecture.
+
+**Architectural Outcome**
+
+Future design decisions should now consider Product Architecture, Technical Architecture, Content Architecture, and Experience Architecture before introducing new features or interaction patterns.
