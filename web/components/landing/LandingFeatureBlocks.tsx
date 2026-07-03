@@ -19,13 +19,13 @@ export default function LandingFeatureBlocks({
     <div className="grid gap-6 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:items-start">
       <Surface padding="none" className="overflow-hidden">
         <figure>
-          <div className="relative aspect-[640/287] w-full bg-[var(--surface-elevated)]">
+          <div className="relative aspect-[4/5] w-full bg-[var(--surface-elevated)]">
             <Image
               src={image.imageUrl}
               alt={image.imageAlt}
               fill
               sizes="(min-width: 1024px) 44vw, 100vw"
-              className="object-cover"
+              className="object-contain"
             />
           </div>
           {image.caption ? (

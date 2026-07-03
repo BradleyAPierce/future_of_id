@@ -12,7 +12,7 @@ export const HOMEPAGE_DASHBOARD_PROOF_IMAGE =
   "https://raw.githubusercontent.com/BradleyAPierce/future-of-id-images/main/dashboard-banner-overlay-web640x287.jpg";
 
 export const HOMEPAGE_LEARNING_SYSTEM_FRAMEWORK_IMAGE =
-  "https://raw.githubusercontent.com/BradleyAPierce/future-of-id-images/main/future-of-id-learning-system.png";
+  "https://raw.githubusercontent.com/BradleyAPierce/future-of-id-images/main/future-of-id-learning-system-portrait.png";
 
 export const homepageProofAssets = {
   dashboard: {
