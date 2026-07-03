@@ -65,12 +65,13 @@ export default function LightboxImage({
           role="dialog"
           aria-modal="true"
           aria-label="Image preview"
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4 backdrop-blur-sm"
+          className="fixed inset-0 z-50 flex items-start justify-center overflow-y-auto bg-black/80 p-4 py-10 backdrop-blur-sm sm:p-8 sm:py-12"
           onClick={() => setIsOpen(false)}>
           <button
             type="button"
             aria-label="Close image preview"
-            className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full border border-white/25 bg-black/60 text-2xl leading-none text-white transition hover:bg-black focus:outline-none focus-visible:ring-2 focus-visible:ring-white">
+            className="fixed right-4 top-4 z-10 flex h-10 w-10 items-center justify-center rounded-full border border-white/25 bg-black/60 text-2xl leading-none text-white transition hover:bg-black focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
+            onClick={() => setIsOpen(false)}>
             ×
           </button>
           <div

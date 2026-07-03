@@ -9,7 +9,7 @@ type LandingFeatureBlocksProps = {
   items: LandingCard[];
   image: Pick<
     HomepageProofAsset,
-    "imageUrl" | "imageAlt" | "caption" | "cropBottom"
+    "imageUrl" | "imageAlt" | "cropBottom"
   >;
 };
 
@@ -31,14 +31,9 @@ export default function LandingFeatureBlocks({
             sizes="(min-width: 1024px) 44vw, 100vw"
             className="relative block aspect-[4/5] w-full bg-[var(--surface-elevated)]"
             imageClassName={imageClassName}
-            previewClassName="h-[min(82vh,900px)] w-[min(92vw,720px)]"
+            previewClassName="aspect-[4/5] w-[min(92vw,760px)]"
             previewImageClassName={imageClassName}
           />
-          {image.caption ? (
-            <figcaption className="border-t border-[var(--border)] px-5 py-4 text-sm leading-6 text-[var(--text-muted)]">
-              {image.caption}
-            </figcaption>
-          ) : null}
         </figure>
       </Surface>
 
