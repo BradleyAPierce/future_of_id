@@ -33,55 +33,55 @@ export const landingContent = {
       { label: "Principles", href: "#platform-principles" },
       { label: "About", href: "/about" },
     ],
-    cta: { label: "Start Orientation", href: "/course/orientation" },
+    cta: { label: "Start with Orientation", href: "/course/orientation" },
   },
   hero: {
     eyebrow: "For instructional designers, L&D teams, and career changers",
     title: "Future of ID",
     description:
-      "A practical learning platform for moving from course production to next-generation learning systems design.",
+      "Not another AI course, LMS, or article series. A practical learning product for moving from course production to next-generation learning systems design.",
     support:
-      "Study seven modern capabilities through guided modules, AI-supported practice, Reverse Builds, and transparent design decisions from real instructional design work.",
+      "Future of ID shows how AI can accelerate better instructional design decisions when it is paired with human judgment, learning science, and systems thinking.",
     imageUrl:
       "https://raw.githubusercontent.com/BradleyAPierce/future-of-id-images/main/dashboard-banner-overlay-web640x287.jpg",
-    primaryCta: { label: "Start Orientation", href: "/course/orientation" },
-    secondaryCta: { label: "Preview Capabilities", href: "#capabilities" },
+    primaryCta: { label: "Start with Orientation", href: "/course/orientation" },
+    secondaryCta: { label: "Explore Capability Map", href: "/course/dashboard" },
     proofPoints: [
-      "Systems thinking",
+      "Human judgment",
       "AI-supported practice",
-      "Reverse Builds",
+      "Inspect the Build",
     ],
   },
   learningLoop: {
     eyebrow: "How the Platform Teaches",
-    title: "A learning loop built for design judgment.",
+    title: "Learn, practice, inspect the build, then apply it.",
     intro:
-      "Future of ID connects explanation, practice, design rationale, and reflection so learners can see both the concept and the choices behind the experience.",
+      "Future of ID does not stop at explaining concepts. Each module moves from understanding to practice, then opens the design decisions behind the experience so learners can transfer the insight into their own work.",
     steps: [
       {
-        label: "Theory",
-        meaning: "Explain",
+        label: "Learn",
+        meaning: "Theory",
         description:
           "Start with the concept, why it matters, and how it connects to instructional design work.",
         order: 1,
       },
       {
-        label: "Experience",
-        meaning: "Apply",
+        label: "Practice",
+        meaning: "Experience",
         description:
-          "Use scenarios, decisions, or guided activities to practice the idea in context.",
+          "Use scenarios, decisions, or guided activities to test the idea in context.",
         order: 2,
       },
       {
-        label: "Reverse Build",
-        meaning: "Reveal",
+        label: "Inspect the Build",
+        meaning: "Reverse Build",
         description:
-          "Inspect the design rationale, tradeoffs, and implementation choices behind the learning experience.",
+          "Open the design rationale, tradeoffs, and implementation choices behind the learning experience.",
         order: 3,
       },
       {
-        label: "Reflection",
-        meaning: "Transfer",
+        label: "Apply",
+        meaning: "Reflection",
         description:
           "Connect the lesson to your own tools, role, constraints, and future design decisions.",
         order: 4,
@@ -319,11 +319,11 @@ export const landingContent = {
     ] satisfies LandingCapability[],
   },
   finalCta: {
-    eyebrow: "Start With Orientation",
-    title: "Enter the course with the full system in view.",
+    eyebrow: "Choose Your Entry Point",
+    title: "Start with the frame, or explore the capability map.",
     description:
-      "The orientation frames the shift from course builder to learning systems designer, then points you into the seven capability modules. Use the course to study real decisions, borrow what fits, and choose the level of AI-enabled practice that makes sense for your context.",
-    primaryCta: { label: "Start Orientation", href: "/course/orientation" },
-    secondaryCta: { label: "View Course Dashboard", href: "/course/dashboard" },
+      "Use Orientation if you want the full product frame first. Use the Dashboard if you want to browse the seven capabilities and choose the path that fits your current questions. Neither path is required before the other.",
+    primaryCta: { label: "Start with Orientation", href: "/course/orientation" },
+    secondaryCta: { label: "Explore Capability Map", href: "/course/dashboard" },
   },
 };
