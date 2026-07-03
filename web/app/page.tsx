@@ -1,4 +1,6 @@
 import { landingContent } from "@/content/landing";
+import { homepageProofAssets } from "@/data/homepageProofs";
+import HomepageProofAsset from "@/components/landing/HomepageProofAsset";
 import LandingCardGrid from "@/components/landing/LandingCardGrid";
 import LandingCapabilityPreview from "@/components/landing/LandingCapabilityPreview";
 import LandingFinalCta from "@/components/landing/LandingFinalCta";
@@ -20,6 +22,8 @@ export default function Home() {
 
         <div className="mx-auto max-w-6xl space-y-16 px-5 py-16 sm:px-6 lg:px-8 lg:py-20">
           <LearningLoopSection content={landingContent.learningLoop} />
+
+          <HomepageProofAsset asset={homepageProofAssets.dashboard} />
 
           <LandingSection
             id="what-it-is"
