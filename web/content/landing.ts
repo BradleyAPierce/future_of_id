@@ -43,7 +43,7 @@ export const landingContent = {
     support:
       "Future of ID shows how AI can accelerate better instructional design decisions when it is paired with human judgment, learning science, and systems thinking.",
     imageUrl:
-      "https://raw.githubusercontent.com/BradleyAPierce/future-of-id-images/main/dashboard-banner-overlay-web640x287.jpg",
+      "https://cdn.jsdelivr.net/gh/BradleyAPierce/future-of-id-images@main/dashboard-banner-overlay-web640x287.jpg",
     primaryCta: { label: "Start with Orientation", href: "/course/orientation" },
     secondaryCta: { label: "Explore Capability Map", href: "/course/dashboard" },
     proofPoints: [

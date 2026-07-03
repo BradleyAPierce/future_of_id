@@ -5,8 +5,8 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "raw.githubusercontent.com",
-        pathname: "/BradleyAPierce/future-of-id-images/**",
+        hostname: "cdn.jsdelivr.net",
+        pathname: "/gh/BradleyAPierce/future-of-id-images@main/**",
       },
     ],
   },

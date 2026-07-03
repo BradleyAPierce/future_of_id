@@ -8,7 +8,7 @@ export type PageBannerConfig = {
 };
 
 export const DEFAULT_BANNER_IMAGE =
-  "https://raw.githubusercontent.com/BradleyAPierce/future-of-id-images/main/dashboard-banner-overlay-web640x287.jpg";
+  "https://cdn.jsdelivr.net/gh/BradleyAPierce/future-of-id-images@main/dashboard-banner-overlay-web640x287.jpg";
 
 export const dashboardBanner: PageBannerConfig = {
   title: "Future of Instructional Design",
@@ -22,7 +22,7 @@ export const orientationBanner: PageBannerConfig = {
   subtitle:
     "Build future-ready instructional design capabilities faster while keeping the learning science, performance focus, and design judgment that still matter.",
   imageUrl:
-    "https://raw.githubusercontent.com/BradleyAPierce/future-of-id-images/main/orientation-banner-overlay-web640x287.jpg",
+    "https://cdn.jsdelivr.net/gh/BradleyAPierce/future-of-id-images@main/orientation-banner-overlay-web640x287.jpg",
   pills: ["Orientation"],
 };
 
@@ -49,7 +49,7 @@ export const moduleBannersBySlug: Record<string, PageBannerConfig> = {
     subtitle:
       "Learn where AI can support your design work, where it falls short, and how to use it with judgment.",
     imageUrl:
-      "https://raw.githubusercontent.com/BradleyAPierce/future-of-id-images/main/ai-literacy-banner-overlay-web640x287.jpg",
+      "https://cdn.jsdelivr.net/gh/BradleyAPierce/future-of-id-images@main/ai-literacy-banner-overlay-web640x287.jpg",
     pills: ["Module 1", "AI Practice"],
   },
   "performance-consulting": {
@@ -57,7 +57,7 @@ export const moduleBannersBySlug: Record<string, PageBannerConfig> = {
     subtitle:
       "Learn how to connect course requests to business goals, performance gaps, and real workplace needs.",
     imageUrl:
-      "https://raw.githubusercontent.com/BradleyAPierce/future-of-id-images/main/performance-consulting-banner-overlay-web640x287.jpg",
+      "https://cdn.jsdelivr.net/gh/BradleyAPierce/future-of-id-images@main/performance-consulting-banner-overlay-web640x287.jpg",
     pills: ["Module 2", "AI Practice"],
   },
   "learning-analytics": {
@@ -65,7 +65,7 @@ export const moduleBannersBySlug: Record<string, PageBannerConfig> = {
     subtitle:
       "Use data to measure what is working, find gaps, and improve learning designs over time.",
     imageUrl:
-      "https://raw.githubusercontent.com/BradleyAPierce/future-of-id-images/main/learning-analytics-banner-overlay-web640x287.jpg",
+      "https://cdn.jsdelivr.net/gh/BradleyAPierce/future-of-id-images@main/learning-analytics-banner-overlay-web640x287.jpg",
     pills: ["Module 3", "AI Practice"],
   },
   "simulation-design": {
@@ -73,7 +73,7 @@ export const moduleBannersBySlug: Record<string, PageBannerConfig> = {
     subtitle:
       "Design realistic scenarios and conversations that help people practice job skills.",
     imageUrl:
-      "https://raw.githubusercontent.com/BradleyAPierce/future-of-id-images/main/simulation-design-banner-overlay-web640x287.jpg",
+      "https://cdn.jsdelivr.net/gh/BradleyAPierce/future-of-id-images@main/simulation-design-banner-overlay-web640x287.jpg",
     pills: ["Module 4", "AI Practice"],
   },
   "adaptive-learning": {
@@ -81,7 +81,7 @@ export const moduleBannersBySlug: Record<string, PageBannerConfig> = {
     subtitle:
       "Design pathways that adjust to your learners' goals, needs, and progress.",
     imageUrl:
-      "https://raw.githubusercontent.com/BradleyAPierce/future-of-id-images/main/adaptive-learning-banner-overlay-web640x287.jpg",
+      "https://cdn.jsdelivr.net/gh/BradleyAPierce/future-of-id-images@main/adaptive-learning-banner-overlay-web640x287.jpg",
     pills: ["Module 5", "AI Practice"],
   },
   "content-systems": {
@@ -89,7 +89,7 @@ export const moduleBannersBySlug: Record<string, PageBannerConfig> = {
     subtitle:
       "Build content systems that are easier to update, reuse, and manage across programs.",
     imageUrl:
-      "https://raw.githubusercontent.com/BradleyAPierce/future-of-id-images/main/content-systems-banner-overlay-web640x287.jpg",
+      "https://cdn.jsdelivr.net/gh/BradleyAPierce/future-of-id-images@main/content-systems-banner-overlay-web640x287.jpg",
     pills: ["Module 6", "AI Practice"],
   },
   "human-centered-change": {
@@ -97,7 +97,7 @@ export const moduleBannersBySlug: Record<string, PageBannerConfig> = {
     subtitle:
       "Design learning experiences that support real behavior change and build trust with your learners.",
     imageUrl:
-      "https://raw.githubusercontent.com/BradleyAPierce/future-of-id-images/main/human-centered-change-banner-overlay-web640x287.jpg",
+      "https://cdn.jsdelivr.net/gh/BradleyAPierce/future-of-id-images@main/human-centered-change-banner-overlay-web640x287.jpg",
     pills: ["Module 7", "AI Practice"],
   },
 };
