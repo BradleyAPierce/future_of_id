@@ -95,24 +95,24 @@ export const landingContent = {
       "Future of ID helps experienced IDs, L&D professionals, and career-transition learners strengthen the judgment required to design learning systems, not just deliver course assets.",
     items: [
       {
-        title: "A practical learning pathway",
+        title: "Practical Learning Pathway",
         description:
-          "The course gives instructional designers a structured way to explore AI literacy, performance consulting, analytics, scenarios, adaptive learning, content systems, and trust.",
+          "Explore AI literacy, performance consulting, analytics, scenarios, adaptive learning, content systems, and trust through a structured course path.",
       },
       {
-        title: "A transparent implementation record",
+        title: "Transparent Implementation",
         description:
-          "Reverse Builds show what shaped the work, what was simplified, where AI helped, and where human judgment stayed central.",
+          "Use Reverse Builds to see what shaped the work, what was simplified, where AI helped, and where human judgment stayed central.",
       },
       {
-        title: "A systems design lens",
+        title: "Systems Thinking",
         description:
-          "The platform connects learning science, workflow decisions, evidence, learner support, and technical constraints into one design conversation.",
+          "Connect learning science, workflow decisions, evidence, learner support, and technical constraints in one design conversation.",
       },
       {
-        title: "A place to calibrate your path",
+        title: "Calibrate Your Future",
         description:
-          "The goal is to help you decide what level of AI adoption, technical depth, and system ownership makes sense for your role and context.",
+          "Choose the level of AI adoption, technical depth, and system ownership that fits your role and context.",
       },
     ] satisfies LandingCard[],
   },

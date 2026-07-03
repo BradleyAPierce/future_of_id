@@ -4,6 +4,7 @@ import HomepageProofAsset from "@/components/landing/HomepageProofAsset";
 import LandingCardGrid from "@/components/landing/LandingCardGrid";
 import LandingCapabilityPreview from "@/components/landing/LandingCapabilityPreview";
 import LandingFinalCta from "@/components/landing/LandingFinalCta";
+import LandingFeatureBlocks from "@/components/landing/LandingFeatureBlocks";
 import LandingHeader from "@/components/landing/LandingHeader";
 import LandingHero from "@/components/landing/LandingHero";
 import LandingSection from "@/components/landing/LandingSection";
@@ -30,7 +31,10 @@ export default function Home() {
             eyebrow={landingContent.whatIs.eyebrow}
             title={landingContent.whatIs.title}
             intro={landingContent.whatIs.intro}>
-            <LandingCardGrid items={landingContent.whatIs.items} />
+            <LandingFeatureBlocks
+              items={landingContent.whatIs.items}
+              image={homepageProofAssets.dashboard}
+            />
           </LandingSection>
 
           <LandingSection
