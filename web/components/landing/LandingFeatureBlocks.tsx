@@ -7,20 +7,13 @@ import Surface from "@/components/ui/Surface";
 
 type LandingFeatureBlocksProps = {
   items: LandingCard[];
-  image: Pick<
-    HomepageProofAsset,
-    "imageUrl" | "imageAlt" | "cropBottom"
-  >;
+  image: Pick<HomepageProofAsset, "imageUrl" | "imageAlt">;
 };
 
 export default function LandingFeatureBlocks({
   items,
   image,
 }: LandingFeatureBlocksProps) {
-  const imageClassName = image.cropBottom
-    ? "object-cover object-top"
-    : "object-contain";
-
   return (
     <div className="grid gap-6 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:items-start">
       <Surface padding="none" className="overflow-hidden">
@@ -29,10 +22,10 @@ export default function LandingFeatureBlocks({
             src={image.imageUrl}
             alt={image.imageAlt}
             sizes="(min-width: 1024px) 44vw, 100vw"
-            className="relative block aspect-[4/5] w-full bg-[var(--surface-elevated)]"
-            imageClassName={imageClassName}
-            previewClassName="aspect-[4/5] w-[min(92vw,760px)]"
-            previewImageClassName={imageClassName}
+            className="relative block aspect-[2/3] w-full bg-white"
+            imageClassName="object-contain"
+            previewClassName="aspect-[2/3] w-[min(92vw,760px)]"
+            previewImageClassName="object-contain"
           />
         </figure>
       </Surface>
