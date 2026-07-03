@@ -12,6 +12,14 @@ Future of ID already has strategy, content, technical, and design-system documen
 
 Use this document when making decisions about page flow, interaction design, learning activities, AI feedback, visual communication, progress, and the overall quality bar of the product experience.
 
+## Document Ownership
+
+This document owns the product experience philosophy for Future of ID. It defines product feel, quality bar, interaction principles, page and module experience guidance, learner-facing AI posture, conceptual visual and motion standards, and review checklist guidance.
+
+It should remain separate from `docs/strategy/EXPERIENCE_ARCHITECTURE.md`, which owns the learner journey, emotional arc, learner autonomy model, professional identity shift, MVP constraints, unlocked access model, and high-level experience success criteria.
+
+Use this document to judge how product surfaces should feel and behave; use the experience architecture document to understand the learner journey those surfaces are meant to support.
+
 ## 2. Product Experience Vision
 
 Future of ID should feel like a premium software product that teaches instructional design, not a traditional online course dressed up with modern UI.

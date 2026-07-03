@@ -14,7 +14,7 @@ It is a planning document. It does not move, delete, rename, merge, or archive f
 | `READMEV2.md` | Root | Archive / Superseded | Merge | Appears to preserve earlier project vision, audience, course theme, seven capabilities, experience model, and stack notes. | Extract strongest public-facing and strategy material before archiving or removing later. |
 | `READMEV3.md` | Root | Archive / Superseded | Merge | Appears to combine product story, features, philosophy, tech stack, Reverse Engineering language, and setup instructions. | Preserve useful positioning/setup language; update terminology later where product-facing language should use Reverse Build. |
 | `web/README.md` | `web/` | Implementation / Contributor Guidance | Review | Appears to be a default app-level README for running/deploying the Next.js app. | Decide whether local setup belongs here, root README, or both. Avoid duplicate setup drift. |
-| `DOCUMENTATION_ARCHITECTURE.md` | `docs/` | Documentation Governance | Keep | Defines intended documentation domains, README responsibilities, decision rules, and reorganization phases. | Should be linked from future `docs/README.md`. It is governance/planning, not the hub itself. |
+| `DOCUMENTATION_ARCHITECTURE.md` | `docs/` | Documentation Governance | Keep | Defines intended documentation domains, README responsibilities, decision rules, and reorganization phases. | Should stay linked from `docs/README.md`. It is governance/planning, not the hub itself. |
 | `DOCUMENTATION_INVENTORY.md` | `docs/` | Documentation Governance | Keep | Inventories current documentation and classifies each file before migration. | Should be updated before and after major documentation moves. |
 | `SYSTEM-INSTRUCTIONS.md` | `docs/` | Implementation / Contributor Guidance | Keep | Defines source-of-truth hierarchy, operating principles, workflow expectations, terminology, and AI assistant behavior. | Must be updated after any file moves. Strong dependency on final docs map. |
 | `COPILOT-INSTRUCTIONS.md` | `docs/` | Implementation / Contributor Guidance | Keep | Provides coding assistant guidance for architecture, file structure, naming, TypeScript, validation, UX, and AI integration. | Should stay aligned with `SYSTEM-INSTRUCTIONS.md`. Update references after reorganization. |
@@ -35,9 +35,10 @@ It is a planning document. It does not move, delete, rename, merge, or archive f
 | `PROJECT-BRAIN.md` | `docs/strategy/` | Archive / Superseded | Archive | Broad project brain with purpose, philosophy, stack, architecture, AI strategy, standards, and AI assistant instructions. | Much content now exists in more specific docs. Preserve historical context; avoid using as active source of truth unless refreshed. |
 | `ROADMAP.md` | `docs/strategy/` | Strategy | Keep | Defines roadmap status, completed foundation, current phase, next phase, later phase, and future phases. | Should be reviewed after major architecture/content milestones. |
 | `STRATEGY.md` | `docs/strategy/` | Strategy | Keep | Captures product strategy, vision notes, current/historical state, sharing, pricing, content, acquisition, and principles. | Contains historical snapshot; preserve but label current vs historical clearly if needed. |
+| `EXPERIENCE_ARCHITECTURE.md` | `docs/strategy/` | Strategy | Keep | Defines the intended learner experience, autonomy model, progress philosophy, AI role, experience language, and success criteria. | Current strategy-level experience north star; should be cross-linked from experience docs if the documentation map is updated. |
 | `scenario-engine-validation-log.md` | `docs/validation/` | Validation | Keep | Captures scenario engine validation timeline, evidence, final decision, and retest guidance. | Linked to ADR-009 and AI behavior docs later. |
 | `.DS_Store` | `docs/` | Archive / Superseded | Archive | System artifact, not documentation. | Remove in a cleanup pass only if approved; consider adding ignore coverage if missing. |
-| `docs/README.md` | Not currently present | Documentation Hub | Create | Needed as the central documentation map and reading-order guide. | Should be created before moving/consolidating docs. |
+| `docs/README.md` | `docs/` | Documentation Hub | Keep | Serves as the central documentation map and reading-order guide. | Exists and should stay aligned with the documentation architecture and inventory. |
 | `docs/archive/` or `docs/reference/` strategy | Not currently finalized | Archive / Reference | Review | Needed to decide where historical, superseded, or reference-only docs should live. | Finalize before moving `INITIAL_REPO_STRUCTURE.md`, `PROJECT-BRAIN.md`, or alternate README content. |
 | `docs/design-system/README.md` | Not currently present | Design System | Create | Needed if design-system docs move into their own domain. | Should map tokens, design system, component architecture, changelog, and Figma/React alignment. |
 | `docs/ai/README.md` | Not currently present | AI | Create | Needed before AI behavior, prompt architecture, and AI interaction patterns split from architecture/experience. | Should distinguish AI experience from AI implementation. |
@@ -51,7 +52,6 @@ It is a planning document. It does not move, delete, rename, merge, or archive f
 
 The documentation system is not ready for migration until these gaps are resolved or intentionally deferred:
 
-- `docs/README.md` does not exist yet.
 - `docs/design-system/` does not exist yet.
 - `docs/ai/` does not exist yet.
 - Folder-level README files do not exist yet for active documentation domains.
@@ -114,7 +114,7 @@ Use these documents as authoritative starting points by decision type:
 ## Recommended Reorganization Sequence
 
 1. Finalize README strategy.
-2. Create `docs/README.md` as the documentation hub.
+2. Keep `docs/README.md` current as the documentation hub.
 3. Decide root README consolidation using the strongest parts of `README.md`, `READMEV2.md`, and `READMEV3.md`.
 4. Move strategy docs only after the target docs hub exists.
 5. Move architecture docs only after links and source-of-truth references are mapped.
