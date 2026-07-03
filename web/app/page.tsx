@@ -33,7 +33,7 @@ export default function Home() {
             intro={landingContent.whatIs.intro}>
             <LandingFeatureBlocks
               items={landingContent.whatIs.items}
-              image={homepageProofAssets.dashboard}
+              image={homepageProofAssets.learningSystemFramework}
             />
           </LandingSection>
 

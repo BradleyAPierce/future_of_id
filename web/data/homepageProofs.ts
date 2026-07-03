@@ -11,6 +11,9 @@ export type HomepageProofAsset = {
 export const HOMEPAGE_DASHBOARD_PROOF_IMAGE =
   "https://raw.githubusercontent.com/BradleyAPierce/future-of-id-images/main/dashboard-banner-overlay-web640x287.jpg";
 
+export const HOMEPAGE_LEARNING_SYSTEM_FRAMEWORK_IMAGE =
+  "https://raw.githubusercontent.com/BradleyAPierce/future-of-id-images/main/future-of-id-learning-system.png";
+
 export const homepageProofAssets = {
   dashboard: {
     eyebrow: "Product proof",
@@ -22,5 +25,16 @@ export const homepageProofAssets = {
       "Future of ID dashboard preview showing the course environment and capability-based learning experience.",
     caption: "Dashboard preview: open access to the guided capability map.",
     href: "/course/dashboard",
+  },
+  learningSystemFramework: {
+    eyebrow: "Experience framework",
+    title: "How Future of ID frames learning system design.",
+    description:
+      "A framework view of how practical learning, implementation transparency, systems thinking, and professional calibration fit together.",
+    imageUrl: HOMEPAGE_LEARNING_SYSTEM_FRAMEWORK_IMAGE,
+    imageAlt:
+      "Future of ID learning system framework graphic showing the relationship between practical learning, transparent implementation, systems thinking, and professional calibration.",
+    caption:
+      "Framework view: the section teaches the shape of the learning system before asking learners to explore it.",
   },
 } satisfies Record<string, HomepageProofAsset>;
