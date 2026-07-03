@@ -1,7 +1,7 @@
-import Image from "next/image";
 import type { HomepageProofAsset as HomepageProofAssetConfig } from "@/data/homepageProofs";
 import Badge from "@/components/ui/Badge";
 import Button from "@/components/ui/Button";
+import LightboxImage from "@/components/ui/LightboxImage";
 import Surface from "@/components/ui/Surface";
 
 type HomepageProofAssetProps = {
@@ -34,15 +34,13 @@ export default function HomepageProofAsset({ asset }: HomepageProofAssetProps) {
       </div>
 
       <figure className="border-t border-[var(--border)] bg-[var(--surface)] lg:border-l lg:border-t-0">
-        <div className="relative aspect-[640/287] w-full">
-          <Image
-            src={asset.imageUrl}
-            alt={asset.imageAlt}
-            fill
-            sizes="(min-width: 1024px) 640px, 100vw"
-            className="object-cover"
-          />
-        </div>
+        <LightboxImage
+          src={asset.imageUrl}
+          alt={asset.imageAlt}
+          sizes="(min-width: 1024px) 640px, 100vw"
+          className="relative block aspect-[640/287] w-full"
+          imageClassName="object-cover"
+        />
 
         {asset.caption && (
           <figcaption className="border-t border-[var(--border)] px-5 py-3 text-sm text-[var(--muted)]">

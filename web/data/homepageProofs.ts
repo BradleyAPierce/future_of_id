@@ -6,6 +6,7 @@ export type HomepageProofAsset = {
   imageAlt: string;
   caption?: string;
   href?: string;
+  cropBottom?: boolean;
 };
 
 export const HOMEPAGE_DASHBOARD_PROOF_IMAGE =
@@ -36,5 +37,6 @@ export const homepageProofAssets = {
       "Future of ID learning system framework graphic showing the relationship between practical learning, transparent implementation, systems thinking, and professional calibration.",
     caption:
       "Framework view: the section teaches the shape of the learning system before asking learners to explore it.",
+    cropBottom: true,
   },
 } satisfies Record<string, HomepageProofAsset>;
