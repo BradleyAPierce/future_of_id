@@ -1,6 +1,7 @@
 import { landingContent } from "@/content/landing";
 import { homepageProofAssets } from "@/data/homepageProofs";
 import HomepageProofAsset from "@/components/landing/HomepageProofAsset";
+import LandingAccordion from "@/components/landing/LandingAccordion";
 import LandingCardGrid from "@/components/landing/LandingCardGrid";
 import LandingCapabilityPreview from "@/components/landing/LandingCapabilityPreview";
 import LandingFinalCta from "@/components/landing/LandingFinalCta";
@@ -42,10 +43,7 @@ export default function Home() {
             eyebrow={landingContent.whatIsNot.eyebrow}
             title={landingContent.whatIsNot.title}
             intro={landingContent.whatIsNot.intro}>
-            <LandingCardGrid
-              items={landingContent.whatIsNot.items}
-              tone="elevated"
-            />
+            <LandingAccordion items={landingContent.whatIsNot.items} />
           </LandingSection>
 
           <LandingSection
