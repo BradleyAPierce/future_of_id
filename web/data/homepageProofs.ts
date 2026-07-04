@@ -8,8 +8,8 @@ export type HomepageProofAsset = {
   href?: string;
 };
 
-export const HOMEPAGE_DASHBOARD_PROOF_IMAGE =
-  "https://raw.githubusercontent.com/BradleyAPierce/future-of-id-images/main/dashboard-banner-overlay-web640x287.jpg";
+export const HOMEPAGE_EXPERIENCE_IN_ACTION_IMAGE =
+  "https://raw.githubusercontent.com/BradleyAPierce/future-of-id-images/main/Experience-in-Action-LandscapeV4.jpg";
 
 export const HOMEPAGE_LEARNING_SYSTEM_FRAMEWORK_IMAGE =
   "https://raw.githubusercontent.com/BradleyAPierce/future-of-id-images/main/future-of-id-learning-system-portrait.png";
@@ -17,13 +17,14 @@ export const HOMEPAGE_LEARNING_SYSTEM_FRAMEWORK_IMAGE =
 export const homepageProofAssets = {
   dashboard: {
     eyebrow: "Product proof",
-    title: "A real learning product, not a static article.",
+    title: "Experience, feedback, and Reverse Build in one learning loop.",
     description:
-      "The dashboard gives learners an open capability map so they can start with orientation or choose the module that matches their current question.",
-    imageUrl: HOMEPAGE_DASHBOARD_PROOF_IMAGE,
+      "Future of ID teaches through experience: learners practice, receive AI-supported feedback, reflect on their judgment, and then use Reverse Build to inspect why the experience was designed that way.",
+    imageUrl: HOMEPAGE_EXPERIENCE_IN_ACTION_IMAGE,
     imageAlt:
-      "Future of ID dashboard preview showing the course environment and capability-based learning experience.",
-    caption: "Dashboard preview: open access to the guided capability map.",
+      "Experience in Action framework showing the relationship between the learner experience, AI feedback, reflection, and Reverse Build design rationale.",
+    caption:
+      "Experience in Action: practice, AI-supported feedback, reflection, and Reverse Build design rationale.",
     href: "/course/dashboard",
   },
   learningSystemFramework: {

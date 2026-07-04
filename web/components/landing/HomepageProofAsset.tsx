@@ -38,8 +38,10 @@ export default function HomepageProofAsset({ asset }: HomepageProofAssetProps) {
           src={asset.imageUrl}
           alt={asset.imageAlt}
           sizes="(min-width: 1024px) 640px, 100vw"
-          className="relative block aspect-[640/287] w-full"
-          imageClassName="object-cover"
+          className="relative block aspect-video w-full bg-white"
+          imageClassName="object-contain"
+          previewClassName="aspect-video w-[min(92vw,1180px)]"
+          previewImageClassName="object-contain"
         />
 
         {asset.caption && (
