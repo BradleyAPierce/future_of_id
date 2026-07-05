@@ -1,11 +1,12 @@
 import { landingContent } from "@/content/landing";
 import { homepageProofAssets } from "@/data/homepageProofs";
+import { learningFrameworksById } from "@/data/learningFrameworks";
 import HomepageProofAsset from "@/components/landing/HomepageProofAsset";
 import LandingAccordion from "@/components/landing/LandingAccordion";
 import LandingCardGrid from "@/components/landing/LandingCardGrid";
-import LandingCapabilityPreview from "@/components/landing/LandingCapabilityPreview";
 import LandingFinalCta from "@/components/landing/LandingFinalCta";
 import LandingFeatureBlocks from "@/components/landing/LandingFeatureBlocks";
+import LandingFrameworkPanel from "@/components/landing/LandingFrameworkPanel";
 import LandingHeader from "@/components/landing/LandingHeader";
 import LandingHero from "@/components/landing/LandingHero";
 import LandingSection from "@/components/landing/LandingSection";
@@ -51,7 +52,10 @@ export default function Home() {
             eyebrow={landingContent.paths.eyebrow}
             title={landingContent.paths.title}
             intro={landingContent.paths.intro}>
-            <LandingCardGrid items={landingContent.paths.items} columns="three" />
+            <LandingFrameworkPanel
+              framework={learningFrameworksById["different-paths"]}
+              description={landingContent.paths.intro}
+            />
           </LandingSection>
 
           <LandingSection
@@ -71,7 +75,29 @@ export default function Home() {
             eyebrow={landingContent.capabilities.eyebrow}
             title={landingContent.capabilities.title}
             intro={landingContent.capabilities.intro}>
-            <LandingCapabilityPreview items={landingContent.capabilities.items} />
+            <LandingFrameworkPanel
+              framework={learningFrameworksById["capability-ecosystem"]}
+              description="The seven capability areas are connected parts of one professional system: judgment, performance, evidence, practice, adaptation, maintainability, and trust.">
+              <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+                {landingContent.capabilities.items.map((item) => (
+                  <div
+                    key={item.title}
+                    className="rounded-[var(--radius-md)] border border-[var(--border)] bg-[var(--surface-elevated)] p-4">
+                    <div className="flex items-start justify-between gap-3">
+                      <span className="text-sm font-semibold text-[var(--primary)]">
+                        {item.label}
+                      </span>
+                      <span className="rounded-full border border-[var(--accent)] bg-[color-mix(in_srgb,var(--accent)_10%,transparent)] px-2.5 py-1 text-xs font-semibold text-[var(--accent-hover)]">
+                        {item.focus}
+                      </span>
+                    </div>
+                    <p className="mt-3 text-sm font-semibold leading-snug text-[var(--text)]">
+                      {item.title}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </LandingFrameworkPanel>
           </LandingSection>
 
           <LandingSection
