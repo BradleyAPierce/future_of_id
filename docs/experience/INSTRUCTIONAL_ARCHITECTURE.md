@@ -21,6 +21,22 @@ The architecture teaches learners:
 - how to practice
 - how experienced designers reason
 - how to transfer those ideas into professional work
+- Each layer intentionally answers a different instructional question. Together, they move learners from understanding the profession to practicing sound professional judgment.
+
+## Instructional Questions
+
+Each instructional layer exists to answer a different learner question. Together, these questions guide learners from understanding the profession to practicing sound professional judgment.
+
+| Instructional Layer | Learner Question |
+| ------------------- | ---------------- |
+| Learning Frameworks | **Why should I think differently?** |
+| Situational Mental Models | **How should I approach this professional decision?** |
+| Design Practice | **What would I do in this situation?** |
+| AI Design Review | **How well did I reason through my decision?** |
+| Reverse Build | **How did an experienced instructional designer think through this experience?** |
+| Reflection & Transfer | **How will this change my future professional practice?** |
+
+Rather than relying on a single instructional strategy, Future of ID intentionally layers these questions throughout the learning experience. Each layer prepares the learner for the next, gradually shifting them from understanding concepts to developing professional judgment that transfers beyond the platform.
 
 ## Instructional Architecture
 
