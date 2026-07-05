@@ -86,6 +86,16 @@ export const performanceConsultingContent: ModuleContent = {
         "This layer gives learners practice reframing a stakeholder's course request into a performance consulting conversation. The goal is not to find the fastest solution; it is to identify the real performance problem before proposing learning.",
       practiceGuidance:
         "As you respond, name the stakeholder's stated request, the performance problem that may sit beneath it, the evidence or questions you still need, any non-training factors that could affect performance, and the next step you would defend.",
+      situationalMentalModel: {
+        title: "From Request to Diagnosis",
+        steps: [
+          "Stakeholder Request",
+          "Performance Problem",
+          "Evidence",
+          "Root Cause",
+          "Recommendation",
+        ],
+      },
       sections: [
         {
           id: "activity",

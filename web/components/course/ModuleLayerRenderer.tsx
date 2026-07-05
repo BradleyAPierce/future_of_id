@@ -5,6 +5,7 @@ import LandingFrameworkPanel from "@/components/landing/LandingFrameworkPanel";
 import LessonSection from "./LessonSection";
 import ModuleExperienceSections from "./ModuleExperienceSections";
 import ModuleSectionAccordion from "./ModuleSectionAccordion";
+import ModuleSituationalMentalModel from "./ModuleSituationalMentalModel";
 import ReverseBuildModalCards from "./ReverseBuildModalCards";
 import ScenarioDecisionAI from "./ScenarioDecisionAI";
 
@@ -61,6 +62,12 @@ export default function ModuleLayerRenderer({
           {framework && <LandingFrameworkPanel framework={framework} />}
 
           <ModuleExperienceSections sections={layer.sections} />
+
+          {layer.situationalMentalModel && (
+            <ModuleSituationalMentalModel
+              model={layer.situationalMentalModel}
+            />
+          )}
 
           {scenarioDecisions.length > 0 && (
             <ScenarioDecisionAI

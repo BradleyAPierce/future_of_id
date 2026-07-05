@@ -8,11 +8,17 @@ export type ModuleLayerSection = {
   }[];
 };
 
+export type ModuleSituationalMentalModel = {
+  title: string;
+  steps: string[];
+};
+
 export type ModuleLayer = {
   title: string;
   badge?: string;
   intro?: string;
   practiceGuidance?: string;
+  situationalMentalModel?: ModuleSituationalMentalModel;
   sections: ModuleLayerSection[];
 };
 
