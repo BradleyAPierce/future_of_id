@@ -44,7 +44,7 @@ export default function ModuleLayerRenderer({
       badge={layer.badge}
       accent={display.accent}
       emphasis={display.emphasis}>
-      {layer.intro && <p>{layer.intro}</p>}
+      {kind !== "reverseBuild" && layer.intro && <p>{layer.intro}</p>}
 
       {kind === "theory" &&
         layer.sections.map((section) => (
@@ -65,7 +65,7 @@ export default function ModuleLayerRenderer({
       )}
 
       {kind === "reverseBuild" && (
-        <ReverseBuildModalCards sections={layer.sections} />
+        <ReverseBuildModalCards intro={layer.intro} sections={layer.sections} />
       )}
     </LessonSection>
   );
