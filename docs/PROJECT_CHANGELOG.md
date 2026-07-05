@@ -34,6 +34,47 @@ Future entries should include:
 
 ## Version History
 
+### v1.4 — Learning Framework Library & Orientation Transformation
+
+**Date:** July 2026
+
+**Status:** Complete
+
+**Summary**
+
+Future of ID evolved from a content-driven learning platform into a framework-driven learning product.
+
+A reusable Learning Framework Library was established to capture the product's core mental models, visual language, and reusable instructional artifacts. Homepage and Orientation now teach through frameworks, belief shifts, and shared vocabulary rather than paragraph-heavy explanation.
+
+**Major Milestones**
+
+- Established the Learning Framework Library as a product philosophy layer.
+- Registered six foundational frameworks:
+  - Learning System
+  - Experience in Action
+  - Different Paths
+  - Stronger Together / Capability Ecosystem
+  - Reverse Build
+  - Human Judgment in the Age of AI
+- Treated framework graphics as reusable learning artifacts and intellectual property, not decorative page assets.
+- Integrated frameworks into the homepage to reduce reading and increase understanding.
+- Redesigned Orientation around shared vocabulary, belief shifts, and open exploration rather than traditional course onboarding.
+- Established AI Interpretability as a product design principle: pages should be readable by humans and teachable by AI/browser assistants.
+- Reinforced the principle that every major page must stand on its own while still contributing to the larger learner journey.
+
+**Why This Matters**
+
+This milestone shifts Future of ID from explaining its ideas through copy-heavy sections toward teaching through durable mental models.
+
+Frameworks now operate as reusable product assets that can support homepage learning, Orientation, module pages, Reverse Build experiences, AI-mediated interpretation, presentations, downloads, and future portfolio storytelling.
+
+**What We Learned**
+
+- Framework work should be intentional and tied to one transformational question, mental model, emotional job, and memorable line.
+- Pages should consume framework data from centralized sources where practical rather than duplicating framework metadata.
+- Future Orientation, module, Reverse Build, and AI feedback work should use the Learning Framework Library and AI Interpretability strategy as product-quality references.
+- Homepage architecture is considered mature; remaining homepage work should focus on visual polish, mobile readability, and asset quality rather than structural redesign.
+
 ### v0.9 — Experience Framework and Documentation Governance
 
 **Date:** June 2026

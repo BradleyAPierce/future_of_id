@@ -7,6 +7,8 @@ interface LessonIntroProps {
   description: string;
   children?: ReactNode;
   metadata?: string[];
+  learnerQuestion?: string;
+  takeaway?: string;
 }
 
 export default function LessonIntro({
@@ -14,6 +16,8 @@ export default function LessonIntro({
   description,
   children,
   metadata,
+  learnerQuestion,
+  takeaway,
 }: LessonIntroProps) {
   return (
     <Surface
@@ -36,7 +40,27 @@ export default function LessonIntro({
       </div>
 
       <div className="space-y-4 p-5 sm:p-6">
+        {learnerQuestion && (
+          <div className="space-y-1">
+            <p className="text-xs font-semibold uppercase tracking-wide text-[var(--primary-hover)]">
+              Learner question
+            </p>
+            <p className="text-xl font-semibold leading-snug text-[var(--text)]">
+              {learnerQuestion}
+            </p>
+          </div>
+        )}
+
         <p className="leading-7 text-[var(--text)]">{description}</p>
+
+        {takeaway && (
+          <p className="rounded-[var(--radius-lg)] border border-[var(--primary)] bg-[color-mix(in_srgb,var(--primary)_8%,var(--surface))] px-4 py-3 text-sm leading-6 text-[var(--text)]">
+            <span className="font-semibold text-[var(--primary-hover)]">
+              Takeaway:
+            </span>{" "}
+            {takeaway}
+          </p>
+        )}
 
         {children && (
           <div className="max-w-4xl text-sm leading-7 text-[var(--muted)]">

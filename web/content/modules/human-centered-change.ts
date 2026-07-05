@@ -3,6 +3,8 @@ import type { ModuleContent } from "@/types/moduleContent";
 export const humanCenteredChangeContent: ModuleContent = {
   slug: "human-centered-change",
   intro: {
+    learnerQuestion: "How do I design learning experiences people can trust?",
+    takeaway: "Trust is designed.",
     overview:
       "Human-centered change, ethics, and learner trust focus on how you design learning experiences people are willing to use, question, and rely on. In this module, you make design decisions about transparency, bias, psychological safety, and AI support so your learners understand what is happening, why it matters, and how you protect their trust.",
     outcomes: [

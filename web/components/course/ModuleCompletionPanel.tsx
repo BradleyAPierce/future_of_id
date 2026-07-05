@@ -23,23 +23,33 @@ export default function ModuleCompletionPanel({
     <Surface
       padding="md"
       className={`rounded-[var(--radius-xl)] border-t-4 border-t-[var(--primary)] ${className}`}>
+      <div className="mb-4 space-y-1">
+        <p className="text-lg font-semibold text-[var(--text)]">
+          Choose what you are curious about next.
+        </p>
+        <p className="text-sm leading-relaxed text-[var(--muted)]">
+          Follow the next capability or return to the Capability Map. Learners
+          may begin anywhere; there is no required sequence.
+        </p>
+      </div>
+
       <section className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
         <Button
           type="button"
           onClick={onMarkComplete}
           disabled={isCompleted}
           variant={isCompleted ? "secondary" : "primary"}>
-          {isCompleted ? "✓ Module Completed" : "Mark Module Complete"}
+          {isCompleted ? "✓ Complete" : "Mark Complete"}
         </Button>
 
         {nextModule && nextModuleHref && (
           <Button href={nextModuleHref} variant="secondary">
-            Next Module →
+            Explore Next Capability →
           </Button>
         )}
 
         <Button href={dashboardHref} variant="secondary">
-          Back to Dashboard
+          Return to Capability Map
         </Button>
       </section>
     </Surface>

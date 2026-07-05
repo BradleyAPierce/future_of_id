@@ -50,7 +50,7 @@ export const moduleBannersBySlug: Record<string, PageBannerConfig> = {
       "Learn where AI can support your design work, where it falls short, and how to use it with judgment.",
     imageUrl:
       "https://cdn.jsdelivr.net/gh/BradleyAPierce/future-of-id-images@main/ai-literacy-banner-overlay-web640x287.jpg",
-    pills: ["Module 1", "AI Practice"],
+    pills: ["Module 1", "Design Practice"],
   },
   "performance-consulting": {
     title: "Performance Consulting and Business Alignment",
@@ -58,7 +58,7 @@ export const moduleBannersBySlug: Record<string, PageBannerConfig> = {
       "Learn how to connect course requests to business goals, performance gaps, and real workplace needs.",
     imageUrl:
       "https://cdn.jsdelivr.net/gh/BradleyAPierce/future-of-id-images@main/performance-consulting-banner-overlay-web640x287.jpg",
-    pills: ["Module 2", "AI Practice"],
+    pills: ["Module 2", "Design Practice"],
   },
   "learning-analytics": {
     title: "Learning Analytics and Evidence-Based Design",
@@ -66,7 +66,7 @@ export const moduleBannersBySlug: Record<string, PageBannerConfig> = {
       "Use data to measure what is working, find gaps, and improve learning designs over time.",
     imageUrl:
       "https://cdn.jsdelivr.net/gh/BradleyAPierce/future-of-id-images@main/learning-analytics-banner-overlay-web640x287.jpg",
-    pills: ["Module 3", "AI Practice"],
+    pills: ["Module 3", "Design Practice"],
   },
   "simulation-design": {
     title: "Scenario, Simulation, and Conversation Design",
@@ -74,7 +74,7 @@ export const moduleBannersBySlug: Record<string, PageBannerConfig> = {
       "Design realistic scenarios and conversations that help people practice job skills.",
     imageUrl:
       "https://cdn.jsdelivr.net/gh/BradleyAPierce/future-of-id-images@main/simulation-design-banner-overlay-web640x287.jpg",
-    pills: ["Module 4", "AI Practice"],
+    pills: ["Module 4", "Design Practice"],
   },
   "adaptive-learning": {
     title: "Adaptive and Personalized Learning Architecture",
@@ -82,7 +82,7 @@ export const moduleBannersBySlug: Record<string, PageBannerConfig> = {
       "Design pathways that adjust to your learners' goals, needs, and progress.",
     imageUrl:
       "https://cdn.jsdelivr.net/gh/BradleyAPierce/future-of-id-images@main/adaptive-learning-banner-overlay-web640x287.jpg",
-    pills: ["Module 5", "AI Practice"],
+    pills: ["Module 5", "Design Practice"],
   },
   "content-systems": {
     title: "Content Systems Thinking and Workflow Automation",
@@ -90,7 +90,7 @@ export const moduleBannersBySlug: Record<string, PageBannerConfig> = {
       "Build content systems that are easier to update, reuse, and manage across programs.",
     imageUrl:
       "https://cdn.jsdelivr.net/gh/BradleyAPierce/future-of-id-images@main/content-systems-banner-overlay-web640x287.jpg",
-    pills: ["Module 6", "AI Practice"],
+    pills: ["Module 6", "Design Practice"],
   },
   "human-centered-change": {
     title: "Human-Centered Change, Ethics, and Trust",
@@ -98,6 +98,6 @@ export const moduleBannersBySlug: Record<string, PageBannerConfig> = {
       "Design learning experiences that support real behavior change and build trust with your learners.",
     imageUrl:
       "https://cdn.jsdelivr.net/gh/BradleyAPierce/future-of-id-images@main/human-centered-change-banner-overlay-web640x287.jpg",
-    pills: ["Module 7", "AI Practice"],
+    pills: ["Module 7", "Design Practice"],
   },
 };

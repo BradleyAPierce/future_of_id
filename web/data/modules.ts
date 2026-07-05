@@ -26,7 +26,7 @@ export const modules: ModuleMetadata[] = [
     order: 1,
     estimatedTime: "20 min",
     type: "module",
-    practiceLabel: "AI Practice",
+    practiceLabel: "Design Practice",
   },
   {
     slug: "performance-consulting",
@@ -36,7 +36,7 @@ export const modules: ModuleMetadata[] = [
     order: 2,
     estimatedTime: "20 min",
     type: "module",
-    practiceLabel: "AI Practice",
+    practiceLabel: "Design Practice",
   },
   {
     slug: "learning-analytics",
@@ -46,7 +46,7 @@ export const modules: ModuleMetadata[] = [
     order: 3,
     estimatedTime: "20 min",
     type: "module",
-    practiceLabel: "AI Practice",
+    practiceLabel: "Design Practice",
   },
   {
     slug: "simulation-design",
@@ -56,7 +56,7 @@ export const modules: ModuleMetadata[] = [
     order: 4,
     estimatedTime: "20 min",
     type: "module",
-    practiceLabel: "AI Practice",
+    practiceLabel: "Design Practice",
   },
   {
     slug: "adaptive-learning",
@@ -66,7 +66,7 @@ export const modules: ModuleMetadata[] = [
     order: 5,
     estimatedTime: "20 min",
     type: "module",
-    practiceLabel: "AI Practice",
+    practiceLabel: "Design Practice",
   },
   {
     slug: "content-systems",
@@ -76,7 +76,7 @@ export const modules: ModuleMetadata[] = [
     order: 6,
     estimatedTime: "20 min",
     type: "module",
-    practiceLabel: "AI Practice",
+    practiceLabel: "Design Practice",
   },
   {
     slug: "human-centered-change",
@@ -86,6 +86,6 @@ export const modules: ModuleMetadata[] = [
     order: 7,
     estimatedTime: "20 min",
     type: "module",
-    practiceLabel: "AI Practice",
+    practiceLabel: "Design Practice",
   },
 ];

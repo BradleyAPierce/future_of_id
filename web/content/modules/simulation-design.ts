@@ -3,6 +3,9 @@ import type { ModuleContent } from "@/types/moduleContent";
 export const simulationDesignContent: ModuleContent = {
   slug: "simulation-design",
   intro: {
+    learnerQuestion: "How do I design practice where decisions matter?",
+    takeaway:
+      "Realistic practice starts with a decision, a consequence, and useful feedback.",
     overview:
       "Scenario, simulation, and conversation design helps instructional designers create realistic practice environments where your learners can make decisions, receive feedback, and experience consequences before applying skills in higher-stakes settings. This module shows you how to design realistic practice where decisions matter, constraints are visible, and feedback helps people improve before the stakes are real.",
     outcomes: [

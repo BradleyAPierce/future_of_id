@@ -18,6 +18,8 @@ export type ModuleLayer = {
 export type ModuleContent = {
   slug: string;
   intro: {
+    learnerQuestion?: string;
+    takeaway?: string;
     overview: string;
     outcomes?: string[];
   };

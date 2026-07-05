@@ -3,6 +3,8 @@ import type { ModuleContent } from "@/types/moduleContent";
 export const adaptiveLearningContent: ModuleContent = {
   slug: "adaptive-learning",
   intro: {
+    learnerQuestion: "When does adaptation actually improve learning?",
+    takeaway: "Complexity should be earned.",
     overview:
       "Adaptive and personalized learning lets you design experiences that respond to your learners' readiness, progress, and context. This module focuses on the decisions behind adaptation: what to change, why it matters, what evidence supports that decision, and whether the added complexity is actually worth it.",
     outcomes: [

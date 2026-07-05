@@ -49,7 +49,9 @@ export default function ModulePageHeader({
       <LessonIntro
         title={module.title}
         description={module.description}
-        metadata={getModuleMetadata(module)}>
+        metadata={getModuleMetadata(module)}
+        learnerQuestion={moduleContent.intro.learnerQuestion}
+        takeaway={moduleContent.intro.takeaway}>
         {moduleContent.intro.overview}
       </LessonIntro>
     </section>

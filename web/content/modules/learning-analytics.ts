@@ -3,6 +3,8 @@ import type { ModuleContent } from "@/types/moduleContent";
 export const learningAnalyticsContent: ModuleContent = {
   slug: "learning-analytics",
   intro: {
+    learnerQuestion: "How can evidence help me make better design decisions?",
+    takeaway: "Evidence should guide decisions, not decorate reports.",
     overview:
       "Learning analytics helps instructional designers replace assumptions with evidence. This module shows how to use data to understand your learners' behavior, evaluate design decisions, and make improvements tied to performance and business outcomes.",
     outcomes: [

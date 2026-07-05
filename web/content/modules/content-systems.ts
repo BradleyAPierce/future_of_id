@@ -3,6 +3,9 @@ import type { ModuleContent } from "@/types/moduleContent";
 export const contentSystemsContent: ModuleContent = {
   slug: "content-systems",
   intro: {
+    learnerQuestion: "How can learning content scale without losing quality?",
+    takeaway:
+      "Reusable content works when structure protects context and quality.",
     overview:
       "Content systems thinking moves you from one-off course builds to structured content you can reuse and update across programs. This module covers modular content design, content architecture, workflow automation, and separating content from presentation. The goal is to scale content without duplicating it or breaking it when it changes.",
     outcomes: [

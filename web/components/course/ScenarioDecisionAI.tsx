@@ -110,12 +110,12 @@ export default function ScenarioDecisionAI({
       className="mt-6 space-y-6 rounded-[var(--radius-xl)] shadow-[var(--shadow-sm)]">
       <div className="space-y-3">
         <p className="text-sm font-medium uppercase tracking-wide text-[var(--primary-hover)]">
-          Practice sequence
+          Design practice
         </p>
         <p className="text-sm leading-relaxed text-[var(--muted)]">
-          These scenarios build in complexity from realistic practice design to
-          governed AI conversations and adaptive simulation logic. You can move
-          in order or select the decision point most relevant to your work.
+          Choose a professional design decision, explain your reasoning, and use
+          AI feedback as a structured critique. You can move in order or select
+          the decision point most relevant to your work.
         </p>
         <div className="flex flex-col gap-2 sm:flex-row">
           {scenarios.map((scenarioOption) => (

@@ -3,6 +3,8 @@ import type { ModuleContent } from "@/types/moduleContent";
 export const performanceConsultingContent: ModuleContent = {
   slug: "performance-consulting",
   intro: {
+    learnerQuestion: "What problem are we actually solving?",
+    takeaway: "Better diagnosis leads to better learning solutions.",
     overview:
       "Performance consulting means you don't take course requests at face value. You investigate the business problem, define the performance gap, and identify the conditions influencing behavior. In this module, you'll ask targeted questions, align work to measurable outcomes, and decide when training is not the solution.",
     outcomes: [

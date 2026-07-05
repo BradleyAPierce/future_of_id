@@ -3,6 +3,8 @@ import type { ModuleContent } from "@/types/moduleContent";
 export const aiLiteracyContent: ModuleContent = {
   slug: "ai-literacy",
   intro: {
+    learnerQuestion: "How can I use AI without giving up professional judgment?",
+    takeaway: "AI accelerates design work. Judgment protects quality.",
     overview:
       "AI literacy means knowing what AI can do, where it fails, and how to use it responsibly in design work. This module treats AI as a design partner, not a replacement for instructional judgment.",
     outcomes: [
