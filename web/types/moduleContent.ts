@@ -23,6 +23,10 @@ export type ModuleContent = {
     overview: string;
     outcomes?: string[];
   };
+  frameworks?: {
+    afterIntro?: string;
+    beforeDesignPractice?: string;
+  };
   layers: {
     theory: ModuleLayer;
     experience: ModuleLayer;

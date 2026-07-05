@@ -1,5 +1,7 @@
 import type { ScenarioDecision } from "@/data/scenarioDecisions";
+import { learningFrameworksById } from "@/data/learningFrameworks";
 import type { ModuleContent, ModuleLayer } from "@/types/moduleContent";
+import LandingFrameworkPanel from "@/components/landing/LandingFrameworkPanel";
 import ModuleLayerRenderer, {
   type ModuleLayerKind,
 } from "./ModuleLayerRenderer";
@@ -22,6 +24,11 @@ export default function ModuleContentFlow({
   moduleSlug,
   scenarioDecisions,
 }: ModuleContentFlowProps) {
+  const introFrameworkId = moduleContent.frameworks?.afterIntro;
+  const introFramework = introFrameworkId
+    ? learningFrameworksById[introFrameworkId]
+    : undefined;
+
   const orderedLayers: OrderedModuleLayer[] = [
     { kind: "theory", layer: moduleContent.layers.theory },
     { kind: "experience", layer: moduleContent.layers.experience },
@@ -30,6 +37,8 @@ export default function ModuleContentFlow({
 
   return (
     <section className="space-y-12">
+      {introFramework && <LandingFrameworkPanel framework={introFramework} />}
+
       <ModuleOutcomesAccordion outcomes={moduleContent.intro.outcomes} />
 
       {orderedLayers.map(({ kind, layer }) => (
@@ -38,6 +47,11 @@ export default function ModuleContentFlow({
           kind={kind}
           layer={layer}
           moduleSlug={moduleSlug}
+          frameworkId={
+            kind === "experience"
+              ? moduleContent.frameworks?.beforeDesignPractice
+              : undefined
+          }
           scenarioDecisions={scenarioDecisions}
         />
       ))}

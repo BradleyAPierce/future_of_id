@@ -1,5 +1,7 @@
 import type { ScenarioDecision } from "@/data/scenarioDecisions";
+import { learningFrameworksById } from "@/data/learningFrameworks";
 import type { ModuleLayer } from "@/types/moduleContent";
+import LandingFrameworkPanel from "@/components/landing/LandingFrameworkPanel";
 import LessonSection from "./LessonSection";
 import ModuleExperienceSections from "./ModuleExperienceSections";
 import ModuleSectionAccordion from "./ModuleSectionAccordion";
@@ -12,6 +14,7 @@ type ModuleLayerRendererProps = {
   kind: ModuleLayerKind;
   layer: ModuleLayer;
   moduleSlug: string;
+  frameworkId?: string;
   scenarioDecisions: ScenarioDecision[];
 };
 
@@ -34,9 +37,11 @@ export default function ModuleLayerRenderer({
   kind,
   layer,
   moduleSlug,
+  frameworkId,
   scenarioDecisions,
 }: ModuleLayerRendererProps) {
   const display = layerDisplayByKind[kind];
+  const framework = frameworkId ? learningFrameworksById[frameworkId] : undefined;
 
   return (
     <LessonSection
@@ -53,6 +58,8 @@ export default function ModuleLayerRenderer({
 
       {kind === "experience" && (
         <>
+          {framework && <LandingFrameworkPanel framework={framework} />}
+
           <ModuleExperienceSections sections={layer.sections} />
 
           {scenarioDecisions.length > 0 && (

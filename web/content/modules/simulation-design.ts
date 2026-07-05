@@ -15,6 +15,9 @@ export const simulationDesignContent: ModuleContent = {
       "Decide when AI-driven conversation adds value, and when simpler scenario design is enough.",
     ],
   },
+  frameworks: {
+    beforeDesignPractice: "experience-in-action",
+  },
   layers: {
     theory: {
       title: "Theory",

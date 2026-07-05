@@ -14,6 +14,9 @@ export const aiLiteracyContent: ModuleContent = {
       "Evaluate an AI-supported learning activity for instructional quality and risk.",
     ],
   },
+  frameworks: {
+    afterIntro: "human-judgment-in-the-age-of-ai",
+  },
   layers: {
     theory: {
       title: "Theory",
