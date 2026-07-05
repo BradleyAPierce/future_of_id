@@ -43,6 +43,8 @@ Use a neutral, analytical peer-review tone. Do not invent learner intent. Do not
 const moduleSpecificReviewCriteriaBySlug: Record<string, string> = {
   "ai-literacy":
     "For AI Literacy responses, evaluate the learner's professional judgment about AI use. Check whether the response explains appropriate AI delegation, human validation or review, SME or stakeholder review where relevant, learner and context fit, risk awareness, safeguards that protect quality, and boundaries for what remains human-owned. Do not evaluate AI Literacy primarily as a scenario design exercise.",
+  "performance-consulting":
+    "For Performance Consulting responses, evaluate whether the learner avoided order-taking, diagnosed before prescribing, identified missing evidence, considered business and performance context, recognized possible non-training causes, and made a defensible, appropriately scoped recommendation or next step. Do not reward jumping straight from a stakeholder course request to a training solution unless the learner has established evidence that training is justified.",
 };
 
 const scenarioFeedbackOutputContract =

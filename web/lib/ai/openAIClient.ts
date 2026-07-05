@@ -13,6 +13,25 @@ type ChatCompletionJsonOptions = {
   maxTokens?: number;
 };
 
+async function getOpenAIErrorMessage(response: Response): Promise<string> {
+  if (response.status === 429) {
+    try {
+      const errorBody = await response.json();
+      const errorCode = errorBody?.error?.code;
+
+      if (errorCode === "insufficient_quota") {
+        return "OpenAI rejected this API key with insufficient_quota. Check that the key belongs to the funded API project and that billing or credits are active.";
+      }
+    } catch {
+      return "OpenAI rejected this API key with insufficient_quota. Check that the key belongs to the funded API project and that billing or credits are active.";
+    }
+
+    return "AI feedback is temporarily rate-limited. Try again shortly.";
+  }
+
+  return "AI feedback failed.";
+}
+
 export async function createChatCompletionJson(
   messages: OpenAIMessage[],
   options: ChatCompletionJsonOptions = {},
@@ -46,7 +65,13 @@ export async function createChatCompletionJson(
     );
 
     if (!openAIResponse.ok) {
-      return { ok: false, error: { message: "AI feedback failed.", status: 502 } };
+      return {
+        ok: false,
+        error: {
+          message: await getOpenAIErrorMessage(openAIResponse),
+          status: 502,
+        },
+      };
     }
 
     const completion = await openAIResponse.json();

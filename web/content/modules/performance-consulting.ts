@@ -6,7 +6,7 @@ export const performanceConsultingContent: ModuleContent = {
     learnerQuestion: "What problem are we actually solving?",
     takeaway: "Better diagnosis leads to better learning solutions.",
     overview:
-      "Performance consulting means you don't take course requests at face value. You investigate the business problem, define the performance gap, and identify the conditions influencing behavior. In this module, you'll ask targeted questions, align work to measurable outcomes, and decide when training is not the solution.",
+      "A course request is a signal to diagnose the performance system, not an automatic order to build training. Performance consulting means you investigate the business problem, define the performance gap, and identify the conditions influencing behavior. In this module, you'll ask targeted questions, align work to measurable outcomes, and decide when training is not the solution.",
     outcomes: [
       "Distinguish a course request from an underlying performance problem.",
       "Use stakeholder discovery questions to clarify business goals and constraints.",
@@ -83,7 +83,9 @@ export const performanceConsultingContent: ModuleContent = {
       title: "Experience",
       badge: "Layer 2",
       intro:
-        "This layer gives learners practice reframing a stakeholder's course request into a performance consulting conversation.",
+        "This layer gives learners practice reframing a stakeholder's course request into a performance consulting conversation. The goal is not to find the fastest solution; it is to identify the real performance problem before proposing learning.",
+      practiceGuidance:
+        "As you respond, name the stakeholder's stated request, the performance problem that may sit beneath it, the evidence or questions you still need, any non-training factors that could affect performance, and the next step you would defend.",
       sections: [
         {
           id: "activity",
@@ -328,6 +330,6 @@ export const performanceConsultingContent: ModuleContent = {
   reflection: {
     title: "Reflection",
     prompt:
-      "Think of a recent or realistic course request. What performance question would you ask first, and how would the answer change the solution you recommend?",
+      "Think of a recent or realistic course request. What assumption would you challenge, what evidence would you still need, and what diagnosis remains yours as the instructional designer before recommending a solution?",
   },
 };
