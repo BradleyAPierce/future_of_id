@@ -17,9 +17,16 @@ export default function LandingFrameworkPanel({
   description,
   children,
 }: LandingFrameworkPanelProps) {
+  const hasImage = Boolean(framework.imageUrl && framework.alt);
+
   return (
     <Surface tone="elevated" padding="none" className="overflow-hidden">
-      <div className="grid gap-0 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.35fr)] lg:items-stretch">
+      <div
+        className={`grid gap-0 lg:items-stretch ${
+          hasImage
+            ? "lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.35fr)]"
+            : ""
+        }`}>
         <div className="space-y-5 p-6 sm:p-7">
           <Badge tone="primary">Learning framework</Badge>
 
@@ -36,17 +43,19 @@ export default function LandingFrameworkPanel({
           </div>
         </div>
 
-        <div className="border-t border-[var(--border)] bg-white lg:border-l lg:border-t-0">
-          <LightboxImage
-            src={framework.imageUrl}
-            alt={framework.alt}
-            sizes="(min-width: 1024px) 720px, 100vw"
-            className="relative block aspect-video w-full bg-white"
-            imageClassName="object-contain"
-            previewClassName="aspect-video w-[min(92vw,1180px)]"
-            previewImageClassName="object-contain"
-          />
-        </div>
+        {hasImage ? (
+          <div className="border-t border-[var(--border)] bg-white lg:border-l lg:border-t-0">
+            <LightboxImage
+              src={framework.imageUrl as string}
+              alt={framework.alt as string}
+              sizes="(min-width: 1024px) 720px, 100vw"
+              className="relative block aspect-video w-full bg-white"
+              imageClassName="object-contain"
+              previewClassName="aspect-video w-[min(92vw,1180px)]"
+              previewImageClassName="object-contain"
+            />
+          </div>
+        ) : null}
       </div>
 
       {children ? (

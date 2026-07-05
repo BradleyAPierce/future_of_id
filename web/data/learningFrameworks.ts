@@ -12,8 +12,8 @@ export type LearningFramework = {
   title: string;
   mentalModel: string;
   transformationalQuestion: string;
-  imageUrl: string;
-  alt: string;
+  imageUrl?: string;
+  alt?: string;
   status: LearningFrameworkStatus;
   intendedUses: LearningFrameworkUse[];
 };
@@ -22,6 +22,18 @@ const GITHUB_IMAGE_BASE =
   "https://raw.githubusercontent.com/BradleyAPierce/future-of-id-images/main";
 
 export const learningFrameworks = [
+  {
+    id: "human-judgment-in-the-age-of-ai",
+    title: "Human Judgment in the Age of AI",
+    mentalModel:
+      "AI can accelerate analysis, drafting, feedback, and iteration, but human judgment remains responsible for purpose, ethics, context, quality, and consequence.",
+    transformationalQuestion:
+      "What should instructional designers own when AI can generate more of the work?",
+    imageUrl: `${GITHUB_IMAGE_BASE}/Human-Judgement-in-the-Age-of-AI.jpg`,
+    alt: "Human Judgment in the Age of AI framework showing professional judgment as a compass for navigating learning science, human needs, business context, AI capability, professional experience, and systems thinking.",
+    status: "active",
+    intendedUses: ["homepage", "orientation", "modules", "presentations"],
+  },
   {
     id: "learning-system",
     title: "Learning System",
