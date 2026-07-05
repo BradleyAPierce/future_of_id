@@ -81,7 +81,9 @@ export const aiLiteracyContent: ModuleContent = {
       title: "Experience",
       badge: "Layer 2",
       intro:
-        "This layer asks learners to examine an AI-supported design scenario and practice deciding where AI adds value, where it introduces risk, and where human design judgment is required.",
+        "This layer asks learners to examine an AI-supported design scenario and practice deciding where AI adds value, where it introduces risk, and where human design judgment is required. Use the Human Judgment framework as the lens for the decision you are about to make.",
+      practiceGuidance:
+        "As you respond, name what AI can support, what humans must validate, what risk exists, and which safeguard protects learning quality.",
       sections: [
         {
           id: "activity",
@@ -321,6 +323,6 @@ export const aiLiteracyContent: ModuleContent = {
   reflection: {
     title: "Reflection",
     prompt:
-      "Where would AI most responsibly support your current learning design workflow, and what human review step would you keep in place to protect instructional quality?",
+      "Where would AI most responsibly support your current learning design workflow, what human review step would you keep in place to protect instructional quality, and what judgment remains yours as the designer?",
   },
 };

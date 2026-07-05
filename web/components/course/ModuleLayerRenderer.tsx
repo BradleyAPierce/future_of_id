@@ -65,6 +65,7 @@ export default function ModuleLayerRenderer({
           {scenarioDecisions.length > 0 && (
             <ScenarioDecisionAI
               moduleSlug={moduleSlug}
+              practiceGuidance={layer.practiceGuidance}
               scenarios={scenarioDecisions}
             />
           )}

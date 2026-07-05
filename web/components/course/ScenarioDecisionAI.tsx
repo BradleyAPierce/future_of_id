@@ -10,6 +10,7 @@ const MIN_RESPONSE_LENGTH = 20;
 
 type ScenarioDecisionAIProps = {
   moduleSlug: string;
+  practiceGuidance?: string;
   scenarios: {
     id: string;
     title: string;
@@ -28,6 +29,7 @@ type ScenarioFeedback = {
 
 export default function ScenarioDecisionAI({
   moduleSlug,
+  practiceGuidance,
   scenarios,
 }: ScenarioDecisionAIProps) {
   const [selectedScenarioId, setSelectedScenarioId] = useState(
@@ -159,6 +161,7 @@ export default function ScenarioDecisionAI({
         maxLength={1200}
         minLength={MIN_RESPONSE_LENGTH}
         error={error}
+        helperText={practiceGuidance}
         showCharacterCount
         placeholder="Describe your design decision..."
       />

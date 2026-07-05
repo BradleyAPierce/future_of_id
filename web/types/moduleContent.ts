@@ -12,6 +12,7 @@ export type ModuleLayer = {
   title: string;
   badge?: string;
   intro?: string;
+  practiceGuidance?: string;
   sections: ModuleLayerSection[];
 };
 

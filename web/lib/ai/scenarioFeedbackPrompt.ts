@@ -40,15 +40,33 @@ The nextStep must be a specific design action that pushes the response one level
 
 Use a neutral, analytical peer-review tone. Do not invent learner intent. Do not assume a scenario, workflow, audience, or constraint beyond what is provided. If the response is vague, ask for a more specific decision. Do not grade the learner. Do not mention that you are an AI model. Do not include markdown. Do not add keys beyond summary, strengths, gap, nextStep.`;
 
+const moduleSpecificReviewCriteriaBySlug: Record<string, string> = {
+  "ai-literacy": `For AI Literacy responses, evaluate the learner's professional judgment about AI use. Silently check whether the response addresses:
+- appropriate AI delegation
+- human validation or review
+- SME or stakeholder review where relevant
+- learner and context fit
+- risk awareness
+- safeguards that protect quality
+- boundaries for what remains human-owned
+
+Do not evaluate AI Literacy primarily as a scenario design exercise. The strongest responses should explain what AI can support, what must be checked by a person, what risk could affect learners or quality, and what safeguard keeps instructional judgment in control.`,
+};
+
 export function buildScenarioFeedbackMessages({
   scenario,
   moduleSlug,
   response,
 }: ScenarioFeedbackPromptContext): ScenarioFeedbackMessage[] {
+  const moduleSpecificReviewCriteria =
+    moduleSpecificReviewCriteriaBySlug[moduleSlug];
+
   return [
     {
       role: "system",
-      content: scenarioFeedbackSystemPrompt,
+      content: moduleSpecificReviewCriteria
+        ? `${scenarioFeedbackSystemPrompt}\n\n${moduleSpecificReviewCriteria}`
+        : scenarioFeedbackSystemPrompt,
     },
     {
       role: "user",
