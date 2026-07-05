@@ -121,13 +121,13 @@ export const performanceConsultingContent: ModuleContent = {
       title: "Reverse Build",
       badge: "Layer 3",
       intro:
-        "Most training requests do not start with a clear performance problem. They start with a symptom: sales are down, people are not following the process, or someone believes a refresher is needed. By the time the request reaches L&D, the solution is often already assumed to be training. This module was built to interrupt that pattern. The goal is not to teach a perfect consulting process. The goal is to help designers slow down just enough to ask better questions, clarify what is actually happening, and determine whether training will improve performance at all.",
+        "Most training requests do not start with a clear performance problem. They start with a symptom: sales are down, people are not following the process, or someone believes a refresher is needed. By the time the request reaches L&D, the solution is often already assumed to be training. This module was built to interrupt that pattern by moving learners from stakeholder request, to performance problem, to evidence, to root cause, to recommendation. The goal is not to teach a perfect consulting process. The goal is to help designers slow down just enough to ask better questions, clarify what is actually happening, and determine whether training will improve performance at all.",
       sections: [
         {
           id: "what-this-module-is-solving",
           title: "What This Module Is Solving",
           description:
-            "Most training requests do not start with a clear performance problem. They start with a symptom, and the solution is often already assumed to be training. This module is designed to interrupt that pattern. It helps designers slow down just enough to ask better questions, clarify what is actually happening, and determine whether training will improve performance at all. This reflects real work: incomplete information, unclear causes, and pressure to move quickly.",
+            "Most training requests do not start with a clear performance problem. They start with a symptom, and the solution is often already assumed to be training. This module is designed to interrupt order-taking by helping designers move from request to diagnosis before they prescribe. It asks learners to surface the possible performance problem, identify missing evidence, consider non-training causes, and decide what recommendation could be defended. This reflects real work: incomplete information, unclear causes, and pressure to move quickly.",
         },
         {
           id: "key-design-decisions",
@@ -138,12 +138,12 @@ export const performanceConsultingContent: ModuleContent = {
             {
               label: "Start with an assumed solution",
               description:
-                "Learners are not given full context, complete data, or a well-defined gap. They have to work from assumptions and decide what to ask next.",
+                "Learners begin with a stakeholder request, not a confirmed performance problem. They are not given full context, complete data, or a well-defined gap, so they have to work from assumptions and decide what to ask next.",
             },
             {
               label: "Make clarity something learners build",
               description:
-                "Stakeholder conversations rarely arrive fully formed. The module shows that clarity is created through questioning, not handed to the designer.",
+                "Stakeholder conversations rarely arrive fully formed. The module shows that clarity is created through questioning: what is the performance problem, what evidence exists, and what root cause is most plausible?",
             },
             {
               label: "Avoid a fixed intake template",
@@ -158,7 +158,7 @@ export const performanceConsultingContent: ModuleContent = {
             {
               label: "Force judgment before solution design",
               description:
-                "Learners have to decide what information matters before recommending training, coaching, process support, or another intervention.",
+                "Learners have to decide what information matters before recommending training, coaching, process support, or another intervention. The recommendation should come after diagnosis, not before it.",
             },
           ],
         },
@@ -177,9 +177,9 @@ export const performanceConsultingContent: ModuleContent = {
                 "Performance consulting asks designers to understand the business outcome, current performance, desired performance, and possible causes before building.",
             },
             {
-              label: "New approach: messy intake practice",
+              label: "New approach: request-to-diagnosis practice",
               description:
-                "This module keeps the core idea—diagnose before designing—but removes the assumption that learners will have clean inputs.",
+                "This module keeps the core idea—diagnose before designing—but removes the assumption that learners will have clean inputs. Learners practice moving from request to performance problem, evidence, root cause, and recommendation.",
             },
             {
               label: "New approach: stakeholder response variation",
@@ -250,7 +250,7 @@ export const performanceConsultingContent: ModuleContent = {
             {
               label: "Interpretation support",
               description:
-                "AI helped surface different possible explanations for a vague request, but those possibilities still needed human review.",
+                "AI helped surface different possible explanations for a vague request, including possible non-training causes, but those possibilities still needed human review and evidence before becoming recommendations.",
             },
             {
               label: "Human judgment remains central",
@@ -262,7 +262,8 @@ export const performanceConsultingContent: ModuleContent = {
         {
           id: "what-another-designer-can-reuse",
           title: "What Another Designer Can Reuse",
-          description: "The most reusable element is the consulting pattern.",
+          description:
+            "The most reusable element is the request-to-diagnosis pattern: stakeholder request, performance problem, evidence, root cause, recommendation.",
           items: [
             {
               label: "Define the business outcome",
