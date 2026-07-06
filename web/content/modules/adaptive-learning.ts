@@ -6,7 +6,7 @@ export const adaptiveLearningContent: ModuleContent = {
     learnerQuestion: "When does adaptation actually improve learning?",
     takeaway: "Complexity should be earned.",
     overview:
-      "Adaptive and personalized learning lets you design experiences that respond to your learners' readiness, progress, and context. This module focuses on the decisions behind adaptation: what to change, why it matters, what evidence supports that decision, and whether the added complexity is actually worth it.",
+      "Adaptive learning does not mean creating more personalization, paths, or technology by default. Adaptation should occur only when evidence justifies a different learning response. This module focuses on deciding what should change, why it matters, what evidence supports that decision, and whether the added complexity is actually worth it.",
     outcomes: [
       "Explain how adaptive learning and personalization differ from static course design.",
       "Identify learner variables that can inform pathways, support, recommendations, or practice.",
@@ -89,7 +89,17 @@ export const adaptiveLearningContent: ModuleContent = {
       title: "Experience",
       badge: "Layer 2",
       intro:
-        "This layer gives learners practice designing a simple adaptive pathway from a real learner need instead of adding personalization as a decorative feature.",
+        "This layer gives learners practice designing a simple adaptive pathway from a real learner need instead of adding personalization as a decorative feature. Before changing the path, decide what evidence warrants adaptation, what learning response would help, and what complexity should stay out of the design.",
+      situationalMentalModel: {
+        title: "Adaptive Decisions",
+        steps: [
+          "Learner Difference",
+          "Evidence",
+          "Trigger",
+          "Response",
+          "Review",
+        ],
+      },
       sections: [
         {
           id: "activity",
@@ -115,13 +125,13 @@ export const adaptiveLearningContent: ModuleContent = {
       title: "Reverse Build",
       badge: "Layer 3",
       intro:
-        'Most teams ask for "adaptive learning" without being able to define what should actually change, or why. The result is usually one of two extremes: a single static path that ignores real learner differences, or an overbuilt experience with unnecessary branching, weak logic, and no clear evidence behind it. This module was designed to correct that problem. Instead of teaching adaptive learning as a feature or system, it focuses on the core design work: deciding which learner differences matter, what evidence you trust, and when a change in the experience is actually justified. The goal is not to make every experience personalized. The goal is to make better decisions about when adaptation improves learning, and when it doesn\'t.',
+        'Most teams ask for "adaptive learning" without being able to define what should actually change, or why. The result is usually one of two extremes: a single static path that ignores real learner differences, or an overbuilt experience with unnecessary branching, weak logic, and no clear evidence behind it. This module was designed to correct that problem. Instead of teaching adaptive learning as a feature or system, it follows an adaptive-decision lens: learner difference, evidence, trigger, response, and review. The goal is not to make every experience personalized. The goal is to decide when adaptation improves learning, when it doesn\'t, and why complexity should be earned.',
       sections: [
         {
           id: "what-this-module-is-solving",
           title: "What This Module Is Solving",
           description:
-            "This module was built to correct a common mistake: teams jump to tools and pathways before defining what should actually change. Instead of building a full adaptive system, we focused on the decision work: what triggers a change, what changes, and why it is justified.",
+            "This module was built to correct a common mistake: teams jump to tools and pathways before defining what should actually change. Instead of building a full adaptive system, we focused on the decision work: identify the meaningful learner difference, determine what evidence justifies adaptation, define the trigger, choose the response, and review whether the adaptation actually helped.",
         },
         {
           id: "key-design-decisions",
@@ -130,27 +140,27 @@ export const adaptiveLearningContent: ModuleContent = {
             {
               label: "Focus on decisions, not systems",
               description:
-                "We did not simulate a full adaptive platform. Most designers don't struggle with tools; they struggle with defining rules. This module centers on decision points: what triggers a change, what changes, and why.",
+                "We did not simulate a full adaptive platform. Most designers don't struggle with tools; they struggle with defining rules. This module centers on the adaptive decision: learner difference, evidence, trigger, response, and review.",
             },
             {
               label: "Start with learner variability, not pathways",
               description:
-                "Designers often jump straight to branching. We intentionally start with identifying meaningful learner differences so adaptation is grounded in real needs, not assumptions.",
+                "Designers often jump straight to branching. We intentionally start with identifying meaningful learner differences so adaptation is grounded in real needs, not assumptions or novelty.",
             },
             {
               label: "Treat diagnostics as design choices",
               description:
-                "We frame evidence, such as quiz performance, self-assessment, or role selection, as something you choose and justify, not something the system magically provides.",
+                "We frame evidence, such as quiz performance, self-assessment, or role selection, as something you choose and justify before changing the learner's path.",
             },
             {
               label: "Keep a shared core experience",
               description:
-                "Not everything changes. Some content should remain consistent to protect clarity, alignment, and shared outcomes.",
+                "Not every learner difference requires a separate response. Some content should remain consistent to protect clarity, alignment, and shared outcomes.",
             },
             {
               label: "Build in evaluation criteria",
               description:
-                "Every adaptive decision is tested against practical questions: Is the trigger meaningful? Is the evidence reliable? Does this actually improve the learner's path?",
+                "Every adaptive decision is tested against practical questions: Is the trigger meaningful? Is the evidence reliable? Does the response match the need? Did the adaptation actually improve learning?",
             },
           ],
         },
@@ -161,12 +171,12 @@ export const adaptiveLearningContent: ModuleContent = {
             {
               label: "Mastery learning -> Used to support progress",
               description:
-                "Instead of just referencing mastery, we show how learners might receive remediation or additional practice based on evidence of progress.",
+                "Instead of just referencing mastery, we show how learners might receive remediation or additional practice based on evidence of progress, then review whether that response helped.",
             },
             {
               label: "Differentiated instruction -> Turned into rules",
               description:
-                "Differentiation often stays conceptual. Here, it becomes concrete: define what changes, when, and for whom.",
+                "Differentiation often stays conceptual. Here, it becomes concrete: define what changes, when, for whom, and how you will know whether it worked.",
             },
             {
               label: "Learner variability -> Prioritized, not expanded",
@@ -176,7 +186,7 @@ export const adaptiveLearningContent: ModuleContent = {
             {
               label: "New approach: constraint-driven adaptation",
               description:
-                "The shift is not toward more personalization. It is toward more disciplined decisions. Adaptation is treated as something you justify, not something you assume.",
+                "The shift is not toward more personalization. It is toward more disciplined decisions. Adaptation is treated as something you justify, not something you assume. Complexity should be earned.",
             },
           ],
         },
@@ -187,7 +197,7 @@ export const adaptiveLearningContent: ModuleContent = {
             {
               label: "We did not build a fully adaptive system",
               description:
-                "No dynamic content rendering, no AI-driven personalization engine, no complex branching trees. That level of build introduces significant overhead and often fails without strong underlying logic.",
+                "No dynamic content rendering, no AI-driven personalization engine, no complex branching trees. That level of build introduces significant overhead and often fails when the learner difference, evidence, trigger, and response are weak.",
             },
             {
               label: "We simplified diagnostic signals",
@@ -197,12 +207,12 @@ export const adaptiveLearningContent: ModuleContent = {
             {
               label: "We constrained pathway complexity",
               description:
-                "More paths are not better. Each added pathway increases design, content, and maintenance cost. This module forces designers to evaluate whether the added complexity is worth it.",
+                "More paths are not better. Each added pathway increases design, content, and maintenance cost. This module forces designers to evaluate whether the added complexity improves the learner response enough to justify the cost.",
             },
             {
               label: "We prioritized clarity over customization",
               description:
-                "Too much personalization can fragment the experience or hide essential content. We intentionally keep a strong common path with targeted adaptation.",
+                "Too much personalization can fragment the experience or hide essential content. We intentionally keep a strong common path with targeted adaptation only where the evidence warrants it.",
             },
           ],
         },
@@ -210,7 +220,7 @@ export const adaptiveLearningContent: ModuleContent = {
           id: "how-ai-supported-the-build",
           title: "How AI Supported the Build",
           description:
-            "AI was useful in specific parts of the process, but it did not drive the design. It helped generate variations quickly, but many of the initial outputs were too generic or unrealistic. Most of the work was refining those outputs into decisions that actually reflected meaningful learner differences.",
+            "AI was useful in specific parts of the process, but it did not drive the design. It helped generate variations quickly, but many of the initial outputs were too generic or unrealistic. Most of the work was refining those outputs into decisions that actually reflected meaningful learner differences, evidence-backed triggers, useful responses, and review criteria.",
           items: [
             {
               label: "Helpful for generating variations",
@@ -220,12 +230,12 @@ export const adaptiveLearningContent: ModuleContent = {
             {
               label: "Useful for structuring decision logic",
               description:
-                "Prompts helped organize thinking into patterns: learner variable -> evidence -> trigger -> response.",
+                "Prompts helped organize thinking into patterns: learner difference -> evidence -> trigger -> response -> review.",
             },
             {
               label: "Not reliable for determining what matters",
               description:
-                "AI cannot decide which learner differences are instructionally meaningful. That required human judgment tied to the learning goal.",
+                "AI cannot decide which learner differences are instructionally meaningful or whether the evidence is strong enough to justify adaptation. That required human judgment tied to the learning goal.",
             },
             {
               label: "Not used to automate adaptation decisions",
@@ -241,12 +251,12 @@ export const adaptiveLearningContent: ModuleContent = {
             {
               label: "A simple adaptive design pattern",
               description:
-                "Define the goal -> identify meaningful learner differences -> select evidence -> define trigger -> specify response -> evaluate the tradeoff.",
+                "Define the goal -> identify a meaningful learner difference -> select evidence -> define the trigger -> specify the response -> review whether it worked.",
             },
             {
               label: "A constraint mindset",
               description:
-                "Treat adaptation as something you earn through evidence, not something you apply everywhere.",
+                "Treat adaptation as something you earn through evidence, not something you apply everywhere. Complexity should be earned.",
             },
             {
               label: "Practical diagnostic signals",
@@ -267,12 +277,12 @@ export const adaptiveLearningContent: ModuleContent = {
             {
               label: "Weak or unreliable data",
               description:
-                "If your diagnostic signals don't reflect real learner needs, your pathways will misdirect learners.",
+                "If your diagnostic signals don't reflect real learner needs, your triggers will misdirect learners.",
             },
             {
               label: "Overestimating learner differences",
               description:
-                "Not all variability matters. Designing for the wrong differences adds complexity without improving outcomes.",
+                "Not all variability matters. Designing for the wrong differences adds personalization without improving outcomes.",
             },
             {
               label: "Stakeholder pressure for full personalization",
@@ -282,7 +292,7 @@ export const adaptiveLearningContent: ModuleContent = {
             {
               label: "Maintenance and scalability",
               description:
-                "Every adaptive pathway adds ongoing cost. If the system can't be maintained, it won't hold up over time.",
+                "Every adaptive pathway adds ongoing cost. If no one reviews whether the adaptation improved learning, the system won't hold up over time.",
             },
           ],
         },
@@ -290,7 +300,7 @@ export const adaptiveLearningContent: ModuleContent = {
           id: "reflection-question",
           title: "Reflection Question",
           description:
-            "Where in your current work would a change in the learning path actually improve outcomes—and what evidence would you require before justifying that change?",
+            "Where in your current work would a change in the learning path actually improve outcomes? What learner difference, evidence, trigger, response, and review plan would justify that added complexity?",
         },
       ],
     },
@@ -298,6 +308,6 @@ export const adaptiveLearningContent: ModuleContent = {
   reflection: {
     title: "Reflection",
     prompt:
-      "Where would adaptation genuinely improve a learning experience you know, and what learner evidence would you trust before changing the path?",
+      "Where would adaptation genuinely improve a learning experience you know? What evidence would justify the change, what adaptation would be unnecessary, and what judgment remains yours as the instructional designer?",
   },
 };
