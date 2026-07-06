@@ -3,11 +3,10 @@ import type { ModuleContent } from "@/types/moduleContent";
 export const simulationDesignContent: ModuleContent = {
   slug: "simulation-design",
   intro: {
-    learnerQuestion: "How do I design practice where decisions matter?",
-    takeaway:
-      "Realistic practice starts with a decision, a consequence, and useful feedback.",
+    learnerQuestion: "How do I design practice where decisions truly matter?",
+    takeaway: "Meaningful practice begins with meaningful decisions.",
     overview:
-      "Scenario, simulation, and conversation design helps instructional designers create realistic practice environments where your learners can make decisions, receive feedback, and experience consequences before applying skills in higher-stakes settings. This module shows you how to design realistic practice where decisions matter, constraints are visible, and feedback helps people improve before the stakes are real.",
+      "Better scenarios do not come from more branching, realism, or technology by default. They come from meaningful decisions, consequences, and feedback that help learners practice judgment before the stakes are real. This module shows you how to design decision-rich practice where constraints are visible, feedback is useful, and complexity is earned.",
     outcomes: [
       "Explain how scenario-based learning, simulations, and conversation design support skill transfer.",
       "Shape decision points that reflect realistic constraints, consequences, and learner judgment.",
@@ -93,7 +92,9 @@ export const simulationDesignContent: ModuleContent = {
       title: "Experience",
       badge: "Layer 2",
       intro:
-        "This layer gives your learners practice shaping a realistic scenario or AI-driven conversation around a workplace decision that matters.",
+        "This layer gives your learners practice shaping a realistic scenario or AI-driven conversation around a workplace decision that matters. Before adding branches, realism, or AI, define the decision learners must make, the consequence they need to see, and the feedback that will help them improve.",
+      practiceGuidance:
+        "As you respond, define the meaningful decision the learner must make, the consequence that makes the decision matter, the feedback that helps them improve, whether branching, realism, or AI actually improves the practice, and what complexity you would intentionally avoid.",
       sections: [
         {
           id: "activity",
@@ -119,33 +120,33 @@ export const simulationDesignContent: ModuleContent = {
       title: "Reverse Build",
       badge: "Layer 3",
       intro:
-        "We focused this module on one problem: new sales reps don't struggle because they lack knowledge; they struggle because they don't know what to say next. You see it in the first few minutes of a customer conversation. They hesitate, over-explain, or go in the wrong direction. So instead of trying to cover the full sales process, we kept this tight. This module is about practicing that moment where a rep has to make a call and move the conversation forward.",
+        "We focused this module on one problem: new sales reps don't struggle because they lack knowledge; they struggle at the moment when a customer says something unexpected and they have to decide what to do next. The design starts with that meaningful decision, then builds the consequence, feedback, and only the complexity needed to support transfer. Instead of covering the full sales process or chasing realism, this module practices the moment where a rep has to make a call and move the conversation forward.",
       sections: [
         {
           id: "key-design-decisions",
           title: "Key Design Decisions",
           description:
-            "A few decisions shaped everything here. We did consider building a full end-to-end simulation, but it added complexity without improving the core skill, so we cut it.",
+            "A few decisions shaped everything here: meaningful decision, consequence, feedback, justified complexity, and transfer. We did consider building a full end-to-end simulation, but it added complexity without improving the core skill, so we cut it.",
           items: [
             {
               label: "Narrow the scope",
               description:
-                "We stayed in the early conversation instead of building a full simulation. That's where most breakdowns happen.",
+                "We stayed in the early conversation instead of building a full simulation. That's where the learner decision is clearest and most transferable.",
             },
             {
               label: "Build around one decision at a time",
               description:
-                "Not a full conversation tree. Just moments where the learner has to decide what to do next.",
+                "Not a full conversation tree. Just moments where the learner has to decide what to do next and see why that choice matters.",
             },
             {
               label: "Keep branching limited",
               description:
-                "We only added branches where a choice actually changes what happens. Anything else just adds noise.",
+                "We only added branches where a choice changes the consequence or feedback. Anything else just adds noise.",
             },
             {
               label: "Keep it realistic, not dramatic",
               description:
-                "No over-the-top scenarios. Just situations that feel like something a rep would actually run into.",
+                "No over-the-top scenarios. Just enough workplace pressure to make the decision feel real and useful.",
             },
           ],
         },
@@ -153,32 +154,33 @@ export const simulationDesignContent: ModuleContent = {
           id: "proven-practice-vs-new-approach",
           title: "Proven Practice vs New Approach",
           description:
-            "There's nothing new about scenario-based learning. This is built on practices that already work: scenarios, decision points, and feedback tied to consequences. The difference is we cut everything that didn't force a real decision. Instead of trying to build something immersive, we focused on making sure the learner has to make a decision and see what happens next. AI is optional here. You don't need it to do this well. In a lot of cases, solid scenario design gets you most of the way there.",
+            "There's nothing new about scenario-based learning. This is built on practices that already work: scenarios, decision points, consequences, and feedback. The difference is we cut everything that didn't help the learner practice a real decision. Instead of trying to build something immersive, we focused on making sure the learner has to choose, see what happens, and understand how to improve next time. AI is optional here. You don't need it to do this well. In a lot of cases, solid scenario design gets you most of the way there.",
         },
         {
           id: "tradeoffs-and-constraints",
           title: "Tradeoffs and Constraints",
           description:
-            "This didn't come together in a clean sequence. Most of the work was going back and fixing weak decisions after we saw how the scenario actually played out. The first version of this didn't work. The decisions were too obvious, so there was nothing to actually think through.",
+            "This didn't come together in a clean sequence. Most of the work was going back and fixing weak decisions after we saw how the scenario actually played out. The first version didn't work because the decisions were too obvious, the consequences were too soft, and the feedback had nothing meaningful to respond to.",
           items: [
             {
               label: "No full conversation simulation",
-              description: "Too much complexity, not enough added value.",
+              description:
+                "Too much complexity, not enough added value for the decision being practiced.",
             },
             {
               label: "Limited number of decisions",
               description:
-                "More choices can feel realistic, but they make feedback harder to follow. If we added more branches, the feedback would get messy fast and the build time would spike.",
+                "More choices can feel realistic, but they make feedback harder to follow. If a branch doesn't change the consequence or the feedback, it is probably not worth building.",
             },
             {
               label: "Controlled fidelity",
               description:
-                "Enough detail to feel real, but not so much that it slows everything down.",
+                "Enough detail to support workplace transfer, but not so much that realism distracts from the decision.",
             },
             {
               label: "Buildable structure",
               description:
-                "Most teams don't have time to create large simulations, so we kept the structure simple enough to reuse.",
+                "Most teams don't have time to create large simulations, so complexity has to earn its place by improving practice.",
             },
           ],
         },
@@ -186,7 +188,7 @@ export const simulationDesignContent: ModuleContent = {
           id: "how-ai-supported-the-build",
           title: "How AI Supported the Build",
           description:
-            "AI helped in a few specific ways. But the first outputs were generic. Most of the real work was rewriting choices and consequences so they sounded like something a real customer would actually say, and making sure the feedback explained what changed. AI didn't decide what a good response looks like. That still comes from the designer and the SME.",
+            "AI helped in a few specific ways. But the first outputs were generic. Most of the real work was rewriting choices and consequences so they sounded like something a real customer would actually say, and making sure the feedback explained what changed. AI didn't decide which decision mattered, how much complexity was justified, or what a good response looks like. That still comes from the designer and the SME.",
           items: [
             {
               label: "Scenario drafts",
@@ -207,20 +209,25 @@ export const simulationDesignContent: ModuleContent = {
           id: "what-another-designer-can-reuse",
           title: "What Another Designer Can Reuse",
           description:
-            "If you're building something like this, you don't need to overcomplicate it. You can do a lot with just a few moves.",
+            "If you're building something like this, you don't need to overcomplicate it. You can do a lot with a simple decision-rich sequence.",
           items: [
             {
               label: "Start with one decision that actually matters.",
             },
             {
-              label: "Build the scenario around that moment.",
-            },
-            {
-              label: "Only branch when the outcome changes.",
+              label: "Define the consequence that teaches.",
             },
             {
               label:
-                "Write feedback that explains what happens, not just what's correct.",
+                "Write feedback that improves future judgment, not just correctness.",
+            },
+            {
+              label:
+                "Add branching, realism, or AI only when it improves practice.",
+            },
+            {
+              label:
+                "Connect the practice back to real workplace performance.",
             },
           ],
         },
@@ -228,13 +235,13 @@ export const simulationDesignContent: ModuleContent = {
           id: "where-this-could-break",
           title: "Where This Could Break",
           description:
-            "This approach doesn't work everywhere. This starts to fall apart if the decision isn't real, the scenario doesn't feel believable, or the learner already knows how to handle the situation. It also breaks if you overbuild it. More branching, more AI, and more realism can sound better, but they can make the experience harder to follow and harder to maintain.",
+            "This approach doesn't work everywhere. It starts to fall apart if the decision isn't real, the consequence doesn't teach, the feedback only marks correctness, or the learner already knows how to handle the situation. It also breaks if you overbuild it. More branching, more AI, and more realism can sound better, but they can make the experience harder to follow, harder to maintain, and less connected to performance.",
         },
         {
           id: "reflection",
           title: "Reflection",
           description:
-            "What's one decision you keep explaining in your training—but never actually let people practice? And what's stopping you from building that experience?",
+            "What's one decision you keep explaining in your training but never actually let people practice? What consequence, feedback, and level of complexity would help that practice transfer to real work?",
         },
       ],
     },
@@ -242,6 +249,6 @@ export const simulationDesignContent: ModuleContent = {
   reflection: {
     title: "Reflection",
     prompt:
-      "What is one workplace conversation or decision that would benefit from safe practice, and what feedback would help learners improve before they face it in real life?",
+      "Think of one workplace conversation or decision that would benefit from safe practice. What decision matters most, what consequence would create learning, and what professional judgment remains yours as the designer?",
   },
 };

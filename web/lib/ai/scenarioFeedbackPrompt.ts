@@ -47,6 +47,8 @@ const moduleSpecificReviewCriteriaBySlug: Record<string, string> = {
     "For Performance Consulting responses, evaluate whether the learner avoided order-taking, diagnosed before prescribing, identified missing evidence, considered business and performance context, recognized possible non-training causes, and made a defensible, appropriately scoped recommendation or next step. Do not reward jumping straight from a stakeholder course request to a training solution unless the learner has established evidence that training is justified.",
   "learning-analytics":
     "For Learning Analytics responses, evaluate the quality of evidence selected, how the learner interprets that evidence, whether they acknowledge uncertainty, the quality of the instructional decision, whether additional evidence is needed, the connection between evidence and learner or business outcomes, and the appropriateness of proposed measurement. Do not reward collecting more data without purpose, reporting metrics without interpretation, dashboard thinking, or certainty without evidence. Reinforce that evidence should guide decisions, not decorate reports.",
+  "simulation-design":
+    "For Scenario, Simulation, and Conversation Design responses, evaluate whether the learner identified a meaningful decision, connected useful consequences to that decision, designed feedback that supports learning rather than just correctness, justified any added branching, realism, or AI, avoided decorative complexity, and supported transfer to real work. Do not reward more branches, higher fidelity, or AI conversation unless the learner explains how they improve the practice decision.",
 };
 
 const scenarioFeedbackOutputContract =
