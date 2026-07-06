@@ -45,6 +45,8 @@ const moduleSpecificReviewCriteriaBySlug: Record<string, string> = {
     "For AI Literacy responses, evaluate the learner's professional judgment about AI use. Check whether the response explains appropriate AI delegation, human validation or review, SME or stakeholder review where relevant, learner and context fit, risk awareness, safeguards that protect quality, and boundaries for what remains human-owned. Do not evaluate AI Literacy primarily as a scenario design exercise.",
   "performance-consulting":
     "For Performance Consulting responses, evaluate whether the learner avoided order-taking, diagnosed before prescribing, identified missing evidence, considered business and performance context, recognized possible non-training causes, and made a defensible, appropriately scoped recommendation or next step. Do not reward jumping straight from a stakeholder course request to a training solution unless the learner has established evidence that training is justified.",
+  "learning-analytics":
+    "For Learning Analytics responses, evaluate the quality of evidence selected, how the learner interprets that evidence, whether they acknowledge uncertainty, the quality of the instructional decision, whether additional evidence is needed, the connection between evidence and learner or business outcomes, and the appropriateness of proposed measurement. Do not reward collecting more data without purpose, reporting metrics without interpretation, dashboard thinking, or certainty without evidence. Reinforce that evidence should guide decisions, not decorate reports.",
 };
 
 const scenarioFeedbackOutputContract =

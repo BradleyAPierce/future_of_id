@@ -3,10 +3,11 @@ import type { ModuleContent } from "@/types/moduleContent";
 export const learningAnalyticsContent: ModuleContent = {
   slug: "learning-analytics",
   intro: {
-    learnerQuestion: "How can evidence help me make better design decisions?",
+    learnerQuestion:
+      "How can evidence help me make better instructional design decisions?",
     takeaway: "Evidence should guide decisions, not decorate reports.",
     overview:
-      "Learning analytics helps instructional designers replace assumptions with evidence. This module shows how to use data to understand your learners' behavior, evaluate design decisions, and make improvements tied to performance and business outcomes.",
+      "Learning analytics is not reporting numbers for their own sake. It means using evidence to make better instructional design decisions when the data is incomplete, mixed, or uncertain. This module shows how to understand learner behavior, evaluate design decisions, and make improvements tied to performance and business outcomes.",
     outcomes: [
       "Explain how learning analytics supports evidence-based design decisions.",
       "Distinguish useful learning measures from vanity metrics.",
@@ -78,7 +79,11 @@ export const learningAnalyticsContent: ModuleContent = {
       title: "Experience",
       badge: "Layer 2",
       intro:
-        "This layer gives you practice reading analytics evidence and turning it into a focused design recommendation.",
+        "This layer gives you practice reading analytics evidence and turning it into a focused design recommendation. Before recommending action, interpret the evidence, name what remains uncertain, and connect the decision to learner behavior or performance.",
+      situationalMentalModel: {
+        title: "From Evidence to Decision",
+        steps: ["Evidence", "Interpretation", "Decision", "Measurement"],
+      },
       sections: [
         {
           id: "activity",
@@ -104,13 +109,13 @@ export const learningAnalyticsContent: ModuleContent = {
       title: "Reverse Build",
       badge: "Layer 3",
       intro:
-        "Most teams already have data. That's not the problem. The problem is that the data doesn't lead to better decisions. Designers see completion rates, quiz scores, and satisfaction feedback, but still don't know what to fix or why performance isn't improving. This module was built to address a common failure point: collecting more data than you can interpret, and reacting to signals that don't actually connect to behavior or outcomes. The goal is not to teach analytics. The goal is to help designers decide what evidence actually matters, what can be trusted, and what should change because of it.",
+        "Most teams already have data. That's not the problem. The problem is that the data doesn't lead to better decisions. Designers see completion rates, quiz scores, and satisfaction feedback, but still don't know what to fix or why performance isn't improving. This module was built to address a common failure point: collecting more data than you can interpret, and reacting to signals that don't actually connect to behavior or outcomes. The learning experience moves learners from evidence, to interpretation, to decision, to measurement. The goal is not to teach analytics. The goal is to help designers decide what evidence actually matters, what can be trusted, what should change because of it, and how they would know whether that change worked.",
       sections: [
         {
           id: "what-this-module-is-solving",
           title: "What This Module Is Solving",
           description:
-            "Most teams already have data. The problem is that the data does not always lead to better decisions. This module focuses on the gap between reporting and action. Designers may see completion rates, quiz scores, and satisfaction feedback, but still not know what to fix or why performance is not improving. The goal is to help designers use evidence to make better design decisions, not collect more metrics.",
+            "Most teams already have data. The problem is that the data does not always lead to better decisions. This module focuses on the gap between reporting and action. Designers may see completion rates, quiz scores, and satisfaction feedback, but still not know what to fix or why performance is not improving. The experience is designed to move learners away from dashboard thinking and toward a more useful sequence: evidence, interpretation, decision, and measurement. The goal is to help designers use evidence to make better design decisions, not collect more metrics.",
         },
         {
           id: "key-design-decisions",
@@ -119,7 +124,7 @@ export const learningAnalyticsContent: ModuleContent = {
             {
               label: "We started with a decision, not a dashboard",
               description:
-                "The module forces a design recommendation before explaining whether it is correct. This reveals how people interpret evidence under pressure.",
+                "The module forces a design recommendation before explaining whether it is correct. This reveals how people interpret evidence under pressure and whether they can connect a signal to a defensible instructional decision.",
             },
             {
               label: "We limited the number of signals on purpose",
@@ -129,7 +134,7 @@ export const learningAnalyticsContent: ModuleContent = {
             {
               label: "We designed for conflicting signals",
               description:
-                "High completion, positive feedback, and no performance improvement are intentional. The mix prevents easy conclusions and forces deeper interpretation.",
+                "High completion, positive feedback, and no performance improvement are intentional. The mix prevents easy conclusions, forces deeper interpretation, and asks learners to name uncertainty before recommending action.",
             },
             {
               label: "We did not define metrics upfront",
@@ -139,7 +144,7 @@ export const learningAnalyticsContent: ModuleContent = {
             {
               label: "We prioritized behavior over activity",
               description:
-                'The scenario pushes beyond "did they finish?" toward "did anything change on the job?"',
+                'The scenario pushes beyond "did they finish?" toward "did anything change for learners, performance, or the business?"',
             },
           ],
         },
@@ -155,7 +160,7 @@ export const learningAnalyticsContent: ModuleContent = {
             {
               label: "Start with the decision",
               description:
-                "Before reviewing data, define what decision the evidence needs to support.",
+                "Before reviewing data, define what decision the evidence needs to support and what measurement would show whether the decision worked.",
             },
             {
               label: "Use fewer signals more deliberately",
@@ -170,7 +175,7 @@ export const learningAnalyticsContent: ModuleContent = {
             {
               label: "Treat data as incomplete",
               description:
-                "Data can inform a decision, but it rarely tells the whole story.",
+                "Data can inform a decision, but it rarely tells the whole story. A useful recommendation names what the evidence suggests and what remains uncertain.",
             },
           ],
         },
@@ -196,7 +201,7 @@ export const learningAnalyticsContent: ModuleContent = {
             {
               label: "Incomplete data",
               description:
-                "You often will not have direct performance data or clean attribution. This module keeps that constraint visible instead of assuming perfect measurement.",
+                "You often will not have direct performance data or clean attribution. This module keeps that constraint visible by asking learners to decide with incomplete evidence while still naming what additional evidence would improve confidence.",
             },
             {
               label: "Stakeholder pressure",
@@ -224,12 +229,12 @@ export const learningAnalyticsContent: ModuleContent = {
             {
               label: "Evidence-to-decision checks",
               description:
-                "AI helped evaluate whether a recommendation connected evidence to a design decision.",
+                "AI helped evaluate whether a recommendation connected evidence to interpretation, interpretation to a design decision, and the decision to a future measurement plan.",
             },
             {
               label: "Guardrails for feedback",
               description:
-                "The feedback looks for whether the learner identified meaningful signals, avoided overreacting to weak indicators, and tied the recommendation back to performance or behavior.",
+                "The feedback looks for whether the learner identified meaningful signals, avoided overreacting to weak indicators, named uncertainty, and tied the recommendation back to performance, behavior, or business outcomes.",
             },
             {
               label: "Human judgment remains central",
@@ -245,7 +250,7 @@ export const learningAnalyticsContent: ModuleContent = {
             {
               label: "Start with the decision you need to make",
               description:
-                "Before reviewing any data, ask: What am I trying to decide?",
+                "Before reviewing any data, ask: What am I trying to decide, and what would show whether that decision worked?",
             },
             {
               label: "Limit the signals",
@@ -265,7 +270,7 @@ export const learningAnalyticsContent: ModuleContent = {
             {
               label: "State what you don't know",
               description:
-                "A strong recommendation includes uncertainty, not just conclusions.",
+                "A strong recommendation includes uncertainty, not just conclusions. It also names what evidence or measurement would reduce that uncertainty over time.",
             },
           ],
         },
@@ -314,6 +319,6 @@ export const learningAnalyticsContent: ModuleContent = {
   reflection: {
     title: "Reflection",
     prompt:
-      "What is one learning design decision you would want evidence for before revising a course, and what data would help you make that decision responsibly?",
+      "Before revising a course, what learning design decision would you want evidence for, what evidence would you trust, what evidence would you still need, and what professional judgment remains yours as the instructional designer?",
   },
 };
