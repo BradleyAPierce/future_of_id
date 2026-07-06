@@ -6,7 +6,7 @@ export const humanCenteredChangeContent: ModuleContent = {
     learnerQuestion: "How do I design learning experiences people can trust?",
     takeaway: "Trust is designed.",
     overview:
-      "Human-centered change, ethics, and learner trust focus on how you design learning experiences people are willing to use, question, and rely on. In this module, you make design decisions about transparency, bias, psychological safety, and AI support so your learners understand what is happening, why it matters, and how you protect their trust.",
+      "Adoption is not solved through rollout, communication, or messaging alone. Trust is designed through learner-facing choices, safeguards, transparency, and visible limits. This module focuses on human trust, responsible change, and professional judgment: what learners need to understand, what risks must be reduced, and how the experience protects agency, safety, and credibility.",
     outcomes: [
       "Explain why adoption depends on learner trust, not only system capability.",
       "Identify ethical design decisions in AI-enabled and data-informed learning environments.",
@@ -89,7 +89,7 @@ export const humanCenteredChangeContent: ModuleContent = {
       title: "Experience",
       badge: "Layer 2",
       intro:
-        "This layer gives you practice reviewing an AI-enabled learning experience for trust, ethics, and adoption risks before release.",
+        "This layer gives you practice reviewing an AI-enabled learning experience for trust, ethics, and adoption risks before release. Before asking learners to rely on the experience, decide what must be transparent, what safeguards are needed, what agency learners should have, and what limits must be visible.",
       sections: [
         {
           id: "activity",
@@ -115,13 +115,13 @@ export const humanCenteredChangeContent: ModuleContent = {
       title: "Reverse Build",
       badge: "Layer 3",
       intro:
-        "Most learning about ethics, trust, or change sounds right but does not change behavior. Designers explain principles, but they do not always help learners understand what the system is actually doing, what to trust, or when to question it. This module was built around a practical problem: AI-supported learning experiences fail when learners are confused, skeptical, or overconfident, and the design does not address that directly. The goal is not to convince learners to trust the system. The goal is to design an experience that earns trust, or makes its limits clear enough that learners can decide how to use it.",
+        "Most learning about ethics, trust, or change sounds right but does not change behavior. Designers explain principles, but they do not always help learners understand what the system is doing, what to trust, or when to question it. This module was built around a trust-design lens: trust risk, learner-facing transparency, safeguards, learner agency, visible limits, and responsible professional judgment. The goal is not to convince learners to trust the system. Trust is designed through choices that earn trust, or make limits clear enough that learners can decide how to use the experience.",
       sections: [
         {
           id: "what-this-module-is-solving",
           title: "What This Module Is Solving",
           description:
-            "AI-supported learning experiences fail when learners are confused, skeptical, or overconfident, and the design does not address that directly. This module focuses on making system behavior visible instead of implied, reducing avoidable confusion and misuse, designing for real learner reactions instead of ideal adoption, and clarifying where human judgment still matters. The goal is not to convince learners to trust the system. The goal is to design an experience that earns trust, or makes its limits clear enough that learners can decide how to use it.",
+            "AI-supported learning experiences fail when learners are confused, skeptical, or overconfident, and the design does not address that directly. This module reconstructs the learner experience through the sequence of trust risk, transparency, safeguards, agency, visible limits, and responsible judgment. The goal is not to request trust through messaging. The goal is to design an experience that earns trust, or makes its limits clear enough that learners can decide how to use it.",
         },
         {
           id: "key-design-decisions",
@@ -130,27 +130,27 @@ export const humanCenteredChangeContent: ModuleContent = {
             {
               label: "We moved quickly from concept to decision-making",
               description:
-                "Instead of teaching ethics or change frameworks, we pushed designers into evaluating a real scenario. Trust breaks in implementation, not theory.",
+                "Instead of teaching ethics or change frameworks, we pushed designers into evaluating a real trust risk. Trust breaks in learner-facing implementation, not theory.",
             },
             {
               label: "We focused on what the learner sees",
               description:
-                "Designers often think about models, data, and outputs. Learners experience messaging, feedback, and consequences. We kept the lens on the learner-facing experience.",
+                "Designers often think about models, data, and outputs. Learners experience transparency, feedback, choices, and consequences. We kept the lens on the learner-facing experience.",
             },
             {
               label: "We made boundaries explicit",
               description:
-                "The module emphasizes when AI is used, what it can and cannot do, when a human is involved, and what options learners have if they disagree.",
+                "The module emphasizes when AI is used, what it can and cannot do, when a human is involved, and what options learners have if they disagree. Visible limits are part of the design.",
             },
             {
               label: "We treated skepticism as expected",
               description:
-                "Some learners will question the system. Others will trust it too quickly. The design accounts for both.",
+                "Some learners will question the system. Others will trust it too quickly. The design accounts for both by preserving learner agency instead of assuming ideal adoption.",
             },
             {
               label: "We avoided full governance or compliance models",
               description:
-                "Those matter, but they do not help a designer make day-to-day decisions about feedback, transparency, or support. We kept the focus on choices that affect behavior directly.",
+                "Those matter, but they do not help a designer make day-to-day decisions about feedback, transparency, safeguards, or support. We kept the focus on choices that affect behavior directly.",
             },
           ],
         },
@@ -161,22 +161,22 @@ export const humanCenteredChangeContent: ModuleContent = {
             {
               label: "Proven practice: change management",
               description:
-                "Change management focuses on communication, readiness, and reinforcement. This module uses that lens to ask whether the learner understands what the system is doing and why.",
+                "Change management focuses on communication, readiness, and reinforcement. This module uses that lens to ask whether the learner can see what the system is doing, why it matters, and what choices they still have.",
             },
             {
               label: "Proven practice: ethical design",
               description:
-                "Ethical design focuses on fairness, bias, and responsible use. This module asks where the learner could experience the system as unfair, unclear, or intrusive.",
+                "Ethical design focuses on fairness, bias, privacy, and responsible use. This module asks where the learner could experience the system as unfair, unclear, intrusive, or unsafe.",
             },
             {
               label: "Proven practice: psychological safety",
               description:
-                "Psychological safety focuses on safe practice and feedback. This module asks what happens when the learner makes a mistake or disagrees with the feedback.",
+                "Psychological safety focuses on safe practice and feedback. This module asks what safeguards protect learners when they make a mistake, disagree with feedback, or need a human path.",
             },
             {
               label: "New approach: principles become design choices",
               description:
-                "The shift is from explaining ethics and trust to making learner-facing decisions about transparency, feedback, safeguards, and human review.",
+                "The shift is from explaining ethics and trust to making learner-facing decisions about transparency, safeguards, learner agency, visible limits, and human review.",
             },
           ],
         },
@@ -189,27 +189,27 @@ export const humanCenteredChangeContent: ModuleContent = {
             {
               label: "Transparency vs simplicity",
               description:
-                "More explanation can build trust, but too much overwhelms the learner. We focused on the minimum information needed to understand and question the system.",
+                "More explanation can build trust, but too much overwhelms the learner. We focused on useful transparency: the minimum information needed to understand, question, and responsibly use the system.",
             },
             {
               label: "Automation vs human judgment",
               description:
-                "Automation increases scale and speed. Human review increases trust in high-stakes moments. The module pushes designers to decide where human involvement is non-negotiable.",
+                "Automation increases scale and speed. Human review increases trust in high-stakes moments. The module pushes designers to decide where safeguards and human involvement are non-negotiable.",
             },
             {
               label: "Adoption vs control",
               description:
-                "Strict guardrails reduce risk but can frustrate learners. Flexible systems increase adoption but allow misuse. Both risks must be managed, not eliminated.",
+                "Strict guardrails reduce risk but can frustrate learners. Flexible systems increase adoption but allow misuse. Both risks must be managed while preserving learner agency.",
             },
             {
               label: "Speed vs governance",
               description:
-                "Teams often need to launch quickly, and full governance is rarely in place at launch. The module reflects this reality instead of assuming ideal conditions.",
+                "Teams often need to launch quickly, and full governance is rarely in place at launch. The module reflects this reality while keeping responsible professional judgment visible.",
             },
             {
               label: "Confidence vs skepticism",
               description:
-                "Too much confidence leads to overtrust. Too much skepticism leads to avoidance. The design aims to keep learners appropriately critical.",
+                "Too much confidence leads to overtrust. Too much skepticism leads to avoidance. The design uses visible limits to keep learners appropriately critical.",
             },
           ],
         },
@@ -217,7 +217,7 @@ export const humanCenteredChangeContent: ModuleContent = {
           id: "how-ai-supported-the-build",
           title: "How AI Supported the Build",
           description:
-            "AI helped expand the design space, but it did not replace judgment.",
+            "AI helped expand the design space, but it did not replace judgment. It helped pressure-test trust risks and language options, but it did not decide what transparency was useful, what safeguards were required, or what limits learners needed to see.",
           items: [
             {
               label: "Scenario variation",
@@ -227,22 +227,22 @@ export const humanCenteredChangeContent: ModuleContent = {
             {
               label: "Trust-risk pressure testing",
               description:
-                "AI helped pressure-test where trust might break, where instructions felt unclear, and where feedback could be misread.",
+                "AI helped pressure-test where trust might break, where transparency felt unclear, where safeguards were missing, and where feedback could be misread.",
             },
             {
               label: "Misuse pattern exploration",
               description:
-                "AI helped identify common patterns of confusion, overtrust, distrust, or misuse.",
+                "AI helped identify common patterns of confusion, overtrust, distrust, misuse, and learner agency being implied rather than designed.",
             },
             {
               label: "Feedback language drafts",
               description:
-                "AI helped draft alternative feedback language, which still needed human review for tone, clarity, and fairness.",
+                "AI helped draft alternative feedback language, which still needed human review for tone, clarity, fairness, psychological safety, and visible limits.",
             },
             {
               label: "Human judgment remained central",
               description:
-                "AI did not decide what risks matter most, where human judgment is required, what level of transparency is appropriate, or how much complexity learners can handle.",
+                "AI did not decide what trust risks matter most, where human judgment is required, what level of transparency is appropriate, which safeguards protect learners, or how much complexity learners can handle.",
             },
           ],
         },
@@ -250,32 +250,32 @@ export const humanCenteredChangeContent: ModuleContent = {
           id: "what-another-designer-can-reuse",
           title: "What Another Designer Can Reuse",
           description:
-            "You can reuse this approach before launching any AI-supported learning experience.",
+            "You can reuse this approach before launching any AI-supported learning experience: trust risk, transparency, safeguards, learner agency, visible limits, and responsible judgment.",
           items: [
             {
               label: "A simple trust review pattern",
               description:
-                "Ask: What does the learner see? What is the system inferring or deciding? Where could this feel unclear, unfair, or intrusive? What happens if the learner disagrees?",
+                "Ask: What trust risk exists? What does the learner see? What is the system inferring or deciding? Where could this feel unclear, unfair, intrusive, or unsafe?",
             },
             {
               label: "Boundary-setting decisions",
               description:
-                "Decide where to disclose AI use, what limitations to state clearly, when to require human review, and what choices the learner has.",
+                "Decide where to disclose AI use, what limitations to state clearly, when to require human review, and what choices the learner has if they disagree.",
             },
             {
               label: "Safeguard types",
               description:
-                "Consider clear disclosures, feedback phrasing that avoids overconfidence, opt-out or alternative paths, and manager or stakeholder communication.",
+                "Consider clear disclosures, feedback phrasing that avoids overconfidence, opt-out or alternative paths, privacy protections, bias checks, and manager or stakeholder communication.",
             },
             {
               label: "A practical misuse lens",
               description:
-                "Design for misuse, not just correct use. Assume mixed reactions such as trust, skepticism, and confusion.",
+                "Design for misuse, not just correct use. Assume mixed reactions such as trust, skepticism, confusion, and overreliance.",
             },
             {
               label: "Moments where trust is gained or lost",
               description:
-                "Focus on the moments where feedback, automation, or lack of transparency could change how the learner uses the system.",
+                "Focus on the moments where feedback, automation, lack of transparency, or missing agency could change how the learner uses the system. Trust is designed in those moments.",
             },
           ],
         },
@@ -293,22 +293,22 @@ export const humanCenteredChangeContent: ModuleContent = {
             {
               label: "Learners do not have real choice",
               description:
-                "If the system is mandatory and cannot be questioned, transparency alone will not build trust.",
+                "If the system is mandatory and cannot be questioned, transparency alone will not build trust. Learner agency has to be designed, not implied.",
             },
             {
               label: "Feedback feels misaligned with real performance",
               description:
-                "Even well-explained systems lose credibility if outputs feel wrong or unfair.",
+                "Even well-explained systems lose credibility if outputs feel wrong, unfair, unsafe, or disconnected from real performance.",
             },
             {
               label: "The experience is over-engineered",
               description:
-                "Too many safeguards, disclosures, or steps can slow adoption and frustrate users.",
+                "Too many safeguards, disclosures, or steps can slow adoption and frustrate learners. Responsible judgment means choosing the safeguards that matter.",
             },
             {
               label: "Teams assume trust is solved at launch",
               description:
-                "Trust changes over time. It requires monitoring, feedback, and iteration.",
+                "Trust changes over time. It requires monitoring, feedback, visible limits, and iteration.",
             },
           ],
         },
@@ -316,7 +316,7 @@ export const humanCenteredChangeContent: ModuleContent = {
           id: "reflection-question",
           title: "Reflection Question",
           description:
-            'Where in your current or upcoming learning experience could a learner reasonably think: "I don\'t understand what this system is doing," "This feels unfair or inaccurate," or "I\'m not sure how much I should trust this"? What is one design change you would make before launch to address that moment?',
+            'Where in your current or upcoming learning experience could a learner reasonably think: "I don\'t understand what this system is doing," "This feels unfair or inaccurate," or "I\'m not sure how much I should trust this"? What transparency, safeguard, agency choice, or visible limit would you design before launch?',
         },
       ],
     },
@@ -324,6 +324,6 @@ export const humanCenteredChangeContent: ModuleContent = {
   reflection: {
     title: "Reflection",
     prompt:
-      "Where could an AI-enabled learning experience lose learner trust, and what design safeguard would you add before asking learners to rely on it?",
+      "Where could a learning experience you are designing lose learner trust? What safeguard would reduce that risk, and what transparency or learner agency decision remains yours as the instructional designer?",
   },
 };
