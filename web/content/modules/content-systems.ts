@@ -7,7 +7,7 @@ export const contentSystemsContent: ModuleContent = {
     takeaway:
       "Reusable content works when structure protects context and quality.",
     overview:
-      "Content systems thinking moves you from one-off course builds to structured content you can reuse and update across programs. This module covers modular content design, content architecture, workflow automation, and separating content from presentation. The goal is to scale content without duplicating it or breaking it when it changes.",
+      "Learning content should not be treated as a set of one-off deliverables. Content systems thinking helps instructional designers structure, reuse, govern, and maintain learning content without losing context or quality. This module is about systems thinking for instructional work: deciding what should become reusable, what needs protection, and how workflows keep content reliable as it scales.",
     outcomes: [
       "Explain how modular content design supports scalable learning production.",
       "Identify reusable learning objects and content patterns within a course workflow.",
@@ -90,7 +90,16 @@ export const contentSystemsContent: ModuleContent = {
       title: "Experience",
       badge: "Layer 2",
       intro:
-        "This layer gives you practice turning a messy course asset into a modular content system that can be reused and maintained.",
+        "This layer gives you practice turning a messy course asset into a modular content system that can be reused and maintained. Before proposing reuse or automation, decide what should be structured, what context must stay protected, what governance prevents quality drift, and what workflow choices make updates sustainable.",
+      situationalMentalModel: {
+        title: "Content System Decisions",
+        steps: [
+          "Messy Content",
+          "Structured Objects",
+          "Reuse Rules",
+          "Governance",
+        ],
+      },
       sections: [
         {
           id: "activity",
@@ -116,13 +125,13 @@ export const contentSystemsContent: ModuleContent = {
       title: "Reverse Build",
       badge: "Layer 3",
       intro:
-        "Most learning teams don't struggle to create content; they struggle to update it without breaking everything. This module was built to address a common pattern: the same explanations, examples, and prompts get rewritten across courses, slightly differently each time. That leads to version drift, inconsistent quality, and slow updates when something changes. The goal here is not to teach systems thinking as a concept. It is to show how to stop rewriting the same content, make updates in one place instead of five, and reduce manual coordination across reviewers and stakeholders. This module focuses on reducing rework and making content maintainable, not building a perfect system.",
+        "Most learning teams don't struggle to create content; they struggle to update it without breaking everything. This module was built around a content-system lens: messy content, structured objects, reuse rules, and governance. The same explanations, examples, and prompts often get rewritten across courses, slightly differently each time. That leads to version drift, inconsistent quality, and slow updates when something changes. The goal here is not to teach systems thinking as a concept. It is to show how reusable content works when structure protects context and quality.",
       sections: [
         {
           id: "what-this-module-is-solving",
           title: "What This Module Is Solving",
           description:
-            "Most learning teams don't struggle to create content; they struggle to update it without breaking everything. This module addresses a common pattern: the same explanations, examples, and prompts get rewritten across courses, slightly differently each time. That leads to version drift, inconsistent quality, and slow updates when something changes. The goal is not to teach systems thinking as a concept. It is to make content easier to reuse, update, and maintain across real production constraints.",
+            "Most learning teams don't struggle to create content; they struggle to update it without breaking everything. This module addresses the move from messy content to structured objects, reuse rules, and governance. The goal is not to build a perfect content system. It is to make content easier to reuse, update, and maintain while protecting the instructional context that makes it useful.",
         },
         {
           id: "key-design-decisions",
@@ -131,27 +140,27 @@ export const contentSystemsContent: ModuleContent = {
             {
               label: "Start with duplication, not architecture",
               description:
-                "Instead of introducing content models first, the module starts with repeated content patterns. If you don't see the duplication, structure feels unnecessary.",
+                "Instead of introducing content models first, the module starts with messy repeated content patterns. If you don't see the duplication, structure feels unnecessary.",
             },
             {
               label: "Keep content chunks practical and recognizable",
               description:
-                "Content is broken into real instructional pieces: explanations, prompts, examples, and feedback, not abstract content entities. This makes reuse easier to spot and apply.",
+                "Content is broken into real instructional pieces: explanations, prompts, examples, and feedback, not abstract content entities. These become structured objects only when reuse preserves their instructional purpose.",
             },
             {
               label: "Separate content from UI early",
               description:
-                "The module reinforces that instructional meaning should exist independently from how it is displayed. This prevents content from being locked into a single format.",
+                "The module reinforces that instructional meaning should exist independently from how it is displayed. This protects context so content can move across formats without losing intent.",
             },
             {
               label: "Limit how much gets structured",
               description:
-                "Not everything becomes a reusable object. The focus is on structuring content that actually repeats or changes often.",
+                "Not everything becomes a reusable object. Reuse rules define what can repeat, what must stay specific, and what needs review before it moves.",
             },
             {
               label: "Keep automation in the background",
               description:
-                "Automation is introduced only where it removes obvious friction, such as review routing, tagging, or version checks. It is not treated as the center of the design.",
+                "Automation is introduced only where it removes obvious friction, such as review routing, tagging, or version checks. Governance stays visible so speed does not weaken quality.",
             },
           ],
         },
@@ -173,18 +182,18 @@ export const contentSystemsContent: ModuleContent = {
               label:
                 "New approach: Identify repeated content before building",
               description:
-                "This module pushes designers to find repeated explanations, prompts, examples, and feedback before creating more content.",
+                "This module pushes designers to find messy or duplicated explanations, prompts, examples, and feedback before creating more content.",
             },
             {
               label:
                 "New approach: Define reusable chunks with clear boundaries",
               description:
-                "Content can live beyond a single course when designers define what it means, where it belongs, and when it should be reused.",
+                "Content can live beyond a single course when designers define what it means, where it belongs, when it should be reused, and what context must travel with it.",
             },
             {
               label: "New approach: Manage content over time",
               description:
-                "This is not a replacement for instructional design fundamentals. It is a shift in how content is managed and maintained after the first build.",
+                "This is not a replacement for instructional design fundamentals. It is a shift in how reuse rules and governance preserve quality after the first build.",
             },
           ],
         },
@@ -196,22 +205,22 @@ export const contentSystemsContent: ModuleContent = {
             {
               label: "Slower upfront, faster later",
               description:
-                "Defining reusable content takes more time at the beginning, but reduces rework during updates.",
+                "Defining structured objects and reuse rules takes more time at the beginning, but reduces rework during updates.",
             },
             {
               label: "Reuse vs context",
               description:
-                "Over-reusing content can strip away necessary context. Some content should stay specific.",
+                "Over-reusing content can strip away necessary context. Some content should stay specific, and some reusable content needs context attached to it.",
             },
             {
               label: "Structure vs flexibility",
               description:
-                "More structure improves consistency, but too much structure makes content rigid and harder to adapt.",
+                "More structure improves consistency, but too much structure makes content rigid and harder to adapt. The system has to remain maintainable.",
             },
             {
               label: "Automation vs quality control",
               description:
-                "Automation can speed up workflows, but it cannot evaluate instructional quality. Human review remains essential.",
+                "Automation can speed up workflows, but it cannot evaluate instructional quality, context, or intent. Human review remains part of governance.",
             },
             {
               label: "Simplicity vs scalability",
@@ -223,17 +232,18 @@ export const contentSystemsContent: ModuleContent = {
         {
           id: "how-ai-supported-the-build",
           title: "How AI Supported the Build",
-          description: "AI was used as a support tool, not a decision-maker.",
+          description:
+            "AI was used as a support tool, not a decision-maker. It helped surface patterns, but it did not decide what should become reusable, what context needed protection, or what governance would preserve quality.",
           items: [
             {
               label: "Pattern identification",
               description:
-                "AI helped surface repeated content structures across modules, such as explanations, prompts, examples, and feedback types.",
+                "AI helped surface messy repeated content structures across modules, such as explanations, prompts, examples, and feedback types.",
             },
             {
               label: "Drafting and variation",
               description:
-                "AI assisted in generating variations of reusable content blocks, which were then reviewed and refined.",
+                "AI assisted in generating variations of reusable content blocks, which were then reviewed and refined against instructional context.",
             },
             {
               label: "Workflow acceleration",
@@ -243,39 +253,40 @@ export const contentSystemsContent: ModuleContent = {
             {
               label: "Where AI did not replace judgment",
               description:
-                "AI did not decide what should be reusable, define content boundaries, evaluate instructional quality, or determine where automation belongs. Those decisions remained human-driven.",
+                "AI did not decide what should be reusable, define content boundaries, write reuse rules, evaluate instructional quality, or determine where automation belongs. Those decisions remained human-driven.",
             },
           ],
         },
         {
           id: "what-another-designer-can-reuse",
           title: "What Another Designer Can Reuse",
-          description: "You don't need a full system to apply this approach.",
+          description:
+            "You don't need a full system to apply this approach. Start with the pattern: messy content, structured objects, reuse rules, and governance.",
           items: [
             {
               label: "Reusable content patterns",
               description:
-                "Identify repeatable elements like explanations, prompts, feedback, and examples.",
+                "Identify repeatable instructional assets like explanations, prompts, feedback, and examples.",
             },
             {
-              label: "A simple rule",
+              label: "A simple reuse rule",
               description:
-                "If you've written it twice, consider structuring it.",
+                "If you've written it twice, consider structuring it, but only reuse it when the instructional context still holds.",
             },
             {
               label: "Basic content separation",
               description:
-                "Keep instructional content independent from layout, slide design, or page design when possible.",
+                "Keep instructional content independent from layout, slide design, or page design when possible so meaning is not trapped in presentation.",
             },
             {
               label: "Lightweight workflow improvements",
               description:
-                "Clarify who owns drafting, review, and updates. Reduce handoffs that rely on memory.",
+                "Clarify who owns drafting, review, updates, and reuse decisions. Reduce handoffs that rely on memory.",
             },
             {
               label: "A reuse filter",
               description:
-                "Ask: Does this appear in more than one place? Will this need to change later? Would updating this in one place save time?",
+                "Ask: Does this appear in more than one place? What context must stay attached? Who governs updates? Would updating this in one place preserve quality?",
             },
           ],
         },
@@ -286,22 +297,22 @@ export const contentSystemsContent: ModuleContent = {
             {
               label: "Everything gets over-structured",
               description:
-                "Trying to turn all content into reusable objects creates complexity without value.",
+                "Trying to turn all content into reusable objects creates complexity without value and can make the system harder to maintain.",
             },
             {
               label: "Teams don't adopt shared rules",
               description:
-                "Without agreement on naming, structure, and ownership, reuse breaks down quickly.",
+                "Without agreement on naming, structure, reuse rules, and ownership, reuse breaks down quickly.",
             },
             {
               label: "Content loses context",
               description:
-                "Reused content that is not adapted properly can feel generic or disconnected.",
+                "Reused content that is not adapted properly can feel generic, disconnected, or instructionally weaker than the original.",
             },
             {
               label: "Automation replaces review",
               description:
-                "Skipping human checks leads to quality issues, even if the workflow is efficient.",
+                "Skipping human checks leads to quality issues, even if the workflow is efficient. Automation cannot replace governance.",
             },
             {
               label: "The system outgrows its simplicity",
@@ -314,7 +325,7 @@ export const contentSystemsContent: ModuleContent = {
           id: "reflection-question",
           title: "Reflection Question",
           description:
-            "Think of one course you've updated more than once. What content did you rewrite each time, and how would you structure it so you only have to update it once going forward?",
+            "Think of one course you've updated more than once. What messy content could become a structured object, what reuse rules would protect context, and what governance would keep quality intact over time?",
         },
       ],
     },
@@ -322,6 +333,6 @@ export const contentSystemsContent: ModuleContent = {
   reflection: {
     title: "Reflection",
     prompt:
-      "Where does your current learning content workflow create duplication or manual rework, and what content structure or automation step would reduce that friction without reducing quality?",
+      "What content in your current workflow should become reusable, what context must be protected as it scales, and what governance or workflow decision remains yours as the instructional designer?",
   },
 };
