@@ -47,12 +47,36 @@ These principles remain in force throughout the work.
 - [ ] No account system, Supabase persistence, or unrelated future feature will be pulled into this launch-readiness scope.
 - [ ] The launch-readiness process will end when the defined gates are passed; it will not become an endless perfection cycle.
 
+## 2.1 Approved execution order
+
+Work must proceed in this order unless a direct dependency is documented and Bradley approves a change:
+
+1. Revise and approve this checklist.
+2. Inventory and reconcile capability claims.
+3. Approve the Reverse Build v2, Module 4, learner-artifact, privacy, AI-contract, and validation briefs.
+4. Build the shared learner-artifact system and harden existing progress persistence.
+5. Build Reverse Build v2 on Module 2 as the reference implementation.
+6. Build the Module 4 stateful simulation, structured AI feedback, artifact integration, and Reverse Build behavior.
+7. Roll Reverse Build v2 through the remaining modules.
+8. Conduct scenario and Reflection AI regression testing and retain exact evidence.
+9. Complete the public-claims audit.
+10. Complete repository, production, asset, responsive, and accessibility hardening.
+11. Run full internal validation.
+12. Complete forking documentation, license verification, and the technical fork test.
+13. Conduct private human review.
+14. Resolve material findings and rerun focused validation.
+15. Complete Bradley’s personal launch sign-off.
+
+An execution item may be checked only after its defined implementation, test evidence, review, and required personal approval are complete.
+
 ---
 
 # 3. Seven-Capability Positioning
 
 ## 3.1 Lock the correct meaning of the seven capabilities
 
+- [ ] Create one canonical Bradley-approved explanation of why the seven capabilities were selected.
+- [ ] Preserve this conceptual foundation: “Future of ID is a deliberately selected professional learning pathway shaped by its creator’s current work, responsibilities, development needs, and career direction. The seven capabilities are neither universal nor exhaustive; they demonstrate how practitioners can build an intentional pathway around where they are and where they are trying to go.”
 - [ ] Document that the seven capabilities were personally selected by Bradley.
 - [ ] State that they reflect where Bradley is now as an instructional designer.
 - [ ] State that the selection was influenced by Bradley’s:
@@ -67,6 +91,7 @@ These principles remain in force throughout the work.
 - [ ] State clearly that the seven capabilities are not presented as a universal industry framework.
 - [ ] State clearly that the exact seven-capability collection has not been formally validated by an outside institution.
 - [ ] Preserve Bradley’s authority to explain why each capability matters in his current professional context.
+- [ ] Preserve both truths: the pathway has a personal and professional origin, and the resulting product remains relevant and reusable for other practitioners.
 
 ## 3.2 Clarify the reusable product promise
 
@@ -88,13 +113,21 @@ Audit and update, at minimum:
 - [ ] any retained alternate README files
 - [ ] `docs/strategy/DECISIONS.md`
 - [ ] `docs/architecture/CONTENT_ARCHITECTURE.md`
-- [ ] `docs/strategy/EXPERIENCE_PHILOSOPHY.md`
+- [ ] `docs/architecture/TECH_ARCHITECTURE.md`
+- [ ] `docs/strategy/FUTURE_READY_CAPABILITY_MODEL.md`
+- [ ] `docs/experience/EXPERIENCE_PHILOSOPHY.md`
 - [ ] `docs/strategy/EXPERIENCE_ARCHITECTURE.md`
-- [ ] `docs/strategy/PRODUCT_EXPERIENCE_MAP.md`
+- [ ] `docs/experience/PRODUCT_EXPERIENCE_MAP.md`
 - [ ] Orientation documentation
 - [ ] About-page documentation
 - [ ] page metadata and social-preview copy
 - [ ] any source comments or content files containing positioning claims
+
+Before implementation briefs are approved:
+
+- [ ] Reconcile `docs/architecture/TECH_ARCHITECTURE.md` with the approved local-persistence MVP and the explicit deferral of Supabase, accounts, and authentication.
+- [ ] Confirm which documents are current sources of truth and which are historical or superseded.
+- [ ] Ensure implementation work orders do not rely on stale future-state architecture.
 
 Search the repository for language including:
 
@@ -145,6 +178,9 @@ No major coding begins until each core feature has a concise implementation brie
 - [ ] Define technical constraints.
 - [ ] Define acceptance criteria.
 - [ ] Define what public claims the completed feature will support.
+- [ ] Confirm that Reverse Build preserves the sequence Design Practice → AI Review → Reverse Build → Reflection.
+- [ ] Confirm that Reverse Build does not display or depend on the learner’s Reflection.
+- [ ] Define how completed and partially completed Design Practice prompts appear when one module contains multiple prompts.
 
 ## 4.2 Module 4 simulation brief
 
@@ -161,10 +197,43 @@ No major coding begins until each core feature has a concise implementation brie
 - [ ] Define mobile and accessibility behavior.
 - [ ] Define acceptance criteria.
 - [ ] Define what public claims the completed simulation will support.
+- [ ] Define a validated branching-simulation request contract separate from the written-response request form.
+- [ ] Define the authoritative repository data used by the server to reconstruct decision, consequence, and pathway language.
+- [ ] Prohibit client-written pathway descriptions from being treated as authoritative state.
 
-## 4.3 Implementation-control requirements
+## 4.3 Learner-artifact and persistence brief
 
-Each Codex prompt must:
+- [ ] Define one current learner artifact per module.
+- [ ] Define how the artifact stores the latest response and associated AI feedback for each Design Practice prompt.
+- [ ] Define how a revised response updates the current artifact without creating attempt history.
+- [ ] Define Module 4’s structured decisions, pathway, consequences, and final state.
+- [ ] Define how Reflection is persisted after Reverse Build without being displayed inside Reverse Build.
+- [ ] Define course-progress hardening and reset behavior alongside artifact persistence.
+- [ ] Define schema-version, unsupported-version, stale-data, partial-data, and migration behavior.
+- [ ] Explicitly exclude attempt history, version history, longitudinal tracking, portfolio management, and cross-device synchronization.
+
+## 4.4 Privacy and data-flow brief
+
+- [ ] Define the local browser-persistence disclosure.
+- [ ] Define the disclosure shown before or when learner input is transmitted for AI processing.
+- [ ] Define what the Future of ID application itself retains.
+- [ ] Verify any provider-retention statement against current authoritative sources before using it.
+- [ ] Prohibit claims that learner work remains only in the browser when AI feedback is requested.
+- [ ] Prohibit unverified statements about OpenAI retention behavior.
+
+## 4.5 Validation brief
+
+- [ ] Define which acceptance checks are automated.
+- [ ] Define which acceptance checks require manual review.
+- [ ] Define the exact commands, environments, routes, browsers, viewport sizes, and assistive-technology checks used where applicable.
+- [ ] Define pass, fail, defect-severity, evidence, and retest rules.
+- [ ] Define `docs/validation/ai-feedback-regression/` as the location for exact AI test inputs, outputs, verdicts, reasons, tuning changes, and rerun evidence.
+- [ ] Define the launch-validation record under `docs/validation/` before testing begins.
+- [ ] Confirm that an automated accessibility scan does not by itself close the accessibility gate.
+
+## 4.6 Implementation-control requirements
+
+Each implementation work order must:
 
 - [ ] identify the relevant source-of-truth documents
 - [ ] identify affected files and components
@@ -181,6 +250,10 @@ Each Codex prompt must:
 
 - [ ] Reverse Build v2 brief approved.
 - [ ] Module 4 simulation brief approved.
+- [ ] Learner-artifact and persistence brief approved.
+- [ ] Privacy and data-flow brief approved.
+- [ ] Module 4 AI-contract decisions approved.
+- [ ] Validation brief approved.
 - [ ] Acceptance criteria are specific enough that completion can be tested rather than assumed.
 
 ---
@@ -189,29 +262,35 @@ Each Codex prompt must:
 
 Build one reusable learner-artifact system before independently modifying multiple modules.
 
+For this launch, the system stores one current artifact per module. It does not store attempt history.
+
 ## 5.1 Data model
 
-Define a versioned artifact capable of representing:
+Define a versioned module artifact capable of representing:
 
 - [ ] module identifier
 - [ ] module slug
-- [ ] interaction identifier
-- [ ] interaction type
-- [ ] scenario title or context
-- [ ] learner-written response
-- [ ] learner-selected decisions
-- [ ] consequence states
-- [ ] final outcome
-- [ ] AI feedback summary
-- [ ] AI-identified strengths
-- [ ] AI-identified gap
-- [ ] AI-recommended next step
-- [ ] optional reflection response
-- [ ] optional reflection feedback
+- [ ] a current Design Practice entry for each module prompt, keyed by an authoritative interaction identifier
+- [ ] the interaction type for each entry: written response or branching simulation
+- [ ] the authoritative scenario or practice-context identifier
+- [ ] the learner’s latest written response for each written prompt
+- [ ] the AI feedback associated with that latest response
+- [ ] AI feedback summary, strengths, gap when applicable, and recommended next step
+- [ ] Module 4’s validated decisions, pathway, consequences, final state, and learner rationale
+- [ ] the learner’s current Reflection response after Reverse Build
+- [ ] Reflection feedback when requested
 - [ ] completion state
 - [ ] creation timestamp
 - [ ] update timestamp
 - [ ] schema version
+
+Explicitly exclude:
+
+- [ ] attempt history
+- [ ] version history
+- [ ] longitudinal tracking
+- [ ] portfolio management
+- [ ] cross-device synchronization
 
 ## 5.2 Architecture
 
@@ -223,27 +302,45 @@ Define a versioned artifact capable of representing:
 - [ ] Support branching-decision artifacts.
 - [ ] Support partially completed artifacts.
 - [ ] Support revised responses.
-- [ ] Support artifact replacement or updating.
+- [ ] Update the current prompt entry and associated feedback when a learner revises a response.
+- [ ] Prevent feedback from an earlier response from being presented as feedback on a later revision.
+- [ ] Support current-artifact replacement or updating without creating an archive.
 - [ ] Prevent malformed stored data from breaking a module.
 - [ ] Add schema-version handling.
 - [ ] Add safe parsing.
 - [ ] Add graceful degradation when browser storage is unavailable.
+- [ ] Treat stale, unsupported, or incomplete stored data as unavailable when it cannot be migrated safely.
+- [ ] Prevent one module from reading or displaying another module’s artifact.
 - [ ] Do not add account, authentication, database, or cloud persistence requirements.
 
-## 5.3 Learner trust and control
+## 5.3 Existing course-progress hardening
 
-- [ ] Clearly tell learners that work is stored only in their browser.
+- [ ] Add safe parsing to the existing course-progress store.
+- [ ] Catch failures from browser-storage reads and writes.
+- [ ] Handle malformed, stale, incomplete, and unsupported progress data without breaking navigation or module access.
+- [ ] Define and implement learner-controlled progress reset behavior.
+- [ ] Preserve same-tab and cross-tab update behavior without allowing synchronization failures to break the experience.
+- [ ] Keep all modules available when progress persistence fails or is cleared.
+
+## 5.4 Learner trust and control
+
+- [ ] Clearly explain that saved progress and learner artifacts are persisted locally in the current browser.
 - [ ] Do not imply that work is connected to an account.
 - [ ] Do not imply that work is synchronized across devices.
 - [ ] Provide a way to clear stored module work.
 - [ ] Provide a way to reset the active practice.
-- [ ] Decide whether reflection text is stored automatically.
-- [ ] Decide whether reflection display requires learner choice.
+- [ ] Provide the approved way to reset course-progress data.
+- [ ] Explain when learner input is transmitted for AI processing.
+- [ ] Explain what the Future of ID application itself retains.
+- [ ] Use provider-retention language only when it has been verified from current authoritative sources.
+- [ ] Do not claim that work remains only in the browser when AI feedback is requested.
+- [ ] Persist Reflection after Reverse Build according to the approved artifact model.
+- [ ] Do not display Reflection inside Reverse Build.
 - [ ] Avoid unexpectedly resurfacing sensitive personal reflection.
 - [ ] Handle shared-computer use responsibly.
 - [ ] Ensure the storage approach is consistent with Module 7’s trust principles.
 
-## 5.4 Artifact behavior
+## 5.5 Artifact and progress behavior
 
 Test:
 
@@ -258,29 +355,37 @@ Test:
 - [ ] cleared browser storage
 - [ ] storage blocked by the browser
 - [ ] multiple module artifacts
+- [ ] multiple Design Practice prompts within one module artifact
 - [ ] refresh during the experience
+- [ ] course-progress read failure
+- [ ] course-progress write failure
+- [ ] malformed course-progress data
+- [ ] learner-initiated module-work reset
+- [ ] learner-initiated course-progress reset
 
 ### Phase 5 completion evidence
 
 - [ ] Artifact architecture is reusable.
 - [ ] Artifact behavior is documented.
 - [ ] No module-specific content is hardcoded into the storage system.
-- [ ] Learner control and local-storage disclosure are implemented.
-- [ ] Required artifact test cases pass.
+- [ ] Learner control, local-persistence disclosure, and AI-processing disclosure are implemented accurately.
+- [ ] Course progress and module access remain usable when persistence fails.
+- [ ] Required automated and manual persistence test cases pass and are recorded in the approved launch-validation record.
 
 ---
 
-# 6. Reverse Build v2
+# 6. Reverse Build v2 — Module 2 Reference Implementation
 
 ## 6.1 Reference implementation
 
-Select one mature reference module before system-wide rollout.
+Use Module 2 as the mature written-response reference before system-wide rollout.
 
-- [ ] Select the reference module.
-- [ ] Confirm the module has stable AI feedback behavior.
+- [ ] Confirm Module 2 as the reference implementation.
+- [ ] Confirm Module 2 has stable AI feedback behavior before integration.
 - [ ] Connect the learner artifact to Reverse Build.
 - [ ] Verify that Reverse Build updates after the learner revises an answer.
 - [ ] Verify that direct entry without an artifact still works.
+- [ ] Verify that each completed Module 2 Design Practice prompt reconnects to its own latest response and associated feedback.
 
 ## 6.2 Dynamic Experience layer
 
@@ -294,7 +399,6 @@ When a learner artifact exists, show:
 - [ ] the recommended next step
 - [ ] the learner’s decision pathway for branching experiences
 - [ ] the consequence or outcome created by those decisions
-- [ ] reflection content only according to the approved learner-control decision
 
 The layer must:
 
@@ -303,6 +407,7 @@ The layer must:
 - [ ] avoid fabricating personalization
 - [ ] avoid displaying stale content from another module
 - [ ] avoid presenting AI feedback as an objective final answer
+- [ ] exclude the learner’s Reflection from Reverse Build
 
 ## 6.3 Partial and fallback states
 
@@ -347,20 +452,13 @@ Do not unnecessarily rewrite:
 - [ ] mentorship-lens language
 - [ ] closing professional-judgment framing
 
-## 6.6 Rollout
+## 6.6 Reference-component accessibility
 
-After the reference module passes:
-
-- [ ] connect Module 1
-- [ ] connect Module 2
-- [ ] connect Module 3
-- [ ] connect Module 4
-- [ ] connect Module 5
-- [ ] connect Module 6
-- [ ] connect Module 7
-- [ ] verify each module reads only its own artifact
-- [ ] verify each module uses its own rubric-intent explanation
-- [ ] verify written and branching interactions render correctly
+- [ ] Apply keyboard, visible-focus, logical-focus-order, and screen-reader requirements to the dynamic Reverse Build controls.
+- [ ] Ensure the Reverse Build modal traps focus, supports Escape, and returns focus to the triggering control.
+- [ ] Ensure learner-content labels distinguish learner text, AI critique, and authored rationale programmatically as well as visually.
+- [ ] Ensure partial, empty, loading, and failure states are announced appropriately.
+- [ ] Record both automated scan results and manual keyboard and screen-reader checks for the affected Reverse Build components.
 
 ### Phase 6 completion evidence
 
@@ -368,7 +466,7 @@ After the reference module passes:
 - [ ] Reverse Build works without learner work.
 - [ ] Reverse Build explains why the AI critique focused where it did.
 - [ ] Existing strong design-analysis content remains intact.
-- [ ] All seven modules pass module-specific verification.
+- [ ] Module 2 passes automated and manual reference-module verification.
 
 ---
 
@@ -411,10 +509,18 @@ The interaction must include:
 - [ ] Ensure keyboard operation.
 - [ ] Ensure screen-reader labels and logical focus order.
 - [ ] Prevent accidental loss of the active decision pathway.
+- [ ] Apply accessible labels, instructions, error messaging, and status announcements to the branching controls and learner-rationale input.
+- [ ] Define focus movement when a decision is submitted, a consequence appears, the next decision loads, feedback returns, or an error occurs.
+- [ ] Validate the affected Module 4 components with both an automated accessibility scan and the approved manual keyboard and screen-reader checklist.
 
-## 7.4 AI integration
+## 7.4 Validated AI integration
 
-- [ ] Feed relevant pathway data into the existing AI-feedback system.
+- [ ] Preserve the shared scenario-feedback architecture while supporting validated written-response and branching-simulation request forms.
+- [ ] Submit Module 4 decisions and pathway state as structured identifiers and learner rationale.
+- [ ] Validate the branching request shape and all submitted identifiers on the server.
+- [ ] Reconstruct scenario, decision, consequence, pathway, and final-state language from authoritative repository data on the server.
+- [ ] Reject unknown, impossible, mismatched, or malformed pathways.
+- [ ] Do not concatenate untrusted client-written pathway descriptions into an ordinary prose response.
 - [ ] Include the learner’s explanation of judgment.
 - [ ] Ensure feedback references the actual choices made.
 - [ ] Ensure feedback remains Module 4-specific.
@@ -435,7 +541,7 @@ Store:
 - [ ] final state
 - [ ] learner rationale
 - [ ] AI critique
-- [ ] reflection
+- [ ] Reflection after Reverse Build, without displaying it inside Reverse Build
 
 Reverse Build must explain:
 
@@ -457,9 +563,43 @@ Reverse Build must explain:
 
 ---
 
-# 8. AI Feedback Regression and Transparency
+# 8. Reverse Build v2 — Remaining Module Rollout
 
-## 8.1 Regression testing
+Rollout begins only after the Module 2 reference and Module 4 branching implementation pass their approved acceptance criteria.
+
+## 8.1 Written-response rollout
+
+- [ ] connect Module 1
+- [ ] connect Module 3
+- [ ] connect Module 5
+- [ ] connect Module 6
+- [ ] connect Module 7
+- [ ] preserve each module’s authored Reverse Build layers
+- [ ] reconnect each completed Design Practice prompt to its own latest response and associated feedback
+- [ ] preserve truthful partial and no-artifact states
+
+## 8.2 Cross-module verification
+
+- [ ] verify Module 2 retains the approved reference behavior
+- [ ] verify Module 4 retains the approved branching behavior
+- [ ] verify each module reads only its own artifact
+- [ ] verify each prompt reads only its own current response and feedback
+- [ ] verify each module uses its own approved rubric-intent explanation
+- [ ] verify written and branching interactions render correctly
+- [ ] verify Reflection remains after Reverse Build and is not displayed inside Reverse Build
+
+### Phase 8 completion evidence
+
+- [ ] Reverse Build v2 works across all seven modules.
+- [ ] Written-response and branching artifacts reconstruct accurately.
+- [ ] Partial and direct-entry fallback behavior remains truthful and ungated.
+- [ ] All seven modules pass module-specific automated and manual verification.
+
+---
+
+# 9. AI Feedback Regression and Transparency
+
+## 9.1 Regression testing
 
 For affected shared feedback logic, test weak, medium, and strong responses in:
 
@@ -482,8 +622,17 @@ For every test:
 - [ ] record the reason
 - [ ] record any tuning change
 - [ ] rerun earlier cases after shared prompt changes
+- [ ] retain the complete evidence under `docs/validation/ai-feedback-regression/`
+- [ ] identify the model and relevant configuration used for the run
+- [ ] distinguish automated contract/parser checks from manual instructional-quality judgments
 
-## 8.2 AI behavior standards
+Test both shared feedback forms:
+
+- [ ] written Design Practice feedback
+- [ ] Module 4 branching-simulation feedback
+- [ ] Reflection feedback
+
+## 9.2 AI behavior standards
 
 Verify that AI:
 
@@ -498,7 +647,7 @@ Verify that AI:
 - [ ] does not invent learner actions
 - [ ] fails gracefully
 
-## 8.3 Learner-facing transparency
+## 9.3 Learner-facing transparency
 
 - [ ] Explain that feedback is AI-supported.
 - [ ] Explain that feedback is based on module-specific instructional criteria.
@@ -508,7 +657,7 @@ Verify that AI:
 - [ ] Add a concise reviewer-facing explanation of how the feedback system was tested.
 - [ ] Avoid overstating the scale or independence of validation.
 
-### Phase 8 completion evidence
+### Phase 9 completion evidence
 
 - [ ] Regression cases pass.
 - [ ] AI behavior remains module-specific.
@@ -517,7 +666,7 @@ Verify that AI:
 
 ---
 
-# 9. Public Claims and Product Language Audit
+# 10. Public Claims and Product Language Audit
 
 Audit all public and potentially public surfaces:
 
@@ -536,28 +685,28 @@ Audit all public and potentially public surfaces:
 - [ ] screenshots or demo captions
 - [ ] documentation that may be read by repository visitors
 
-## 9.1 Reverse Build claims
+## 10.1 Reverse Build claims
 
 - [ ] Do not claim personal reconstruction until the completed feature supports it.
 - [ ] After implementation, ensure the claim precisely describes what is reconstructed.
 - [ ] Distinguish learner-experience reconstruction from module-design reconstruction.
 - [ ] Do not imply that every part of Reverse Build is dynamically personalized.
 
-## 9.2 Simulation claims
+## 10.2 Simulation claims
 
 - [ ] Do not describe all module practices as full simulations.
 - [ ] Do not use “consequences” unless the interaction contains meaningful consequences.
 - [ ] Describe Module 4’s completed interaction accurately.
 - [ ] Distinguish guided decision practice from branching simulation.
 
-## 9.3 Adaptive-learning claims
+## 10.3 Adaptive-learning claims
 
 - [ ] Do not describe the platform itself as adaptive.
 - [ ] State that Module 5 teaches adaptive and personalized learning architecture.
 - [ ] Do not imply that the current platform changes pathways based on learner performance.
 - [ ] Do not imply dynamic personalization that is not implemented.
 
-## 9.4 Capability claims
+## 10.4 Capability claims
 
 - [ ] Present the seven capabilities as Bradley’s current pathway.
 - [ ] Avoid universal prescriptions.
@@ -565,14 +714,14 @@ Audit all public and potentially public surfaces:
 - [ ] Avoid implying that research independently produced the exact seven.
 - [ ] Preserve credible evidence for the concepts taught inside each capability.
 
-## 9.5 Validation claims
+## 10.5 Validation claims
 
 - [ ] Do not imply outside user validation until it occurs.
 - [ ] Distinguish internal testing from external review.
 - [ ] Distinguish AI review from human user testing.
 - [ ] Do not use participant counts or testing claims without records.
 
-## 9.6 Access and product claims
+## 10.6 Access and product claims
 
 Verify claims concerning:
 
@@ -582,6 +731,9 @@ Verify claims concerning:
 - [ ] local progress storage
 - [ ] local artifact storage
 - [ ] persistence limitations
+- [ ] transmission of learner input for AI processing
+- [ ] what the Future of ID application itself retains
+- [ ] provider-retention language, if used
 - [ ] full-stack development
 - [ ] AI integration
 - [ ] public availability
@@ -589,7 +741,7 @@ Verify claims concerning:
 
 Avoid indefinite promises such as “free permanently” unless Bradley consciously chooses to make that commitment.
 
-### Phase 9 completion evidence
+### Phase 10 completion evidence
 
 - [ ] Every major claim maps to observable product evidence.
 - [ ] Future-state capabilities are labeled as future-state.
@@ -598,9 +750,9 @@ Avoid indefinite promises such as “free permanently” unless Bradley consciou
 
 ---
 
-# 10. Repository and Production Hardening
+# 11. Repository and Production Hardening
 
-## 10.1 Asset pipeline
+## 11.1 Asset pipeline
 
 - [ ] Identify all production assets loaded from `raw.githubusercontent.com`.
 - [ ] Move appropriate application assets into the approved asset pipeline.
@@ -613,7 +765,7 @@ Avoid indefinite promises such as “free permanently” unless Bradley consciou
 - [ ] Remove unused default Next.js assets.
 - [ ] Remove unused or duplicated production assets.
 
-## 10.2 Repository hygiene
+## 11.2 Repository hygiene
 
 - [ ] Remove obsolete scaffolding that could confuse future contributors.
 - [ ] Identify duplicate or outdated strategy documents.
@@ -625,7 +777,7 @@ Avoid indefinite promises such as “free permanently” unless Bradley consciou
 - [ ] Confirm public documentation contains no confidential employer information.
 - [ ] Confirm public examples do not expose proprietary course content.
 
-## 10.3 Build integrity
+## 11.3 Build integrity
 
 - [ ] Run the production build.
 - [ ] Resolve build errors.
@@ -641,7 +793,7 @@ Avoid indefinite promises such as “free permanently” unless Bradley consciou
 - [ ] Check network failures.
 - [ ] Check AI endpoint behavior in production.
 
-### Phase 10 completion evidence
+### Phase 11 completion evidence
 
 - [ ] Production build passes.
 - [ ] Production assets are stable.
@@ -650,9 +802,24 @@ Avoid indefinite promises such as “free permanently” unless Bradley consciou
 
 ---
 
-# 11. End-to-End Experience Validation
+# 12. Full Internal Validation
 
-## 11.1 First-time journey
+## 12.1 Automated validation
+
+Run the exact automated checks approved in the validation brief and record the commands, environment, result, and evidence location.
+
+- [ ] production build
+- [ ] lint
+- [ ] learner-artifact parsing, schema, update, isolation, and reset behavior
+- [ ] course-progress parsing, failure, and reset behavior
+- [ ] written and branching AI request validation and response parsing
+- [ ] Module 4 state-transition and invalid-path rejection behavior
+- [ ] required route and interaction checks
+- [ ] automated accessibility scans for the approved routes and affected components
+
+Automated success does not replace manual experience, instructional-quality, responsive, or accessibility review.
+
+## 12.2 First-time journey
 
 Test as a new visitor:
 
@@ -667,7 +834,7 @@ Test as a new visitor:
 - [ ] AI behavior is explained
 - [ ] Reverse Build purpose is clear
 
-## 11.2 Module validation
+## 12.3 Module validation
 
 For every module:
 
@@ -684,7 +851,7 @@ For every module:
 - [ ] module completion works
 - [ ] mobile behavior works
 
-## 11.3 Failure states
+## 12.4 Failure states
 
 Test:
 
@@ -705,7 +872,7 @@ Test:
 - [ ] navigation away and return
 - [ ] multiple browser tabs
 
-## 11.4 Responsive validation
+## 12.5 Responsive validation
 
 Test at minimum:
 
@@ -726,7 +893,9 @@ Check:
 - [ ] focus is not lost
 - [ ] long content does not become unusable
 
-## 11.5 Accessibility validation
+## 12.6 Manual accessibility validation
+
+Apply the approved checklist to the affected components, including written Design Practice, Module 4 branching controls, learner-rationale inputs, AI feedback states, Reflection, Reverse Build dynamic content and modal behavior, and persistence-reset controls.
 
 - [ ] keyboard-only navigation
 - [ ] visible focus states
@@ -743,86 +912,17 @@ Check:
 - [ ] sufficient contrast
 - [ ] reduced-motion consideration
 - [ ] no meaning communicated by color alone
-
-### Phase 11 completion evidence
-
-- [ ] End-to-end test record is complete.
-- [ ] Material defects are resolved.
-- [ ] Deferred defects are documented and do not undermine launch claims.
-- [ ] Bradley personally completes the primary learner journey.
-
----
-
-# 12. Private Human Review
-
-This review occurs after the core product fixes and internal testing.
-
-## 12.1 Reviewer group
-
-Include, where reasonably available:
-
-- [ ] experienced instructional designer or learning architect
-- [ ] L&D leader or hiring-manager-level reviewer
-- [ ] less-experienced instructional designer
-- [ ] technically informed reviewer
-- [ ] reviewer unfamiliar with the project
-
-## 12.2 Reviewer instructions
-
-Ask reviewers to evaluate:
-
-- [ ] what they think Future of ID is
-- [ ] who they believe it is for
-- [ ] where they would begin
-- [ ] whether they understand why Bradley selected these seven capabilities
-- [ ] whether “meet you where you are” is demonstrated
-- [ ] whether the AI feedback feels specific
-- [ ] whether Module 4 feels like meaningful simulation design
-- [ ] whether Reverse Build reconnects to their actual experience
-- [ ] whether Reverse Build feels like mentorship
-- [ ] whether any claim feels stronger than the product evidence
-- [ ] whether anything harms trust
-- [ ] whether anything breaks or becomes confusing
-
-## 12.3 Evidence collection
-
-For every reviewer:
-
-- [ ] record role or perspective
-- [ ] record review date
-- [ ] record tested route or pathway
-- [ ] record major observations
-- [ ] separate defects from preferences
-- [ ] separate comprehension issues from stylistic opinions
-- [ ] record required action
-- [ ] record intentionally declined suggestions and rationale
-
-## 12.4 Response rules
-
-Fix findings that materially affect:
-
-- [ ] credibility
-- [ ] instructional integrity
-- [ ] learner trust
-- [ ] comprehension
-- [ ] accessibility
-- [ ] reliability
-- [ ] public-claim accuracy
-
-Do not automatically act on:
-
-- [ ] personal aesthetic preference
-- [ ] requests for unrelated new features
-- [ ] suggestions that conflict with product philosophy
-- [ ] suggestions that unnecessarily increase scope
-- [ ] requests to make the seven capabilities universal
+- [ ] automated findings manually reviewed for false positives and false negatives
+- [ ] accessibility defects recorded with component, route, reproduction steps, severity, and retest evidence
 
 ### Phase 12 completion evidence
 
-- [ ] Private human review completed.
-- [ ] Material findings resolved.
-- [ ] Declined recommendations documented.
-- [ ] No unresolved reviewer finding creates a known integrity risk.
+- [ ] End-to-end test record is complete.
+- [ ] Automated and manual results are clearly distinguished.
+- [ ] Automated accessibility scans and the manual accessibility checklist are both complete.
+- [ ] Material defects are resolved.
+- [ ] Deferred defects are documented and do not undermine launch claims.
+- [ ] Bradley personally completes the primary learner journey.
 
 ---
 
@@ -872,15 +972,131 @@ Document:
 - [ ] Explain how to test a customized pathway.
 - [ ] Avoid presenting the repository as a one-click production platform unless it truly is one.
 
+## 13.4 License verification
+
+- [ ] Confirm that Bradley intends to release the repository under the MIT License.
+- [ ] Confirm that a valid MIT `LICENSE` file is tracked at the repository root.
+- [ ] Confirm that README and forking language match the tracked license.
+- [ ] Remove or qualify reuse claims if the tracked license does not support them.
+
+## 13.5 Technical fork validation
+
+From a clean fork or equivalent isolated clone, have a technically capable practitioner follow the documentation without undocumented assistance.
+
+- [ ] install dependencies using the documented workflow
+- [ ] configure the required environment from the documented instructions
+- [ ] run the application without an AI key and verify the documented fallback behavior
+- [ ] run the application with AI configured when credentials are available
+- [ ] identify the authoritative files for capabilities, module content, navigation, scenarios, and reviewer criteria
+- [ ] replace or add a test capability in an isolated validation branch or disposable copy
+- [ ] verify that the customized capability appears in the expected navigation and module surfaces
+- [ ] run the documented build and validation workflow
+- [ ] record every undocumented assumption, failure, or confusing instruction
+- [ ] ensure disposable validation content is not merged into the product
+
 ### Phase 13 completion evidence
 
 - [ ] A technically capable practitioner can identify how to replace the capability pathway.
 - [ ] Documentation reinforces “meet you where you are.”
 - [ ] Forking documentation does not require copying Bradley’s seven capabilities.
+- [ ] The tracked license supports the repository’s stated reuse terms.
+- [ ] The technical fork test passes from a clean, isolated starting point.
 
 ---
 
-# 14. Explicitly Deferred Work
+# 14. Private Human Review
+
+This review occurs after the core product fixes, internal testing, forking documentation, license verification, and technical fork validation.
+
+## 14.1 Required reviewer perspectives
+
+The minimum review group must cover all three perspectives below. One person may cover more than one perspective when the overlap is credible, so three perspectives do not necessarily require three different people.
+
+- [ ] experienced instructional design or learning-experience practitioner
+- [ ] technically informed reviewer
+- [ ] first-time learner who is not already immersed in the project
+
+Additional L&D leader, hiring-manager, less-experienced practitioner, accessibility, or specialist perspectives may be included when available, but they are not required to close the minimum gate.
+
+## 14.2 Reviewer instructions
+
+Ask reviewers to evaluate:
+
+- [ ] what they think Future of ID is
+- [ ] who they believe it is for
+- [ ] where they would begin
+- [ ] whether they understand why Bradley selected these seven capabilities
+- [ ] whether “meet you where you are” is demonstrated
+- [ ] whether the AI feedback feels specific
+- [ ] whether Module 4 feels like meaningful simulation design
+- [ ] whether Reverse Build reconnects to their actual experience
+- [ ] whether Reverse Build feels like mentorship
+- [ ] whether the forking and reuse promise is understandable and credible
+- [ ] whether any claim feels stronger than the product evidence
+- [ ] whether anything harms trust
+- [ ] whether anything breaks or becomes confusing
+
+## 14.3 Evidence collection
+
+For every reviewer:
+
+- [ ] record role or perspective
+- [ ] record review date
+- [ ] record tested route or pathway
+- [ ] record major observations
+- [ ] separate defects from preferences
+- [ ] separate comprehension issues from stylistic opinions
+- [ ] record required action
+- [ ] record intentionally declined suggestions and rationale
+
+## 14.4 Response rules
+
+Fix findings that materially affect:
+
+- [ ] credibility
+- [ ] instructional integrity
+- [ ] learner trust
+- [ ] comprehension
+- [ ] accessibility
+- [ ] reliability
+- [ ] public-claim accuracy
+
+Do not automatically act on:
+
+- [ ] personal aesthetic preference
+- [ ] requests for unrelated new features
+- [ ] suggestions that conflict with product philosophy
+- [ ] suggestions that unnecessarily increase scope
+- [ ] requests to make the seven capabilities universal
+
+### Phase 14 completion evidence
+
+- [ ] All three required perspectives are represented.
+- [ ] Private human review is complete and recorded.
+- [ ] Findings are classified by materiality and required response.
+- [ ] Declined recommendations are documented with rationale.
+
+---
+
+# 15. Material-Finding Resolution and Focused Revalidation
+
+- [ ] Resolve findings that materially affect credibility, instructional integrity, learner trust, comprehension, accessibility, reliability, reuse, or public-claim accuracy.
+- [ ] Record intentionally deferred defects and why they do not undermine a launch gate or public claim.
+- [ ] Rerun every automated check affected by a change.
+- [ ] Repeat the relevant manual learner, responsive, accessibility, AI-quality, or fork-validation checks.
+- [ ] Update the validation record with final pass, fail, and accepted-defect status.
+- [ ] Confirm that no fix introduced unrelated scope or reopened an explicitly deferred feature.
+
+### Phase 15 completion evidence
+
+- [ ] Material findings are resolved.
+- [ ] Focused regression and manual revalidation pass.
+- [ ] No unresolved reviewer finding creates a known integrity risk.
+- [ ] Accepted defects are documented and do not compromise a launch gate.
+
+---
+
+# 16. Explicitly Deferred Work
 
 These items are not required for the first public introduction unless a later discovery changes the decision.
 
@@ -889,18 +1105,19 @@ These items are not required for the first public introduction unless a later di
 - [ ] authentication
 - [ ] cross-device synchronization
 - [ ] adaptive sequencing
-- [ ] dynamic learner profiles
+- [ ] learner profiles
 - [ ] community features
-- [ ] social discussion
+- [ ] social or discussion features
 - [ ] certificates or badges
 - [ ] advanced analytics dashboards
-- [ ] richer AI coaching agents
-- [ ] role-play agents
+- [ ] agent experiences, including richer AI coaching or role-play agents
 - [ ] rebuilding all Design Practices as branching simulations
+- [ ] rebuilding or redesigning unrelated modules
 - [ ] new modules
-- [ ] major homepage redesign
-- [ ] major dashboard redesign
-- [ ] broad visual redesign
+- [ ] homepage redesign
+- [ ] dashboard redesign
+- [ ] global visual redesign
+- [ ] broad design-system redesign
 - [ ] native mobile application
 - [ ] LMS integration
 - [ ] content-management administration interface
@@ -912,9 +1129,11 @@ Deferred items must not be quietly added to active scope without:
 - [ ] architecture review
 - [ ] Bradley’s approval
 
+Small copy, disclosure, accessibility, metadata, reliability, or claim-accuracy changes remain legitimate launch work when they directly support a defined gate.
+
 ---
 
-# 15. Final Public-Launch Gates
+# 17. Final Public-Launch Gates
 
 ## Gate 1 — Capability-positioning integrity
 
@@ -933,7 +1152,10 @@ Deferred items must not be quietly added to active scope without:
 ## Gate 3 — Learner-trust integrity
 
 - [ ] Local persistence is transparent.
+- [ ] AI-processing transmission is disclosed accurately.
+- [ ] Claims about application retention and provider retention are verified and precise.
 - [ ] Learners can clear saved work.
+- [ ] Learners can reset current module work and course progress.
 - [ ] Reflection content is handled intentionally.
 - [ ] AI limitations and human judgment are clear.
 - [ ] Failure states do not mislead learners.
@@ -944,6 +1166,8 @@ Deferred items must not be quietly added to active scope without:
 - [ ] Required routes and interactions work.
 - [ ] Production assets are stable.
 - [ ] Core responsive and accessibility checks pass.
+- [ ] Automated and manual accessibility validation both pass at the approved standard.
+- [ ] Artifact and course-progress persistence fail safely.
 - [ ] No known critical defect remains.
 
 ## Gate 5 — Claims integrity
@@ -955,7 +1179,8 @@ Deferred items must not be quietly added to active scope without:
 
 ## Gate 6 — External reality check
 
-- [ ] Private first-time-user review is complete.
+- [ ] Forking documentation, license verification, and technical fork validation are complete.
+- [ ] Private review covers the experienced-practitioner, technically informed, and project-unfamiliar first-time-learner perspectives.
 - [ ] Material credibility findings are resolved.
 - [ ] Material comprehension findings are resolved.
 - [ ] Material trust findings are resolved.
@@ -963,7 +1188,7 @@ Deferred items must not be quietly added to active scope without:
 
 ---
 
-# 16. Final Personal Sign-Off
+# 18. Final Personal Sign-Off
 
 The following items may only be checked by Bradley.
 
@@ -971,6 +1196,7 @@ The following items may only be checked by Bradley.
 - [ ] I personally completed the Module 4 simulation through multiple decision paths.
 - [ ] I personally verified that Reverse Build reconstructed my actual work accurately.
 - [ ] I personally reviewed how my learner data was stored and cleared.
+- [ ] I personally reviewed how learner input is transmitted for AI processing and how that behavior is disclosed.
 - [ ] I personally reviewed all major public-facing claims.
 - [ ] I personally reviewed the explanation of why I selected these seven capabilities.
 - [ ] I personally confirmed that the product does not present my seven capabilities as universal.
@@ -992,21 +1218,24 @@ The following items may only be checked by Bradley.
 
 ---
 
-# 17. Completion Record
+# 19. Completion Record
 
 For each completed phase, record:
 
-| Phase                          | Completion date | Commit or PR | Personally verified by | Notes |
-| ------------------------------ | --------------- | ------------ | ---------------------- | ----- |
-| Capability positioning         |                 |              |                        |       |
-| Implementation briefs          |                 |              |                        |       |
-| Learner-artifact architecture  |                 |              |                        |       |
-| Reverse Build v2               |                 |              |                        |       |
-| Module 4 simulation            |                 |              |                        |       |
-| AI regression and transparency |                 |              |                        |       |
-| Public claims audit            |                 |              |                        |       |
-| Production hardening           |                 |              |                        |       |
-| End-to-end validation          |                 |              |                        |       |
-| Private human review           |                 |              |                        |       |
-| Forking documentation          |                 |              |                        |       |
-| Final launch approval          |                 |              |                        |       |
+| Phase                                          | Completion date | Commit or PR | Personally verified by | Evidence location | Notes |
+| ---------------------------------------------- | --------------- | ------------ | ---------------------- | ----------------- | ----- |
+| Checklist revision and approval                |                 |              |                        |                   |       |
+| Capability positioning                         |                 |              |                        |                   |       |
+| Implementation briefs                          |                 |              |                        |                   |       |
+| Learner-artifact and progress persistence      |                 |              |                        |                   |       |
+| Module 2 Reverse Build v2 reference             |                 |              |                        |                   |       |
+| Module 4 simulation and Reverse Build           |                 |              |                        |                   |       |
+| Remaining Reverse Build v2 rollout              |                 |              |                        |                   |       |
+| AI regression and transparency                 |                 |              |                        |                   |       |
+| Public claims audit                            |                 |              |                        |                   |       |
+| Repository and production hardening            |                 |              |                        |                   |       |
+| Full internal validation                       |                 |              |                        |                   |       |
+| Forking, license, and technical fork validation |                 |              |                        |                   |       |
+| Private human review                           |                 |              |                        |                   |       |
+| Material-findings resolution and revalidation  |                 |              |                        |                   |       |
+| Final launch approval                          |                 |              |                        |                   |       |
