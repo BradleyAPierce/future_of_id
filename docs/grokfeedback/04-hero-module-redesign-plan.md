@@ -1,5 +1,7 @@
 # Grok Feedback 04 — Hero Module Redesign Plan (AI Literacy + Performance Consulting)
 
+> **Advisory external review:** This document preserves Grok's analysis and recommendations as evidence. It is not an official launch gate or execution authority. `../strategy/PUBLIC_LAUNCH_READINESS_CHECKLIST.md` is the authoritative public launch-readiness process; Bradley decides whether and how external recommendations are adopted.
+
 **Date:** 2026-07-10  
 **Reviewer:** Grok (Grok Build / xAI)  
 **Scope:** Concrete redesign plan for two hero modules — **AI Literacy** (entry hero) and **Performance Consulting** (credibility hero)  

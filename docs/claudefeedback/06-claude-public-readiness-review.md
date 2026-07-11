@@ -1,5 +1,7 @@
 # 06 — Public Readiness Evaluation
 
+> **Advisory external review:** This document preserves Claude's analysis and recommendations as evidence. It is not an official launch gate or execution authority. `../strategy/PUBLIC_LAUNCH_READINESS_CHECKLIST.md` is the authoritative public launch-readiness process; Bradley decides whether and how external recommendations are adopted. Any launch-readiness labels in the original review remain historical recommendations, not current official status.
+
 **Frame:** This report is written as if a skeptical senior L&D leader or hiring manager is about to click a shared link. It evaluates readiness for a broad public/professional share (LinkedIn, L&D communities, a hiring manager following a portfolio link) — not readiness for continued private iteration, which is already happening successfully.
 
 Notably, the project's own `docs/strategy/ROADMAP.md` places "public narrative and sharing readiness" in the **Later Phase**, after persistence and analytics work — meaning the project's own planning does not yet consider itself launch-ready. This review agrees with that self-assessment and adds specifics.

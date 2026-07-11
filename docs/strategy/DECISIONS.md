@@ -12,32 +12,42 @@
 - The guided course will include theory, interaction/experience, and Reverse Build in every module. Reverse Build is the user-facing layer that exposes reverse engineering and design rationale.
 - The experience should appeal to both experienced L&D professionals and newer/career-transition learners.
 - The project should support the creator's growth as a full-stack developer and portfolio builder.
+- The current public launch uses local browser persistence.
+- Accounts, authentication, Supabase-backed persistence, and cloud synchronization are outside the current public launch scope.
 
-## Current Preferred Technical Direction
+## Current Launch Technical Direction
 
 - Next.js
 - React
 - TypeScript
 - Tailwind
-- Supabase
 - OpenAI
 - Vercel
 - GitHub
 - VS Code
+- local browser persistence
 
-## Open Decisions
+## Future Platform Direction
 
-- Should auth be included in the MVP or deferred?
-- Should progress tracking work anonymously first, then move to authenticated accounts later?
+- Supabase-backed cloud persistence
+- optional learner accounts and authentication
+- cross-device synchronization and richer saved state
+- additional platform capabilities after the current launch scope
+
+## Future Open Decisions
+
+- What account and authentication model, if any, should be used after the current public launch?
+- When should local browser persistence expand into cloud persistence and synchronization?
 - Should module content live fully in MDX, or partially in database/admin-managed structures later?
-- Should the first polished module be Simulation Design or AI Literacy?
-- How much Articulate content, if any, should be embedded or referenced in phase 1?
+- Which module should receive additional post-launch polish after the launch-readiness sequence is complete?
+- How much Articulate content, if any, should be embedded or referenced in a future product phase?
 
 ## Working Recommendation
 
-For MVP:
+For the current public launch:
 
-- no required auth at first if that slows development
-- use local state or browser storage for early progress tracking
-- add Supabase-backed persistence when shell is stable
-- build one standout module end-to-end before expanding the rest
+- use local state or browser storage for progress tracking
+- do not add accounts, authentication, or a Supabase dependency
+- follow the approved execution order in `PUBLIC_LAUNCH_READINESS_CHECKLIST.md`
+
+After the current launch-readiness gates are complete, Supabase-backed persistence and account capabilities may be evaluated as future roadmap work.

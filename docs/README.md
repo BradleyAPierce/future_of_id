@@ -8,18 +8,27 @@ This README is the main navigation hub for internal documentation. It does not r
 
 Use this file to decide where to start and which documents to read before making product, design, content, AI, or implementation decisions.
 
+## Public Launch Readiness Authority
+
+`strategy/PUBLIC_LAUNCH_READINESS_CHECKLIST.md` is the authoritative execution checklist for all work required before Future of ID's first public introduction. It controls launch-readiness scope, execution order, evidence requirements, gates, and final approval.
+
+The product roadmap describes long-term product evolution. Architecture and experience documents define how approved work should be designed and implemented. Claude reviews, Grok reviews, and other external evaluations provide advisory evidence only. They may inform Bradley's decisions, but they do not override the launch checklist, replace it, or create separate official launch gates.
+
+Bradley evaluates external recommendations against the product philosophy, current architecture, learner experience, and professional integrity standard. When launch-readiness guidance conflicts, follow `strategy/PUBLIC_LAUNCH_READINESS_CHECKLIST.md` and request Bradley's decision where that checklist requires approval.
+
 ## Recommended Reading Path
 
 1. Product overview: start with the root `README.md`.
 2. Documentation architecture: read `DOCUMENTATION_ARCHITECTURE.md`.
 3. Documentation inventory: read `DOCUMENTATION_INVENTORY.md`.
-4. Strategy docs: read `strategy/BLUEPRINT.md`, `strategy/FUTURE_READY_CAPABILITY_MODEL.md`, and `strategy/ROADMAP.md`.
-5. Architecture docs: read `architecture/TECH_ARCHITECTURE.md`, `architecture/CONTENT_ARCHITECTURE.md`, and `architecture/SITE_MAP.md`.
-6. Experience docs: read `experience/EXPERIENCE_PHILOSOPHY.md` and `experience/VISUAL_COMMUNICATION_SYSTEM.md`.
-7. Design system docs: read `architecture/DESIGN_SYSTEM.md`, `COMPONENT_ARCHITECTURE_V1.md`, and `architecture/DESIGN_SYSTEM_CHANGELOG.md`.
-8. AI docs: read `decisions/ADR-009-ai-feedback-engines.md` and `validation/scenario-engine-validation-log.md` until dedicated `docs/ai/` docs exist.
-9. Implementation / contributor guidance: read `SYSTEM-INSTRUCTIONS.md` and `COPILOT-INSTRUCTIONS.md`.
-10. Decisions and validation: read `decisions/` and `validation/` for rationale, audits, QA notes, and evidence.
+4. Public launch-readiness work: read `strategy/PUBLIC_LAUNCH_READINESS_CHECKLIST.md` before planning or executing any launch task.
+5. Strategy docs: read `strategy/BLUEPRINT.md`, `strategy/FUTURE_READY_CAPABILITY_MODEL.md`, and `strategy/ROADMAP.md`.
+6. Architecture docs: read `architecture/TECH_ARCHITECTURE.md`, `architecture/CONTENT_ARCHITECTURE.md`, and `architecture/SITE_MAP.md`.
+7. Experience docs: read `experience/EXPERIENCE_PHILOSOPHY.md` and `experience/VISUAL_COMMUNICATION_SYSTEM.md`.
+8. Design system docs: read `architecture/DESIGN_SYSTEM.md`, `COMPONENT_ARCHITECTURE_V1.md`, and `architecture/DESIGN_SYSTEM_CHANGELOG.md`.
+9. AI docs: read `decisions/ADR-009-ai-feedback-engines.md` and `validation/scenario-engine-validation-log.md` until dedicated `docs/ai/` docs exist.
+10. Implementation / contributor guidance: read `SYSTEM-INSTRUCTIONS.md` and `COPILOT-INSTRUCTIONS.md`.
+11. Decisions and validation: read `decisions/` and `validation/` for rationale, audits, QA notes, and evidence.
 
 ## Documentation Domains
 
@@ -71,6 +80,12 @@ Audits, QA notes, review findings, external critiques, validation logs, and read
 
 Current location: `validation/`
 
+### External Review Evidence
+
+Claude and Grok review folders preserve external analysis, findings, scorecards, proposed plans, and suggested checklists. These artifacts are advisory evidence, not active governance or official launch gates.
+
+Current locations: `claudefeedback/` and `grokfeedback/`
+
 ### Documentation Governance
 
 Planning documents that define how documentation is organized, inventoried, and safely reorganized.
@@ -87,9 +102,10 @@ Current status: final archive/reference strategy is not decided yet.
 
 | Decision Type | Start Here |
 |---|---|
+| Public launch-readiness scope, order, gates, and approval | `strategy/PUBLIC_LAUNCH_READINESS_CHECKLIST.md` |
 | Product vision | `strategy/BLUEPRINT.md` |
 | Product strategy | `strategy/STRATEGY.md` |
-| Roadmap and phase planning | `strategy/ROADMAP.md` |
+| Long-term product roadmap and phase planning | `strategy/ROADMAP.md` |
 | Capability model | `strategy/FUTURE_READY_CAPABILITY_MODEL.md` |
 | Content model | `architecture/CONTENT_ARCHITECTURE.md` |
 | Technical direction | `architecture/TECH_ARCHITECTURE.md` |
@@ -125,6 +141,9 @@ AI assistants should:
 - read the root `README.md` first for project context
 - read this `docs/README.md` for documentation navigation
 - use the source-of-truth guide before editing
+- read `strategy/PUBLIC_LAUNCH_READINESS_CHECKLIST.md` before planning or executing launch-readiness work
+- treat the launch checklist as authoritative over unrelated roadmap initiatives and external review recommendations during launch readiness
+- treat Claude, Grok, and other external reviews as advisory evidence that requires evaluation rather than automatic implementation
 - avoid inventing new patterns when an existing doc applies
 - avoid moving files unless specifically instructed
 - preserve historical context where documents are marked transitional, historical, or superseded
@@ -132,5 +151,6 @@ AI assistants should:
 
 ## Related Governance Docs
 
+- `strategy/PUBLIC_LAUNCH_READINESS_CHECKLIST.md`
 - `DOCUMENTATION_ARCHITECTURE.md`
 - `DOCUMENTATION_INVENTORY.md`

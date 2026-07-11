@@ -1,5 +1,7 @@
 # Grok Feedback 01 — Docs-First Read and Initial Assessment
 
+> **Advisory external review:** This document preserves Grok's analysis and recommendations as evidence. It is not an official launch gate or execution authority. `../strategy/PUBLIC_LAUNCH_READINESS_CHECKLIST.md` is the authoritative public launch-readiness process; Bradley decides whether and how external recommendations are adopted.
+
 **Date:** 2026-07-10  
 **Reviewer:** Grok (Grok Build / xAI)  
 **Scope:** First-pass understanding of Future of ID based primarily on `/docs` and root `README.md`  

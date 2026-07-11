@@ -1,5 +1,7 @@
 # future_of_id
 
+> **Historical README draft:** This file is preserved for reference and is not the current project or launch-readiness source of truth. Use `README.md` for current project status and `docs/strategy/PUBLIC_LAUNCH_READINESS_CHECKLIST.md` for authoritative launch scope, order, and gates. Stack references below reflect an earlier proposal; accounts, authentication, and Supabase are not part of the current public launch scope.
+
 **future_of_id** is a guided, self-paced learning experience exploring the seven capabilities shaping the future of instructional design through 2030.
 
 This project is designed to do two things at once:

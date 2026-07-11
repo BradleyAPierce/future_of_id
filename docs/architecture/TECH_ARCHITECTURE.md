@@ -4,12 +4,14 @@
 
 Initial recommendation: **Next.js + TypeScript + Tailwind + Supabase + OpenAI + Vercel**
 
+This initial recommendation describes the longer-term platform direction, not the current public launch scope. The current launch uses local browser persistence and has no accounts, authentication, Supabase dependency, or cloud synchronization. Future architecture may add those capabilities after the public launch-readiness gates are complete.
+
 ## Why This Stack
 
 - Next.js supports modern full-stack React development, routing, server logic, and deployment simplicity.
 - TypeScript supports maintainability and professional code quality.
 - Tailwind supports rapid UI iteration and consistent design systems.
-- Supabase provides auth, Postgres, and progress storage with a flexible growth path.
+- Supabase may provide future auth, Postgres, cloud progress storage, and synchronization with a flexible growth path.
 - OpenAI supports simulations, feedback layers, and AI-enabled interactions.
 - Vercel provides streamlined deployment for a Next.js app.
 
@@ -25,19 +27,26 @@ Initial recommendation: **Next.js + TypeScript + Tailwind + Supabase + OpenAI + 
 ### Backend
 
 - Next.js route handlers / server actions
-- database read/write for progress and user state
 - AI integration endpoints
 
-### Database (Initial)
+Current progress state remains in local browser storage.
 
-Recommended use of Supabase for:
+### Database and Accounts (Future)
 
+Possible future use of Supabase after the current public launch for:
+
+- optional learner accounts and authentication
 - learner progress
 - module completion state
 - reflection entries (optional)
 - saved activity outcomes (optional)
+- cross-device synchronization
+
+None of these future database or account capabilities are dependencies for the current public launch.
 
 ## Proposed Data Domains
+
+These are future platform domains rather than current launch requirements.
 
 - users
 - modules
@@ -63,6 +72,8 @@ Recommended use of Supabase for:
 - database only for dynamic learner state and interaction records
 
 ## Analytics
+
+Analytics work is future product evolution unless it is explicitly required by `docs/strategy/PUBLIC_LAUNCH_READINESS_CHECKLIST.md`.
 
 ### Phase 1
 

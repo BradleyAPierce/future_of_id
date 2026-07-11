@@ -7,6 +7,10 @@
 
 ---
 
+## Launch objective
+
+Future of ID is not being launched as a finished universal model of instructional design. It is being introduced as a working demonstration of a capability-development system, showing how an instructional designer can identify future-relevant capabilities, develop them through intentional practice, and create a reusable learning architecture others can adapt.
+
 ## 1. Purpose
 
 This checklist defines the work required before Future of ID is introduced publicly.
@@ -36,18 +40,32 @@ Every recommendation must ultimately fit:
 
 These principles remain in force throughout the work.
 
-- [ ] Future of ID will not be publicly introduced merely because it is visually polished.
+- [x] Future of ID will not be publicly introduced merely because it is visually polished.
 - [ ] Future of ID will not make a claim that cannot be observed or defended in the actual experience.
+  - **Open dependency:** Repository governance now enforces claim accuracy, but implementation evidence is still required for Reverse Build v2 learner reconstruction, learner-artifact persistence, and the Module 4 simulation experience.
 - [ ] Core product gaps will not be hidden through careful marketing language.
-- [ ] Product integrity takes priority over launch speed.
-- [ ] Reviewer recommendations will not be implemented automatically without evaluation.
-- [ ] Scope will not expand into unrelated homepage, dashboard, or design-system redesign work.
-- [ ] New functionality must follow the existing system-first architecture.
+  - **Open dependency:** The current experience still requires implementation work before all learner-facing claims are supported by observable behavior.
+- [x] Product integrity takes priority over launch speed.
+- [x] Reviewer recommendations will not be implemented automatically without evaluation.
+- [x] Scope will not expand into unrelated homepage, dashboard, or design-system redesign work.
+- [x] New functionality must follow the existing system-first architecture.
 - [ ] Instructional content, application logic, and presentation must remain separated.
-- [ ] No account system, Supabase persistence, or unrelated future feature will be pulled into this launch-readiness scope.
-- [ ] The launch-readiness process will end when the defined gates are passed; it will not become an endless perfection cycle.
+  - **Open dependency:** The architecture direction is approved, but Reverse Build v2 still requires embedded instructional content and presentation responsibilities to be refactored into a cleaner system.
+- [x] No account system, Supabase persistence, authentication, or unrelated future feature will be pulled into this launch-readiness scope.
+- [x] The launch-readiness process will end when the defined gates are passed; it will not become an endless perfection cycle.
+
+### Section 2 approval record
+
+- **Approval status:** Section 2 documentation and repository-governance remediation approved.
+- **Approval date:** 2026-07-11
+- **Approved by:** Bradley Pierce
+- **Launch execution authority:** `PUBLIC_LAUNCH_READINESS_CHECKLIST.md`
+- **External review status:** Claude and Grok reviews are advisory evidence and input only; they are not final authority and do not create separate launch gates.
+- **Implementation-dependent principles:** The three principles marked open above remain incomplete until their required implementation evidence exists.
 
 ## 2.1 Approved execution order
+
+**Execution-order status:** Approved by Bradley Pierce on 2026-07-11. The fifteen-step order below remains authoritative.
 
 Work must proceed in this order unless a direct dependency is documented and Bradley approves a change:
 
@@ -68,6 +86,10 @@ Work must proceed in this order unless a direct dependency is documented and Bra
 15. Complete Bradley’s personal launch sign-off.
 
 An execution item may be checked only after its defined implementation, test evidence, review, and required personal approval are complete.
+
+### Historical sequencing note
+
+Capability-positioning analysis began while this checklist was still being refined. Bradley accepted that activity as dependency discovery needed to clarify the checklist, not as completion of the capability-positioning phase or out-of-sequence launch implementation. No launch implementation work was approved through that analysis. This note preserves the historical context; it does not mark any additional checklist item complete. Future launch-readiness work must follow the approved execution order above unless Bradley explicitly approves a documented change.
 
 ---
 
@@ -1286,20 +1308,20 @@ The following items may only be checked by Bradley.
 
 For each completed phase, record:
 
-| Phase                                          | Completion date | Commit or PR | Personally verified by | Evidence location | Notes |
-| ---------------------------------------------- | --------------- | ------------ | ---------------------- | ----------------- | ----- |
-| Checklist revision and approval                |                 |              |                        |                   |       |
-| Capability positioning                         |                 |              |                        |                   |       |
-| Implementation briefs                          |                 |              |                        |                   |       |
-| Learner-artifact and progress persistence      |                 |              |                        |                   |       |
-| Module 2 Reverse Build v2 reference             |                 |              |                        |                   |       |
-| Module 4 simulation and Reverse Build           |                 |              |                        |                   |       |
-| Remaining Reverse Build v2 rollout              |                 |              |                        |                   |       |
-| AI regression and transparency                 |                 |              |                        |                   |       |
-| Public claims audit                            |                 |              |                        |                   |       |
-| Repository and production hardening            |                 |              |                        |                   |       |
-| Full internal validation                       |                 |              |                        |                   |       |
-| Forking, license, and technical fork validation |                 |              |                        |                   |       |
-| Private human review                           |                 |              |                        |                   |       |
-| Material-findings resolution and revalidation  |                 |              |                        |                   |       |
-| Final launch approval                          |                 |              |                        |                   |       |
+| Phase                                           | Completion date | Commit or PR | Personally verified by | Evidence location                                                                                            | Notes                                                                                          |
+| ----------------------------------------------- | --------------- | ------------ | ---------------------- | ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------- |
+| Checklist revision and approval                 | 2026-07-11      | —            | Bradley Pierce         | Section 2 of this checklist; `docs/README.md`; `docs/SYSTEM-INSTRUCTIONS.md`; `docs/COPILOT-INSTRUCTIONS.md` | Section 2 governance remediation completed. Implementation-dependent launch gates remain open. |
+| Capability positioning                          |                 |              |                        |                                                                                                              |                                                                                                |
+| Implementation briefs                           |                 |              |                        |                                                                                                              |                                                                                                |
+| Learner-artifact and progress persistence       |                 |              |                        |                                                                                                              |                                                                                                |
+| Module 2 Reverse Build v2 reference             |                 |              |                        |                                                                                                              |                                                                                                |
+| Module 4 simulation and Reverse Build           |                 |              |                        |                                                                                                              |                                                                                                |
+| Remaining Reverse Build v2 rollout              |                 |              |                        |                                                                                                              |                                                                                                |
+| AI regression and transparency                  |                 |              |                        |                                                                                                              |                                                                                                |
+| Public claims audit                             |                 |              |                        |                                                                                                              |                                                                                                |
+| Repository and production hardening             |                 |              |                        |                                                                                                              |                                                                                                |
+| Full internal validation                        |                 |              |                        |                                                                                                              |                                                                                                |
+| Forking, license, and technical fork validation |                 |              |                        |                                                                                                              |                                                                                                |
+| Private human review                            |                 |              |                        |                                                                                                              |                                                                                                |
+| Material-findings resolution and revalidation   |                 |              |                        |                                                                                                              |                                                                                                |
+| Final launch approval                           |                 |              |                        |                                                                                                              |                                                                                                |

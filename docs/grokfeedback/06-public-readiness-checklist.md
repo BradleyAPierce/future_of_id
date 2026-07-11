@@ -1,5 +1,7 @@
 # Grok Feedback 06 — Public-Readiness Checklist (Pass/Fail Before LinkedIn Launch)
 
+> **Advisory external review:** This document preserves Grok's proposed gates as historical recommendation evidence. It is not an official launch checklist, approval record, or execution authority. `../strategy/PUBLIC_LAUNCH_READINESS_CHECKLIST.md` is the sole authoritative public launch-readiness process. Any T0, T1, T2, "approved," or pass/fail language below belongs to the original external review and does not establish current official launch status.
+
 **Date:** 2026-07-10  
 **Reviewer:** Grok (Grok Build / xAI)  
 **Scope:** Pass/fail criteria for public sharing — from process posts to product soft launch  

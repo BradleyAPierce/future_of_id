@@ -4,6 +4,14 @@
 
 This roadmap reflects the current product phase after the initial strategy, app foundation, guided course shell, landing/about surfaces, module content structure, and first AI feedback architecture have been established.
 
+## Scope and Authority
+
+This roadmap describes long-term product evolution, future capabilities, and future architecture. It does not define the work required before Future of ID's first public introduction.
+
+`PUBLIC_LAUNCH_READINESS_CHECKLIST.md` is the authoritative source for current public launch gates and execution order. During launch readiness, that checklist takes priority over unrelated roadmap initiatives. Roadmap items remain valid future direction, but they are not launch requirements unless Bradley explicitly incorporates them into the launch checklist.
+
+For the current public launch scope, learner progress is stored locally in the browser. Accounts, authentication, Supabase-backed cloud persistence, synchronization, and additional platform capabilities are deferred future work.
+
 ## Completed / Foundation
 
 - finalized seven capability framework
@@ -33,12 +41,14 @@ This roadmap reflects the current product phase after the initial strategy, app 
 - improve navigation and learner flow across landing, course, dashboard, and module pages
 - add clearer completion states and course progress affordances
 
-## Later Phase — Persistence, Analytics, and Public Readiness
+## Later Product Phase — Persistence, Analytics, and Public Evolution
 
-- add Supabase-backed persistence when the shell and learning flows are stable
+- consider Supabase-backed cloud persistence, accounts, authentication, and synchronization after the current public launch-readiness process
 - add analytics/event tracking for meaningful course and module behavior
 - refine public narrative and sharing readiness
 - add supporting resources, downloads, or references where they strengthen the guided course
+
+These items do not add to or replace the current launch gates in `PUBLIC_LAUNCH_READINESS_CHECKLIST.md`.
 
 ## Future Phases
 

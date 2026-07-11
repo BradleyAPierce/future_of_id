@@ -138,6 +138,16 @@ Currently Implemented
 - reflection workflows and shared AI feedback architecture
 - structured content/data separation
 - Reverse Build instructional framework
+- local browser persistence for course progress
+
+Current Public Launch Scope
+
+- no learner accounts
+- no authentication
+- no Supabase dependency
+- no cloud synchronization
+
+Public launch readiness is governed by `docs/strategy/PUBLIC_LAUNCH_READINESS_CHECKLIST.md`.
 
 In Progress
 
@@ -145,7 +155,6 @@ In Progress
 - richer AI-supported interactions across modules
 - improved UI system and visual polish
 - expanded analytics and learner feedback systems
-- Supabase-backed persistence layer
 
 ⸻
 
@@ -164,13 +173,19 @@ Content Architecture
 - modular content modeling
 - scalable component patterns
 
-Active / Expanding
+Current
 
 - OpenAI-powered scenario and reflection feedback architecture
 - richer AI interaction patterns
-- Supabase persistence
 - analytics and event tracking
 - adaptive interaction layers
+
+Future Platform Direction
+
+- optional learner accounts and authentication
+- Supabase-backed cloud persistence
+- cross-device synchronization and richer saved state
+- additional platform capabilities after the current launch scope
 
 ⸻
 

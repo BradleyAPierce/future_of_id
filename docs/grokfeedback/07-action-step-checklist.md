@@ -1,5 +1,7 @@
 # Grok Feedback 07 — Action Step Checklist
 
+> **Advisory external review:** This document preserves Grok's proposed sequence as historical recommendation evidence. It is not an official launch gate, approved execution order, or active checklist. `../strategy/PUBLIC_LAUNCH_READINESS_CHECKLIST.md` is the sole authoritative public launch-readiness process. The original "living" and T0/T1/T2 language below does not establish current official launch status; Bradley decides whether and how external recommendations are adopted.
+
 **Date:** 2026-07-10  
 **Reviewer:** Grok (Grok Build / xAI)  
 **Purpose:** Convert reviews `01`–`06` into an ordered, executable work plan toward an honest soft product launch (T1)  

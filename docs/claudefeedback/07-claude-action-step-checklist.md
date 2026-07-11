@@ -1,5 +1,7 @@
 # 07 — Ordered Execution Checklist
 
+> **Advisory external review:** This document preserves Claude's proposed sequence as historical recommendation evidence. It is not an official launch gate, approved execution order, or active checklist. `../strategy/PUBLIC_LAUNCH_READINESS_CHECKLIST.md` is the sole authoritative public launch-readiness process; Bradley decides whether and how external recommendations are adopted.
+
 This checklist converts Reports 01–06 into an ordered sequence. It intentionally contains few items. The findings across this review point at two structural fixes and a short cleanup pass — not a long backlog.
 
 ## Tier 1 — Build First (Launch Gates)

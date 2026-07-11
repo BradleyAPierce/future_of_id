@@ -102,6 +102,7 @@ Use these documents as authoritative starting points by decision type:
 
 | Decision Type | Primary Source of Truth | Supporting Sources |
 |---|---|---|
+| Public launch-readiness scope, order, gates, and approval | `docs/strategy/PUBLIC_LAUNCH_READINESS_CHECKLIST.md` | Architecture, experience, validation, and external review evidence as referenced by the checklist |
 | Product vision | `docs/strategy/BLUEPRINT.md` | `docs/strategy/STRATEGY.md`, `README.md` |
 | Learning architecture | `docs/strategy/BLUEPRINT.md` | `docs/architecture/CONTENT_ARCHITECTURE.md`, `docs/strategy/FUTURE_READY_CAPABILITY_MODEL.md` |
 | Technical architecture | `docs/architecture/TECH_ARCHITECTURE.md` | `docs/SYSTEM-INSTRUCTIONS.md`, `docs/COPILOT-INSTRUCTIONS.md` |

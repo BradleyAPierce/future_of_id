@@ -1,5 +1,7 @@
 # Grok Feedback 05 — Reverse Build v2 Interaction Spec (Learner Artifacts)
 
+> **Advisory external review:** This document preserves Grok's analysis and recommendations as evidence. It is not an approved implementation brief, official launch gate, or execution authority. `../strategy/PUBLIC_LAUNCH_READINESS_CHECKLIST.md` is the authoritative public launch-readiness process; Bradley decides whether and how external recommendations are adopted.
+
 **Date:** 2026-07-10  
 **Reviewer:** Grok (Grok Build / xAI)  
 **Scope:** Interaction, data, UX, and acceptance specification for Reverse Build v2  

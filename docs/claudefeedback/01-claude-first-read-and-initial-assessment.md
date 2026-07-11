@@ -1,5 +1,7 @@
 # 01 — First Read and Initial Assessment
 
+> **Advisory external review:** This document preserves Claude's analysis and recommendations as evidence. It is not an official launch gate or execution authority. `../strategy/PUBLIC_LAUNCH_READINESS_CHECKLIST.md` is the authoritative public launch-readiness process; Bradley decides whether and how external recommendations are adopted.
+
 **Reviewer:** Claude (independent product/instructional review)
 **Scope:** Full `/docs` folder (~40 documents across strategy, experience, architecture, decisions, validation) and the `/web` Next.js implementation (7 modules, homepage, orientation, dashboard, about, AI feedback engines).
 **Method:** Primary-source read of philosophy documents, direct inspection of module content files, page components, AI prompt engineering, and progress logic. Not based on summaries.

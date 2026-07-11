@@ -1,5 +1,7 @@
 # 05 — Reverse Build Deep Evaluation and Future-State Model
 
+> **Advisory external review:** This document preserves Claude's analysis and recommendations as evidence. It is not an official launch gate or execution authority. `../strategy/PUBLIC_LAUNCH_READINESS_CHECKLIST.md` is the authoritative public launch-readiness process; Bradley decides whether and how external recommendations are adopted.
+
 ## Does Reverse Build Fulfill Its Promise?
 
 **No, not currently.** This is the clearest, most confidently answerable finding in this entire review, because `REVERSE_BUILD_EXPERIENCE.md` is unusually explicit about what it must do and must not become — and the shipped implementation lands on the "must not" side of nearly every line.

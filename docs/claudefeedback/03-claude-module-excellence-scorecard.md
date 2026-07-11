@@ -1,5 +1,7 @@
 # 03 — Module Excellence Scorecard
 
+> **Advisory external review:** This document preserves Claude's analysis and recommendations as evidence. It is not an official launch gate or execution authority. `../strategy/PUBLIC_LAUNCH_READINESS_CHECKLIST.md` is the authoritative public launch-readiness process; Bradley decides whether and how external recommendations are adopted.
+
 **Method:** Each of the seven capability modules scored 1–5 against the seven criteria in `MODULE_EXCELLENCE_STANDARD.md`. Scores are based on direct inspection of module content files (`web/content/modules/*.ts`), the shared rendering components, the AI prompt rubrics, and — where available — the live validation evidence in `docs/validation/scenario-engine-validation-log.md`.
 
 Two structural facts apply to every module and are not repeated in each row: **Design Practice** and **Reverse Build** use identical shared components across all seven modules (`ScenarioDecisionAI`, `ReverseBuildModalCards`). This means their ceiling is set by the shared architecture, not by individual module authoring — a module cannot out-author a structural limitation shared by all seven. This is why AI Design Review and Reverse Build scores cluster tightly across the table.

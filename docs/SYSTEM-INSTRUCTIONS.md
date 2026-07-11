@@ -21,6 +21,12 @@ All AI tools (Kilo Code, Copilot, Codex, Claude, ChatGPT) must follow this docum
 
 AI must prioritize project documents in the following order:
 
+### Special Authority — Public Launch Readiness
+
+For any work described, requested, or scheduled as public launch readiness, `docs/strategy/PUBLIC_LAUNCH_READINESS_CHECKLIST.md` is the authoritative execution process. It controls launch scope, required sequencing, evidence, gates, and approval. The checklist takes priority over unrelated roadmap initiatives during launch readiness.
+
+Core architecture documents still govern how checklist-approved work is implemented. Claude reviews, Grok reviews, and other external evaluations are advisory evidence only. They do not override or replace the launch checklist and do not create separate official launch gates. Bradley evaluates their recommendations against the product philosophy, architecture, learner experience, and professional integrity standard.
+
 ### Tier 1 — Core System Contracts (Non-Negotiable)
 
 1. `docs/architecture/CONTENT_ARCHITECTURE.md` → module structure and learning model  
@@ -45,7 +51,7 @@ Used to guide implementation decisions and resolve ambiguity.
 
 ### Tier 3 — Supporting Context
 
-9. `docs/strategy/ROADMAP.md` → development phases and sequencing
+9. `docs/strategy/ROADMAP.md` → long-term product phases and sequencing outside the authoritative launch-readiness order
 10. `docs/strategy/LANDING_PAGE_STRATEGY.md` → public landing-page positioning and messaging
 11. `docs/reference/INITIAL_REPO_STRUCTURE.md` → historical structural reference
 12. `README.md` → project overview
@@ -54,6 +60,7 @@ Used to guide implementation decisions and resolve ambiguity.
 
 - `docs/decisions/*` → architecture decision records
 - `docs/validation/*` → validation notes and test evidence
+- `docs/claudefeedback/*` and `docs/grokfeedback/*` → external advisory analysis and recommendations
 
 Helpful context, but must not override Tier 1 or Tier 2.
 
@@ -126,7 +133,9 @@ Content must remain:
 - React  
 - TypeScript  
 - Tailwind CSS  
-- Supabase (future persistence)  
+- local browser persistence for the current public launch scope
+- no accounts, authentication, or Supabase dependency in the current public launch scope
+- Supabase, cloud persistence, account synchronization, and authentication remain possible future architecture
 - OpenAI (AI features)  
 
 Do not introduce new frameworks without justification.
@@ -160,6 +169,7 @@ For any meaningful task, AI must follow this process:
 
 ### Step 1 — Context Alignment
 - Read relevant Tier 1 and Tier 2 documents  
+- If the task is related to public launch readiness, read `docs/strategy/PUBLIC_LAUNCH_READINESS_CHECKLIST.md` first and confirm that the work is the next approved execution item
 - Identify affected areas (UI, data, routing, content)
 
 ---

@@ -1,5 +1,7 @@
 # 04 — Hero Module Strategy
 
+> **Advisory external review:** This document preserves Claude's analysis and recommendations as evidence. It is not an official launch gate or execution authority. `../strategy/PUBLIC_LAUNCH_READINESS_CHECKLIST.md` is the authoritative public launch-readiness process; Bradley decides whether and how external recommendations are adopted.
+
 **Purpose:** Identify the highest-leverage module-level investment. `BLUEPRINT.md`'s own MVP scope calls for "1 fully polished interactive experience" — that experience does not yet exist in a way that lives up to the product's claims. This report identifies which module should carry that weight, and why the other six should not be touched yet.
 
 This report does not recommend rebuilding all seven modules. It recommends one deliberate, disproportionate investment.

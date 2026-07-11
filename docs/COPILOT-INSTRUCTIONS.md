@@ -6,12 +6,15 @@ This project is a **Next.js + TypeScript** learning platform for `future_of_id`,
 
 Copilot must align its work with the source-of-truth hierarchy in `docs/SYSTEM-INSTRUCTIONS.md`:
 
+- Public launch readiness authority: `docs/strategy/PUBLIC_LAUNCH_READINESS_CHECKLIST.md` controls launch scope, execution order, evidence, gates, and approval
 - Tier 1: `docs/architecture/CONTENT_ARCHITECTURE.md`, `docs/architecture/SITE_MAP.md`, `docs/architecture/TECH_ARCHITECTURE.md`, `docs/architecture/DESIGN_SYSTEM.md`, `docs/COMPONENT_ARCHITECTURE_V1.md`
 - Tier 2: `docs/strategy/DECISIONS.md`, `docs/strategy/BLUEPRINT.md`, `docs/strategy/FUTURE_READY_CAPABILITY_MODEL.md`
 - Tier 3: `docs/strategy/ROADMAP.md`, `docs/strategy/LANDING_PAGE_STRATEGY.md`, `docs/reference/INITIAL_REPO_STRUCTURE.md`, `README.md`
 - Evidence records: `docs/decisions/*` and `docs/validation/*`
 
 When making decisions, prefer consistency with those files over inventing new patterns.
+
+For launch-readiness work, read the public launch checklist before planning or editing. Follow its approved order, and do not pull unrelated roadmap work into launch scope. Claude reviews, Grok reviews, and other external evaluations are advisory evidence only; Bradley decides whether their recommendations fit the product, and they do not create official launch gates.
 
 If documentation and existing code disagree, do not assume the code is correct by default. Inspect both, identify the conflict, and choose the path that best matches the long-term architecture and documented intent.
 
@@ -85,7 +88,9 @@ Copilot should not behave like a rapid code generator that invents architecture 
 - TypeScript
 - Tailwind CSS
 - Structured content/config data
-- Supabase for future persistence
+- local browser persistence for the current public launch scope
+- no accounts, authentication, or Supabase dependency for the current public launch
+- Supabase-backed cloud persistence, synchronization, accounts, and authentication as possible future platform architecture
 - OpenAI for real AI-enabled interactions
 
 ### Separation of Responsibilities

@@ -1,5 +1,7 @@
 # 02 — Deep Product Honesty Review
 
+> **Advisory external review:** This document preserves Claude's analysis and recommendations as evidence. It is not an official launch gate or execution authority. `../strategy/PUBLIC_LAUNCH_READINESS_CHECKLIST.md` is the authoritative public launch-readiness process; Bradley decides whether and how external recommendations are adopted.
+
 **Purpose:** Evaluate where implementation matches philosophy, where the product overpromises, where it under-delivers, what is genuinely differentiated, and what could damage credibility with a skeptical senior audience.
 
 This report is deliberately unsympathetic to the creator's intentions. Intentions are documented well; this report checks receipts.

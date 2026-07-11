@@ -1,7 +1,7 @@
 # future_of_id — Product Strategy & Vision Notes
 *Historical strategy snapshot captured from planning conversation — April 2026*
 
-> Historical note: This document preserves strategic context from an earlier planning moment. Some current-state details below are stale; use `README.md`, `docs/strategy/ROADMAP.md`, ADRs, and validation logs for current implementation status.
+> Historical note: This document preserves strategic context from an earlier planning moment. Some current-state details below are stale; use `README.md`, `docs/strategy/ROADMAP.md`, ADRs, and validation logs for current implementation status. `docs/strategy/PUBLIC_LAUNCH_READINESS_CHECKLIST.md` is the authority for current public launch scope, order, gates, and approval.
 
 ---
 
