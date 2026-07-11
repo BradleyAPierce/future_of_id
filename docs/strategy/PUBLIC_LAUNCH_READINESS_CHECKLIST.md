@@ -71,9 +71,48 @@ An execution item may be checked only after its defined implementation, test evi
 
 ---
 
-# 3. Seven-Capability Positioning
+# 3. Capability-System and Current-Pathway Positioning
 
-## 3.1 Lock the correct meaning of the seven capabilities
+## 3.1 Define Future of ID as a capability development system
+
+- [ ] Define Future of ID as a capability development system rather than a product permanently defined by a fixed number of capabilities.
+- [ ] Explain that the system is a repeatable method and learning architecture for identifying, developing, applying, and sharing future-relevant instructional design capabilities.
+- [ ] State that the current seven capabilities are the first complete demonstration of that method.
+- [ ] Explain that the seven capabilities provide implemented evidence of the method producing a coherent pathway; they are not external validation of effectiveness or the permanent boundary of the system.
+- [ ] Explain that practitioners may identify different capability needs based on their:
+  - [ ] role
+  - [ ] responsibilities
+  - [ ] organization
+  - [ ] industry
+  - [ ] career direction
+  - [ ] professional goals
+- [ ] Explain that a practitioner-created pathway can select different capability areas while preserving the Future of ID learning architecture.
+- [ ] Clarify that “capability development system” refers to the repeatable learning method and architecture.
+- [ ] Do not imply that Future of ID automatically diagnoses needs, recommends capabilities algorithmically, creates adaptive learning plans, or dynamically personalizes pathways.
+
+## 3.2 Explain the capability-discovery process
+
+- [ ] Explain that Future of ID was not created from a claim of mastery over every capability.
+- [ ] Explain that it was created by an experienced instructional designer intentionally developing capabilities needed for future professional work.
+- [ ] Frame the discovery process as disciplined professional calibration, not beginner status or learning the profession from scratch.
+
+### I know what I know
+
+- [ ] Represent Bradley’s existing instructional design experience, established strengths, professional judgment, and existing expertise.
+
+### I know what I don’t know
+
+- [ ] Represent capabilities Bradley recognized required intentional development.
+- [ ] Show where additional knowledge, practice, and experimentation supported deliberate professional growth.
+
+### I don’t know what I don’t know
+
+- [ ] Represent emerging questions and possibilities revealed through building, research, experimentation, and reflection.
+- [ ] Present exploration as a responsible way to discover new professional possibilities, not evidence that the original pathway was arbitrary.
+
+- [ ] Preserve the central credibility statement: Bradley understood where existing expertise ended, intentionally explored new capability areas, and documented how those capabilities were applied and refined.
+
+## 3.3 Lock the correct meaning of the current seven-capability pathway
 
 - [ ] Create one canonical Bradley-approved explanation of why the seven capabilities were selected.
 - [ ] Preserve this conceptual foundation: “Future of ID is a deliberately selected professional learning pathway shaped by its creator’s current work, responsibilities, development needs, and career direction. The seven capabilities are neither universal nor exhaustive; they demonstrate how practitioners can build an intentional pathway around where they are and where they are trying to go.”
@@ -93,7 +132,7 @@ An execution item may be checked only after its defined implementation, test evi
 - [ ] Preserve Bradley’s authority to explain why each capability matters in his current professional context.
 - [ ] Preserve both truths: the pathway has a personal and professional origin, and the resulting product remains relevant and reusable for other practitioners.
 
-## 3.2 Clarify the reusable product promise
+## 3.4 Clarify the reusable product promise
 
 - [ ] Document that the reusable contribution is the method—not the exact list of seven.
 - [ ] Explain that another practitioner may need a different capability pathway.
@@ -103,7 +142,7 @@ An execution item may be checked only after its defined implementation, test evi
 - [ ] Show that Future of ID itself was created by meeting Bradley where he currently is.
 - [ ] Explain that professional calibration may cause the capability pathway to change over time.
 
-## 3.3 Correct outdated foundational language
+## 3.5 Correct outdated foundational language
 
 Audit and update, at minimum:
 
@@ -140,7 +179,7 @@ Search the repository for language including:
 - [ ] “next-generation capabilities” when used as a universal claim
 - [ ] similar language that implies universal selection or external validation
 
-## 3.4 Preserve legitimate evidence standards
+## 3.6 Preserve legitimate evidence standards
 
 - [ ] Do not remove credible learning theory or supporting research from the modules.
 - [ ] Continue grounding substantive instructional claims in credible sources.
@@ -156,7 +195,10 @@ Search the repository for language including:
 - [ ] All known universal-framework language has been identified.
 - [ ] Replacement positioning has been approved by Bradley.
 - [ ] Repository search confirms that unsupported universal claims are removed or intentionally qualified.
+- [ ] A first-time reader can distinguish Future of ID from its current seven-capability pathway.
+- [ ] A first-time reader understands why Bradley selected these capabilities and does not mistake disciplined development for a lack of existing expertise.
 - [ ] A first-time reader can explain why these seven capabilities were selected without assuming they are mandatory for everyone.
+- [ ] A first-time reader understands that the method can support practitioner-created capability pathways using different capability areas.
 
 ---
 
@@ -168,6 +210,17 @@ No major coding begins until each core feature has a concise implementation brie
 
 - [ ] Define the current problem.
 - [ ] Define the intended learner experience.
+- [ ] Define Reverse Build as the mechanism that makes capability development visible.
+- [ ] Define how Reverse Build reveals:
+  - [ ] the capability need or professional challenge that existed
+  - [ ] what needed to be learned or investigated
+  - [ ] how concepts were applied
+  - [ ] the decisions that shaped implementation
+  - [ ] the trade-offs that existed
+  - [ ] where professional judgment remained necessary
+  - [ ] how understanding evolved through practice
+- [ ] Define how Reverse Build connects Bradley’s capability-development journey with the learner’s capability-development journey without making Bradley’s exact pathway mandatory for every learner.
+- [ ] Keep Reverse Build focused on transferable capability development and professional reasoning rather than personal journaling, autobiographical storytelling, raw development history, prompt exposure, or code walkthroughs.
 - [ ] Define the information Reverse Build must receive.
 - [ ] Define which parts become dynamic.
 - [ ] Define which existing authored layers remain unchanged.
@@ -708,8 +761,12 @@ Audit all public and potentially public surfaces:
 
 ## 10.4 Capability claims
 
+- [ ] Present Future of ID as the capability development system.
+- [ ] Present the current seven capabilities as the first complete demonstration of that system and as Bradley’s current implemented pathway.
+- [ ] Do not imply that the seven capabilities define the entire future of instructional design or the permanent boundary of Future of ID.
 - [ ] Present the seven capabilities as Bradley’s current pathway.
 - [ ] Avoid universal prescriptions.
+- [ ] Do not imply that all instructional designers need the same capability pathway.
 - [ ] Avoid claims of formal industry validation.
 - [ ] Avoid implying that research independently produced the exact seven.
 - [ ] Preserve credible evidence for the concepts taught inside each capability.
@@ -933,12 +990,16 @@ Apply the approved checklist to the affected components, including written Desig
 Documentation must help another practitioner:
 
 - [ ] assess where they are professionally
+- [ ] identify existing strengths, established expertise, and professional judgment
 - [ ] identify current work demands
 - [ ] identify immediate capability gaps
+- [ ] recognize capability-development needs that require intentional knowledge, practice, or experimentation
+- [ ] explore emerging or previously unknown areas revealed through research, building, experimentation, and reflection
 - [ ] identify future professional direction
 - [ ] select their own capability areas
 - [ ] define why each capability matters
 - [ ] build a coherent capability pathway
+- [ ] apply the Future of ID learning architecture to that practitioner-created pathway
 - [ ] connect theory, practice, feedback, reflection, and Reverse Build
 - [ ] create module-specific AI reviewer criteria
 - [ ] replace Bradley’s content without rewriting the platform architecture
@@ -1137,6 +1198,8 @@ Small copy, disclosure, accessibility, metadata, reliability, or claim-accuracy 
 
 ## Gate 1 — Capability-positioning integrity
 
+- [ ] Future of ID is accurately framed as a capability development system.
+- [ ] The current seven capabilities are accurately framed as the first complete demonstration of that system.
 - [ ] The seven capabilities are accurately framed as Bradley’s current professional pathway.
 - [ ] The reusable method is clear.
 - [ ] Universal or externally validated framework claims are removed.
@@ -1146,6 +1209,7 @@ Small copy, disclosure, accessibility, metadata, reliability, or claim-accuracy 
 
 - [ ] Module 4 demonstrates meaningful stateful simulation design.
 - [ ] Reverse Build reconstructs actual learner work.
+- [ ] Reverse Build makes capability development and professional judgment visible.
 - [ ] AI critique is connected to capability-specific instructional intent.
 - [ ] Open exploration still works without learner artifacts.
 
