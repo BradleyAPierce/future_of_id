@@ -45,7 +45,7 @@
 ### Orientation Module
 
 - why instructional design is changing
-- research-backed reasons these 7 capabilities were selected
+- Bradley's professional-calibration rationale for selecting the current seven-capability pathway, with research supporting individual capability concepts rather than selecting or validating the exact collection
 - explanation of how to use the guided experience
 - knowledge check / reflection
 - unlock module 1

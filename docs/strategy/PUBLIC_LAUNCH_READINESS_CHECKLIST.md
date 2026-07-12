@@ -230,23 +230,80 @@ Approval was based on:
 
 ## 3.3 Lock the correct meaning of the current seven-capability pathway
 
-- [ ] Create one canonical Bradley-approved explanation of why the seven capabilities were selected.
-- [ ] Preserve this conceptual foundation: “Future of ID is a deliberately selected professional learning pathway shaped by its creator’s current work, responsibilities, development needs, and career direction. The seven capabilities are neither universal nor exhaustive; they demonstrate how practitioners can build an intentional pathway around where they are and where they are trying to go.”
-- [ ] Document that the seven capabilities were personally selected by Bradley.
-- [ ] State that they reflect where Bradley is now as an instructional designer.
-- [ ] State that the selection was influenced by Bradley’s:
-  - [ ] current role
-  - [ ] current responsibilities
-  - [ ] company initiatives
-  - [ ] active learning projects
-  - [ ] immediate development needs
-  - [ ] future professional direction
-  - [ ] transition into full-stack learning-product development
-- [ ] State clearly that the seven capabilities are not claimed to be the only capabilities instructional designers need.
-- [ ] State clearly that the seven capabilities are not presented as a universal industry framework.
-- [ ] State clearly that the exact seven-capability collection has not been formally validated by an outside institution.
-- [ ] Preserve Bradley’s authority to explain why each capability matters in his current professional context.
-- [ ] Preserve both truths: the pathway has a personal and professional origin, and the resulting product remains relevant and reusable for other practitioners.
+- [x] Create one canonical Bradley-approved explanation of why the seven capabilities were selected.
+- [x] Preserve this conceptual foundation: “Future of ID is a deliberately selected professional learning pathway shaped by its creator’s current work, responsibilities, development needs, and career direction. The seven capabilities are neither universal nor exhaustive; they demonstrate how practitioners can build an intentional pathway around where they are and where they are trying to go.”
+- [x] Document that the seven capabilities were personally selected by Bradley.
+- [x] State that they reflect where Bradley is now as an instructional designer.
+- [x] State that the selection was influenced by Bradley’s:
+  - [x] current role
+  - [x] current responsibilities
+  - [x] company initiatives
+  - [x] active learning projects
+  - [x] immediate development needs
+  - [x] future professional direction
+  - [x] transition into full-stack learning-product development
+- [x] State clearly that the seven capabilities are not claimed to be the only capabilities instructional designers need.
+- [x] State clearly that the seven capabilities are not presented as a universal industry framework.
+- [x] State clearly that the exact seven-capability collection has not been formally validated by an outside institution.
+- [x] Preserve Bradley’s authority to explain why each capability matters in his current professional context.
+- [x] Preserve both truths: the pathway has a personal and professional origin, and the resulting product remains relevant and reusable for other practitioners.
+
+### Section 3.3 Approval Record
+
+- **Status:** Approved
+- **Approval date:** 2026-07-12
+- **Approved by:** Bradley Pierce
+
+#### Decision
+
+Section 3.3 remediation is complete and approved for launch readiness review.
+
+#### Evidence Reviewed
+
+Approval was based on:
+
+- establishment of a canonical capability-selection record within `FUTURE_READY_CAPABILITY_MODEL.md`
+- confirmation that Bradley personally selected the seven capabilities as his first complete demonstrated pathway
+- documentation that the pathway reflects Bradley’s current instructional-design practice
+- documentation that selection was influenced by:
+  - current role
+  - professional responsibilities
+  - organizational initiatives
+  - active learning projects
+  - applied experimentation
+  - immediate development needs
+  - future professional direction
+  - transition into full-stack learning-product development
+- confirmation that Bradley’s professional judgment, rather than external authority, determined the exact collection
+- confirmation that research informed individual capability concepts but did not determine, select, or validate the exact seven-capability collection
+- confirmation that no outside institution has formally validated the exact collection
+- confirmation that the seven capabilities remain a practitioner-created pathway and not a universal, exhaustive, or permanent framework
+
+#### Remediation Summary
+
+- `FUTURE_READY_CAPABILITY_MODEL.md` was updated with the canonical selection rationale.
+- The Orientation learner-facing explanation was updated.
+- `ORIENTATION_EXPERIENCE_STORYBOARD.md` was aligned.
+- `SITE_MAP.md` was corrected to remove research-selection implications.
+- `ROADMAP.md` was clarified to describe the seven capabilities as a launch-stable current pathway rather than a permanent framework.
+- No application behavior changed.
+- No routes, components, services, APIs, state, persistence, interactions, or architecture patterns changed.
+- Validation passed:
+  - `npm run lint`
+  - `tsc --noEmit`
+  - `git diff --check`
+  - conflicting-language repository search
+  - checklist isolation review
+
+#### Remaining Considerations
+
+- Future capability additions or changes should preserve the distinction between practitioner-created pathways and universal professional frameworks.
+- Research references should continue describing evidence supporting capability areas rather than implying research selected the pathway.
+- The seven capabilities remain stable for launch while allowing future evolution of the broader capability development system.
+
+#### Approval Rationale
+
+> Section 3.3 is approved because Future of ID now clearly explains why the seven capabilities were selected as Bradley’s first demonstrated pathway. The canonical selection record establishes professional context, responsibilities, initiatives, projects, development needs, experimentation, and future direction as the basis for selection while preserving practitioner judgment, non-universal positioning, and accurate research boundaries.
 
 ## 3.4 Clarify the reusable product promise
 

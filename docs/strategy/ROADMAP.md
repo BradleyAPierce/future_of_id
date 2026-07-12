@@ -14,7 +14,7 @@ For the current public launch scope, learner progress is stored locally in the b
 
 ## Completed / Foundation
 
-- finalized seven capability framework
+- established Bradley's launch-stable seven-capability pathway as the first complete demonstration of the reusable capability development system
 - created blueprint, decision, architecture, and strategy docs
 - initialized Next.js app under `web/`
 - established App Router, TypeScript, Tailwind, and linting foundation

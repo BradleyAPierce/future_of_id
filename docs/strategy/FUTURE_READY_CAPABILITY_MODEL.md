@@ -169,6 +169,22 @@ This transformation is practical, not theoretical. It is about making better des
 
 Bradley selected the current seven capabilities because each one extends a traditional instructional design strength into an area where his professional work and development direction were becoming more complex.
 
+### Canonical Pathway Selection Record
+
+Bradley personally selected these seven capabilities as the pathway that reflects where he currently is as an instructional designer and where his work requires intentional capability development. The selection was shaped by:
+
+- his current instructional design role and the responsibilities and professional decisions that come with it
+- organizational initiatives that are changing the capabilities needed in his work
+- active learning projects, applied experiments, and the questions revealed through building
+- immediate development needs identified through professional calibration
+- his future professional direction
+- his transition from designing learning experiences toward building full-stack learning products
+- his professional judgment about where established instructional design strengths needed to expand
+
+These influences explain why this exact collection forms Bradley's current demonstrated pathway. Research and established practice informed the individual capability areas and their instructional foundations; research did not independently determine, validate, or select the exact seven-capability collection. No outside institution has formally validated the exact collection.
+
+Bradley's professional context and judgment remain the authority for explaining why each capability matters within this pathway. The current seven are the first complete demonstration of the capability development system, not a universal, exhaustive, or permanent definition of the profession. Another practitioner may use the same professional calibration method and learning architecture while selecting a different pathway for their own role, responsibilities, organization, projects, development needs, and future direction.
+
 Together, they help instructional designers:
 
 - use AI with judgment instead of treating it as a shortcut

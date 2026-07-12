@@ -130,6 +130,14 @@ export default function OrientationPage() {
             ))}
           </div>
           <p className="text-sm leading-6 text-[var(--muted)]">
+            Bradley personally selected this pathway by calibrating his current
+            professional context and responsibilities with active projects,
+            applied experimentation, immediate development needs, and a future
+            direction toward full-stack learning product development. Research
+            informed the individual capability concepts; professional judgment,
+            not an outside institution, selected the collection.
+          </p>
+          <p className="text-sm leading-6 text-[var(--muted)]">
             Another practitioner may identify different needs, replace or add
             capability areas, and preserve the same Identify → Develop → Apply →
             Share method and Theory → Experience → Reverse Build → Reflection
