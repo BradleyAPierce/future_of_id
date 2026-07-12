@@ -53,6 +53,24 @@ Reflection
 
 Another practitioner may replace capabilities, add capabilities, or create a different pathway while preserving this architecture.
 
+## Reusable System Principle
+
+The reusable contribution of Future of ID is the capability development method, the learning architecture, and the professional calibration process. Bradley's exact seven-capability topics are not the reusable requirement. They remain his current launch-stable pathway and the first complete demonstrated implementation of the system.
+
+### Pathway Flexibility
+
+Another practitioner may use the same system to create a pathway for a different professional context. That pathway may retain some of Bradley's capability areas, replace some of them, or replace all seven. Even when every capability topic changes, the Identify → Develop → Apply → Share method, the Theory → Experience → Reverse Build → Reflection architecture, and practitioner-led professional calibration remain the foundation.
+
+### What “Meet You Where You Are” Means
+
+Future of ID meets practitioners where they are through practitioner-led professional calibration. The practitioner examines current context, experience, responsibilities, goals, and development needs, then identifies capability growth areas relevant to where they are and where they are trying to go.
+
+This promise does not mean automatic diagnosis, automatic recommendations, algorithmic pathway generation, or platform personalization. The current product demonstrates the process through Bradley's pathway; it does not perform professional calibration on a practitioner's behalf.
+
+### Ongoing Calibration
+
+Professional calibration is not a one-time creation event. Changes in role, responsibilities, projects, goals, and discoveries from applied work may require a practitioner to revisit a pathway. Capabilities may be retained, added, replaced, or removed as the practitioner's context and direction evolve while the reusable method and learning architecture remain stable.
+
 ## Professional Calibration and Capability Discovery
 
 Future of ID did not begin with a claim that one person had mastered every capability instructional designers may need. It emerged from disciplined professional calibration: an experienced instructional designer examining established expertise, recognizing where future work required intentional development, and using applied practice to discover additional questions and possibilities.

@@ -1,88 +1,68 @@
 # TECH_ARCHITECTURE.md
 
-## Recommended Technical Direction
+## Scope and Authority
 
-Initial recommendation: **Next.js + TypeScript + Tailwind + Supabase + OpenAI + Vercel**
+This document separates the architecture implemented for the current public launch from options that may be evaluated later. `docs/strategy/PUBLIC_LAUNCH_READINESS_CHECKLIST.md` governs current launch scope and execution. Future options below are not current dependencies or approved launch requirements.
 
-This initial recommendation describes the longer-term platform direction, not the current public launch scope. The current launch uses local browser persistence and has no accounts, authentication, Supabase dependency, or cloud synchronization. Future architecture may add those capabilities after the public launch-readiness gates are complete.
+## Current Launch Architecture
 
-## Why This Stack
+### Application
 
-- Next.js supports modern full-stack React development, routing, server logic, and deployment simplicity.
-- TypeScript supports maintainability and professional code quality.
-- Tailwind supports rapid UI iteration and consistent design systems.
-- Supabase may provide future auth, Postgres, cloud progress storage, and synchronization with a flexible growth path.
-- OpenAI supports simulations, feedback layers, and AI-enabled interactions.
-- Vercel provides streamlined deployment for a Next.js app.
+- Next.js App Router and React
+- TypeScript
+- Tailwind CSS
+- Next.js route handlers for the implemented scenario and reflection feedback endpoints
+- OpenAI-backed feedback orchestration within those existing endpoints
 
-## App Architecture
+### Content
 
-### Frontend
+- structured TypeScript content under `web/content/`
+- structured TypeScript data and configuration under `web/data/`
+- reusable React components that render the structured content
 
-- Next.js App Router
-- React components
-- Tailwind styling
-- MDX support for rich article-style content
+The current launch does not depend on MDX or database-managed instructional content.
 
-### Backend
+### Persistence
 
-- Next.js route handlers / server actions
-- AI integration endpoints
+- learner progress is stored locally in the browser
+- the experience remains usable without permanent saved progress
+- there are no learner accounts, authentication, Supabase dependency, cloud persistence, or cross-device synchronization requirements
 
-Current progress state remains in local browser storage.
+### Deployment
 
-### Database and Accounts (Future)
+- the Next.js application is built for deployment on Vercel
+- current deployment does not require a separate database or authentication service
 
-Possible future use of Supabase after the current public launch for:
+## Future Architecture Options
+
+The following options preserve earlier architecture exploration without representing current implementation. Each requires a future product decision after the public launch-readiness process.
+
+### Supabase, Accounts, and Cloud State
+
+Supabase or another service may later support:
 
 - optional learner accounts and authentication
-- learner progress
-- module completion state
-- reflection entries (optional)
-- saved activity outcomes (optional)
-- cross-device synchronization
+- database-backed learner progress and module completion state
+- optional reflection entries or saved activity outcomes
+- cloud persistence and cross-device synchronization
 
-None of these future database or account capabilities are dependencies for the current public launch.
+Possible future data domains include users, modules, lessons or content metadata, progress, interaction attempts, and resources.
 
-## Proposed Data Domains
+### MDX Adoption
 
-These are future platform domains rather than current launch requirements.
+MDX may be evaluated later for long-form concept or Reverse Build content. The current launch continues to use structured TypeScript content and does not require an MDX migration.
 
-- users
-- modules
-- lessons/content metadata
-- module progress
-- interactions / attempts
-- resources
+### Analytics
 
-## AI Integration Opportunities
+Analytics and event tracking are future product evolution unless explicitly added to `docs/strategy/PUBLIC_LAUNCH_READINESS_CHECKLIST.md`. Future evaluation may include page engagement and events such as module starts, module completions, interaction launches, and reflection submissions.
 
-- AI simulation responses
-- AI-generated coaching feedback
-- AI prompt lab examples
-- guided reflection support
-- future content personalization
+### Personalization Possibilities
 
-## Content Storage Strategy
+Future exploration may consider bounded personalization or adaptive support only after separate product, evidence, privacy, and implementation decisions. The current platform does not automatically diagnose capability needs, recommend pathways, generate pathways algorithmically, or personalize the experience.
 
-### Recommended Hybrid Approach
+### Additional AI Opportunities
 
-- MDX for long-form concept content and reverse engineering pages
-- structured JSON / TypeScript config for module metadata, cards, progress rules, and activity definitions
-- database only for dynamic learner state and interaction records
-
-## Analytics
-
-Analytics work is future product evolution unless it is explicitly required by `docs/strategy/PUBLIC_LAUNCH_READINESS_CHECKLIST.md`.
-
-### Phase 1
-
-- GA4 for page and module engagement
-- custom event tracking for:
-  - module started
-  - module completed
-  - interaction launched
-  - reflection submitted
+Future work may explore additional simulation responses, coaching patterns, prompt-lab examples, or guided reflection support. These possibilities do not expand the current launch scope.
 
 ## Design System Direction
 

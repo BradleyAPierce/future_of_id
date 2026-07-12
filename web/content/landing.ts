@@ -148,7 +148,7 @@ export const landingContent = {
     eyebrow: "Different Paths",
     title: "There is more than one credible future for instructional designers.",
     intro:
-      "Roles, responsibilities, organizations, industries, career directions, and goals vary. Another practitioner may select, replace, or add capability areas while preserving the Future of ID method and learning architecture; the current platform does not make those selections automatically.",
+      "Roles, responsibilities, organizations, industries, career directions, and goals vary. Future of ID meets practitioners where they are through practitioner-led professional calibration: understanding current context, experience, responsibilities, goals, and development needs before identifying relevant growth areas. Different practitioners may build different pathways—and revisit them as their work changes—while reusing the method and learning architecture; the platform does not diagnose needs, recommend capabilities, generate pathways, or personalize the experience automatically.",
     items: [
       {
         label: "Foundation",

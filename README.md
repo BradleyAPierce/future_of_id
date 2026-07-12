@@ -158,7 +158,9 @@ In Progress
 - additional module development
 - richer AI-supported interactions across modules
 - improved UI system and visual polish
-- expanded analytics and learner feedback systems
+- expanded learner feedback systems
+- analytics and event tracking
+- adaptive interaction concepts and prototypes
 
 ⸻
 
@@ -177,12 +179,11 @@ Content Architecture
 - modular content modeling
 - scalable component patterns
 
-Current
+Currently Implemented Technical Capabilities
 
 - OpenAI-powered scenario and reflection feedback architecture
-- richer AI interaction patterns
-- analytics and event tracking
-- adaptive interaction layers
+- local browser persistence for course progress
+- structured TypeScript content and configuration
 
 Future Platform Direction
 
@@ -260,6 +261,8 @@ The intent is to allow other instructional designers, learning architects, and d
 - reuse patterns
 - evaluate tradeoffs
 - learn from real implementation work instead of abstract discussion alone
+
+A fork does not need to preserve Bradley's seven-capability topics. It may replace some or all seven while reusing or adapting the capability development method and learning architecture. The reusable value is the system, not Bradley's exact pathway.
 
 ⸻
 

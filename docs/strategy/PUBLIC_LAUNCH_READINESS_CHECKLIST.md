@@ -307,50 +307,159 @@ Approval was based on:
 
 ## 3.4 Clarify the reusable product promise
 
-- [ ] Document that the reusable contribution is the method—not the exact list of seven.
-- [ ] Explain that another practitioner may need a different capability pathway.
-- [ ] Explain that a forked version of Future of ID may replace all seven capabilities.
-- [ ] Explain that the learning architecture can be reused while the capability topics change.
-- [ ] Connect this architecture directly to the promise to “meet you where you are.”
-- [ ] Show that Future of ID itself was created by meeting Bradley where he currently is.
-- [ ] Explain that professional calibration may cause the capability pathway to change over time.
+- [x] Document that the reusable contribution is the method—not the exact list of seven.
+- [x] Explain that another practitioner may need a different capability pathway.
+- [x] Explain that a forked version of Future of ID may replace all seven capabilities.
+- [x] Explain that the learning architecture can be reused while the capability topics change.
+- [x] Connect this architecture directly to the promise to “meet you where you are.”
+- [x] Show that Future of ID itself was created by meeting Bradley where he currently is.
+- [x] Explain that professional calibration may cause the capability pathway to change over time.
+
+### Section 3.4 Approval Record
+
+- **Status:** Approved
+- **Approval date:** 2026-07-12
+- **Approved by:** Bradley Pierce
+
+#### Decision
+
+Section 3.4 remediation is complete and approved for launch readiness review.
+
+#### Evidence Reviewed
+
+Approval was based on:
+
+- confirmation that the reusable contribution of Future of ID is the capability development method, learning architecture, and professional calibration process
+- confirmation that Bradley’s seven capabilities remain his launch-stable pathway and first complete demonstrated implementation, not a reuse requirement
+- confirmation that another practitioner or fork may preserve, replace, or replace all seven capability topics while retaining or adapting the reusable system
+- confirmation that “meet you where you are” is defined as practitioner-led calibration of:
+  - current context and experience
+  - responsibilities
+  - goals
+  - development needs
+  - relevant capability growth areas
+- confirmation that “meet you where you are” explicitly excludes:
+  - automatic diagnosis
+  - automatic recommendations
+  - algorithmic pathway generation
+  - platform personalization
+- confirmation that professional calibration is an ongoing cycle and pathways may evolve as roles, responsibilities, projects, goals, and discoveries change
+
+#### Remediation Summary
+
+- `FUTURE_READY_CAPABILITY_MODEL.md` was updated with the reusable-system principle and ongoing calibration guidance.
+- `landing.ts` was updated with bounded public-facing language for “meet you where you are.”
+- `README.md` was updated to clarify fork and adaptation boundaries.
+- MIT License language was not modified.
+- No application behavior changed.
+- No routes, components, services, APIs, state, persistence, interactions, or architecture patterns changed.
+- Validation passed:
+  - `npm run lint`
+  - `tsc --noEmit`
+  - `git diff --check`
+  - required-principle and automation-boundary search
+  - checklist isolation review
+  - README and license diff review
+
+#### Remaining Considerations
+
+- Future additions should preserve the distinction between reusable system principles and specific pathway implementations.
+- “Meet you where you are” should continue to be used only within the practitioner-led calibration meaning.
+- Future pathway changes should preserve the professional calibration process.
+
+#### Approval Rationale
+
+> Section 3.4 is approved because Future of ID now clearly defines the reusable contribution as its capability development method, learning architecture, and professional calibration process rather than the exact seven capability topics. This preserves practitioner-created pathways, supports adaptation and evolution, and maintains clear boundaries against unsupported automation or personalization claims.
 
 ## 3.5 Correct outdated foundational language
 
 Audit and update, at minimum:
 
-- [ ] `docs/strategy/BLUEPRINT.md`
-- [ ] `docs/architecture/SITE_MAP.md`
-- [ ] current project `README.md`
-- [ ] any retained alternate README files
-- [ ] `docs/strategy/DECISIONS.md`
-- [ ] `docs/architecture/CONTENT_ARCHITECTURE.md`
-- [ ] `docs/architecture/TECH_ARCHITECTURE.md`
-- [ ] `docs/strategy/FUTURE_READY_CAPABILITY_MODEL.md`
-- [ ] `docs/experience/EXPERIENCE_PHILOSOPHY.md`
-- [ ] `docs/strategy/EXPERIENCE_ARCHITECTURE.md`
-- [ ] `docs/experience/PRODUCT_EXPERIENCE_MAP.md`
-- [ ] Orientation documentation
-- [ ] About-page documentation
-- [ ] page metadata and social-preview copy
-- [ ] any source comments or content files containing positioning claims
+- [x] `docs/strategy/BLUEPRINT.md`
+- [x] `docs/architecture/SITE_MAP.md`
+- [x] current project `README.md`
+- [x] any retained alternate README files
+- [x] `docs/strategy/DECISIONS.md`
+- [x] `docs/architecture/CONTENT_ARCHITECTURE.md`
+- [x] `docs/architecture/TECH_ARCHITECTURE.md`
+- [x] `docs/strategy/FUTURE_READY_CAPABILITY_MODEL.md`
+- [x] `docs/experience/EXPERIENCE_PHILOSOPHY.md`
+- [x] `docs/strategy/EXPERIENCE_ARCHITECTURE.md`
+- [x] `docs/experience/PRODUCT_EXPERIENCE_MAP.md`
+- [x] Orientation documentation
+- [x] About-page documentation
+- [x] page metadata and social-preview copy
+- [x] any source comments or content files containing positioning claims
 
 Before implementation briefs are approved:
 
-- [ ] Reconcile `docs/architecture/TECH_ARCHITECTURE.md` with the approved local-persistence MVP and the explicit deferral of Supabase, accounts, and authentication.
-- [ ] Confirm which documents are current sources of truth and which are historical or superseded.
-- [ ] Ensure implementation work orders do not rely on stale future-state architecture.
+- [x] Reconcile `docs/architecture/TECH_ARCHITECTURE.md` with the approved local-persistence MVP and the explicit deferral of Supabase, accounts, and authentication.
+- [x] Confirm which documents are current sources of truth and which are historical or superseded.
+- [x] Ensure implementation work orders do not rely on stale future-state architecture.
 
 Search the repository for language including:
 
-- [ ] “seven research-grounded capabilities”
-- [ ] “seven capabilities shaping the future”
-- [ ] “through 2030”
-- [ ] “research-backed reasons these seven were selected”
-- [ ] “industry-validated”
-- [ ] “the capabilities every instructional designer needs”
-- [ ] “next-generation capabilities” when used as a universal claim
-- [ ] similar language that implies universal selection or external validation
+- [x] “seven research-grounded capabilities”
+- [x] “seven capabilities shaping the future”
+- [x] “through 2030”
+- [x] “research-backed reasons these seven were selected”
+- [x] “industry-validated”
+- [x] “the capabilities every instructional designer needs”
+- [x] “next-generation capabilities” when used as a universal claim
+- [x] similar language that implies universal selection or external validation
+
+### Section 3.5 Approval Record
+
+- **Status:** Approved
+- **Approval date:** 2026-07-12
+- **Approved by:** Bradley Pierce
+
+#### Decision
+
+Section 3.5 remediation is complete and approved for launch readiness review.
+
+#### Evidence Reviewed
+
+Approval was based on:
+
+- confirmation that active documentation accurately represents current implementation
+- confirmation that future concepts are clearly separated from current capabilities
+- confirmation that historical documents remain preserved but are not treated as current authority
+- confirmation that `README.md` current-state claims now reflect observable functionality
+- confirmation that technical architecture distinguishes:
+  - current launch architecture
+  - future architecture options
+- confirmation that site-map documentation distinguishes implemented routes from planned routes
+- confirmation that Orientation guidance is not represented as access gating
+- confirmation that documentation hierarchy now routes current strategy through authoritative current sources
+
+#### Remediation Summary
+
+- `README.md` was updated to separate current capabilities from future exploration.
+- `TECH_ARCHITECTURE.md` was updated to distinguish current architecture from future options.
+- `SITE_MAP.md` was updated to distinguish implemented and planned experiences and preserve open-access positioning.
+- `docs/README.md` was updated to correct the source-of-truth hierarchy.
+- Historical documents remain preserved and appropriately labeled.
+- No application behavior changed.
+- No routes, components, APIs, persistence, or architecture implementation changed.
+- Validation passed:
+  - `npm run lint`
+  - `tsc --noEmit`
+  - `git diff --check`
+  - implemented route and module-slug comparison
+  - scope-boundary searches
+  - stale-target language search
+  - prohibited-claim search
+
+#### Remaining Considerations
+
+- Future documentation updates should continue distinguishing implemented functionality from future exploration.
+- Historical documents should remain preserved but clearly separated from current authority.
+- Architecture documents should continue reflecting current reality while preserving future direction.
+
+#### Approval Rationale
+
+> Section 3.5 is approved because Future of ID documentation now accurately represents the current system, future possibilities, and historical context. The repository maintains documentation integrity by ensuring current claims match implementation while preserving future exploration and historical evolution.
 
 ## 3.6 Preserve legitimate evidence standards
 

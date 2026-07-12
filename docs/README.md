@@ -22,13 +22,14 @@ Bradley evaluates external recommendations against the product philosophy, curre
 2. Documentation architecture: read `DOCUMENTATION_ARCHITECTURE.md`.
 3. Documentation inventory: read `DOCUMENTATION_INVENTORY.md`.
 4. Public launch-readiness work: read `strategy/PUBLIC_LAUNCH_READINESS_CHECKLIST.md` before planning or executing any launch task.
-5. Strategy docs: read `strategy/BLUEPRINT.md`, `strategy/FUTURE_READY_CAPABILITY_MODEL.md`, and `strategy/ROADMAP.md`.
+5. Current strategy docs: read `strategy/BLUEPRINT.md`, `strategy/FUTURE_READY_CAPABILITY_MODEL.md`, `strategy/DECISIONS.md`, and `strategy/ROADMAP.md`.
 6. Architecture docs: read `architecture/TECH_ARCHITECTURE.md`, `architecture/CONTENT_ARCHITECTURE.md`, and `architecture/SITE_MAP.md`.
 7. Experience docs: read `experience/EXPERIENCE_PHILOSOPHY.md` and `experience/VISUAL_COMMUNICATION_SYSTEM.md`.
 8. Design system docs: read `architecture/DESIGN_SYSTEM.md`, `COMPONENT_ARCHITECTURE_V1.md`, and `architecture/DESIGN_SYSTEM_CHANGELOG.md`.
 9. AI docs: read `decisions/ADR-009-ai-feedback-engines.md` and `validation/scenario-engine-validation-log.md` until dedicated `docs/ai/` docs exist.
 10. Implementation / contributor guidance: read `SYSTEM-INSTRUCTIONS.md` and `COPILOT-INSTRUCTIONS.md`.
 11. Decisions and validation: read `decisions/` and `validation/` for rationale, audits, QA notes, and evidence.
+12. Historical context: consult documents such as `strategy/STRATEGY.md`, `strategy/PROJECT-BRAIN.md`, and retained alternate README drafts only when historical planning context is useful; they are not current implementation or launch sources of truth.
 
 ## Documentation Domains
 
@@ -104,7 +105,7 @@ Current status: final archive/reference strategy is not decided yet.
 |---|---|
 | Public launch-readiness scope, order, gates, and approval | `strategy/PUBLIC_LAUNCH_READINESS_CHECKLIST.md` |
 | Product vision | `strategy/BLUEPRINT.md` |
-| Product strategy | `strategy/STRATEGY.md` |
+| Current product strategy and locked decisions | `strategy/BLUEPRINT.md` and `strategy/DECISIONS.md` |
 | Long-term product roadmap and phase planning | `strategy/ROADMAP.md` |
 | Canonical capability development system philosophy and current-pathway positioning | `strategy/FUTURE_READY_CAPABILITY_MODEL.md` |
 | Content model | `architecture/CONTENT_ARCHITECTURE.md` |
@@ -120,12 +121,15 @@ Current status: final archive/reference strategy is not decided yet.
 | AI assistant guidance | `COPILOT-INSTRUCTIONS.md` |
 | Documentation structure | `DOCUMENTATION_ARCHITECTURE.md` |
 | File migration planning | `DOCUMENTATION_INVENTORY.md` |
+| Historical product strategy context | `strategy/STRATEGY.md` — historical reference only, not current-state authority |
 
 ## Current Documentation Status
 
 The documentation ecosystem is in a transitional state.
 
 Some files are already in their intended domain folders. Others still live in transitional locations and should not be moved until the migration plan is executed.
+
+Documents explicitly labeled historical, superseded, under evaluation, or retained as drafts preserve decision history. Their retained language does not describe current implementation unless a current source of truth adopts it. For current launch work, use the launch checklist and the current sources identified above.
 
 In particular:
 
