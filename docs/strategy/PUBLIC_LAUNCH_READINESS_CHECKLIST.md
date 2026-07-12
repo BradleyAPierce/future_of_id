@@ -158,25 +158,75 @@ Approval was based on:
 
 ## 3.2 Explain the capability-discovery process
 
-- [ ] Explain that Future of ID was not created from a claim of mastery over every capability.
-- [ ] Explain that it was created by an experienced instructional designer intentionally developing capabilities needed for future professional work.
-- [ ] Frame the discovery process as disciplined professional calibration, not beginner status or learning the profession from scratch.
+- [x] Explain that Future of ID was not created from a claim of mastery over every capability.
+- [x] Explain that it was created by an experienced instructional designer intentionally developing capabilities needed for future professional work.
+- [x] Frame the discovery process as disciplined professional calibration, not beginner status or learning the profession from scratch.
 
 ### I know what I know
 
-- [ ] Represent Bradley’s existing instructional design experience, established strengths, professional judgment, and existing expertise.
+- [x] Represent Bradley’s existing instructional design experience, established strengths, professional judgment, and existing expertise.
 
 ### I know what I don’t know
 
-- [ ] Represent capabilities Bradley recognized required intentional development.
-- [ ] Show where additional knowledge, practice, and experimentation supported deliberate professional growth.
+- [x] Represent capabilities Bradley recognized required intentional development.
+- [x] Show where additional knowledge, practice, and experimentation supported deliberate professional growth.
 
 ### I don’t know what I don’t know
 
-- [ ] Represent emerging questions and possibilities revealed through building, research, experimentation, and reflection.
-- [ ] Present exploration as a responsible way to discover new professional possibilities, not evidence that the original pathway was arbitrary.
+- [x] Represent emerging questions and possibilities revealed through building, research, experimentation, and reflection.
+- [x] Present exploration as a responsible way to discover new professional possibilities, not evidence that the original pathway was arbitrary.
 
-- [ ] Preserve the central credibility statement: Bradley understood where existing expertise ended, intentionally explored new capability areas, and documented how those capabilities were applied and refined.
+- [x] Preserve the central credibility statement: Bradley understood where existing expertise ended, intentionally explored new capability areas, and documented how those capabilities were applied and refined.
+
+### Section 3.2 Approval Record
+
+- **Status:** Approved
+- **Approval date:** 2026-07-12
+- **Approved by:** Bradley Pierce
+
+#### Decision
+
+Section 3.2 remediation is complete and approved for launch readiness review.
+
+#### Evidence Reviewed
+
+Approval was based on:
+
+- establishment of the professional calibration narrative as a canonical part of Future of ID positioning
+- clarification that Future of ID emerged from an experienced instructional designer’s intentional capability development process
+- definition of the three-part calibration model:
+  - Know what you know
+  - Know what you do not know
+  - Discover what you did not know you needed to know
+- recognition that Bradley’s existing experience, strengths, professional judgment, and development needs informed the current capability pathway
+- connection between professional calibration and the Identify → Develop → Apply → Share system methodology
+- connection between professional calibration and the Theory → Experience → Reverse Build → Reflection learning architecture
+- clarification that experimentation, applied practice, research, building, and reflection contributed to capability discovery and refinement
+- preservation of the seven capabilities as Bradley’s first demonstrated pathway rather than a universal, exhaustive, or permanent framework
+- preservation of practitioner-created pathways and boundaries against automatic diagnosis, recommendation, or pathway generation
+
+#### Remediation Summary
+
+- The canonical professional calibration narrative was added to `FUTURE_READY_CAPABILITY_MODEL.md`.
+- Public-facing alignment was added to `about.ts`, the Orientation experience, and `ORIENTATION_EXPERIENCE_STORYBOARD.md`.
+- `README.md` was reviewed and intentionally left unchanged because its existing positioning remained accurate.
+- No application behavior changed.
+- No routes, reusable component definitions, services, APIs, persistence mechanisms, interactions, or architecture patterns changed.
+- Orientation changes were limited to explanatory content within existing presentation structures.
+- Validation passed:
+  - `npm run lint`
+  - `tsc --noEmit`
+  - `git diff --check`
+
+#### Remaining Considerations
+
+- The professional calibration narrative should continue guiding future public positioning decisions.
+- Future updates should preserve the distinction between Bradley’s demonstrated pathway and practitioner-created pathways within the larger capability development system.
+- The seven capabilities should continue to be presented as an implementation example rather than a universal definition of the profession.
+
+#### Approval Rationale
+
+> Section 3.2 is approved because Future of ID now clearly communicates the professional calibration process that produced the system. The narrative establishes experienced practice, recognized development needs, experimentation, reflection, and applied learning as the foundation for capability development while preserving the seven capabilities as the first demonstrated pathway within a reusable system.
 
 ## 3.3 Lock the correct meaning of the current seven-capability pathway
 

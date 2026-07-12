@@ -36,27 +36,27 @@ export const aboutContent = {
   },
   creator: {
     eyebrow: "Creator Perspective",
-    title: "Built by a learning architect, not a commentator on the sidelines.",
+    title: "A professional calibration process made visible.",
     intro:
-      "Bradley Pierce approaches this project as a practitioner building the thing he is trying to explain. The platform is both a learning experience and a transparent record of how capabilities were identified, developed, applied, and shared through documented reasoning.",
+      "Future of ID did not begin with a claim that Bradley Pierce had mastered every capability the profession may need. It emerged through his professional calibration as an experienced instructional designer: assessing established expertise against the demands of future work, then using research, experimentation, applied practice, and reflection to develop and refine new capabilities.",
     items: [
       {
-        label: "Practice",
-        title: "Instructional design grounded in real work",
+        label: "Know what you know",
+        title: "Begin with established expertise",
         description:
-          "The focus is on performance, decision-making, scenario practice, stakeholder value, and the conditions that make learning useful on the job.",
+          "Existing strengths in instructional design, professional judgment, performance, practice, evidence, accessibility, and learner trust provide the foundation for deciding where growth should begin.",
       },
       {
-        label: "Build",
-        title: "Full-stack implementation as design evidence",
+        label: "Know what you do not know",
+        title: "Name development needs deliberately",
         description:
-          "The platform connects curriculum structure, interface design, content systems, AI feedback, and technical architecture into one working learning product.",
+          "Bradley's current pathway focuses on areas where future work called for additional knowledge, intentional practice, technical experimentation, and stronger implementation experience.",
       },
       {
-        label: "Strategy",
-        title: "Learning product thinking",
+        label: "Discover through practice",
+        title: "Let applied work reveal new questions",
         description:
-          "Future of ID treats learning experiences as products that need clear audiences, reusable systems, measurable value, responsible AI use, and long-term maintainability.",
+          "Building, applying, and reflecting revealed connections and possibilities that were not visible at the start. Those discoveries refine an intentional pathway; they do not turn it into a universal prescription.",
       },
     ] satisfies AboutCard[],
   },

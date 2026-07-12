@@ -15,7 +15,7 @@ By the end of Orientation, learners should understand that Future of ID is open,
 Orientation should unfold as six acts:
 
 1. The Profession Has Changed
-2. You Already Belong
+2. Start With Professional Calibration
 3. How Future of ID Teaches
 4. How Modern Instructional Design Fits Together
 5. How Experts Think
@@ -32,13 +32,14 @@ Each act should answer a learner question, reduce a form of uncertainty, and int
 - Key takeaway: AI can accelerate parts of the work, but human judgment still gives instructional design its purpose, ethics, context, and quality.
 - Transition to the next act: If judgment still matters, the learner needs to know there is not only one valid way to grow into this future.
 
-## Act 2 — You Already Belong
+## Act 2 — Start With Professional Calibration
 
-- Learner question: Do I need to become a technologist, coder, or AI expert to belong here?
-- Learner emotion: Relieved, included, and more willing to continue.
-- Psychological job: Reduce anxiety by showing that future-ready instructional design has multiple credible paths.
+- Learner question: How did this pathway take shape, and what does that mean for mine?
+- Learner emotion: Respected, included, and more willing to assess their own direction honestly.
+- Psychological job: Explain that Future of ID emerged through disciplined professional calibration by an experienced instructional designer, not through a claim of mastery or an attempt to learn the profession from scratch.
 - Framework used: Different Paths
-- Key takeaway: Learners can grow from their current role, context, strengths, and level of technical ownership.
+- Key takeaway: Capability development starts by distinguishing what a practitioner already knows, what they know requires development, and what research, experimentation, applied practice, and reflection reveal along the way. Bradley's current seven capabilities are the first demonstrated pathway through that process, not a universal prescription.
+- Architecture connection: Identify names strengths, development needs, and emerging questions; Develop builds knowledge and practice; Apply tests capability through working decisions and artifacts; Share documents reasoning and lessons. Theory, Experience, Reverse Build, and Reflection make that cycle visible.
 - Transition to the next act: Once learners know they belong, they need to understand how Future of ID will help them learn.
 
 ## Act 3 — How Future of ID Teaches
@@ -84,6 +85,7 @@ After Orientation, learners should believe:
 - Instructional design is changing, but human judgment matters more, not less.
 - AI is a design partner, not a replacement for instructional designers.
 - They do not need to follow one prescribed professional path to belong.
+- Future of ID grew from an experienced practitioner's deliberate calibration of established expertise, recognized development needs, and questions discovered through applied work.
 - Future of ID is a connected learning system, not a traditional LMS.
 - Bradley's current seven capabilities work together as one professional pathway and demonstrate a system that can support other capability selections.
 - Reverse Build will help them see how expert design decisions are made.

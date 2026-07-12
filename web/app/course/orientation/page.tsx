@@ -90,13 +90,53 @@ export default function OrientationPage() {
 
       <SectionFrame
         act="Act 2"
-        title="You Already Belong"
-        question="Do I need to become a technologist, coder, or AI expert to belong here?"
-        takeaway="There is more than one credible capability pathway. Your needs may differ based on your role, responsibilities, organization, industry, career direction, and goals.">
+        title="Start With Professional Calibration"
+        question="How did this pathway take shape, and what does that mean for mine?"
+        takeaway="Capability development starts with honest professional calibration, not a claim of mastery or one prescribed pathway.">
         <LandingFrameworkPanel
           framework={learningFrameworksById["different-paths"]}
-          description="Another practitioner may replace or add capability areas while preserving the same learning architecture. Future of ID demonstrates that method; it does not diagnose needs or generate a pathway automatically."
-        />
+          description="Future of ID emerged through Bradley's professional calibration as an experienced instructional designer: he assessed established strengths, recognized where future work required intentional development, and allowed research, experimentation, applied practice, and reflection to reveal new questions. His seven capabilities are the first demonstrated pathway through that process, not a universal definition of what every practitioner needs.">
+          <div className="grid gap-3 md:grid-cols-3">
+            {[
+              {
+                title: "Know what you know",
+                description:
+                  "Begin with existing experience, strengths, and professional judgment.",
+              },
+              {
+                title: "Know what you do not know",
+                description:
+                  "Identify where future work calls for new knowledge, practice, and experimentation.",
+              },
+              {
+                title: "Discover through practice",
+                description:
+                  "Use building, application, and reflection to surface questions you could not see at the start.",
+              },
+            ].map((step, index) => (
+              <div
+                key={step.title}
+                className="rounded-[var(--radius-md)] border border-[var(--border)] bg-[var(--surface-elevated)] p-4">
+                <span className="text-sm font-semibold text-[var(--primary)]">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <h3 className="mt-2 text-base font-semibold text-[var(--text)]">
+                  {step.title}
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-[var(--muted)]">
+                  {step.description}
+                </p>
+              </div>
+            ))}
+          </div>
+          <p className="text-sm leading-6 text-[var(--muted)]">
+            Another practitioner may identify different needs, replace or add
+            capability areas, and preserve the same Identify → Develop → Apply →
+            Share method and Theory → Experience → Reverse Build → Reflection
+            architecture. Future of ID does not diagnose needs or generate a
+            pathway automatically.
+          </p>
+        </LandingFrameworkPanel>
       </SectionFrame>
 
       <SectionFrame

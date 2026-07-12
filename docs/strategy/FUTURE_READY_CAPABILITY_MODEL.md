@@ -53,6 +53,48 @@ Reflection
 
 Another practitioner may replace capabilities, add capabilities, or create a different pathway while preserving this architecture.
 
+## Professional Calibration and Capability Discovery
+
+Future of ID did not begin with a claim that one person had mastered every capability instructional designers may need. It emerged from disciplined professional calibration: an experienced instructional designer examining established expertise, recognizing where future work required intentional development, and using applied practice to discover additional questions and possibilities.
+
+This is not a story about learning the instructional design profession from scratch. It is a repeatable way for a practitioner to distinguish among three kinds of professional knowledge:
+
+### Know What You Know
+
+Professional calibration begins with an honest account of existing capability. Bradley brought established instructional design experience, strengths in core practices such as analysis, sequencing, practice, feedback, assessment, accessibility, and evaluation, and the professional judgment to connect learning decisions with performance needs and learner trust.
+
+Those foundations were not displaced by the current pathway. They provided the basis for deciding which established strengths could be extended into more AI-enabled, data-informed, system-based, and performance-focused work.
+
+### Know What You Do Not Know
+
+Calibration also requires recognizing the boundary of current expertise. Bradley identified capability areas where future professional work called for additional knowledge, deliberate practice, technical experimentation, and stronger implementation experience.
+
+The current seven capabilities represent the first complete pathway developed from that assessment. They were selected intentionally around Bradley's professional context and development direction, but they are not a universal diagnosis of the profession or a permanent list for every practitioner.
+
+### Discover What You Did Not Know You Needed to Know
+
+Research, experimentation, building, application, and reflection can reveal questions that were not visible at the beginning. Working through the pathway exposed new connections among instructional design, software architecture, AI-supported practice, content systems, evidence, performance, and learner trust.
+
+Those discoveries do not mean the original pathway was arbitrary. Responsible exploration begins with an intentional direction, tests it through practice, and allows evidence and reflection to refine what the practitioner understands, applies, and may need to investigate next.
+
+### How Calibration Becomes a Learning System
+
+The professional calibration process is carried through the system's repeatable method:
+
+- **Identify** distinguishes established strengths, recognized development needs, and future questions worth exploring.
+- **Develop** uses theory, credible sources, guided study, examples, and intentional practice to build capability.
+- **Apply** turns development into observable decisions, experiments, artifacts, and working experiences that can be evaluated and refined.
+- **Share** documents the reasoning, evidence, lessons, and remaining questions so another practitioner can inspect or adapt the work.
+
+The reusable learning architecture makes that development visible:
+
+- **Theory** supplies concepts and foundations for a recognized capability need.
+- **Experience** creates a place to practice decisions and test developing judgment.
+- **Reverse Build** examines how the work was designed and implemented, including constraints and trade-offs revealed through building.
+- **Reflection** connects new understanding with existing expertise and identifies what should be applied, refined, or explored next.
+
+The central credibility of Future of ID rests on this process: Bradley understood where his existing expertise ended, intentionally explored new capability areas, and documented how those capabilities were applied and refined. Another practitioner can use the same calibration process and reusable architecture while identifying a different pathway.
+
 ### Current Implemented Pathway
 
 The seven capabilities currently implemented in Future of ID are Bradley's current professional pathway and the first complete demonstration of the capability development system.
