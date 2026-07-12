@@ -83,6 +83,29 @@ export const adaptiveLearningContent: ModuleContent = {
             },
           ],
         },
+        {
+          id: "evidence-and-source-notes",
+          title: "Evidence and Source Notes",
+          description:
+            "The module uses established mastery and learner-access principles, then applies Bradley's professional judgment to pathway complexity.",
+          items: [
+            {
+              label: "Established principle — Bloom (1968)",
+              description:
+                "Learning for Mastery, Evaluation Comment 1(2), 1968, ERIC ED053419, supports defining mastery and adjusting time, instruction, and support in response to learner progress.",
+            },
+            {
+              label: "Current established guidance — CAST (2024)",
+              description:
+                "Universal Design for Learning Guidelines version 3.0, 2024, supports reducing barriers, learner agency, relevant choice, appropriate challenge, and action-oriented feedback. UDL informs the learner-variability lens but is not presented as an adaptive-pathway algorithm.",
+            },
+            {
+              label: "Bradley interpretation",
+              description:
+                "The principle that adaptation complexity must be earned by a meaningful learner difference and credible evidence is Bradley's design interpretation, not a universal formula for personalization.",
+            },
+          ],
+        },
       ],
     },
     experience: {
@@ -125,7 +148,7 @@ export const adaptiveLearningContent: ModuleContent = {
       title: "Reverse Build",
       badge: "Layer 3",
       intro:
-        'Most teams ask for "adaptive learning" without being able to define what should actually change, or why. The result is usually one of two extremes: a single static path that ignores real learner differences, or an overbuilt experience with unnecessary branching, weak logic, and no clear evidence behind it. This module was designed to correct that problem. Instead of teaching adaptive learning as a feature or system, it follows an adaptive-decision lens: learner difference, evidence, trigger, response, and review. The goal is not to make every experience personalized. The goal is to decide when adaptation improves learning, when it doesn\'t, and why complexity should be earned.',
+        "Bradley's professional observation is that adaptive-learning requests can move toward tools and pathways before the learner difference or evidence is clear. This module responds with an adaptive-decision lens: learner difference, evidence, trigger, response, and review. It does not claim that every team follows the same pattern or that personalization always improves learning; it asks designers to justify when a different response is worth the added complexity.",
       sections: [
         {
           id: "what-this-module-is-solving",
@@ -140,7 +163,7 @@ export const adaptiveLearningContent: ModuleContent = {
             {
               label: "Focus on decisions, not systems",
               description:
-                "We did not simulate a full adaptive platform. Most designers don't struggle with tools; they struggle with defining rules. This module centers on the adaptive decision: learner difference, evidence, trigger, response, and review.",
+                "We did not simulate a full adaptive platform. Bradley's interpretation is that defining the rule is the more useful learning problem here, so the module centers on learner difference, evidence, trigger, response, and review.",
             },
             {
               label: "Start with learner variability, not pathways",

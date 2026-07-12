@@ -19,7 +19,7 @@ export const humanCenteredChangeContent: ModuleContent = {
       title: "Theory",
       badge: "Layer 1",
       intro:
-        "This layer shows how to design for trust: your learners are more likely to adopt a learning experience when it is transparent, fair, safe, and clearly connected to their goals.",
+        "This layer examines design conditions connected to appropriate trust and learning behavior, including transparency, fairness, safety, learner agency, and clear relevance to learner goals.",
       sections: [
         {
           id: "definition",
@@ -31,7 +31,7 @@ export const humanCenteredChangeContent: ModuleContent = {
           id: "why-it-matters",
           title: "Why It Matters",
           description:
-            "A technically capable learning system will still fail if your learners do not trust it. People adopt a learning experience when they believe it is useful, fair, respectful, safe, and worth changing their behavior for. Design choices build trust. Messaging alone does not.",
+            "A technically capable learning system can still fail when learners cannot understand, question, or appropriately trust it. Established psychological-safety research and responsible-AI guidance support attention to interpersonal risk, transparency, accountability, and harm; Bradley interprets those principles as design responsibilities rather than a guarantee of adoption.",
         },
         {
           id: "change-management",
@@ -83,6 +83,34 @@ export const humanCenteredChangeContent: ModuleContent = {
             },
           ],
         },
+        {
+          id: "evidence-and-source-notes",
+          title: "Evidence and Source Notes",
+          description:
+            "These sources support psychological safety and responsible AI boundaries; Bradley's trust-design lens is the applied professional interpretation.",
+          items: [
+            {
+              label: "Established research — Edmondson (1999)",
+              description:
+                "Psychological Safety and Learning Behavior in Work Teams, Administrative Science Quarterly, 44(2), 1999, DOI 10.2307/2666999, supports the association between team psychological safety and learning behavior. Its team-study findings should not be treated as proof of every learner-interface outcome.",
+            },
+            {
+              label: "Established AI risk guidance — NIST (2023)",
+              description:
+                "Tabassi, Artificial Intelligence Risk Management Framework (AI RMF 1.0), NIST AI 100-1, 2023, DOI 10.6028/NIST.AI.100-1, supports continuous governance, risk management, accountability, and trustworthy AI considerations.",
+            },
+            {
+              label: "Current education guidance — UNESCO (2023)",
+              description:
+                "Miao and Holmes, Guidance for Generative AI in Education and Research, UNESCO, 2023, supports a human-centered approach that considers privacy, ethical validation, pedagogical design, and human agency.",
+            },
+            {
+              label: "Bradley interpretation",
+              description:
+                "The trust-risk → transparency → safeguards → agency → visible-limits sequence is Bradley's professional synthesis for learner-facing design, not an externally validated universal model.",
+            },
+          ],
+        },
       ],
     },
     experience: {
@@ -115,13 +143,13 @@ export const humanCenteredChangeContent: ModuleContent = {
       title: "Reverse Build",
       badge: "Layer 3",
       intro:
-        "Most learning about ethics, trust, or change sounds right but does not change behavior. Designers explain principles, but they do not always help learners understand what the system is doing, what to trust, or when to question it. This module was built around a trust-design lens: trust risk, learner-facing transparency, safeguards, learner agency, visible limits, and responsible professional judgment. The goal is not to convince learners to trust the system. Trust is designed through choices that earn trust, or make limits clear enough that learners can decide how to use the experience.",
+        "Bradley's professional interpretation is that ethics, trust, and change principles become useful when learners can understand what a system is doing, what its limits are, and when to question it. This module applies a trust-design lens: trust risk, learner-facing transparency, safeguards, learner agency, visible limits, and responsible professional judgment. The goal is not to guarantee trust or adoption, but to make design choices and limits clear enough for learners to decide how to use the experience.",
       sections: [
         {
           id: "what-this-module-is-solving",
           title: "What This Module Is Solving",
           description:
-            "AI-supported learning experiences fail when learners are confused, skeptical, or overconfident, and the design does not address that directly. This module reconstructs the learner experience through the sequence of trust risk, transparency, safeguards, agency, visible limits, and responsible judgment. The goal is not to request trust through messaging. The goal is to design an experience that earns trust, or makes its limits clear enough that learners can decide how to use it.",
+            "AI-supported learning experiences can create risk when learners are confused, skeptical, or overconfident and the design leaves those conditions unaddressed. Bradley's trust-design sequence makes that professional interpretation explicit while avoiding a claim that the sequence guarantees trust.",
         },
         {
           id: "key-design-decisions",

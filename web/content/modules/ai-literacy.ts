@@ -34,19 +34,19 @@ export const aiLiteracyContent: ModuleContent = {
           id: "why-it-matters",
           title: "Why It Matters",
           description:
-            "Instructional designers are expected to deliver faster, work across multiple systems, and create learning that improves job performance. AI can speed up parts of the work, but designers still need to judge quality, reduce bias, protect trust, and tie outputs to real performance.",
+            "Current workforce evidence indicates that employers expect AI and information-processing technologies to reshape work, while the effects vary by role, organization, and industry. For instructional designers, that makes judgment about quality, bias, trust, and performance more important than adopting AI for its own sake.",
         },
         {
           id: "industry-trends",
-          title: "How the Work Is Changing",
+          title: "Current Industry Evidence (2025)",
           description:
-            "AI reduces time spent creating content and increases time spent testing ideas, supporting your learners, and analyzing results. The most valuable skill is framing the problem, evaluating AI output, and deciding how to use it in your workflow.",
+            "The World Economic Forum's Future of Jobs Report 2025 reports employer expectations that AI and information-processing technologies will reshape business and increase demand for AI, data, technological literacy, and human judgment skills. This is directional employer-survey evidence, not proof that every instructional design role is changing in the same way.",
         },
         {
           id: "demand-signals",
           title: "Demand Signals",
           description:
-            "Organizations expect learning teams to use AI to work faster without lowering quality. Many roles now expect you to use AI, work with data, understand automation, and guide teams in using these tools responsibly.",
+            "The 2025 World Economic Forum employer survey reports broad plans for AI-related upskilling and hiring, alongside continued demand for analytical thinking, collaboration, and other human capabilities. Future of ID interprets that signal as a reason to develop responsible AI judgment, while avoiding a claim that every learning role requires the same tools or technical depth.",
         },
         {
           id: "instructional-design-implications",
@@ -72,6 +72,29 @@ export const aiLiteracyContent: ModuleContent = {
               label: "Learner-Centered Design",
               description:
                 "Use AI to support the end learner, not to showcase the tool. Designers must consider learner context, accessibility, trust, and privacy, and ensure learners can actually use the guidance provided.",
+            },
+          ],
+        },
+        {
+          id: "evidence-and-source-notes",
+          title: "Evidence and Source Notes",
+          description:
+            "These notes distinguish current external evidence, established guidance, and Bradley's professional interpretation.",
+          items: [
+            {
+              label: "Current industry evidence — World Economic Forum (2025)",
+              description:
+                "The Future of Jobs Report 2025 supports the directional claim that employers expect AI, data, and technological skills to grow in importance. Its findings are employer-survey evidence and should not be generalized to every instructional design role.",
+            },
+            {
+              label: "Established AI risk guidance — NIST (2023)",
+              description:
+                "Tabassi, Artificial Intelligence Risk Management Framework (AI RMF 1.0), NIST AI 100-1, 2023, DOI 10.6028/NIST.AI.100-1. The framework supports risk management, human accountability, and trustworthy AI use; it did not select this capability pathway.",
+            },
+            {
+              label: "Bradley interpretation",
+              description:
+                "The module's emphasis that AI may accelerate work while human judgment protects instructional quality is Bradley's professional interpretation of how these external signals apply to learning design.",
             },
           ],
         },
@@ -109,13 +132,13 @@ export const aiLiteracyContent: ModuleContent = {
       title: "Reverse Build",
       badge: "Layer 3",
       intro:
-        "Most instructional designers don't struggle with understanding what AI is. They struggle with deciding how to use it without lowering quality. AI-supported design work often falls into two patterns: overuse, where designers accept outputs too quickly and replace thinking with generation; or underuse, where designers avoid AI entirely or use it only for surface-level drafting. This module was built to address that gap. The goal is not to teach AI terminology or tools. The goal is to help designers decide when AI helps, when it adds risk or noise, how to evaluate what it produces, and how to keep design judgment in place.",
+        "Bradley's professional interpretation is that the harder instructional design problem is often deciding how to use AI without lowering quality, not learning AI terminology alone. In his applied work, AI-supported design can drift toward overuse, where outputs replace scrutiny, or underuse, where the tool never moves beyond surface drafting. This module addresses that observed tension by helping designers decide when AI helps, when it adds risk or noise, and where human judgment must remain visible.",
       sections: [
         {
           id: "what-this-module-is-solving",
           title: "What This Module Is Solving",
           description:
-            "Most instructional designers don't struggle with understanding what AI is. They struggle with deciding how to use it without lowering quality. Early AI-supported design work often falls into two patterns: overuse, where designers accept outputs too quickly and replace thinking with generation; or underuse, where designers avoid AI entirely or use it only for surface-level drafting. This module focuses on practical judgment under real constraints, not conceptual understanding.",
+            "Bradley's professional observation is that early AI-supported design work can fall into two patterns: overuse, where designers accept outputs too quickly, or underuse, where AI remains limited to surface drafting. The module treats this as an applied design problem rather than a universal finding about every instructional designer.",
         },
         {
           id: "key-design-decisions",

@@ -47,6 +47,7 @@ Introduce the capability development system, establish credibility, and frame Br
 - demand signals
 - instructional design implications
 - L&D framework tie-ins
+- evidence and source notes when substantive claims rely on established principles or current external evidence
 
 ### Layer 2: Experience
 
@@ -78,6 +79,17 @@ Each module should explicitly connect to traditional learning frameworks when re
 - experiential learning
 - performance improvement / HPI
 - learner-centered design
+
+## Evidence Classification in Module Content
+
+Module content should distinguish evidence by purpose rather than presenting every statement with the same authority:
+
+1. **Bradley's professional pathway selection** explains why a capability belongs in his current demonstrated pathway. It should point to the canonical selection rationale and should not claim external validation.
+2. **Established learning principles** identify the framework, model, or research foundation supporting an instructional concept. Source notes should include author or organization, title, and year where appropriate.
+3. **Current industry or technology evidence** supports time-sensitive claims about professional practice, AI adoption, role expectations, technology shifts, or analytics. Source notes must identify the source and date and qualify the finding's scope.
+4. **Bradley's professional interpretation** identifies applied observations, design philosophy, and professional judgment. These statements should be attributed or labeled rather than presented as universal research facts.
+
+The existing `ModuleContent` section and item structures are sufficient for concise evidence and source notes. Section 3.6 does not require a new citation database, automated evidence system, content type, API, or interaction. Structured citation metadata would require a separate implementation decision.
 
 ## Suggested Theory Pairings by Module
 

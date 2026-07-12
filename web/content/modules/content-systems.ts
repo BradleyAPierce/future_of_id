@@ -84,6 +84,29 @@ export const contentSystemsContent: ModuleContent = {
             },
           ],
         },
+        {
+          id: "evidence-and-source-notes",
+          title: "Evidence and Source Notes",
+          description:
+            "Established learning-object and structured-authoring sources support reuse concepts; Bradley's interpretation governs how those concepts are applied in this project.",
+          items: [
+            {
+              label: "Established learning-object source — Wiley (2000)",
+              description:
+                "Connecting Learning Objects to Instructional Design Theory: A Definition, a Metaphor, and a Taxonomy, in The Instructional Use of Learning Objects, 2000, supports examining learning-object definitions and reuse at an instructional level.",
+            },
+            {
+              label: "Established technical standard — OASIS (2018)",
+              description:
+                "Darwin Information Typing Architecture (DITA) Version 1.3, Approved Errata 02, 2018, demonstrates structured authoring and content reuse. It is a technical reference, not evidence that every learning team should adopt DITA.",
+            },
+            {
+              label: "Bradley interpretation",
+              description:
+                "The principle that reusable content works when structure protects instructional context and quality is Bradley's professional design philosophy for this system.",
+            },
+          ],
+        },
       ],
     },
     experience: {
@@ -125,13 +148,13 @@ export const contentSystemsContent: ModuleContent = {
       title: "Reverse Build",
       badge: "Layer 3",
       intro:
-        "Most learning teams don't struggle to create content; they struggle to update it without breaking everything. This module was built around a content-system lens: messy content, structured objects, reuse rules, and governance. The same explanations, examples, and prompts often get rewritten across courses, slightly differently each time. That leads to version drift, inconsistent quality, and slow updates when something changes. The goal here is not to teach systems thinking as a concept. It is to show how reusable content works when structure protects context and quality.",
+        "Bradley's professional observation is that repeated learning content can create update, consistency, and governance problems when teams copy and revise it across experiences. This module applies a content-system lens: messy content, structured objects, reuse rules, and governance. It does not claim that every team has the same workflow; it demonstrates Bradley's design principle that reuse is valuable only when structure protects context and quality.",
       sections: [
         {
           id: "what-this-module-is-solving",
           title: "What This Module Is Solving",
           description:
-            "Most learning teams don't struggle to create content; they struggle to update it without breaking everything. This module addresses the move from messy content to structured objects, reuse rules, and governance. The goal is not to build a perfect content system. It is to make content easier to reuse, update, and maintain while protecting the instructional context that makes it useful.",
+            "This module addresses an update and governance problem Bradley has observed in repeated learning content. The goal is not to prescribe one content system, but to make content easier to reuse and maintain while protecting the instructional context that makes it useful.",
         },
         {
           id: "key-design-decisions",
@@ -169,9 +192,9 @@ export const contentSystemsContent: ModuleContent = {
           title: "Proven Practice vs New Approach",
           items: [
             {
-              label: "Proven practice: Build courses page by page",
+              label: "Common practice observed by Bradley: Build courses page by page",
               description:
-                "Most teams build one course at a time, copy and tweak content across modules, and rely on memory to track what changed where.",
+                "In Bradley's professional experience, teams may build one course at a time, copy and adjust content across modules, and rely on manual coordination to track changes.",
             },
             {
               label: "Proven practice: Treat each course as standalone",

@@ -34,7 +34,7 @@ export const simulationDesignContent: ModuleContent = {
           id: "why-it-matters",
           title: "Why It Matters",
           description:
-            "Most workplace skills aren't about knowing; they require making the right call in the moment, often with incomplete information. Realistic practice lets your learners make decisions, see the consequences, and adjust before those decisions affect customers, teams, or revenue.",
+            "Many workplace skills targeted by this module require decisions under pressure or incomplete information, not recall alone. Experiential and deliberate-practice principles support giving learners focused decisions, consequences, feedback, and opportunities to adjust before the stakes are real.",
         },
         {
           id: "scenario-based-learning",
@@ -83,6 +83,34 @@ export const simulationDesignContent: ModuleContent = {
               label: "Scenario-based learning",
               description:
                 "Build the scenario around the moment where the knowledge matters: the role, pressure, tradeoffs, and decision your learners need to handle.",
+            },
+          ],
+        },
+        {
+          id: "evidence-and-source-notes",
+          title: "Evidence and Source Notes",
+          description:
+            "The module draws on established experiential and deliberate-practice principles while treating implementation choices as Bradley's professional interpretation.",
+          items: [
+            {
+              label: "Established principle — Kolb (1984)",
+              description:
+                "Experiential Learning: Experience as the Source of Learning and Development, 1984, supports connecting concrete experience with reflection, conceptualization, and further application.",
+            },
+            {
+              label: "Established research — Ericsson, Krampe, and Tesch-Römer (1993)",
+              description:
+                "The Role of Deliberate Practice in the Acquisition of Expert Performance, Psychological Review, 100(3), 1993, DOI 10.1037/0033-295X.100.3.363, supports focused practice with feedback. It does not imply that every simulation automatically creates deliberate practice.",
+            },
+            {
+              label: "Established taxonomy — Anderson and Krathwohl (2001)",
+              description:
+                "A Taxonomy for Learning, Teaching, and Assessing, 2001, supports distinguishing application, analysis, evaluation, and creation from simple recall.",
+            },
+            {
+              label: "Bradley interpretation",
+              description:
+                "The rule that complexity must improve a meaningful decision is Bradley's design philosophy for this module, not a universal research threshold for simulation fidelity.",
             },
           ],
         },
@@ -154,7 +182,7 @@ export const simulationDesignContent: ModuleContent = {
           id: "proven-practice-vs-new-approach",
           title: "Proven Practice vs New Approach",
           description:
-            "There's nothing new about scenario-based learning. This is built on practices that already work: scenarios, decision points, consequences, and feedback. The difference is we cut everything that didn't help the learner practice a real decision. Instead of trying to build something immersive, we focused on making sure the learner has to choose, see what happens, and understand how to improve next time. AI is optional here. You don't need it to do this well. In a lot of cases, solid scenario design gets you most of the way there.",
+            "Established experiential and deliberate-practice principles support practice, feedback, and reflection. Bradley's interpretation was to remove elements that did not strengthen the focal decision, rather than assume immersion or AI would improve the experience. That implementation choice is professional judgment, not a universal claim about every simulation.",
         },
         {
           id: "tradeoffs-and-constraints",
@@ -180,7 +208,7 @@ export const simulationDesignContent: ModuleContent = {
             {
               label: "Buildable structure",
               description:
-                "Most teams don't have time to create large simulations, so complexity has to earn its place by improving practice.",
+                "Bradley's professional constraint for this build was to avoid a large simulation unless added complexity improved the focal practice decision.",
             },
           ],
         },

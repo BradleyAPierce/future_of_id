@@ -77,6 +77,29 @@ export const performanceConsultingContent: ModuleContent = {
             },
           ],
         },
+        {
+          id: "evidence-and-source-notes",
+          title: "Evidence and Source Notes",
+          description:
+            "The module combines established performance-improvement practice with Bradley's interpretation of how to interrupt solution-first requests.",
+          items: [
+            {
+              label: "Established principle — ISPI performance standards",
+              description:
+                "The International Society for Performance Improvement's Certified Performance Technologist Performance Standards support systematic analysis, cause analysis, solution design, implementation, and evaluation beyond training alone.",
+            },
+            {
+              label: "Established evaluation model — Kirkpatrick and Kirkpatrick (2006)",
+              description:
+                "Evaluating Training Programs: The Four Levels, 3rd edition, 2006, supports distinguishing reaction, learning, behavior, and results. The model informs evaluation; it did not select Bradley's capability pathway.",
+            },
+            {
+              label: "Bradley interpretation",
+              description:
+                "The request-to-diagnosis sequence and the decision to begin with an assumed training solution reflect Bradley's professional interpretation of how performance consulting can be practiced under real project constraints.",
+            },
+          ],
+        },
       ],
     },
     experience: {
@@ -121,13 +144,13 @@ export const performanceConsultingContent: ModuleContent = {
       title: "Reverse Build",
       badge: "Layer 3",
       intro:
-        "Most training requests do not start with a clear performance problem. They start with a symptom: sales are down, people are not following the process, or someone believes a refresher is needed. By the time the request reaches L&D, the solution is often already assumed to be training. This module was built to interrupt that pattern by moving learners from stakeholder request, to performance problem, to evidence, to root cause, to recommendation. The goal is not to teach a perfect consulting process. The goal is to help designers slow down just enough to ask better questions, clarify what is actually happening, and determine whether training will improve performance at all.",
+        "Bradley's professional experience is that training requests can arrive as symptoms or assumed solutions before the performance problem is clear. This module was built to interrupt that observed pattern by moving learners from stakeholder request, to performance problem, to evidence, to root cause, to recommendation. The goal is not to claim that every request follows this pattern, but to help designers ask better questions and determine whether training is likely to improve performance.",
       sections: [
         {
           id: "what-this-module-is-solving",
           title: "What This Module Is Solving",
           description:
-            "Most training requests do not start with a clear performance problem. They start with a symptom, and the solution is often already assumed to be training. This module is designed to interrupt order-taking by helping designers move from request to diagnosis before they prescribe. It asks learners to surface the possible performance problem, identify missing evidence, consider non-training causes, and decide what recommendation could be defended. This reflects real work: incomplete information, unclear causes, and pressure to move quickly.",
+            "Bradley's professional observation is that some training requests begin with a symptom and an assumed solution. This module is designed to interrupt order-taking by helping designers move from request to diagnosis before they prescribe, while avoiding a claim that all organizations or requests behave this way.",
         },
         {
           id: "key-design-decisions",

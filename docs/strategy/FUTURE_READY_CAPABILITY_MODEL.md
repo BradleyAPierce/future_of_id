@@ -241,6 +241,34 @@ The older planning notes framed each module around common evidence categories:
 
 This is why the current pathway is organized as a connected demonstration rather than as a list of trends. Each capability links a modern pressure back to a durable instructional design foundation while the reusable capability development system remains open to other pathway selections.
 
+## Evidence Governance Standard
+
+Future of ID distinguishes four evidence categories so professional judgment, established theory, and current external evidence are not presented as interchangeable forms of authority.
+
+### 1. Bradley's Professional Pathway Selection
+
+This category explains why a capability belongs in Bradley's current demonstrated pathway. It is grounded in his professional experience, responsibilities, goals, development needs, experimentation, and future direction. It does not require an external institution or research study to validate the selection, and it must not be presented as a universal prescription.
+
+### 2. Established Learning Principles
+
+This category supports instructional concepts through established models, frameworks, or learning research. Content should name the relevant framework and provide credible source information when the framework supports a substantive claim. The framework may support how a capability is taught without being described as the reason the exact seven-capability collection was selected.
+
+### 3. Current Industry or Technology Evidence
+
+This category supports claims about current professional environments, AI adoption, role expectations, technology shifts, or analytics practice. Content should identify the source and publication date, describe the population or scope when relevant, and qualify findings rather than generalize one report to every instructional designer or organization. Time-sensitive evidence should be reviewed as the environment changes.
+
+### 4. Bradley's Professional Interpretation
+
+This category preserves Bradley's professional judgment, observations, and design philosophy. Interpretations should be attributed or explicitly labeled so they are not mistaken for universal research findings. Professional interpretation remains legitimate evidence of applied reasoning, but it does not replace external support when a statement makes a broad empirical or current-industry claim.
+
+### Evidence Handling Rules
+
+- Use primary or authoritative sources where practical and include author or organization, title, and publication year; include a stable URL or DOI in documentation when available.
+- Match the source to the claim it actually supports and retain meaningful scope or limitation language.
+- Qualify broad claims when available evidence is directional, contextual, or time-sensitive.
+- Preserve credible learning theory and research while distinguishing them from Bradley's pathway selection and professional interpretation.
+- Never imply that external evidence independently produced, selected, or validated Bradley's exact seven-capability pathway.
+
 ## Source Trail To Rebuild
 
 The current repo preserves the internal rationale for Bradley's current pathway, but it does not yet preserve a formal external source trail.

@@ -463,14 +463,98 @@ Approval was based on:
 
 ## 3.6 Preserve legitimate evidence standards
 
-- [ ] Do not remove credible learning theory or supporting research from the modules.
-- [ ] Continue grounding substantive instructional claims in credible sources.
-- [ ] Distinguish between:
-  - [ ] Bradley’s professional selection of the capability
-  - [ ] established learning principles used within the module
-  - [ ] current industry or technology evidence
-  - [ ] Bradley’s own interpretation or professional point of view
-- [ ] Ensure evidence supports the content being taught without falsely claiming that research produced the exact seven-capability set.
+- [x] Do not remove credible learning theory or supporting research from the modules.
+- [x] Continue grounding substantive instructional claims in credible sources.
+- [x] Distinguish between:
+  - [x] Bradley’s professional selection of the capability
+  - [x] established learning principles used within the module
+  - [x] current industry or technology evidence
+  - [x] Bradley’s own interpretation or professional point of view
+- [x] Ensure evidence supports the content being taught without falsely claiming that research produced the exact seven-capability set.
+
+### Section 3.6 Approval Record
+
+- **Status:** Approved
+- **Approval date:** July 12, 2026
+- **Approved by:** Bradley Pierce
+
+#### Decision
+
+Section 3.6 evidence-governance remediation is complete and approved for launch readiness review.
+
+#### Evidence Reviewed
+
+Approval was based on:
+
+- establishment of four canonical evidence categories:
+  - Bradley’s professional pathway selection
+  - established learning principles
+  - current industry or technology evidence
+  - Bradley’s professional interpretation
+- establishment of evidence-governance rules covering:
+  - source identification
+  - evidence date
+  - claim scope
+  - appropriate qualification
+  - attribution
+  - research-positioning boundaries
+- alignment of `CONTENT_ARCHITECTURE.md` with the canonical evidence model
+- addition of an `Evidence and Source Notes` section to all seven capability modules
+- preservation of all existing L&D Theory Bridges
+- correction or qualification of unsupported universal phrasing
+- dating and scoping of current AI, workforce, analytics, and technology evidence
+- confirmation that established frameworks support instructional concepts but did not select or externally validate Bradley’s seven-capability pathway
+- explicit identification of Bradley-created sequences, constraints, design principles, and professional observations as professional interpretation or synthesis
+- use of credible and authoritative sources for substantive claims
+
+#### Seven-Module Coverage
+
+Evidence and source notes were added to:
+
+- `ai-literacy.ts`
+- `performance-consulting.ts`
+- `learning-analytics.ts`
+- `simulation-design.ts`
+- `adaptive-learning.ts`
+- `content-systems.ts`
+- `human-centered-change.ts`
+
+#### Remediation Summary
+
+- `FUTURE_READY_CAPABILITY_MODEL.md` was updated with the canonical evidence-governance standard.
+- `CONTENT_ARCHITECTURE.md` was updated with module-authoring requirements for evidence classification and traceability.
+- All seven module files were updated using the existing content structure.
+- Unsupported generalizations were sourced, qualified, or identified as professional observations.
+- Current evidence was dated and scoped.
+- Existing instructional content and theory bridges were preserved.
+- `moduleContent.ts` was intentionally left unchanged because no new content model or citation feature was necessary.
+- No application behavior changed.
+- No routes, components, APIs, state, persistence, interactions, or content types changed.
+
+#### Validation
+
+The following passed:
+
+- `npm run lint`
+- `tsc --noEmit`
+- `git diff --check`
+- seven-of-seven module evidence-section coverage check
+- broad unsupported-claim search
+- content-model isolation check
+- authoritative-source verification
+
+#### Continuing Governance Considerations
+
+- Future substantive instructional claims should be supported by an identifiable credible source, appropriately qualified, or clearly labeled as professional interpretation.
+- Current industry and technology evidence should include sufficient date and scope information to prevent outdated evidence from being treated as permanently current.
+- Bradley’s professional synthesis should remain visible and valuable, but it must not be presented as universal research or outside validation.
+- Research may support individual concepts and instructional choices but must not be described as having independently selected or validated Bradley’s exact capability pathway.
+- Evidence notes should remain proportionate to the learning experience and should not unnecessarily convert modules into academic papers.
+- Future structured citation functionality would require a separate product and implementation decision.
+
+#### Approval Rationale
+
+> Section 3.6 is approved because Future of ID now provides a traceable and governed distinction between established learning principles, current industry or technology evidence, Bradley’s professional pathway selection, and Bradley’s professional interpretation. All seven modules include evidence and source notes, substantive claims are appropriately sourced or qualified, and professional syntheses remain visible without being presented as externally validated or universal models.
 
 ### Phase 3 completion evidence
 

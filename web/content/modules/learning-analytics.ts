@@ -73,6 +73,29 @@ export const learningAnalyticsContent: ModuleContent = {
             },
           ],
         },
+        {
+          id: "evidence-and-source-notes",
+          title: "Evidence and Source Notes",
+          description:
+            "These sources support the field definition and evaluation model; Bradley's design interpretation connects them to the module's decision sequence.",
+          items: [
+            {
+              label: "Current field definition — SoLAR (2025)",
+              description:
+                "The Society for Learning Analytics Research defines learning analytics as collecting, analyzing, interpreting, and communicating learner data to provide theoretically relevant, actionable insight that enhances learning and teaching. The 2025 definition supports the module's decision-focused use of analytics.",
+            },
+            {
+              label: "Established evaluation model — Kirkpatrick and Kirkpatrick (2006)",
+              description:
+                "Evaluating Training Programs: The Four Levels, 3rd edition, 2006, supports distinguishing reaction, learning, behavior, and results rather than treating one metric as proof of impact.",
+            },
+            {
+              label: "Bradley interpretation",
+              description:
+                "The Evidence → Interpretation → Decision → Measurement sequence is Bradley's professional synthesis for turning analytics into an instructional decision. It is a design model for this experience, not a universal research taxonomy.",
+            },
+          ],
+        },
       ],
     },
     experience: {
@@ -109,13 +132,13 @@ export const learningAnalyticsContent: ModuleContent = {
       title: "Reverse Build",
       badge: "Layer 3",
       intro:
-        "Most teams already have data. That's not the problem. The problem is that the data doesn't lead to better decisions. Designers see completion rates, quiz scores, and satisfaction feedback, but still don't know what to fix or why performance isn't improving. This module was built to address a common failure point: collecting more data than you can interpret, and reacting to signals that don't actually connect to behavior or outcomes. The learning experience moves learners from evidence, to interpretation, to decision, to measurement. The goal is not to teach analytics. The goal is to help designers decide what evidence actually matters, what can be trusted, what should change because of it, and how they would know whether that change worked.",
+        "Bradley's professional observation is that learning teams may have completion, score, or satisfaction data without a clear decision it supports. This module addresses that applied problem by moving learners from evidence, to interpretation, to decision, to measurement. It does not claim that every team has the same analytics maturity; it helps designers decide what evidence matters, what remains uncertain, and how a proposed change would be evaluated.",
       sections: [
         {
           id: "what-this-module-is-solving",
           title: "What This Module Is Solving",
           description:
-            "Most teams already have data. The problem is that the data does not always lead to better decisions. This module focuses on the gap between reporting and action. Designers may see completion rates, quiz scores, and satisfaction feedback, but still not know what to fix or why performance is not improving. The experience is designed to move learners away from dashboard thinking and toward a more useful sequence: evidence, interpretation, decision, and measurement. The goal is to help designers use evidence to make better design decisions, not collect more metrics.",
+            "Bradley's professional interpretation focuses on the gap that can exist between reporting and action. The experience moves learners away from treating dashboards as answers and toward the sequence of evidence, interpretation, decision, and measurement, without generalizing that gap to every learning team.",
         },
         {
           id: "key-design-decisions",
@@ -153,9 +176,9 @@ export const learningAnalyticsContent: ModuleContent = {
           title: "Proven Practice vs New Approach",
           items: [
             {
-              label: "What most teams do",
+              label: "Common practice observed by Bradley",
               description:
-                "Track completion, scores, and satisfaction, review dashboards after launch, and add more content when results are unclear.",
+                "In Bradley's professional experience, teams may track completion, scores, and satisfaction, review dashboards after launch, and add content when results remain unclear. This observation is not presented as a universal industry finding.",
             },
             {
               label: "Start with the decision",
