@@ -66,8 +66,8 @@ A strong framework should make the learner feel more oriented, not more impresse
 ### Capability Ecosystem
 
 - Framework Name: Capability Ecosystem
-- Transformational Question: How do the seven capabilities connect into a stronger instructional design practice?
-- Mental Model: The seven capabilities are not isolated topics. They form an ecosystem of judgment, evidence, systems thinking, learner support, and human-centered change.
+- Transformational Question: What does Bradley's current seven-capability pathway demonstrate, and which capability areas might differ in another practitioner's context?
+- Mental Model: Bradley's current seven capabilities are not isolated topics. They form the first complete ecosystem demonstration of a reusable capability development system that can support other pathway selections.
 - Emotional Job: Help learners see the course as a coherent professional map rather than a list of modules.
 - Core Philosophy: Capabilities become powerful when learners understand how they influence one another.
 - Visual Metaphor: An ecosystem of connected capabilities.

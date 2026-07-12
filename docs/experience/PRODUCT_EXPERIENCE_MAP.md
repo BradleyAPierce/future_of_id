@@ -56,7 +56,7 @@ Each major page has a psychological job. The page does not need to answer every 
 
 - Learner question: What is Future of ID, and why does it matter now?
 - Desired feeling: Interested, oriented, and reassured that this is a credible professional learning product.
-- Product responsibility: Establish the project promise, the seven-capability frame, and the value of learning by experiencing and inspecting the system.
+- Product responsibility: Establish the capability development system, Bradley's current seven-capability demonstration, and the value of learning by experiencing and inspecting the architecture.
 - Design implication: The homepage should create a clear reason to begin without overwhelming the learner with every module detail.
 
 ### First Dashboard Scan
@@ -70,7 +70,7 @@ Each major page has a psychological job. The page does not need to answer every 
 
 - Learner question: How does this experience work?
 - Desired feeling: Grounded and ready to explore.
-- Product responsibility: Explain the guided course model, the seven capabilities, the role of progress, and how Theory, Experience, Reverse Build, and Reflection work together.
+- Product responsibility: Explain the reusable method, Bradley's current seven-capability pathway, the role of progress, and how Theory, Experience, Reverse Build, and Reflection work together.
 - Design implication: Orientation should clarify the product without becoming a gate or prerequisite.
 
 ### First Module Entry
@@ -122,11 +122,11 @@ Each major page has a psychological job. The page does not need to answer every 
 - Product responsibility: Keep the full product usable without saved state, login, database persistence, or permanent local storage.
 - Design implication: Progress reset should never block access, hide capabilities, remove AI interactions, or make the product feel broken.
 
-### Completing All Seven Capabilities
+### Completing Bradley's Current Seven-Capability Pathway
 
 - Learner question: What changed in how I think about instructional design?
 - Desired feeling: More capable, not merely finished.
-- Product responsibility: Help the learner synthesize the seven capabilities into a stronger professional identity and future-facing design mindset.
+- Product responsibility: Help the learner synthesize Bradley's current seven capabilities, then consider how their own professional context may call for a different pathway.
 - Design implication: Completion should emphasize growth, synthesis, reflection, and next actions rather than gamified reward.
 
 ## Signature Experience Opportunities

@@ -68,7 +68,7 @@ The current homepage is close to the right content but needs more varied instruc
 
 - one hero visual for positioning
 - one learning-loop visual for product structure
-- one capability map for the seven-capability model
+- one capability map for Bradley's current seven-capability demonstration
 - one comparison or principle section for what makes the platform different
 - one focused CTA section that starts orientation
 
@@ -124,8 +124,8 @@ Recommended flow:
    - Reverse Build = reveal
    - Reflection = transfer
 
-4. **Seven Capability Preview**
-   Present the seven capabilities as a connected capability map, not only as repeated cards.
+4. **Current Seven-Capability Preview**
+   Present Bradley's seven capabilities as a connected current-pathway map, not only as repeated cards or a universal framework.
 
 5. **How the Experience Works**
    Show what a learner actually does: starts orientation, studies modules, practices decisions, receives structured feedback, inspects Reverse Build notes, reflects on transfer, and tracks progress.
@@ -160,9 +160,9 @@ Use icons sparingly for repeated categories such as Theory, Experience, Reverse 
 
 ### Capability Map
 
-The seven capabilities should become a capability map or layered model. This would help learners see the capability system as a coherent stack rather than a list of independent topics.
+Bradley's current seven capabilities should become a capability map or layered model. This would help learners see the implemented pathway as a coherent demonstration rather than a list of independent topics.
 
-The map should preserve the seven-capability model and avoid overexplaining each capability on the homepage.
+The map should preserve the current seven-capability pathway and avoid presenting it as the permanent boundary of the capability development system.
 
 ### Infographic / Experience Preview
 
@@ -196,7 +196,7 @@ Likely reusable patterns to plan before implementation:
 
 - `HomepageHero`: a stronger first-viewport composition that answers the primary question and routes to orientation.
 - `LearningLoopVisual`: a visual explanation of Theory, Experience, Reverse Build, and Reflection.
-- `CapabilityMap`: a visual preview of the seven capabilities as a connected system.
+- `CapabilityMap`: a visual preview of Bradley's current seven capabilities as a connected pathway demonstration.
 - `VisualFrameworkSection`: a reusable section pattern for explaining concepts through diagrams or models instead of cards.
 - `ExperiencePreview`: a learner journey preview showing what happens inside the guided course.
 - `ProofOrTrustSection`: a restrained credibility section focused on transparency, implementation, and instructional judgment.
@@ -211,7 +211,7 @@ Do not implement these yet. First confirm the content hierarchy and visual patte
 - The practical, grounded positioning.
 - The anti-hype stance.
 - The distinction between different practitioner paths.
-- The seven-capability model.
+- Bradley's current seven-capability demonstration.
 - The emphasis on transparent implementation and Reverse Build.
 - The primary CTA to start orientation.
 
@@ -230,7 +230,7 @@ Do not implement these yet. First confirm the content hierarchy and visual patte
 ### Make Visual
 
 - The learning loop.
-- The seven capabilities as a system.
+- Bradley's current seven capabilities as a coherent demonstration of the system.
 - Different practitioner paths as a spectrum.
 - What makes Future of ID different as a comparison or principle model.
 - The course journey from orientation to progress.

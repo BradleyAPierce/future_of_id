@@ -48,16 +48,16 @@ Each act should answer a learner question, reduce a form of uncertainty, and int
 - Psychological job: Explain that Future of ID teaches through a connected learning system, not a traditional course shell.
 - Framework used: Learning System
 - Key takeaway: Future of ID connects practical learning, transparent implementation, systems thinking, and professional calibration into one learning experience.
-- Transition to the next act: Once the learner understands the product model, they need to see how the seven capabilities fit together.
+- Transition to the next act: Once the learner understands the reusable product model, they need to see how Bradley's current seven capabilities demonstrate it.
 
 ## Act 4 — How Modern Instructional Design Fits Together
 
 - Learner question: Are these seven modules separate topics, or do they form a larger professional model?
 - Learner emotion: Grounded, organized, and able to see the whole landscape.
-- Psychological job: Convert a list of modules into an interconnected capability system.
+- Psychological job: Convert a list of modules into an interconnected current-pathway demonstration without presenting it as the permanent system boundary.
 - Framework used: Stronger Together
-- Key takeaway: The seven capabilities reinforce one another; together they form a stronger model of future-ready instructional design practice.
-- Transition to the next act: Once learners understand the capability system, they need to learn how to inspect the thinking behind the experience.
+- Key takeaway: Bradley's current seven capabilities reinforce one another and form the first complete demonstration of the reusable capability development system.
+- Transition to the next act: Once learners distinguish the reusable system from the current pathway, they need to learn how to inspect the thinking behind the experience.
 
 ## Act 5 — How Experts Think
 
@@ -85,7 +85,7 @@ After Orientation, learners should believe:
 - AI is a design partner, not a replacement for instructional designers.
 - They do not need to follow one prescribed professional path to belong.
 - Future of ID is a connected learning system, not a traditional LMS.
-- The seven capabilities work together as one professional capability system.
+- Bradley's current seven capabilities work together as one professional pathway and demonstrate a system that can support other capability selections.
 - Reverse Build will help them see how expert design decisions are made.
 - They can choose where to begin without completing a required prerequisite.
 - Orientation was useful because it changed how they see the product and the profession.

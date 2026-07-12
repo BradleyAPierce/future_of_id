@@ -97,20 +97,64 @@ Capability-positioning analysis began while this checklist was still being refin
 
 ## 3.1 Define Future of ID as a capability development system
 
-- [ ] Define Future of ID as a capability development system rather than a product permanently defined by a fixed number of capabilities.
-- [ ] Explain that the system is a repeatable method and learning architecture for identifying, developing, applying, and sharing future-relevant instructional design capabilities.
-- [ ] State that the current seven capabilities are the first complete demonstration of that method.
-- [ ] Explain that the seven capabilities provide implemented evidence of the method producing a coherent pathway; they are not external validation of effectiveness or the permanent boundary of the system.
-- [ ] Explain that practitioners may identify different capability needs based on their:
-  - [ ] role
-  - [ ] responsibilities
-  - [ ] organization
-  - [ ] industry
-  - [ ] career direction
-  - [ ] professional goals
-- [ ] Explain that a practitioner-created pathway can select different capability areas while preserving the Future of ID learning architecture.
-- [ ] Clarify that “capability development system” refers to the repeatable learning method and architecture.
-- [ ] Do not imply that Future of ID automatically diagnoses needs, recommends capabilities algorithmically, creates adaptive learning plans, or dynamically personalizes pathways.
+- [x] Define Future of ID as a capability development system rather than a product permanently defined by a fixed number of capabilities.
+- [x] Explain that the system is a repeatable method and learning architecture for identifying, developing, applying, and sharing future-relevant instructional design capabilities.
+- [x] State that the current seven capabilities are the first complete demonstration of that method.
+- [x] Explain that the seven capabilities provide implemented evidence of the method producing a coherent pathway; they are not external validation of effectiveness or the permanent boundary of the system.
+- [x] Explain that practitioners may identify different capability needs based on their:
+  - [x] role
+  - [x] responsibilities
+  - [x] organization
+  - [x] industry
+  - [x] career direction
+  - [x] professional goals
+- [x] Explain that a practitioner-created pathway can select different capability areas while preserving the Future of ID learning architecture.
+- [x] Clarify that “capability development system” refers to the repeatable learning method and architecture.
+- [x] Do not imply that Future of ID automatically diagnoses needs, recommends capabilities algorithmically, creates adaptive learning plans, or dynamically personalizes pathways.
+
+### Section 3.1 Approval Record
+
+- **Status:** Approved
+- **Approval date:** 2026-07-12
+- **Approved by:** Bradley Pierce
+
+#### Decision
+
+Section 3.1 remediation is complete and approved for launch readiness review.
+
+#### Evidence Reviewed
+
+Approval was based on:
+
+- establishment of `FUTURE_READY_CAPABILITY_MODEL.md` as the canonical capability-development-system source
+- definition of Future of ID as a repeatable capability development system
+- clarification of the Identify → Develop → Apply → Share method
+- clarification of the Theory → Experience → Reverse Build → Reflection learning architecture
+- repositioning of the seven capabilities as Bradley’s current implemented pathway and first complete system demonstration
+- removal of unsupported universal, permanent, exhaustive, or research-backed claims
+- clarification that practitioner-created pathways can evolve and include additional capability areas
+- explicit boundaries against automatic diagnosis, recommendation, or personalization claims
+- alignment of public-facing copy, metadata, structured content, and experience documentation
+
+#### Remediation Summary
+
+- 33 documentation and content files were updated.
+- No application behavior changed.
+- No routes, components, services, APIs, hooks, or architecture patterns changed.
+- Changes within `web/` were limited to copy, metadata, and structured content.
+- Validation passed:
+  - `npm run lint`
+  - `tsc --noEmit`
+  - `git diff --check`
+
+#### Remaining Considerations
+
+- Historical documents may intentionally preserve previous language for audit and historical purposes.
+- `PRODUCT_ARCHITECTURE.md` remains under evaluation and should continue aligning with the canonical capability model before final launch.
+
+#### Approval Rationale
+
+> Section 3.1 is approved because Future of ID is now accurately positioned as a reusable capability development system rather than a fixed universal capability framework. The seven capabilities represent the first complete demonstrated pathway within that system while preserving room for practitioner-created pathways and future evolution.
 
 ## 3.2 Explain the capability-discovery process
 

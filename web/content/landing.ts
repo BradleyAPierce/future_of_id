@@ -39,9 +39,9 @@ export const landingContent = {
     eyebrow: "For instructional designers, L&D teams, and career changers",
     title: "Future of ID",
     description:
-      "Not another AI course, LMS, or article series. A practical learning product for moving from course production to next-generation learning systems design.",
+      "A capability development system for moving from course production toward learning systems design through a repeatable method and reusable learning architecture.",
     support:
-      "Future of ID shows how AI can accelerate better instructional design decisions when it is paired with human judgment, learning science, and systems thinking.",
+      "Bradley's current seven-capability pathway is the first complete demonstration of the system—not a universal or permanent prescription for every instructional designer.",
     imageUrl:
       "https://cdn.jsdelivr.net/gh/BradleyAPierce/future-of-id-images@main/dashboard-banner-overlay-web640x287.jpg",
     primaryCta: { label: "Start with Orientation", href: "/course/orientation" },
@@ -56,7 +56,7 @@ export const landingContent = {
     eyebrow: "How the Platform Teaches",
     title: "Learn, practice, inspect the build, then apply it.",
     intro:
-      "Future of ID does not stop at explaining concepts. Each module moves from understanding to practice, then opens the design decisions behind the experience so learners can transfer the insight into their own work.",
+      "Future of ID uses a reusable learning architecture: Theory, Experience, Reverse Build, and Reflection. Each module moves from understanding to practice and feedback, then opens the design decisions behind the experience so learners can transfer the insight into their own work.",
     steps: [
       {
         label: "Learn",
@@ -90,14 +90,14 @@ export const landingContent = {
   },
   whatIs: {
     eyebrow: "What Future of ID Is",
-    title: "A field guide for the next shape of instructional design work.",
+    title: "A repeatable system for intentional capability development.",
     intro:
-      "Future of ID helps experienced IDs, L&D professionals, and career-transition learners strengthen the judgment required to design learning systems, not just deliver course assets.",
+      "Future of ID helps practitioners identify, develop, apply, and share future-relevant capabilities through a reusable learning architecture. Sharing means making professional reasoning, artifacts, reflections, and design lessons understandable for others to inspect or adapt.",
     items: [
       {
         title: "Practical Learning Pathway",
         description:
-          "Explore AI literacy, performance consulting, analytics, scenarios, adaptive learning, content systems, and trust through a structured course path.",
+          "Explore Bradley's current seven-capability pathway as a complete demonstration of the method, not as the only valid pathway.",
       },
       {
         title: "Transparent Implementation",
@@ -120,7 +120,7 @@ export const landingContent = {
     eyebrow: "What Future of ID Is Not",
     title: "Not a prediction platform. Not a universal prescription.",
     intro:
-      "This is not a claim that every instructional designer needs to code, build AI systems, or follow the same technical path.",
+      "This is not a claim that every instructional designer needs the same capabilities, technical depth, or professional path. The current platform does not diagnose needs or generate personalized pathways automatically.",
     items: [
       {
         title: "Not a trend report",
@@ -148,7 +148,7 @@ export const landingContent = {
     eyebrow: "Different Paths",
     title: "There is more than one credible future for instructional designers.",
     intro:
-      "Roles, teams, industries, and interests vary. Future of ID treats technical depth as a set of strategic choices, not a single ladder everyone must climb.",
+      "Roles, responsibilities, organizations, industries, career directions, and goals vary. Another practitioner may select, replace, or add capability areas while preserving the Future of ID method and learning architecture; the current platform does not make those selections automatically.",
     items: [
       {
         label: "Foundation",
@@ -242,7 +242,7 @@ export const landingContent = {
       {
         title: "Guided modules",
         description:
-          "Seven capability areas cover AI literacy, performance consulting, analytics, scenarios, adaptive learning, content systems, and trust.",
+          "Bradley's current implemented pathway covers AI literacy, performance consulting, analytics, scenarios, adaptive learning, content systems, and trust.",
       },
       {
         title: "Scenario practice",
@@ -262,10 +262,10 @@ export const landingContent = {
     ] satisfies LandingCard[],
   },
   capabilities: {
-    eyebrow: "Seven Capabilities",
-    title: "A strategic preview of the modern ID capability stack.",
+    eyebrow: "Current Implemented Pathway",
+    title: "Bradley's seven-capability demonstration.",
     intro:
-      "These seven areas extend familiar instructional design strengths into the systems work learning teams are being asked to own: judgment, performance, evidence, practice, adaptation, maintainability, and trust.",
+      "These seven areas form Bradley's launch-stable professional pathway and the first complete demonstration of the capability development system. They are coherent and practical, but not universal, exhaustive, or the permanent boundary of Future of ID.",
     items: [
       {
         label: "01",
@@ -322,7 +322,7 @@ export const landingContent = {
     eyebrow: "Choose Your Entry Point",
     title: "Start with the frame, or explore the capability map.",
     description:
-      "Use Orientation if you want the full product frame first. Use the Dashboard if you want to browse the seven capabilities and choose the path that fits your current questions. Neither path is required before the other.",
+      "Use Orientation to understand the reusable method and Bradley's current pathway. Use the Dashboard to browse the seven implemented capabilities and choose the area that fits your current questions. Neither path is required before the other.",
     primaryCta: { label: "Start with Orientation", href: "/course/orientation" },
     secondaryCta: { label: "Explore Capability Map", href: "/course/dashboard" },
   },

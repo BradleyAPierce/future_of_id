@@ -51,8 +51,8 @@ Section components should own section framing and hierarchy. Visual components s
 | `GuidedPathSection` | Hope | Show Future of ID as a practical path into the shift without implying one required technical route. | Partial | Yes | Path steps, short intro, optional CTA. | May later inform orientation onboarding, but homepage framing is specific. |
 | `LearningLoopSection` | Understanding | Frame the learning-loop explanation and provide section-level copy. | Partial | No | Section intro, optional CTA, visual data. | Could be reused in orientation with different copy. |
 | `LearningLoopVisual` | Understanding | Show Theory -> Experience -> Reverse Build -> Reflection as a clear visual model. | Yes | No | Four learning-loop steps with labels, meanings, descriptions, and optional icons. | Strong platform-wide candidate. |
-| `CapabilityMapSection` | Confidence | Frame the seven-capability preview without overexplaining each capability. | Partial | No | Section intro, capability map data, optional CTA. | Should defer detail to orientation and modules. |
-| `CapabilityMap` | Confidence | Show the seven capabilities as a connected system. | Yes | No | Seven capability labels, short titles, focus terms, relationships or grouping metadata. | Reusable in orientation, dashboard, and capability overview contexts. |
+| `CapabilityMapSection` | Confidence | Frame Bradley's current seven-capability demonstration without overexplaining each capability. | Partial | No | Section intro, capability map data, optional CTA. | Should defer the canonical system definition to the capability model and deeper pathway context to orientation. |
+| `CapabilityMap` | Confidence | Show Bradley's seven capabilities as a connected current pathway. | Yes | No | Seven capability labels, short titles, focus terms, relationships or grouping metadata. | Reusable in orientation, dashboard, and capability overview contexts without implying a universal framework. |
 | `ExperienceJourneySection` | Confidence + Trust | Frame the learner journey through orientation, modules, practice, feedback, Reverse Build, reflection, and progress. | Partial | No | Section intro, journey steps, optional CTA. | Could support onboarding and dashboard education later. |
 | `ExperienceJourney` | Confidence + Trust | Visualize the learner path through the platform. | Yes | No | Journey steps, labels, descriptions, optional status or sequencing metadata. | Should not become a dashboard replica. |
 | `DifferenceSection` | Trust | Frame the platform's anti-hype and practical-positioning contrast. | Partial | Yes | Comparison pairs or principle items. | Section framing is homepage-specific, but comparison pattern may recur. |
@@ -77,9 +77,9 @@ Future reuse opportunities:
 
 Future reuse opportunities:
 
-- Orientation: introduce the seven-capability system in more detail.
+- Orientation: distinguish the reusable capability development system from Bradley's current seven-capability pathway.
 - Dashboard: show progress across capability areas.
-- Module pages: locate the current module inside the broader capability system.
+- Module pages: locate the current module inside Bradley's implemented pathway.
 - Reverse Build sections: connect implementation decisions to capability goals.
 - About or portfolio pages: explain the product's strategic scope.
 

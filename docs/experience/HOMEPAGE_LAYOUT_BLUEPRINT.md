@@ -68,7 +68,7 @@ The scroll should progressively reduce uncertainty. Early sections answer what t
 
 - **Experience moment:** Confidence
 - **Primary learner question:** What will I actually learn?
-- **Content role:** Preview the seven capabilities as a connected system for modern instructional design work.
+- **Content role:** Preview Bradley's current seven capabilities as the first complete demonstration of the reusable system.
 - **Recommended visual structure:** A capability map, layered model, or system view with short labels and restrained support text.
 - **CTA role:** Optional link to orientation or a capability preview anchor. Avoid turning this into a full course catalog.
 - **Layout notes:** The map should not become dense. Capability details should be deferred to orientation and module pages. The homepage only needs enough information to show coherence and motivate the next step.
@@ -155,7 +155,7 @@ Avoid repeated card-grid rhythm. Cards may appear inside a section when they cla
 ### Capability Map
 
 - Include a compact intro.
-- Show the seven-capability system visually.
+- Show the current seven-capability demonstration visually without presenting it as universal or permanent.
 - Use short labels only.
 - Defer deeper details to orientation and module pages.
 - Avoid making every capability equal to a full card with long text.

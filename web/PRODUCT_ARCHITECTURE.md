@@ -4,6 +4,8 @@
 
 Version: 1.0
 
+**Positioning status:** This document remains under evaluation. For capability philosophy and current-pathway positioning, `docs/strategy/FUTURE_READY_CAPABILITY_MODEL.md` is canonical. This document must not be used to redefine Future of ID as a permanently fixed seven-capability framework.
+
 ---
 
 # Purpose
@@ -32,9 +34,9 @@ This document should guide:
 
 # Product Definition
 
-Future of ID is a guided professional learning platform that helps instructional designers understand and apply the capabilities shaping the future of the profession.
+Future of ID is a capability development system demonstrated through a guided professional learning platform. The current product implements Bradley's seven-capability pathway as the first complete demonstration of the reusable method and learning architecture.
 
-The platform teaches the future of instructional design by demonstrating it.
+The platform demonstrates capability development by applying its own reusable method and learning architecture.
 
 Future of ID combines:
 
@@ -202,7 +204,8 @@ Purpose:
 Introduce:
 
 - platform purpose
-- seven capabilities
+- capability development method and reusable learning architecture
+- Bradley's current seven-capability demonstration
 - learning model
 - AI interactions
 - progress tracking
@@ -255,7 +258,7 @@ Reduce friction and encourage progression.
 
 # Capability Architecture
 
-Future of ID currently contains seven capabilities.
+Future of ID currently implements Bradley's seven-capability professional pathway. This launch-stable pathway is the first complete demonstration of the system, not its universal, exhaustive, or permanent boundary.
 
 ## 1
 

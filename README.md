@@ -1,6 +1,6 @@
 future_of_id
 
-future_of_id is a guided, self-paced learning platform exploring the capabilities shaping the future of instructional design through AI, systems thinking, simulation design, analytics, adaptive learning, and human-centered change.
+future_of_id is a capability development system demonstrated through a guided, self-paced learning platform for instructional designers and L&D professionals.
 
 This project is intentionally built as both:
 
@@ -10,6 +10,8 @@ This project is intentionally built as both:
 The goal is not just to talk about the future of instructional design.
 
 The goal is to let people experience it, inspect it, and understand the decisions behind it.
+
+The system provides a repeatable method for identifying, developing, applying, and sharing future-relevant capabilities. Its reusable learning architecture connects Theory, Experience, Reverse Build, and Reflection. Sharing means making applied reasoning, artifacts, reflections, and design lessons understandable for others to inspect or adapt; it does not imply a social network or publishing platform.
 
 ⸻
 
@@ -67,7 +69,9 @@ The project is based on the belief that instructional designers learn more effec
 
 ⸻
 
-The Seven Capability Areas
+Current Implemented Pathway: Seven Capability Areas
+
+The current seven capabilities are Bradley's implemented professional pathway and the first complete demonstration of the capability development system. They are a practical example, not a universal framework, exhaustive list, or permanent boundary. Another practitioner may select different capability areas while preserving the same method and learning architecture.
 
 1. AI Literacy and Agent-Enabled Learning Design
 2. Performance Consulting and Business Alignment

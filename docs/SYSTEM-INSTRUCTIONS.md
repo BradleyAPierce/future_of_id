@@ -43,7 +43,7 @@ These define the **core structure of the system** and must always be followed.
 
 6. `docs/strategy/DECISIONS.md` → locked constraints and decisions
 7. `docs/strategy/BLUEPRINT.md` → product vision and experience design
-8. `docs/strategy/FUTURE_READY_CAPABILITY_MODEL.md` → rationale for the seven-capability framework
+8. `docs/strategy/FUTURE_READY_CAPABILITY_MODEL.md` → canonical capability development system philosophy and current-pathway positioning
 
 Used to guide implementation decisions and resolve ambiguity.
 

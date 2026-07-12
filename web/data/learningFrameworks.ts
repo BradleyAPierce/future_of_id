@@ -36,11 +36,11 @@ export const learningFrameworks = [
   },
   {
     id: "learning-system",
-    title: "Learning System",
+    title: "Capability Development System",
     mentalModel:
-      "Future of ID as a connected learning system where practical learning, transparent implementation, systems thinking, and professional calibration reinforce one another.",
+      "Future of ID uses a repeatable method and reusable Theory, Experience, Reverse Build, and Reflection architecture to develop future-relevant capabilities.",
     transformationalQuestion:
-      "How might I move from creating course assets to designing connected learning systems?",
+      "How can I identify, develop, apply, and share capabilities relevant to my professional context?",
     imageUrl: `${GITHUB_IMAGE_BASE}/future-of-id-learning-system-portrait.png`,
     alt: "Future of ID learning system framework showing practical learning, transparent implementation, systems thinking, and professional calibration.",
     status: "active",
@@ -62,9 +62,9 @@ export const learningFrameworks = [
     id: "different-paths",
     title: "Different Paths",
     mentalModel:
-      "Instructional designers can grow into future-ready practice through multiple credible paths rather than one prescribed technical ladder.",
+      "Practitioners may select different capability areas based on role, responsibilities, organization, industry, career direction, and goals while preserving the same development method.",
     transformationalQuestion:
-      "Which future-ready instructional design path fits my role, context, and level of technical ownership?",
+      "Which capabilities matter in my context, and how might I organize them into an intentional pathway?",
     imageUrl: `${GITHUB_IMAGE_BASE}/Different-Paths-Landscape.jpg`,
     alt: "Different Paths framework showing multiple credible routes for instructional designers developing future-ready capabilities.",
     status: "active",
@@ -74,11 +74,11 @@ export const learningFrameworks = [
     id: "capability-ecosystem",
     title: "Stronger Together",
     mentalModel:
-      "The seven Future of ID capabilities work as an ecosystem of judgment, evidence, systems thinking, and human-centered practice.",
+      "Bradley's current seven capabilities work as the first complete demonstration of an ecosystem of judgment, evidence, systems thinking, and human-centered practice.",
     transformationalQuestion:
-      "How do these capabilities connect into a broader instructional design practice instead of isolated topics?",
+      "What does this implemented pathway demonstrate, and which capability areas might change in another practitioner's context?",
     imageUrl: `${GITHUB_IMAGE_BASE}/Stronger-Together-Landscape.jpg`,
-    alt: "Capability Ecosystem framework showing the seven Future of ID capabilities as connected parts of a broader instructional design practice.",
+    alt: "Capability Ecosystem framework showing Bradley's current seven Future of ID capabilities as the first complete demonstration of a reusable capability development system.",
     status: "active",
     intendedUses: ["homepage", "orientation", "modules", "downloads", "presentations"],
   },

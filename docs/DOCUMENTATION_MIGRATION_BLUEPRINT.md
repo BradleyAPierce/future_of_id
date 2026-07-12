@@ -72,7 +72,7 @@ Notes:
 | `docs/reference/INITIAL_REPO_STRUCTURE.md` | `docs/reference/INITIAL_REPO_STRUCTURE.md` or `docs/archive/INITIAL_REPO_STRUCTURE.md` | Archive / Reference | Archive Later | Archive | Low | Mark historical later; final archive/reference decision needed first. |
 | `docs/strategy/BLUEPRINT.md` | `docs/strategy/BLUEPRINT.md` | Strategy | Keep | Strategy | Medium | Primary strategy source of truth. |
 | `docs/strategy/DECISIONS.md` | `docs/decisions/DECISIONS.md` | Decisions | Review Before Move | Decisions | High | Decide whether to move as legacy decision log or split stable/open decisions. |
-| `docs/strategy/FUTURE_READY_CAPABILITY_MODEL.md` | `docs/strategy/FUTURE_READY_CAPABILITY_MODEL.md` | Strategy | Keep | Strategy | Low | Primary capability model source. |
+| `docs/strategy/FUTURE_READY_CAPABILITY_MODEL.md` | `docs/strategy/FUTURE_READY_CAPABILITY_MODEL.md` | Strategy | Keep | Strategy | Low | Canonical capability development system philosophy and current-pathway positioning source. |
 | `docs/strategy/PROJECT-BRAIN.md` | `docs/reference/PROJECT-BRAIN.md` or `docs/archive/PROJECT-BRAIN.md` | Archive / Reference | Archive Later | Archive | Medium | Historical broad project brain; preserve context but avoid active authority. |
 | `docs/strategy/ROADMAP.md` | `docs/strategy/ROADMAP.md` | Strategy | Keep | Strategy | Low | Keep as roadmap source. |
 | `docs/strategy/STRATEGY.md` | `docs/strategy/STRATEGY.md` | Strategy | Review Before Move | Strategy | Low | Keep for now; later clarify historical/current sections. |

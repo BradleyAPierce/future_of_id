@@ -6,24 +6,26 @@ future_of_id
 
 ## Project Type
 
-Guided, self-paced, interactive learning course with progress tracking.
+Capability development system demonstrated through a guided, self-paced, interactive learning course with progress tracking.
 
 ## Project Purpose
 
-future_of_id is a flagship guided learning product that explores the future of instructional design through seven research-grounded capabilities. It is designed to teach the L&D community while also serving as a portfolio-quality demonstration of full-stack learning experience development.
+future_of_id is a capability development system: a repeatable method and reusable learning architecture for identifying, developing, applying, and sharing future-relevant instructional design capabilities. The current guided course implements Bradley's seven-capability professional pathway as the first complete demonstration of that system and as a portfolio-quality example of full-stack learning experience development.
+
+The canonical capability-development-system definition lives in `docs/strategy/FUTURE_READY_CAPABILITY_MODEL.md`. This blueprint defines the product vision and applies that definition; it does not create a separate capability philosophy.
 
 ## Primary Goals
 
-1. Teach the L&D community how instructional design is evolving.
-2. Ground future-facing ideas in credible learning theory and industry research.
-3. Help newer and experienced practitioners understand the next generation of instructional design capabilities.
-4. Demonstrate these capabilities through interactive, AI-enabled learning experiences.
+1. Demonstrate a repeatable method for identifying, developing, applying, and sharing future-relevant instructional design capabilities.
+2. Ground individual capability concepts in credible learning theory, professional practice, and appropriate research.
+3. Help newer and experienced practitioners develop capabilities relevant to their own roles and professional direction.
+4. Demonstrate Bradley's current seven-capability pathway through interactive, AI-enabled learning experiences.
 5. Document the reverse engineering behind each experience.
 6. Support the creator's growth as a full-stack developer and modern learning architect.
 
 ## Course-Level Learning Objective
 
-By the end of this guided experience, learners will be able to evaluate the seven capabilities shaping the future of instructional design and apply those capabilities to design more strategic, adaptive, AI-enabled, data-informed, and human-centered learning experiences.
+By the end of this guided experience, learners will be able to evaluate and apply the seven capabilities in Bradley's current pathway, explain how the capability development method works, and consider how their own role and goals may require a different capability pathway.
 
 ## Value Statement
 
@@ -46,7 +48,7 @@ This course helps instructional designers move from building courses to designin
 
 ## Design Principles
 
-1. **Research-grounded:** Every capability must be defensible through industry research and L&D practice.
+1. **Evidence-grounded:** Individual capability concepts must be defensible through credible learning theory, research, L&D practice, or documented professional reasoning. Research is not claimed to have independently determined the exact seven-capability collection.
 2. **Instructionally credible:** The experience must align with strong learning design principles, not just trend language.
 3. **Practice-forward:** Learners should interact with the concept, not just read about it.
 4. **Transparent by design:** Reverse engineering is part of the instruction.
@@ -58,12 +60,13 @@ This course helps instructional designers move from building courses to designin
 
 ### Module 0 — Orientation
 
-**Title:** The Future of Instructional Design: Seven Capabilities for the Next Generation
+**Title:** Future of ID: A Demonstrated Capability Development Pathway
 
 Purpose:
 
 - establish the need for change
-- introduce the seven capabilities
+- introduce Bradley's current seven-capability pathway as the first complete demonstration of the system
+- explain that other practitioners may identify different capability needs
 - explain the guided experience model
 - orient learners to progress tracking, interaction types, and course flow
 
@@ -110,7 +113,7 @@ Every module follows the same instructional sequence:
 
 ## Overarching Narrative
 
-The course should present the future of instructional design not as a rejection of traditional learning science, but as an expansion of it through more intelligent, adaptive, data-rich, and practice-based systems.
+The course should present capability development not as a rejection of traditional learning science, but as a reusable way to extend it through more intelligent, adaptive, data-rich, and practice-based systems. Bradley's seven capabilities are the current implementation, not a universal or permanent prescription.
 
 ## Success Criteria
 
@@ -119,6 +122,8 @@ The experience is successful if it:
 - feels cohesive from module to module
 - demonstrates clear instructional intent
 - helps learners understand and apply each capability
+- makes the reusable capability development method clear
+- helps learners recognize that their own capability needs may differ
 - showcases full-stack learning product design
 - positions the creator as a credible thought leader and builder in L&D
 

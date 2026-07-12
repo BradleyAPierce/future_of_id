@@ -16,7 +16,7 @@ The first implementation slice should add the missing learning-loop model:
 Theory -> Experience -> Reverse Build -> Reflection
 ```
 
-The goal is to help visitors understand how Future of ID teaches before they encounter the seven-capability preview or the existing repeated explanatory sections.
+The goal is to help visitors understand the reusable capability development method before they encounter Bradley's current seven-capability preview or the existing repeated explanatory sections.
 
 This slice should make the homepage more clearly function as Module -1 without attempting a full homepage redesign.
 

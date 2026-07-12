@@ -106,7 +106,7 @@ Current status: final archive/reference strategy is not decided yet.
 | Product vision | `strategy/BLUEPRINT.md` |
 | Product strategy | `strategy/STRATEGY.md` |
 | Long-term product roadmap and phase planning | `strategy/ROADMAP.md` |
-| Capability model | `strategy/FUTURE_READY_CAPABILITY_MODEL.md` |
+| Canonical capability development system philosophy and current-pathway positioning | `strategy/FUTURE_READY_CAPABILITY_MODEL.md` |
 | Content model | `architecture/CONTENT_ARCHITECTURE.md` |
 | Technical direction | `architecture/TECH_ARCHITECTURE.md` |
 | Site and route structure | `architecture/SITE_MAP.md` |

@@ -57,14 +57,14 @@ Interested, alert, and pleasantly surprised.
 
 ### Page Responsibility
 
-The first surface should communicate a clear product promise: Future of ID helps instructional designers understand and practice the capabilities shaping the field.
+The first surface should communicate a clear product promise: Future of ID provides a reusable system for intentional capability development and demonstrates it through Bradley's current pathway.
 
 It should quickly separate the product from generic AI training, static articles, slide-like courseware, or corporate LMS patterns.
 
 ### Success Indicators
 
 - The learner understands the product has a point of view.
-- The learner sees the seven-capability frame as useful rather than abstract.
+- The learner sees Bradley's seven-capability demonstration as useful without mistaking it for a universal framework.
 - The learner senses that the experience is polished and professionally relevant.
 
 ### Design Implications

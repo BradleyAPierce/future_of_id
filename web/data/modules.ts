@@ -11,9 +11,9 @@ export type ModuleMetadata = {
 export const modules: ModuleMetadata[] = [
   {
     slug: "orientation",
-    title: "The Future of Instructional Design",
+    title: "Future of ID Capability Development System",
     description:
-      "An introduction to the seven core capabilities instructional designers need to work effectively with AI.",
+      "An introduction to the reusable capability development method and Bradley's current seven-capability pathway.",
     order: 0,
     estimatedTime: "10 min",
     type: "orientation",

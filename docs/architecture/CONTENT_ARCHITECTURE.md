@@ -8,11 +8,26 @@ Content should be modular, reusable, and scalable. Each module should support th
 2. Experience
 3. Reverse Build
 
+Reflection follows the three core content layers as the transfer and closure pattern. Together, Theory, Experience, Reverse Build, and Reflection form the reusable learning architecture defined in `docs/strategy/FUTURE_READY_CAPABILITY_MODEL.md`.
+
+## Capability Pathway Reuse
+
+The current seven modules implement Bradley's launch pathway; they do not permanently define Future of ID. Another practitioner may replace capabilities, add capabilities, or create a different pathway based on role, responsibilities, organization, industry, career direction, and professional goals.
+
+The pathway may change while the learning architecture remains stable:
+
+1. Theory
+2. Experience, including applied practice and feedback
+3. Reverse Build
+4. Reflection
+
+This is content and architecture portability, not automatic personalization. The current platform does not diagnose capability needs, recommend capability selections algorithmically, or generate adaptive learning plans.
+
 ## Orientation Module Structure
 
 ### Purpose
 
-Introduce the course, establish credibility, and frame the seven capabilities as a coherent system.
+Introduce the capability development system, establish credibility, and frame Bradley's current seven capabilities as its first complete demonstration.
 
 ### Core Sections
 

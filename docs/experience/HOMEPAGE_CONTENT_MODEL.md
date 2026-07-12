@@ -61,7 +61,7 @@ Primary navigation and a clear first CTA should be available, but the moment sho
 
 Primary: Start Orientation.
 
-Secondary: Preview the capability model or learning approach.
+Secondary: Preview Bradley's current capability pathway or the reusable learning approach.
 
 ### 2. Hope
 
@@ -140,17 +140,17 @@ What will I actually learn?
 
 #### Key Message
 
-The platform is organized around seven connected capabilities that help instructional designers move from course production toward learning systems design.
+The current platform implements Bradley's seven connected capabilities as the first complete demonstration of a reusable capability development system.
 
 #### Supporting Content
 
-- The seven capabilities as a coherent system.
+- Bradley's current seven capabilities as a coherent pathway demonstration.
 - A brief description of each capability's role in the broader model.
 - Enough detail to motivate orientation, not enough to fully teach the model.
 
 #### Recommended Visual
 
-A capability map that shows the seven capabilities as related parts of a system.
+A capability map that shows Bradley's current seven capabilities as related parts of one implemented pathway.
 
 #### Interaction
 
@@ -206,7 +206,7 @@ Where do I start?
 
 #### Key Message
 
-Start with orientation to see the system, understand the seven capabilities, and enter the guided course with context.
+Start with orientation to understand the reusable system, see Bradley's current seven-capability demonstration, and enter the guided course with context.
 
 #### Supporting Content
 
@@ -237,7 +237,7 @@ This section defines the purpose of the content in each homepage moment. It does
 | Awareness | Name the shift in instructional design work. | Explain that ID work is expanding into AI-enabled workflows, systems thinking, evidence, practice, adaptation, and trust. | Hero/product visual. | Navigation and clear CTA only. | `HomepageHero` |
 | Hope | Present Future of ID as a practical guided path. | Explain that learners can engage at different levels of technical depth and use the platform to develop judgment. | Guided path graphic. | Optional light inspection; no complex choice. | `ExperienceJourney` or `VisualFrameworkSection` |
 | Understanding | Explain how the platform teaches. | Define Theory, Experience, Reverse Build, and Reflection by purpose. | Learning-loop diagram. | Optional reveal states; must work without interaction. | `LearningLoopVisual` |
-| Confidence | Preview the seven capabilities. | Explain that the capabilities form a connected model for modern instructional design work. | Capability map. | Optional capability inspection; avoid full module-browser complexity. | `CapabilityMap` |
+| Confidence | Preview Bradley's current seven capabilities. | Explain that the capabilities form a connected implemented pathway and the first complete system demonstration, not a universal framework. | Capability map. | Optional capability inspection; avoid full module-browser complexity. | `CapabilityMap` |
 | Trust | Explain why the platform is credible. | Connect transparency, implementation evidence, Reverse Build, and instructional design judgment. | Reverse Build preview or comparison graphic. | Optional focused preview of rationale-to-implementation relationship. | `ReverseBuildPreview` or `DifferenceComparison` |
 | Commitment | Invite the learner into orientation. | Explain that orientation gives the full system view before modules begin. | Focused CTA section. | Primary CTA interaction. | `HomepageCTA` |
 
@@ -254,7 +254,7 @@ The homepage owns the first encounter:
 - the field-level shift
 - the guided path promise
 - the learning loop
-- a preview of the seven capabilities
+- a preview of Bradley's current seven-capability pathway
 - a high-level credibility signal
 - the Start Orientation invitation
 
@@ -262,7 +262,7 @@ The homepage owns the first encounter:
 
 Orientation owns formal onboarding:
 
-- why these seven capabilities matter
+- why Bradley selected these seven capabilities for the current pathway
 - how the guided course works
 - what learners will do in modules
 - how progress works
@@ -309,7 +309,7 @@ Reverse Build owns design rationale and implementation transparency:
 
 - Practical positioning as a guided learning platform.
 - The shift from course production to learning systems design.
-- The seven-capability model.
+- Bradley's current seven-capability demonstration.
 - The Theory -> Experience -> Reverse Build -> Reflection loop.
 - The anti-hype stance.
 - Reverse Build as a signature product concept.
@@ -336,7 +336,7 @@ Why: the homepage should reduce cognitive load and avoid becoming a long explana
 ### Content to Move
 
 - Detailed technical-adoption path discussion should move to About or Orientation.
-- Deeper seven-capability rationale should move to Orientation and strategy/capability docs.
+- Deeper current-pathway rationale should move to Orientation, while the canonical system definition remains in `FUTURE_READY_CAPABILITY_MODEL.md`.
 - Extended implementation transparency rationale should move to About or Reverse Build.
 - Detailed module-specific learning promises should move to module pages.
 
@@ -374,7 +374,7 @@ Visuals should clarify meaning, sequence, or relationships. They should not deco
 | --- | --- | --- | --- | --- |
 | `HomepageHero` | Introduce the field shift, platform promise, and primary CTA. | Partial | Yes | Public landing pages or future campaign pages may reuse the structure with different content. |
 | `LearningLoopVisual` | Show Theory, Experience, Reverse Build, and Reflection as the learning model. | Yes | No | Orientation, module intros, docs, Reverse Build explanations. |
-| `CapabilityMap` | Show the seven capabilities as a connected system. | Yes | No | Orientation, dashboard, capability overview, future portfolio/case-study pages. |
+| `CapabilityMap` | Show Bradley's seven capabilities as a connected current pathway. | Yes | No | Orientation, dashboard, capability overview, future portfolio/case-study pages. |
 | `ExperienceJourney` | Show the learner path through orientation, modules, practice, feedback, Reverse Build, reflection, and progress. | Yes | No | Orientation, dashboard onboarding, completion summaries. |
 | `DifferenceComparison` | Clarify what Future of ID is and is not. | Partial | No | About page, landing page, product-positioning pages. |
 | `ReverseBuildPreview` | Introduce Reverse Build as a way to inspect design rationale and implementation decisions. | Yes | No | Module pages, Reverse Build sections, portfolio/case-study content. |
@@ -390,7 +390,7 @@ After **Hope**, learners should understand that Future of ID offers a practical,
 
 After **Understanding**, learners should understand the learning loop and how the platform teaches.
 
-After **Confidence**, learners should understand that the seven capabilities form a coherent system.
+After **Confidence**, learners should understand that Bradley's seven capabilities form a coherent demonstration while the reusable system can support other pathway selections.
 
 After **Trust**, learners should understand why the platform is credible and how Reverse Build exposes the thinking behind the work.
 

@@ -11,16 +11,16 @@ export const DEFAULT_BANNER_IMAGE =
   "https://cdn.jsdelivr.net/gh/BradleyAPierce/future-of-id-images@main/dashboard-banner-overlay-web640x287.jpg";
 
 export const dashboardBanner: PageBannerConfig = {
-  title: "Future of Instructional Design",
+  title: "Bradley's Current Capability Pathway",
   subtitle:
-    "A guided learning experience to help instructional designers build practical skills in AI, analytics, systems thinking, and human-centered design.",
+    "Seven implemented capability areas demonstrating the reusable Future of ID development method.",
   imageUrl: DEFAULT_BANNER_IMAGE,
 };
 
 export const orientationBanner: PageBannerConfig = {
-  title: "The Future of Instructional Design",
+  title: "Future of ID Capability Development System",
   subtitle:
-    "Build future-ready instructional design capabilities faster while keeping the learning science, performance focus, and design judgment that still matter.",
+    "Identify, develop, apply, and share future-relevant capabilities through a reusable learning architecture.",
   imageUrl:
     "https://cdn.jsdelivr.net/gh/BradleyAPierce/future-of-id-images@main/orientation-banner-overlay-web640x287.jpg",
   pills: ["Orientation"],

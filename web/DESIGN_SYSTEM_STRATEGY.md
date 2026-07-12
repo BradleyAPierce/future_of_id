@@ -434,6 +434,6 @@ The design system is successful when:
 
 # Final Principle
 
-Future of ID teaches the future of instructional design by demonstrating it.
+Future of ID makes capability development visible by demonstrating its reusable method and learning architecture.
 
 The design system should reinforce that idea on every page.

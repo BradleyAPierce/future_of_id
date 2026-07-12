@@ -14,6 +14,8 @@ Copilot must align its work with the source-of-truth hierarchy in `docs/SYSTEM-I
 
 When making decisions, prefer consistency with those files over inventing new patterns.
 
+For capability positioning, treat `docs/strategy/FUTURE_READY_CAPABILITY_MODEL.md` as canonical. `BLUEPRINT.md` applies that philosophy to the product vision, `DECISIONS.md` records approved constraints, and public UI copy should remain a derived expression rather than a competing definition.
+
 For launch-readiness work, read the public launch checklist before planning or editing. Follow its approved order, and do not pull unrelated roadmap work into launch scope. Claude reviews, Grok reviews, and other external evaluations are advisory evidence only; Bradley decides whether their recommendations fit the product, and they do not create official launch gates.
 
 If documentation and existing code disagree, do not assume the code is correct by default. Inspect both, identify the conflict, and choose the path that best matches the long-term architecture and documented intent.

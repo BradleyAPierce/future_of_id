@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     template: "%s | Future of ID",
   },
   description:
-    "A practical exploration of instructional design work through AI-enabled workflows, modern learning systems, and transparent design practice.",
+    "A capability development system demonstrated through Bradley's current seven-capability instructional design pathway and a reusable learning architecture.",
 };
 
 export default function RootLayout({

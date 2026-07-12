@@ -36,7 +36,7 @@ It is designed to feel like a modern professional learning product.
 
 The experience should communicate confidence, curiosity, craftsmanship, and optimism.
 
-Learners should feel that they are participating in the future of instructional design—not simply reading about it.
+Learners should feel that they are actively developing relevant instructional design capabilities—not simply reading about change in the profession.
 
 The platform should encourage exploration, experimentation, reflection, and continuous professional growth.
 
@@ -44,9 +44,9 @@ The platform should encourage exploration, experimentation, reflection, and cont
 
 # Core Experience Philosophy
 
-Future of ID exists to help instructional designers evolve from course builders into learning architects.
+Future of ID exists to help instructional designers develop capabilities that support movement from course building toward learning architecture.
 
-The product teaches the future of instructional design by using modern instructional design methods.
+The product demonstrates a reusable capability development method through Bradley's current seven-capability pathway.
 
 Every interaction should reinforce that philosophy.
 

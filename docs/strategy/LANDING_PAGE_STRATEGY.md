@@ -20,17 +20,21 @@ Core Positioning
 
 Primary Positioning Statement
 
-Future of ID is a practical exploration of how instructional design work is evolving through AI-enabled workflows, modern development systems, and transparent design practice.
+Future of ID is a capability development system: a repeatable method and reusable learning architecture for identifying, developing, applying, and sharing future-relevant instructional design capabilities.
 
-The platform documents real projects, experiments, workflows, decisions, constraints, and lessons learned from actual implementation work.
+The platform demonstrates that system through Bradley's current seven-capability professional pathway and documents real projects, experiments, workflows, decisions, constraints, and lessons learned from implementation work.
 
-Future of ID is not attempting to predict the future of instructional design. It is documenting one practitioner’s evolving experience working inside changes that are already happening.
+Future of ID is not attempting to predict the future of instructional design or prescribe one universal capability framework. It documents one practitioner's evolving experience and makes the underlying development method reusable.
 
 ⸻
 
 Important Positioning Clarification
 
 Future of ID does not assume that every instructional designer needs the same level of technical depth.
+
+It also does not assume that every practitioner needs the same capability collection. Capability selections may change based on role, responsibilities, organization, industry, career direction, and professional goals while the Theory, Experience, Reverse Build, and Reflection architecture remains reusable.
+
+The current platform does not automatically diagnose needs, recommend capabilities, or generate personalized pathways.
 
 Instructional design roles vary significantly depending on:
 
@@ -68,6 +72,9 @@ What Future of ID Is
 
 Future of ID is:
 
+* a capability development system,
+* a repeatable method and reusable learning architecture,
+* a working demonstration through Bradley's current seven-capability pathway,
 * a practical learning platform,
 * a transparent design record,
 * a documented implementation space,
@@ -98,6 +105,8 @@ What Future of ID Is Not
 Future of ID is not:
 
 * a prediction platform,
+* a universal or exhaustive capability framework,
+* a system that automatically diagnoses needs or generates personalized pathways,
 * a thought leadership brand,
 * an AI trend commentary site,
 * a replacement for instructional design fundamentals,
@@ -380,6 +389,8 @@ The landing page should become the platform’s credibility anchor.
 
 It should help users understand that Future of ID is:
 
+* a reusable capability development method,
+* a demonstrated current pathway rather than a permanent capability boundary,
 * an evolving implementation record,
 * a practical instructional design resource,
 * and a transparent exploration of how AI-enabled workflows may expand the possibilities available to instructional designers.

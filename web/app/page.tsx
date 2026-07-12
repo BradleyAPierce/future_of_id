@@ -77,7 +77,7 @@ export default function Home() {
             intro={landingContent.capabilities.intro}>
             <LandingFrameworkPanel
               framework={learningFrameworksById["capability-ecosystem"]}
-              description="The seven capability areas are connected parts of one professional system: judgment, performance, evidence, practice, adaptation, maintainability, and trust.">
+              description="Bradley's current seven capabilities are connected parts of the first complete system demonstration: judgment, performance, evidence, practice, adaptation, maintainability, and trust.">
               <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
                 {landingContent.capabilities.items.map((item) => (
                   <div

@@ -4,7 +4,7 @@
 
 This brief defines the Future of ID homepage as the learner's first instructional experience, not simply a marketing page.
 
-The homepage should prepare learners for the guided course by introducing the problem, promise, learning model, capability system, credibility signals, and next step before formal orientation begins.
+The homepage should prepare learners for the guided course by introducing the problem, capability development system, reusable learning architecture, Bradley's current pathway, credibility signals, and next step before formal orientation begins.
 
 This is a design brief only. It does not authorize application-code changes, homepage edits, file movement, or commits.
 
@@ -37,7 +37,7 @@ The homepage should be composed as a sequence of learner-centered moments rather
 | Moment 1: Awareness | Why is instructional design changing? | Alert but not anxious | Signal a field-level shift. |
 | Moment 2: Hope | Is there a practical way to prepare? | Reassured and curious | Show Future of ID as a guided path. |
 | Moment 3: Understanding | How does this platform actually work? | Oriented | Show `Theory -> Experience -> Reverse Build -> Reflection`. |
-| Moment 4: Confidence | What will I actually learn? | Capable and motivated | Show the seven capabilities as a connected system. |
+| Moment 4: Confidence | What will I actually learn? | Capable and motivated | Show Bradley's current seven capabilities as a connected system demonstration. |
 | Moment 5: Trust | Why should I believe this is credible? | Confident in the platform | Show transparency, implementation, and Reverse Build. |
 | Moment 6: Commitment | Where do I start? | Ready | Provide a focused orientation CTA. |
 
@@ -74,9 +74,9 @@ This moment should make the platform feel learnable and navigable.
 
 ### Moment 4: Confidence
 
-The seven capabilities should be presented as a connected system. The learner should see that the course has structure and that each capability contributes to a broader shift from course production toward learning systems design.
+Bradley's current seven capabilities should be presented as a connected pathway and the first complete demonstration of the system. The learner should see that the course has structure without mistaking the current capability collection for a universal or permanent framework.
 
-The homepage should preview the capability model without fully teaching it. Deeper explanation belongs in orientation and module pages.
+The homepage should preview the current pathway without duplicating the canonical capability development system definition. Deeper explanation belongs in orientation and `FUTURE_READY_CAPABILITY_MODEL.md`.
 
 ### Moment 5: Trust
 
@@ -106,7 +106,7 @@ Recommended homepage flow:
    Show the Theory -> Experience -> Reverse Build -> Reflection loop as the platform's core learning pattern.
 
 4. **Capability System**
-   Preview the seven capabilities as a connected model rather than a long list.
+   Distinguish the reusable method from Bradley's current seven-capability demonstration, then preview the current pathway as a connected model rather than a long list.
 
 5. **Experience Journey**
    Show what learners will do: start orientation, enter modules, practice decisions, receive structured feedback, inspect Reverse Build notes, reflect, and track progress.
@@ -124,7 +124,7 @@ Recommended homepage flow:
 | Awareness | Hero/product visual | Signal a real field shift without generic SaaS polish or AI hype. |
 | Hope | Guided-path visual or short pathway model | Show that learners have a practical path into the topic. |
 | Understanding | Learning-loop diagram | Make Theory, Experience, Reverse Build, and Reflection visible. |
-| Confidence | Capability map | Show seven capabilities as a connected system, not isolated cards. |
+| Confidence | Capability map | Show Bradley's seven capabilities as a connected current pathway, not isolated cards or a universal prescription. |
 | Trust | Reverse Build preview or comparison graphic | Show transparency, implementation, and design rationale. |
 | Commitment | CTA section | Focus attention on starting orientation. |
 
@@ -142,7 +142,7 @@ Additional visual guidance:
 - Practical, grounded positioning.
 - Anti-hype stance.
 - Multiple-path framing for different instructional design roles.
-- Seven-capability model.
+- Current seven-capability demonstration.
 - Reverse Build as a signature product concept.
 - Start Orientation as the primary CTA.
 
@@ -163,13 +163,13 @@ Additional visual guidance:
 
 - Detailed explanation of different technical adoption paths.
 - Longer positioning around what the platform is not.
-- Deeper rationale for the seven-capability model.
+- Deeper rationale for Bradley's current seven-capability pathway.
 - Extended discussion of the creator's implementation path and transparency rationale.
 
 ### Become Visual
 
 - Learning loop.
-- Seven capabilities.
+- Bradley's current seven capabilities.
 - Experience journey.
 - Future of ID versus AI hype / generic course / static content library.
 - Reverse Build as a reveal of design rationale and implementation decisions.

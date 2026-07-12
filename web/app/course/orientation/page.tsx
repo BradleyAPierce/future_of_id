@@ -73,7 +73,7 @@ export default function OrientationPage() {
       <PageBanner
         imageUrl={orientationBanner.imageUrl}
         title={orientationBanner.title}
-        subtitle="Build a shared vocabulary for Future of ID, then choose the capability that matches your curiosity."
+        subtitle="Understand the capability development method, then explore Bradley's current implemented pathway."
         pills={orientationBanner.pills}
       />
 
@@ -92,10 +92,10 @@ export default function OrientationPage() {
         act="Act 2"
         title="You Already Belong"
         question="Do I need to become a technologist, coder, or AI expert to belong here?"
-        takeaway="There is more than one credible future for instructional designers. Your path depends on your role, context, strengths, and level of technical ownership.">
+        takeaway="There is more than one credible capability pathway. Your needs may differ based on your role, responsibilities, organization, industry, career direction, and goals.">
         <LandingFrameworkPanel
           framework={learningFrameworksById["different-paths"]}
-          description="Future-ready instructional design is not one ladder. Some designers deepen AI-supported writing and review, some improve production workflows, some design scenarios and feedback, and some move into systems architecture."
+          description="Another practitioner may replace or add capability areas while preserving the same learning architecture. Future of ID demonstrates that method; it does not diagnose needs or generate a pathway automatically."
         />
       </SectionFrame>
 
@@ -103,10 +103,10 @@ export default function OrientationPage() {
         act="Act 3"
         title="How Future of ID Teaches"
         question="What kind of learning experience is this?"
-        takeaway="Future of ID teaches through a connected learning system, not isolated content.">
+        takeaway="Future of ID develops capabilities through a reusable learning architecture, not isolated content.">
         <LandingFrameworkPanel
           framework={learningFrameworksById["learning-system"]}
-          description="Each module connects explanation, practice, Reverse Build, and reflection so learners can experience an idea and inspect the design rationale behind it.">
+          description="Theory, Experience, Reverse Build, and Reflection can organize different capability topics while preserving a consistent development method.">
           <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
             {learningLoop.map((step, index) => (
               <div
@@ -130,11 +130,11 @@ export default function OrientationPage() {
       <SectionFrame
         act="Act 4"
         title="How Modern Instructional Design Fits Together"
-        question="Are these seven modules separate topics, or do they form a larger professional model?"
-        takeaway="The seven capabilities reinforce one another. Together, they form one professional capability system.">
+        question="What do the current seven capabilities demonstrate about the larger system?"
+        takeaway="Bradley's seven capabilities form the first complete demonstration of the system, not its universal or permanent boundary.">
         <LandingFrameworkPanel
           framework={learningFrameworksById["capability-ecosystem"]}
-          description="These capabilities connect judgment, performance, evidence, practice, adaptation, maintainability, and trust into a stronger model of future-ready instructional design.">
+          description="This implemented pathway connects judgment, performance, evidence, practice, adaptation, maintainability, and trust. Other practitioners may create a different collection using the same method.">
           <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
             {landingContent.capabilities.items.map((item) => (
               <div
@@ -178,8 +178,9 @@ export default function OrientationPage() {
         <p className="mt-3 max-w-3xl leading-relaxed text-[var(--muted)]">
           Modules are internally guided, but the overall course path is open.
           You can start with AI Literacy for the recommended judgment baseline,
-          or open the Capability Map and choose the area that matches your
-          current question.
+          or open the Capability Map and choose from Bradley&apos;s implemented
+          pathway. The reusable method can support different capability topics,
+          but this platform does not create personalized pathways automatically.
         </p>
 
         <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap">

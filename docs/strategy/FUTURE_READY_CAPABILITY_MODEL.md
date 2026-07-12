@@ -1,18 +1,87 @@
-# Future-Ready Capability Model
+# Future of ID Capability Development System
 
 ## Purpose
 
-This document explains why the seven Future of ID capabilities were selected and how they work together as a practical development model for instructional designers and adjacent learning professionals.
+This document is the canonical positioning source for Future of ID as a capability development system. It defines the reusable method and learning architecture, then explains how Bradley's current seven-capability pathway demonstrates that system in practice.
+
+## Canonical Definition
+
+Future of ID is a capability development system, not a product permanently defined by one fixed capability list.
+
+The system combines:
+
+- a repeatable method for identifying, developing, applying, and sharing future-relevant instructional design capabilities
+- a reusable learning architecture that organizes capability development through Theory, Experience, Reverse Build, and Reflection
+
+The reusable contribution is the method and architecture. Capability topics may change when a practitioner's role, responsibilities, organization, industry, career direction, or professional goals call for a different pathway.
+
+### Repeatable Method
+
+```text
+Identify
+↓
+Develop
+↓
+Apply
+↓
+Share
+```
+
+1. **Identify** — assess current strengths, work demands, capability gaps, and future professional direction.
+2. **Develop** — build understanding through credible theory, instructional guidance, examples, and intentional practice.
+3. **Apply** — use the capability in realistic decisions, produce evidence of reasoning, receive feedback, and refine professional judgment.
+4. **Share** — make the resulting reasoning, reusable artifacts, reflections, and design lessons understandable so another practitioner can inspect or adapt them.
+
+In this method, **share** means documenting and communicating applied professional reasoning and reusable learning artifacts. It does not imply social features, a community platform, a publishing system, learner profiles, or automated portfolio functionality.
+
+### Reusable Learning Architecture
+
+```text
+Theory
+↓
+Experience
+↓
+Reverse Build
+↓
+Reflection
+```
+
+- **Theory** establishes the capability, evidence, and instructional foundations.
+- **Experience** creates applied practice and feedback around meaningful professional decisions.
+- **Reverse Build** exposes the reasoning, implementation choices, constraints, and trade-offs behind the experience.
+- **Reflection** supports transfer into the practitioner's own role, context, and next actions.
+
+Another practitioner may replace capabilities, add capabilities, or create a different pathway while preserving this architecture.
+
+### Current Implemented Pathway
+
+The seven capabilities currently implemented in Future of ID are Bradley's current professional pathway and the first complete demonstration of the capability development system.
+
+They are:
+
+- a coherent, launch-stable implementation of the method
+- a practical example of capability development through the reusable learning architecture
+- evidence that the method can produce an intentional professional learning pathway
+
+They are not:
+
+- a universal framework for instructional design
+- an exhaustive list of capabilities instructional designers may need
+- the only valid practitioner pathway
+- the permanent boundary of Future of ID
+- a capability collection independently determined or validated by research
+
+Research and established practice support the individual capability concepts and the instructional foundations used to develop them. Bradley's professional context, judgment, development needs, and goals shaped the exact seven-capability collection.
 
 The core thesis is simple:
 
-Future of ID helps instructional designers develop future-ready capabilities faster so they can create more effective learning and performance outcomes for others.
+Future of ID helps instructional designers develop future-relevant capabilities intentionally so they can create more effective learning and performance outcomes for others.
 
-The model is not meant to replace traditional instructional design foundations. It extends them. Strong analysis, sequencing, practice design, accessibility, feedback, assessment, and evaluation still matter. The seven capabilities identify where those foundations need to expand as learning work becomes more AI-enabled, data-informed, system-based, and performance-focused.
+The system is not meant to replace traditional instructional design foundations. It extends them. Strong analysis, sequencing, practice design, accessibility, feedback, assessment, and evaluation still matter. Bradley's current seven-capability pathway demonstrates several areas where those foundations can expand as learning work becomes more AI-enabled, data-informed, system-based, and performance-focused.
 
 ## Primary Audience
 
-The capability model is designed for:
+The capability development system is designed for:
 
 - instructional designers
 - curriculum developers
@@ -21,7 +90,7 @@ The capability model is designed for:
 - training specialists
 - learning leaders
 
-The model also supports career-transition learners and practitioners who want to understand how instructional design roles are changing. It does not assume every person needs the same technical depth or the same career path.
+The system also supports career-transition learners and practitioners who want to understand how instructional design roles are changing. It does not assume every person needs the same technical depth, capability selection, or career path.
 
 ## Central Problem
 
@@ -37,7 +106,7 @@ Many instructional designers learned to work inside a course-production model: a
 - managing content across systems, formats, and updates
 - building trust in AI-supported or data-informed learning experiences
 
-Traditional professional development often treats these topics separately. Future of ID treats them as a connected capability system because real learning work rarely separates them cleanly.
+Traditional professional development often treats these topics separately. Bradley's current pathway treats them as a connected demonstration because real learning work rarely separates them cleanly.
 
 ## The Transformation
 
@@ -56,7 +125,7 @@ This transformation is practical, not theoretical. It is about making better des
 
 ## Why These Seven Capabilities Were Selected
 
-The seven capabilities were selected because each one extends a traditional instructional design strength into an area where modern learning work is becoming more complex.
+Bradley selected the current seven capabilities because each one extends a traditional instructional design strength into an area where his professional work and development direction were becoming more complex.
 
 Together, they help instructional designers:
 
@@ -68,11 +137,11 @@ Together, they help instructional designers:
 - structure content so it can be reused and maintained
 - protect trust, safety, and agency in AI-enabled or data-informed experiences
 
-These capabilities were not chosen because they sound current or technical. They were chosen because they address recurring gaps between traditional course design and the demands of modern learning systems.
+These capabilities were not chosen because they sound current or technical. They were chosen because they address recurring gaps between traditional course design and the demands Bradley identified in modern learning systems. Another practitioner may identify a different capability collection while using the same method and architecture.
 
 ## Research Basis and Selection Logic
 
-The seven capabilities were selected through an internal synthesis of recurring signals across L&D practice, instructional design foundations, learning science, performance improvement, and AI-enabled workflow change.
+The seven capabilities were selected through Bradley's internal synthesis of recurring signals across L&D practice, instructional design foundations, learning science, performance improvement, AI-enabled workflow change, and his professional development needs.
 
 The current repo preserves the selection logic as a planning rationale rather than as a formal bibliography. The strongest historical planning notes identify the following patterns behind the framework:
 
@@ -94,13 +163,13 @@ The older planning notes framed each module around common evidence categories:
 - experience-layer practice opportunities
 - reverse engineering or design-rationale opportunities
 
-This is why the model is organized as a connected capability system rather than as a list of trends. Each capability links a modern pressure back to a durable instructional design foundation.
+This is why the current pathway is organized as a connected demonstration rather than as a list of trends. Each capability links a modern pressure back to a durable instructional design foundation while the reusable capability development system remains open to other pathway selections.
 
 ## Source Trail To Rebuild
 
-The current repo preserves the internal rationale for the capability model, but it does not yet preserve a formal external source trail.
+The current repo preserves the internal rationale for Bradley's current pathway, but it does not yet preserve a formal external source trail.
 
-Before public-facing claims use language such as "research-backed" or imply formal industry validation, the project should rebuild and document a bibliography for the seven-capability framework.
+Before public-facing claims use language such as "research-backed" or imply formal industry validation, the project should rebuild and document a bibliography for the individual capability concepts. Research may strengthen the evidence behind those concepts, but it should not be described as independently producing or validating Bradley's exact seven-capability collection.
 
 The source trail should include, where available:
 
@@ -113,9 +182,9 @@ The source trail should include, where available:
 - performance consulting, HPI, needs analysis, and business-alignment sources that support moving beyond course requests
 - scenario-based learning, simulation, deliberate practice, mastery learning, differentiated instruction, reusable learning objects, change management, ethical design, psychological safety, and learner trust sources
 
-At this point, the framework is supported by internal synthesis and historical planning notes. The repo does not currently document named ATD reports, Learning Guild sources, survey findings, report titles, URLs, or statistics that prove the seven capabilities were selected from a formal literature review.
+At this point, the current pathway is supported by internal synthesis and historical planning notes. The repo does not currently document named ATD reports, Learning Guild sources, survey findings, report titles, URLs, or statistics that prove the seven capabilities were selected from a formal literature review.
 
-That gap does not invalidate the model, but it should shape how the project talks about evidence. The safer language is that the framework is grounded in L&D practice, established learning theory, performance improvement, and documented internal synthesis. Stronger public claims should wait until the external source trail is rebuilt.
+That gap does not invalidate the pathway, but it should shape how the project talks about evidence. The safer language is that the individual capability concepts are grounded in L&D practice, established learning theory, performance improvement, and documented internal synthesis. Stronger public claims should wait until the external source trail is rebuilt.
 
 ## Capability 1: AI Literacy and Agent-Enabled Learning Design
 
@@ -287,10 +356,10 @@ Without this capability, learning systems may create confusion, overtrust, distr
 
 ## How the Capabilities Work Together
 
-The seven capabilities are strongest when treated as a connected system.
+Bradley's current seven capabilities are strongest when treated as a connected pathway and system demonstration.
 
 AI literacy helps designers use new tools responsibly. Performance consulting keeps the work tied to real business and workplace needs. Learning analytics helps designers use evidence to improve decisions. Scenario and simulation design turns content into practice. Adaptive architecture helps learning experiences respond to meaningful differences. Content systems thinking makes the work reusable and maintainable. Human-centered change, ethics, and learner trust protect adoption, agency, and credibility.
 
-Together, these capabilities help instructional designers move beyond course production alone and toward more strategic, adaptive, evidence-informed, AI-enabled, and human-centered learning systems.
+Together, these capabilities demonstrate one way instructional designers can move beyond course production alone and toward more strategic, adaptive, evidence-informed, AI-enabled, and human-centered learning systems.
 
 They do not replace traditional instructional design. They help instructional designers apply those foundations faster and more effectively in the conditions shaping modern learning work.

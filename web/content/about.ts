@@ -13,9 +13,9 @@ export type AboutCard = {
 export const aboutContent = {
   hero: {
     eyebrow: "About Future of ID",
-    title: "Teaching the future of instructional design by demonstrating it.",
+    title: "Making capability development visible through a working system.",
     intro:
-      "Future of ID is a working learning product that shows how instructional design is evolving: from course production toward AI-enabled, data-informed, systems-oriented learning design.",
+      "Future of ID is a capability development system: a repeatable method and reusable learning architecture for identifying, developing, applying, and sharing future-relevant instructional design capabilities.",
     creator: "Created by Bradley Pierce",
     creatorRole: "Learning architect building in public",
     proofPoints: [
@@ -31,14 +31,14 @@ export const aboutContent = {
     paragraphs: [
       "Instructional designers are still responsible for clarity, practice, accessibility, evidence, and learner trust. But the work around those responsibilities is expanding.",
       "Learning teams are being asked to use AI responsibly, interpret data, design adaptive experiences, support performance, manage reusable content, and connect learning work to business outcomes.",
-      "Future of ID exists to make that shift visible. It does not just describe the future of instructional design. It turns the future into a product you can inspect, use, question, and learn from.",
+      "Future of ID exists to make capability development visible. Its current seven-capability pathway is Bradley's implemented professional pathway and the first complete demonstration of the system—not a universal, exhaustive, or permanent prescription.",
     ],
   },
   creator: {
     eyebrow: "Creator Perspective",
     title: "Built by a learning architect, not a commentator on the sidelines.",
     intro:
-      "Bradley Pierce approaches this project as a practitioner building the thing he is trying to explain. The platform is both a learning experience and a transparent record of product decisions.",
+      "Bradley Pierce approaches this project as a practitioner building the thing he is trying to explain. The platform is both a learning experience and a transparent record of how capabilities were identified, developed, applied, and shared through documented reasoning.",
     items: [
       {
         label: "Practice",
@@ -64,7 +64,7 @@ export const aboutContent = {
     eyebrow: "Who It Helps",
     title: "Designed for learners who need more than tool tips and trend summaries.",
     intro:
-      "The course meets people at different points in their instructional design journey while keeping the same central promise: make better design decisions as the work becomes more complex.",
+      "The course demonstrates one complete pathway while the system supports a broader promise: practitioners may identify different capabilities based on their role, responsibilities, organization, industry, career direction, and goals.",
     items: [
       {
         title: "Experienced L&D professionals",
@@ -107,7 +107,7 @@ export const aboutContent = {
       {
         title: "Learning product strategy",
         description:
-          "The platform connects audience needs, capability development, product coherence, maintainability, and evidence of impact.",
+          "The platform connects audience needs, capability development, product coherence, maintainability, and evidence of impact through a reusable learning architecture.",
       },
     ] satisfies AboutCard[],
   },
@@ -115,7 +115,7 @@ export const aboutContent = {
     eyebrow: "Explore the Work",
     title: "Start with the product, then inspect the thinking behind it.",
     description:
-      "Future of ID is both a course and a demonstration. Use it to study the seven capability areas, see how the platform is structured, and decide what kind of future-facing instructional design practice you want to build.",
+      "Future of ID is both a capability development system and a working demonstration. Study Bradley's current seven-capability pathway, inspect the reusable architecture, and consider which capabilities matter in your own professional context.",
     primaryCta: { label: "Start Orientation", href: "/course/orientation" },
     secondaryCta: {
       label: "Connect on LinkedIn",
