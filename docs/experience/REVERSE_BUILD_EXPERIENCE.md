@@ -10,7 +10,11 @@ Reverse Build is a signature Future of ID learning experience. It is not a gener
 
 ## Core Definition
 
-Reverse Build reconstructs the learning experience the learner just completed from the instructional designer's perspective. It does not reverse build the module, the topic, or the code. It reveals the intentional thinking, instructional foundations, design decisions, AI collaboration, trade-offs, and learning science that shaped the experience.
+As an experience principle, Reverse Build reconstructs the learning experience from the instructional designer's perspective. It does not reverse build the module, the topic, or the code. It reveals the intentional thinking, instructional foundations, design decisions, AI collaboration, trade-offs, and learning science that shaped the experience.
+
+The current implementation presents authored professional reasoning and does not yet receive or display the learner's actual Design Practice response or AI Review. Reverse Build v2 will add that learner-artifact comparison only after the approved implementation brief, shared artifact architecture, reference implementation, and validation requirements are completed.
+
+The target learner-facing signature for Reverse Build v2 is:
 
 "You just experienced it as a learner. Now let's inspect it as an instructional designer."
 
@@ -51,18 +55,19 @@ The learning experience.
 
 ### 2. What should the learner see first?
 
-The learner should first reconnect with the learning experience they just completed before any instructional reasoning is revealed.
+In Reverse Build v2, the learner should first reconnect with available evidence from the learning experience before instructional reasoning is revealed.
 
-Reverse Build should begin by establishing the object being inspected:
+The v2 experience should begin by establishing the object being inspected:
 
 "You just experienced this as a learner. Now let's inspect it as an instructional designer."
 
-The learner should see a concise reconstruction of the experience:
+In the Reverse Build v2 target, the learner should see a concise reconstruction using available evidence:
 
 - the learning challenge
-- the decision they made
-- the AI-supported critique they received
-- their reflection
+- the Design Practice decision or response, when available
+- the associated AI Review, when available
+
+Reflection remains a separate activity after Reverse Build. Reverse Build must not receive, display, require, summarize, or depend on the learner's Reflection response or feedback.
 
 Then Reverse Build progressively reveals:
 
@@ -101,7 +106,7 @@ They should no longer see effective learning experiences as finished products to
 
 ### 1. The Experience
 
-Reconnect the learner to the activity they just completed: the challenge, decision, AI-supported critique, and reflection. This anchors Reverse Build in lived experience rather than abstract explanation.
+In the Reverse Build v2 target, reconnect the learner to the activity using the challenge, available Design Practice response or decision, and available AI Review. This anchors Reverse Build in observable practice rather than abstract explanation. Reflection remains the subsequent transfer activity and is not part of the reconstructed input.
 
 ### 2. The Problem
 
@@ -142,7 +147,9 @@ Explain how the experience supports transfer beyond the page. This layer should 
 
 ## MVP Guidance
 
-In the current MVP, Reverse Build may apply to the current React-based module experience, scenario, AI feedback, and reflection flow.
+The current implementation presents authored reasoning about the React-based module experience. It does not yet reconstruct learner-specific Design Practice or AI Review artifacts.
+
+The approved Reverse Build v2 target will reconnect available Design Practice and AI Review artifacts with the authored reasoning while preserving open access and keeping Reflection separate. `REVERSE_BUILD_V2_IMPLEMENTATION_BRIEF.md` controls v2 inputs, states, privacy, accessibility, technical boundaries, claims, and acceptance criteria after Bradley approves it.
 
 In future versions, if Storyline, iSpring, or richer interactive learning experiences appear at the top of each module, Reverse Build should naturally reconstruct those experiences.
 
@@ -168,6 +175,7 @@ The learner should leave understanding better instructional design—not better 
 
 ## Relationship to Other Documents
 
+- `REVERSE_BUILD_V2_IMPLEMENTATION_BRIEF.md` is the controlling Reverse Build v2 implementation specification after Bradley approval. It distinguishes current behavior from target behavior and defines the testable product contract.
 - `LEARNING_FRAMEWORK_LIBRARY.md` defines Reverse Build as one of Future of ID's reusable mental models and learning artifacts.
 - `EXPERIENCE_PHILOSOPHY.md` defines the product feel, interaction quality, AI posture, and expectation that Reverse Build should reveal structure rather than sit as generic content.
 - `EXPERIENCE_ARCHITECTURE.md` defines the learner autonomy model and open access principles that Reverse Build must preserve.
@@ -181,5 +189,6 @@ The learner should leave understanding better instructional design—not better 
 - Do not turn Reverse Build into a code walkthrough.
 - Do not over-explain learning theory.
 - Do not make Reverse Build dependent on module order.
+- Do not make Reverse Build receive, display, require, summarize, or depend on Reflection.
 - Do not imply AI made the design decisions.
 - Use learner-facing language such as "Inspect the Build," "Reveal the Thinking," or "Reconstruct the Experience."

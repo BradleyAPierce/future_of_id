@@ -689,51 +689,646 @@ No major coding begins until each core feature has a concise implementation brie
 
 ## 4.1 Reverse Build v2 brief
 
-- [ ] Define the current problem.
-- [ ] Define the intended learner experience.
-- [ ] Define Reverse Build as the mechanism that makes capability development visible.
-- [ ] Define how Reverse Build reveals:
-  - [ ] the capability need or professional challenge that existed
-  - [ ] what needed to be learned or investigated
-  - [ ] how concepts were applied
-  - [ ] the decisions that shaped implementation
-  - [ ] the trade-offs that existed
-  - [ ] where professional judgment remained necessary
-  - [ ] how understanding evolved through practice
-- [ ] Define how Reverse Build connects Bradley’s capability-development journey with the learner’s capability-development journey without making Bradley’s exact pathway mandatory for every learner.
-- [ ] Keep Reverse Build focused on transferable capability development and professional reasoning rather than personal journaling, autobiographical storytelling, raw development history, prompt exposure, or code walkthroughs.
-- [ ] Define the information Reverse Build must receive.
-- [ ] Define which parts become dynamic.
-- [ ] Define which existing authored layers remain unchanged.
-- [ ] Define learner privacy and control requirements.
-- [ ] Define fallback behavior.
-- [ ] Define failure behavior.
-- [ ] Define accessibility requirements.
-- [ ] Define technical constraints.
-- [ ] Define acceptance criteria.
-- [ ] Define what public claims the completed feature will support.
-- [ ] Confirm that Reverse Build preserves the sequence Design Practice → AI Review → Reverse Build → Reflection.
-- [ ] Confirm that Reverse Build does not display or depend on the learner’s Reflection.
-- [ ] Define how completed and partially completed Design Practice prompts appear when one module contains multiple prompts.
+- [x] Define the current problem.
+- [x] Define the intended learner experience.
+- [x] Define Reverse Build as the mechanism that makes capability development visible.
+- [x] Define how Reverse Build reveals:
+  - [x] the capability need or professional challenge that existed
+  - [x] what needed to be learned or investigated
+  - [x] how concepts were applied
+  - [x] the decisions that shaped implementation
+  - [x] the trade-offs that existed
+  - [x] where professional judgment remained necessary
+  - [x] how understanding evolved through practice
+- [x] Define how Reverse Build connects Bradley’s capability-development journey with the learner’s capability-development journey without making Bradley’s exact pathway mandatory for every learner.
+- [x] Keep Reverse Build focused on transferable capability development and professional reasoning rather than personal journaling, autobiographical storytelling, raw development history, prompt exposure, or code walkthroughs.
+- [x] Define the information Reverse Build must receive.
+- [x] Define which parts become dynamic.
+- [x] Define which existing authored layers remain unchanged.
+- [x] Define learner privacy and control requirements.
+- [x] Define fallback behavior.
+- [x] Define failure behavior.
+- [x] Define accessibility requirements.
+- [x] Define technical constraints.
+- [x] Define acceptance criteria.
+- [x] Define what public claims the completed feature will support.
+- [x] Confirm that Reverse Build preserves the sequence Design Practice → AI Review → Reverse Build → Reflection.
+- [x] Confirm that Reverse Build does not display or depend on the learner’s Reflection.
+- [x] Define how completed and partially completed Design Practice prompts appear when one module contains multiple prompts.
+
+### Section 4.1 Approval Record
+
+- **Status:** Approved
+- **Approval date:** July 13, 2026
+- **Approved by:** Bradley Pierce
+
+#### Decision
+
+The Reverse Build v2 implementation brief is complete, approved, and sufficiently specific to govern future artifact architecture, reference implementation, testing, and launch verification.
+
+Section 4.1 approval authorizes the implementation specification. Reverse Build v2 is not yet implemented. Later checklist sections govern technical architecture and product implementation. Approval of the brief must not be interpreted as approval of currently unsupported learner-specific product claims.
+
+#### Evidence Reviewed
+
+Approval was based on:
+
+- creation of `docs/experience/REVERSE_BUILD_V2_IMPLEMENTATION_BRIEF.md`
+- alignment of:
+  - `docs/experience/REVERSE_BUILD_EXPERIENCE.md`
+  - `docs/README.md`
+- coverage of all 26 Section 4.1 requirements
+- inclusion of all 17 required implementation-brief sections
+- definition of the current product-honesty problem and approved v2 target
+- preservation of existing authored Reverse Build reasoning and mentorship framing
+- definition of Reverse Build as the mechanism that makes capability development and professional reasoning visible
+- definition of the learner-artifact input contract
+- definition of dynamic learner artifacts versus unchanged authored layers
+- definition of multiple-prompt and partial-completion behavior
+- definition of empty, fallback, failure, and malformed-data states
+- definition of privacy and learner-control boundaries
+- definition of accessibility requirements
+- definition of technical constraints and the later Section 5 and Section 6 handoff
+- definition of supported and prohibited public claims
+- inclusion of binary, testable `RB2-*` acceptance criteria
+- explicit non-goals preventing scope expansion
+
+#### Reflection Boundary
+
+The approved instructional sequence is:
+
+> Design Practice → AI Review → Reverse Build → Reflection
+
+- Reverse Build occurs after Design Practice and AI Review.
+- Reflection remains a separate subsequent transfer activity.
+- Reverse Build must not receive, display, require, summarize, infer from, or depend on Reflection data.
+- Reverse Build may prepare learners for Reflection but may not absorb Reflection into the reconstruction.
+- The prior conflicting Reflection requirement in `REVERSE_BUILD_EXPERIENCE.md` was corrected.
+- Future implementation verification must confirm that Reflection data is never accessed by Reverse Build.
+
+#### Approved Experience Contract
+
+The brief defines Reverse Build v2 as reconnecting, when available:
+
+- the professional challenge or capability need
+- what needed to be learned, investigated, or practiced
+- the learner’s Design Practice response or decision
+- the matching AI Review feedback
+- how concepts were applied
+- authored implementation decisions
+- constraints and trade-offs
+- where professional judgment remained necessary
+- how practice and feedback may change understanding
+- transferable lessons for future work
+
+The feature must not claim to infer hidden learner growth, internal understanding, or capability mastery.
+
+#### Dynamic and Authored Content Boundaries
+
+Dynamic learner-artifact content may include:
+
+- learner Design Practice response or decision
+- matching AI Review feedback
+- prompt-level completion and review states
+- partial-completion indicators
+- contextual labels tied to the learner artifact
+
+Authored content remains controlled module content, including:
+
+- Problem or professional challenge
+- Instructional Foundations
+- Design Decisions
+- AI Collaboration
+- Design Constraints and Trade-offs
+- Transfer or reusable lessons
+- other approved authored reasoning
+
+Dynamic learner artifacts must not overwrite, regenerate, or replace authored professional reasoning.
+
+#### Multiple-Prompt Contract
+
+The approved brief requires:
+
+- stable prompt or scenario identifiers
+- correct association of each learner response with its prompt
+- correct association of each AI Review with its learner response
+- independent preservation of artifacts across prompts
+- support for partially completed modules
+- no erasure of prior artifacts when a learner changes prompts
+- continued access to authored Reverse Build content regardless of prompt completion
+
+#### Empty, Partial, and Failure States
+
+The brief defines distinct, honest behavior for:
+
+- no learner artifact
+- response without AI Review
+- pending or unavailable AI Review
+- failed AI Review
+- partially completed multi-prompt modules
+- intentionally cleared artifacts
+- unavailable local persistence
+- failed artifact retrieval
+- malformed or incompatible stored records
+- isolated prompt-record failure
+
+Authored Reverse Build content remains accessible in recoverable states. Missing data must not be invented or misrepresented.
+
+#### Privacy and Learner Control
+
+- Persisted learner artifacts remain local under the approved launch architecture; AI Review transmission and disclosure remain governed separately.
+- No account or cloud synchronization is implied.
+- Only the learner’s own locally available artifacts may be displayed.
+- Learner content is not published or shared.
+- Artifacts are not required for access.
+- Clearing or resetting artifacts must be respected.
+- Missing artifacts must not be silently reconstructed.
+- Learner text should not be unnecessarily duplicated.
+- Reflection content is outside the Reverse Build data boundary.
+- Raw internal prompts, hidden AI reasoning, storage internals, and stack traces must not be exposed.
+
+#### Accessibility
+
+The approved brief includes testable requirements for:
+
+- semantic dialog structure where the modal pattern remains
+- accessible naming and description
+- keyboard access
+- Escape dismissal
+- initial focus
+- focus containment
+- focus return
+- labeled close controls
+- heading hierarchy
+- clear distinction among learner response, AI feedback, and authored reasoning
+- dynamic state announcements
+- non-color indicators
+- scrolling behavior
+- reduced motion
+- mobile usability
+- zoom usability
+- screen-reader interpretation
+
+The current modal’s useful behavior is preserved but is not automatically certified as meeting the complete v2 accessibility standard.
+
+#### Technical Constraints
+
+The approved brief preserves:
+
+- Next.js App Router
+- React and TypeScript
+- open access
+- no account requirement
+- no launch database requirement
+- local browser persistence
+- content separated from presentation
+- no Reflection dependency
+- no diagnosis, recommendation, or pathway personalization
+- no hidden-prompt or chain-of-thought exposure
+
+Later Section 5 work will define shared artifact types, persistence services, hooks, and technical architecture.
+
+#### Public-Claim Governance
+
+Learner-specific public claims become supportable only after matching observable behavior is implemented and verified.
+
+Approved future claims may describe Reverse Build as:
+
+- reconnecting learners with their Design Practice response
+- surfacing the AI Review associated with that response
+- comparing learner practice with authored design reasoning, trade-offs, and professional judgment
+- making capability development more visible through structured reconstruction
+
+Prohibited claims include statements that Reverse Build:
+
+- proves learning occurred
+- diagnoses capability gaps
+- reads or analyzes Reflection
+- reveals hidden AI reasoning
+- automatically personalizes pathways
+- reconstructs learner artifacts that do not exist
+
+Existing learner-specific reconstruction copy remains a documented implementation and product-honesty gap until later remediation.
+
+#### Acceptance-Criteria Governance
+
+- The brief includes binary `RB2-*` acceptance criteria.
+- Criteria cover instructional sequence, learner artifacts, authored reasoning, empty and partial states, privacy, failures, accessibility, open access, multiple prompts, and product honesty.
+- Future implementation and QA must trace behavior back to these identifiers.
+- Each criterion must support a pass or fail determination.
+- Changes to approved criteria require an explicit governance decision rather than silent implementation drift.
+
+#### Remediation Summary
+
+- `REVERSE_BUILD_V2_IMPLEMENTATION_BRIEF.md` was created.
+- `REVERSE_BUILD_EXPERIENCE.md` was aligned with the approved Reflection boundary and current-versus-target language.
+- `docs/README.md` was updated to include the brief in the current documentation hierarchy.
+- No application behavior was changed.
+- No module, route, component, type, hook, service, API, persistence, or checklist files were changed during the remediation pass.
+- Reverse Build v2 remains unimplemented.
+
+#### Validation
+
+The following passed:
+
+- `npm run lint`
+- `tsc --noEmit`
+- `git diff --check`
+- new-file whitespace review
+- Section 4.1 requirement-coverage review
+- Reflection-boundary search
+- current-versus-target language review
+- unsupported reconstruction-claim review
+- documentation-hierarchy review
+- file-scope isolation review
+
+#### Continuing Governance Considerations
+
+- The approved brief is the controlling Reverse Build v2 implementation specification.
+- Broader experience philosophy and instructional architecture remain authoritative within their own scopes.
+- External reviews may inform implementation but do not replace the approved brief.
+- Reverse Build v2 must not be described as implemented until all required behavior and acceptance criteria are verified.
+- Learner-specific claims must remain qualified until corresponding artifacts are actually rendered.
+- Section 5 must define artifact architecture consistent with this brief.
+- Section 6 or the appropriate implementation phase must demonstrate the contract in the designated reference module.
+- Reflection must remain outside the Reverse Build data and display boundary.
+- Implementation must preserve authored reasoning rather than replacing it with generated summaries.
+- Any expansion into accounts, cloud synchronization, scoring, diagnosis, analytics, or personalization requires a separate approved decision.
+
+#### Approval Rationale
+
+> Section 4.1 is approved because Future of ID now has an authoritative and testable Reverse Build v2 implementation brief. The brief defines the intended learner experience, artifact inputs, authored and dynamic content boundaries, Reflection separation, multiple-prompt behavior, privacy, accessibility, fallback and failure states, technical constraints, supported public claims, and binary acceptance criteria without prematurely implementing the feature or expanding the approved product scope.
 
 ## 4.2 Module 4 simulation brief
 
-- [ ] Define the current mismatch between topic and interaction.
-- [ ] Define the professional decision the learner will practice.
-- [ ] Define the first meaningful choice.
-- [ ] Define distinct consequences for each first choice.
-- [ ] Define the second decision point.
-- [ ] Define how the first choice changes the second decision.
-- [ ] Define the final outcome or design state.
-- [ ] Define how the learner explains or refines judgment.
-- [ ] Define how AI critique connects to the interaction.
-- [ ] Define what Reverse Build will reconstruct.
-- [ ] Define mobile and accessibility behavior.
-- [ ] Define acceptance criteria.
-- [ ] Define what public claims the completed simulation will support.
-- [ ] Define a validated branching-simulation request contract separate from the written-response request form.
-- [ ] Define the authoritative repository data used by the server to reconstruct decision, consequence, and pathway language.
-- [ ] Prohibit client-written pathway descriptions from being treated as authoritative state.
+- [x] Define the current mismatch between topic and interaction.
+- [x] Define the professional decision the learner will practice.
+- [x] Define the first meaningful choice.
+- [x] Define distinct consequences for each first choice.
+- [x] Define the second decision point.
+- [x] Define how the first choice changes the second decision.
+- [x] Define the final outcome or design state.
+- [x] Define how the learner explains or refines judgment.
+- [x] Define how AI critique connects to the interaction.
+- [x] Define what Reverse Build will reconstruct.
+- [x] Define mobile and accessibility behavior.
+- [x] Define acceptance criteria.
+- [x] Define what public claims the completed simulation will support.
+- [x] Define a validated branching-simulation request contract separate from the written-response request form.
+- [x] Define the authoritative repository data used by the server to reconstruct decision, consequence, and pathway language.
+- [x] Prohibit client-written pathway descriptions from being treated as authoritative state.
+
+### Section 4.2 Approval Record
+
+- **Status:** Approved
+- **Approval date:** July 13, 2026
+- **Approved by:** Bradley Pierce
+
+#### Decision
+
+`docs/experience/MODULE_4_SIMULATION_IMPLEMENTATION_BRIEF.md` is complete and approved. It is the controlling Module 4 branching-simulation specification and is sufficiently specific and testable to govern later shared architecture, implementation, AI-contract work, Reverse Build integration, accessibility verification, and launch QA.
+
+Section 4.2 approval authorizes the specification, not completed product behavior. The Module 4 simulation remains unimplemented. Later checklist sections govern shared persistence, privacy disclosure, implementation, validation, and launch verification. Current product language must not claim that a branching simulation exists until the approved behavior is implemented and verified.
+
+#### Evidence Reviewed
+
+Approval was based on:
+
+- creation of `docs/experience/MODULE_4_SIMULATION_IMPLEMENTATION_BRIEF.md`
+- alignment of `docs/README.md`
+- coverage of all 16 Section 4.2 requirements
+- inclusion of all 25 required implementation-brief sections
+- inclusion of a complete checklist-to-brief crosswalk
+- definition of the current topic-interaction mismatch
+- definition of the approved target learner sequence
+- definition of one bounded focal professional scenario
+- definition of the first decision and three plausible options
+- definition of a distinct consequence for each first option
+- definition of three branch-dependent second decisions
+- definition of six deterministic pathways and final states
+- definition of repository-authoritative simulation state
+- definition of original and revised learner rationale
+- definition of bounded optional AI Review
+- definition of a separate branching request contract
+- definition of server reconstruction and validation
+- definition of Module 4 Reverse Build inputs
+- preservation of Reflection as a separate subsequent learning layer
+- definition of empty, partial, fallback, failure, persistence, privacy, accessibility, and mobile requirements
+- definition of supported and prohibited public claims
+- inclusion of 69 binary `M4SIM-*` acceptance criteria
+- explicit non-goals preventing scope expansion
+
+#### Approved Focal Scenario
+
+The learner assumes the role of:
+
+> Lead instructional designer responsible for the first release of a sales-onboarding conversation-practice experience.
+
+The scenario practices professional judgment involving:
+
+- instructional transfer
+- consistency
+- realism
+- scalability
+- governance
+- trust
+- appropriate uses and limits of AI
+- continuing human judgment
+
+The scenario is bounded enough for deterministic implementation while remaining transferable beyond Bradley's exact professional context.
+
+#### First Decision
+
+The approved first decision presents three professionally plausible approaches:
+
+- bounded authored branching
+- facilitated role-play
+- bounded AI conversation
+
+None is an unserious distractor. Each represents a legitimate design approach and exposes different professional strengths, risks, and operational consequences. The first choice materially changes the second decision.
+
+#### Consequences and Second Decisions
+
+- Each first option produces a distinct repository-authored consequence.
+- Each consequence changes the scenario's pressure, context, constraints, or available choices.
+- Each first-choice branch leads to its own dependent second decision.
+- The second decision is not an unrelated follow-up question.
+- Branch membership must be validated.
+- Options from one branch cannot be accepted under another branch.
+
+#### Six Pathways and Final States
+
+- The three first branches and two second-choice options per branch produce six valid deterministic pathways.
+- Every valid pathway reaches one approved final state.
+- Each final state records:
+  - the immediate result
+  - a professional strength or benefit
+  - an unresolved risk or trade-off
+  - the continuing need for human judgment
+- No pathway is universally scored as correct.
+- Final states must not diagnose capability mastery, assign professional labels, or alter the learner's broader pathway.
+
+#### Authoritative State Contract
+
+The approved brief requires stable identifiers for:
+
+- simulation and version
+- decisions
+- options
+- consequences
+- pathways
+- final states
+
+Repository-owned data is authoritative. Client-written pathway, consequence, outcome, scenario, or prompt prose is never authoritative. The server must:
+
+- validate identifiers and branch membership
+- derive consequences, dependent decisions, pathways, and final states
+- reject impossible, mismatched, or tampered sequences
+- reconstruct learner-facing pathway language from repository-owned data
+- send only validated, minimized simulation state and learner-authored rationale to the AI provider
+
+#### Learner Rationale Contract
+
+- Deterministic pathway completion remains independent of AI.
+- The original rationale accepts 40–800 trimmed characters.
+- Rationale is required for optional AI Review.
+- Rationale is not required to view the deterministic outcome, navigate the open experience, or access authored learning content.
+- An optional revised rationale accepts 20–800 trimmed characters.
+- Original and revised rationales remain distinguishable.
+- Revision cannot alter deterministic decisions, pathway, or final state.
+- The rationale interaction remains bounded and must not become an unrestricted essay activity.
+
+#### AI Review Contract
+
+Optional AI Review may provide:
+
+- a summary
+- one specific strength
+- one overlooked trade-off
+- one refinement question
+
+AI Review critiques only validated pathway state and learner rationale. It remains separate from deterministic simulation logic and must not:
+
+- select branches
+- invent authoritative decisions, consequences, pathways, or outcomes
+- change the completed final state
+- score mastery
+- diagnose capability gaps
+- personalize the learner's professional pathway
+- analyze Reflection
+- expose hidden prompts, model reasoning, or chain of thought
+
+AI Review is not required for simulation completion. The existing written-response request and output contract remains separate and must not be overloaded with an incompatible branching payload.
+
+#### Server Reconstruction and Validation
+
+Future server behavior must:
+
+- validate module, simulation, and version identifiers
+- load authoritative simulation data from the repository
+- validate the first decision and option
+- derive the first consequence
+- validate the dependent second decision and option
+- derive the pathway and final state
+- reject impossible or tampered sequences
+- reconstruct all pathway language from repository data
+- send only required validated state and learner rationale to the AI provider
+- return deterministic pathway state separately from AI critique
+
+#### Reverse Build Contract
+
+Reverse Build v2 must eventually receive or reconstruct:
+
+- simulation identifier and version
+- first decision and selected option
+- first consequence
+- second decision and selected option
+- complete or partial pathway
+- final state
+- original learner rationale
+- optional revised rationale
+- AI Review state and feedback when available
+- completion or partial-completion status
+
+Reverse Build will connect the learner's validated pathway with authored professional reasoning, constraints, decisions, trade-offs, and human judgment. Reverse Build must not:
+
+- access or display Reflection
+- infer hidden learner growth
+- invent missing pathway state
+- replace authored reasoning with generated interpretation
+
+#### Learning-Layer Boundary
+
+The approved sequence is:
+
+> Design Practice → AI Review → Reverse Build → Reflection
+
+Ownership remains distinct:
+
+- Design Practice owns decisions, consequences, pathway, final state, and learner rationale.
+- AI Review owns bounded critique.
+- Reverse Build owns artifact reconstruction alongside authored design reasoning.
+- Reflection owns later transfer to another professional context.
+
+Reflection remains outside simulation and Reverse Build data boundaries. Simulation decisions do not diagnose or modify capability pathways. Course progress remains separate from simulation state unless later explicitly approved.
+
+#### Empty, Partial, Fallback, and Failure States
+
+The brief defines distinct behavior for:
+
+- not started
+- first decision selected
+- consequence reached but second decision incomplete
+- deterministic pathway completed without rationale
+- completed without AI Review
+- AI pending
+- AI failed
+- rationale revision incomplete
+- missing or malformed state
+- invalid pathway
+- incompatible version
+- unavailable persistence
+
+Deterministic simulation completion never depends on AI. AI failure does not erase or invalidate valid pathway state. Valid partial progress is distinguishable from failure. Malformed or incompatible state fails safely. Clear recovery or restart guidance is required, raw errors, prompts, stack traces, and storage internals must not be exposed, and open access remains intact.
+
+#### Persistence and Reset Governance
+
+Later architecture must satisfy:
+
+- preservation of valid decision and pathway state across approved navigation or refresh behavior
+- no accidental erasure when changing views
+- explicit reset behavior
+- respect for learner-initiated clearing
+- schema-version handling
+- separation from Reflection data
+- appropriate separation from general course-progress state
+- no launch requirement for accounts, Supabase, or cloud synchronization
+
+Section 4.2 defines these product expectations but does not implement persistence.
+
+#### Privacy and Data Minimization
+
+- Learner simulation artifacts remain local under the approved launch architecture.
+- No account or cloud synchronization is implied.
+- Learner responses are not published or shared.
+- Only the minimum validated state and rationale required for optional AI critique are transmitted.
+- Repository-owned scenario text is not accepted from the client as authoritative.
+- Reflection data remains outside the simulation and Reverse Build boundary.
+- Learner reset and clear actions must be respected.
+- The product must not claim that AI processing occurs only in the browser.
+
+#### Accessibility and Mobile Requirements
+
+The approved brief requires testable support for:
+
+- complete keyboard operation
+- visible focus
+- semantic option grouping
+- programmatic selected-state communication
+- accessible instructions and labels
+- announced consequences and changed context
+- appropriate focus management after state transitions
+- accessible AI loading, success, and error status
+- no reliance on color alone
+- nonvisual completed-pathway review
+- logical heading and content hierarchy
+- mobile operation at 320 CSS pixels
+- 200% browser zoom and 200% text-only zoom
+- primary touch targets of at least 44 by 44 CSS pixels
+- responsive stacked pathway review
+- no clipped essential content or horizontal page scrolling
+- reduced-motion support where animation exists
+- deterministic completion when AI is unavailable
+- manual keyboard and screen-reader verification in addition to automated scanning
+
+The current written-response controls are not automatically certified as meeting the final simulation accessibility standard.
+
+#### Current Content Alignment Gap
+
+Later authorized implementation and content alignment must:
+
+- remove or qualify Module 4 claims that branching or consequences already exist before implementation
+- align Reverse Build authored language with the completed simulation
+- rename or reposition the embedded Reverse Build subsection titled or identified as `Reflection`
+- preserve useful theory bridges, design principles, and evidence governance
+- distinguish authored reasoning from learner pathway data
+
+Module 4 content was intentionally not edited during Section 4.2 remediation.
+
+#### Public-Claim Governance
+
+After implementation and verification, claims may describe:
+
+- a bounded branching simulation
+- two connected professional decisions
+- first-choice consequences that change the second decision
+- six deterministic pathways and final states
+- AI critique of a validated pathway and rationale
+- Reverse Build reconstruction of decisions, consequences, pathway, outcome, critique, and authored reasoning
+
+Claims must not state or imply that the feature:
+
+- is currently implemented before verification
+- automatically adapts or personalizes
+- diagnoses capability gaps
+- scores mastery
+- proves learning occurred
+- uses AI to control authoritative branch state
+- reveals hidden reasoning
+- analyzes Reflection
+- stores artifacts in cloud accounts
+- provides unlimited conversational simulation
+
+Current public and authored language must remain limited to observable written scenario-design practice until implementation is complete and verified.
+
+#### Acceptance-Criteria Governance
+
+- The brief includes 69 binary `M4SIM-*` acceptance criteria.
+- Criteria cover state authority, decisions, consequences, branch dependency, final states, rationale, AI Review, server validation, Reverse Build, persistence, reset, failure states, accessibility, privacy, open access, and product honesty.
+- Each criterion must permit an unambiguous pass or fail result.
+- Later implementation, testing, and validation must trace directly to the approved identifiers.
+- Changes to approved criteria require an explicit governance decision rather than silent implementation drift.
+
+#### Remediation Summary
+
+- `MODULE_4_SIMULATION_IMPLEMENTATION_BRIEF.md` was created.
+- `docs/README.md` was updated to place the brief in the documentation hierarchy.
+- No application or module behavior was changed.
+- No route, API, component, type, hook, service, persistence, test, module-content, or checklist file was changed during the remediation pass.
+- The simulation remains unimplemented.
+- Existing Module 4 content gaps remain intentionally deferred to later authorized alignment work.
+
+#### Validation
+
+The following passed:
+
+- `npm run lint` from `web/`
+- `tsc --noEmit`
+- `git diff --check`
+- 16-of-16 Section 4.2 requirement-coverage review
+- six-pathway completeness review
+- client-authoritative-pathway prohibition review
+- AI-boundary review
+- Reverse Build and Reflection boundary review
+- accessibility-requirement coverage review
+- supported and prohibited public-claim review
+- documentation-hierarchy review
+- file-scope isolation review
+
+#### Continuing Governance Considerations
+
+- The approved brief is the controlling Module 4 branching-simulation specification.
+- Approval does not establish that the simulation is implemented.
+- Shared artifact and persistence architecture must preserve the approved state and rationale contracts.
+- Privacy disclosure and provider-retention language remain governed by later checklist work.
+- Implementation and QA must trace behavior to the approved `M4SIM-*` identifiers.
+- The existing written-response AI engine remains separate.
+- Reflection must remain outside simulation and Reverse Build data boundaries.
+- Existing Module 4 content gaps require later authorized alignment before launch claims expand.
+- Any change to the scenario, branch model, authoritative-state rules, AI boundaries, or acceptance criteria requires an explicit documented governance decision.
+
+#### Approval Rationale
+
+> Section 4.2 is approved because Future of ID now has an authoritative and testable specification for a bounded Module 4 branching simulation. The brief defines the focal professional scenario, connected decisions, consequences, deterministic pathways, learner rationale, optional AI critique, server-authoritative state, Reverse Build integration, Reflection separation, accessibility, privacy, failure behavior, public-claim boundaries, and binary acceptance criteria without claiming that the feature is already implemented or expanding launch scope.
 
 ## 4.3 Learner-artifact and persistence brief
 

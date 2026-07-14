@@ -24,7 +24,7 @@ Bradley evaluates external recommendations against the product philosophy, curre
 4. Public launch-readiness work: read `strategy/PUBLIC_LAUNCH_READINESS_CHECKLIST.md` before planning or executing any launch task.
 5. Current strategy docs: read `strategy/BLUEPRINT.md`, `strategy/FUTURE_READY_CAPABILITY_MODEL.md`, `strategy/DECISIONS.md`, and `strategy/ROADMAP.md`.
 6. Architecture docs: read `architecture/TECH_ARCHITECTURE.md`, `architecture/CONTENT_ARCHITECTURE.md`, and `architecture/SITE_MAP.md`.
-7. Experience docs: read `experience/EXPERIENCE_PHILOSOPHY.md` and `experience/VISUAL_COMMUNICATION_SYSTEM.md`.
+7. Experience docs: read `experience/EXPERIENCE_PHILOSOPHY.md`, `experience/REVERSE_BUILD_EXPERIENCE.md`, and `experience/VISUAL_COMMUNICATION_SYSTEM.md`; for approved implementation work, also read `experience/REVERSE_BUILD_V2_IMPLEMENTATION_BRIEF.md` and `experience/MODULE_4_SIMULATION_IMPLEMENTATION_BRIEF.md` as applicable.
 8. Design system docs: read `architecture/DESIGN_SYSTEM.md`, `COMPONENT_ARCHITECTURE_V1.md`, and `architecture/DESIGN_SYSTEM_CHANGELOG.md`.
 9. AI docs: read `decisions/ADR-009-ai-feedback-engines.md` and `validation/scenario-engine-validation-log.md` until dedicated `docs/ai/` docs exist.
 10. Implementation / contributor guidance: read `SYSTEM-INSTRUCTIONS.md` and `COPILOT-INSTRUCTIONS.md`.
@@ -112,6 +112,9 @@ Current status: final archive/reference strategy is not decided yet.
 | Technical direction | `architecture/TECH_ARCHITECTURE.md` |
 | Site and route structure | `architecture/SITE_MAP.md` |
 | Learner experience | `experience/EXPERIENCE_PHILOSOPHY.md` |
+| Reverse Build experience philosophy | `experience/REVERSE_BUILD_EXPERIENCE.md` |
+| Reverse Build v2 implementation contract after Bradley approval | `experience/REVERSE_BUILD_V2_IMPLEMENTATION_BRIEF.md` |
+| Module 4 branching-simulation implementation contract after Bradley approval | `experience/MODULE_4_SIMULATION_IMPLEMENTATION_BRIEF.md` |
 | Visual communication | `experience/VISUAL_COMMUNICATION_SYSTEM.md` |
 | Design system | `architecture/DESIGN_SYSTEM.md` |
 | Component architecture | `COMPONENT_ARCHITECTURE_V1.md` |
