@@ -1332,23 +1332,1034 @@ The following passed:
 
 ## 4.3 Learner-artifact and persistence brief
 
-- [ ] Define one current learner artifact per module.
-- [ ] Define how the artifact stores the latest response and associated AI feedback for each Design Practice prompt.
-- [ ] Define how a revised response updates the current artifact without creating attempt history.
-- [ ] Define Module 4’s structured decisions, pathway, consequences, and final state.
-- [ ] Define how Reflection is persisted after Reverse Build without being displayed inside Reverse Build.
-- [ ] Define course-progress hardening and reset behavior alongside artifact persistence.
-- [ ] Define schema-version, unsupported-version, stale-data, partial-data, and migration behavior.
-- [ ] Explicitly exclude attempt history, version history, longitudinal tracking, portfolio management, and cross-device synchronization.
+- [x] Define one current learner artifact per module.
+- [x] Define how the artifact stores the latest response and associated AI feedback for each Design Practice prompt.
+- [x] Define how a revised response updates the current artifact without creating attempt history.
+- [x] Define Module 4’s structured decisions, pathway, consequences, and final state.
+- [x] Define how Reflection is persisted after Reverse Build without being displayed inside Reverse Build.
+- [x] Define course-progress hardening and reset behavior alongside artifact persistence.
+- [x] Define schema-version, unsupported-version, stale-data, partial-data, and migration behavior.
+- [x] Explicitly exclude attempt history, version history, longitudinal tracking, portfolio management, and cross-device synchronization.
+
+### Section 4.3 Approval Record
+
+- **Status:** Approved
+- **Approval date:** July 13, 2026
+- **Approved by:** Bradley Pierce
+
+#### Decision
+
+`docs/experience/LEARNER_ARTIFACT_AND_PERSISTENCE_IMPLEMENTATION_BRIEF.md` is complete and approved. It is the controlling Section 4.3 product specification and is sufficiently specific and testable to govern Section 5 technical architecture, Section 6 reference implementation, Module 4 artifact integration, privacy disclosure, and launch validation.
+
+Section 4.3 approval authorizes the artifact and persistence contract, not completed product behavior. Learner-artifact persistence remains unimplemented, and existing course-progress hardening risks remain open. Later sections govern concrete types, storage namespaces, validators, migrations, services, hooks, learner controls, integration, disclosure, and validation. Target persistence claims must not be presented as current behavior before implementation and verification.
+
+#### Evidence Reviewed
+
+Approval was based on:
+
+- creation of `docs/experience/LEARNER_ARTIFACT_AND_PERSISTENCE_IMPLEMENTATION_BRIEF.md`
+- alignment of `docs/README.md`
+- coverage of all eight Section 4.3 requirements
+- inclusion of all 27 required implementation-brief sections
+- inclusion of a complete checklist-to-brief crosswalk
+- definition of one current learner artifact per module
+- definition of independent prompt or activity entries inside the current module artifact
+- definition of latest-response replacement without attempt history
+- definition of exact AI Review association and stale-feedback invalidation
+- definition of Module 4 structured simulation state
+- definition of separate Reflection persistence after Reverse Build
+- definition of progress-store hardening and reset behavior
+- definition of schema versions, migrations, stale data, unsupported versions, partial data, malformed-data isolation, and storage failure
+- explicit exclusion of histories, portfolios, longitudinal tracking, accounts, cloud synchronization, analytics, scoring, diagnosis, and personalization
+- inclusion of 80 binary `LAP-*` acceptance criteria
+- explicit ownership boundaries across Sections 4.3, 4.4, 4.5, 5, 6, and later Module 4 implementation
+
+#### One-Current-Artifact Model
+
+- Each module may have one current learner artifact.
+- The artifact represents current learner work rather than attempt history.
+- One module artifact may contain multiple independently identified prompt or activity entries.
+- Replacing work for one entry does not erase unrelated entries.
+- Absence of an artifact is valid.
+- Artifacts are not required for access or completion.
+- Artifacts remain local, account-free, and unsynchronized.
+- The artifact is not a portfolio, longitudinal record, or learner history.
+
+#### Persistence Domains
+
+The approved model has three persistence domains.
+
+##### Course progress
+
+Contains only approved completion state.
+
+##### Module learner artifact
+
+May contain:
+
+- written Design Practice entries
+- Module 4 structured simulation state
+- associated AI Review state and bounded feedback
+- approved original and revised learner fields
+
+##### Reflection
+
+Contains:
+
+- current Reflection response
+- associated Reflection AI-feedback state and feedback
+- separate schema, clearing, and control behavior
+
+The domains remain separately readable, writable, and clearable. Course completion is not proof that learner work exists, learner work is not required for course completion, Reflection remains outside Reverse Build access, and reset actions must not silently cross domain boundaries.
+
+#### Artifact Identity and Authority
+
+Artifact identity conceptually includes:
+
+- repository-authoritative module identifier
+- artifact schema version
+- supported activity categories
+- prompt or simulation entries
+- artifact state
+- only necessary display or update metadata
+
+Prompt, scenario, simulation, option, pathway, and final-state identifiers must remain repository-authoritative. Unknown identifiers do not become valid because they appear in stored JSON, and client-written pathway prose never establishes authoritative Module 4 state.
+
+#### Written Design Practice Entries
+
+Each written practice entry may support:
+
+- prompt or scenario identifier
+- current learner response
+- response state
+- AI Review state
+- associated AI feedback
+- optional revised response only where explicitly approved
+- bounded error or unavailable states
+- no attempt history
+
+Multiple prompt entries remain independent. Switching prompts must not erase valid saved work.
+
+#### Latest-Response Replacement
+
+- A new response replaces the current response for that prompt.
+- Previous attempts are not retained.
+- AI feedback generated for an older response becomes stale or is removed.
+- Stale feedback must never be represented as current.
+- A later AI Review may replace the stale state.
+- Original and revised fields coexist only under an explicitly approved feature contract.
+- Module 4 original and revised rationale remain the approved exception.
+
+#### AI Review Association
+
+The approved AI lifecycle is:
+
+- not requested
+- ready
+- pending
+- available
+- failed
+- stale
+- cleared
+
+Feedback must remain associated with the exact module, prompt, response, or validated simulation state it reviewed. Feedback from one prompt must never appear under another. Failed or missing feedback does not invalidate valid learner work. Clearing a response clears or invalidates matching feedback. Hidden prompts, model reasoning, provider internals, stack traces, and server errors must not be persisted or displayed.
+
+#### Module 4 Artifact Mapping
+
+The shared artifact model must support:
+
+- simulation and version identifiers
+- first decision and option
+- derived consequence
+- dependent second decision and option
+- pathway and final state
+- original and revised rationale
+- AI state and feedback
+- partial, completed, reset, and unavailable states
+
+Deterministic simulation state remains independent of AI. Repository data remains authoritative, client pathway prose cannot establish state, invalid sequences fail safely, one current simulation state replaces previous current state without history, and AI failure does not invalidate deterministic state.
+
+#### Reverse Build v2 Contract
+
+Reverse Build may access approved module-artifact data, including:
+
+- prompt or simulation identifier
+- current learner response or structured state
+- correctly associated AI Review
+- partial, cleared, stale, or unavailable state
+- Module 4 decisions, consequences, pathway, final state, and rationale
+
+Reverse Build must never access Reflection. Missing learner work is not invented, stale feedback is not shown as current, malformed artifacts must not block authored Reverse Build content, and dynamic learner data must not overwrite authored professional reasoning.
+
+#### Reflection Persistence
+
+- Reflection begins only after Reverse Build.
+- Reflection uses a separate persistence domain.
+- Current Reflection responses replace prior current responses without history.
+- Reflection feedback remains associated with the exact response reviewed.
+- Revising Reflection invalidates stale feedback.
+- Reflection clearing must be respected.
+- Reflection must not automatically resurface elsewhere.
+- Reverse Build must not read, display, summarize, transmit, or infer from Reflection.
+- Older advisory recommendations placing Reflection inside Reverse Build remain non-authoritative and rejected.
+
+#### Local Persistence and Retention
+
+- Artifacts remain in the current browser's local storage.
+- No account is required.
+- No cloud synchronization or cross-device access is provided.
+- Clearing browser data may remove learner work.
+- Private browsing, browser policy, storage blocking, or quota limits may affect persistence.
+- Local persistence does not mean AI processing occurs only on the device.
+- Saved work remains until replaced, reset, cleared, invalidated by an unsupported version, or removed through browser controls.
+- Permanent backup must not be implied.
+- Learners on shared computers require practical clearing controls.
+
+#### Reset and Clearing Model
+
+The approved model has three reset levels.
+
+##### Reset active practice
+
+Clears only the active prompt, scenario, or Module 4 activity and matching AI state while preserving unrelated prompts, Reflection, and progress.
+
+##### Clear module work
+
+Clears all Design Practice and simulation artifacts for one module while preserving other modules and course progress. Reflection remains separate by default unless an explicitly broader action is approved.
+
+##### Reset course progress
+
+Clears completion markers only and does not silently erase module artifacts or Reflection.
+
+Destructive actions require clear accessible scope and confirmation where meaningful saved work would be destroyed. Cleared data must not silently reappear. A full-local-data clearing action remains outside minimum Section 4.3 scope.
+
+#### Course-Progress Hardening
+
+Later implementation must add:
+
+- safe parsing
+- guarded storage reads and writes
+- authoritative slug validation
+- unknown-entry isolation or rejection
+- schema or storage versioning
+- predictable empty fallback
+- malformed-data handling
+- accessible reset behavior
+- continued open access
+- separation from module artifacts and Reflection
+- preservation of useful same-tab and cross-tab synchronization
+
+#### Versioning and Migration
+
+- Every persisted domain or independently parsed record requires an identifiable schema version.
+- Supported versions must be validated before rendering.
+- Unsupported future versions must not be partially interpreted.
+- Older versions may be migrated only through explicit deterministic logic.
+- Migrations must not invent learner content.
+- Migration failure must not destroy the original valid raw record before recovery is determined.
+- One incompatible record must not invalidate unrelated valid records.
+- Version handling remains local and requires no account or server migration.
+
+#### Stale, Partial, and Unsupported Data
+
+The approved behavior covers:
+
+- stale AI feedback
+- unknown repository identifiers
+- unsupported schema versions
+- response without AI Review
+- AI pending or failed
+- only some prompts completed
+- partial Module 4 state
+- completed simulation without AI
+- original rationale without revision
+- Reflection without feedback
+
+Valid partial states remain distinguishable from errors, optional missing fields do not invalidate an otherwise valid artifact, and access remains open.
+
+#### Malformed-Data and Storage-Failure Behavior
+
+The brief defines safe behavior for:
+
+- malformed JSON
+- invalid record types
+- missing required identifiers
+- corrupted prompt entries
+- corrupted module artifacts
+- malformed Reflection data
+- interrupted writes
+- unavailable or blocked storage
+- security exceptions
+- quota exceeded
+- read or write failure
+
+The product must not crash. Unrelated valid records remain usable, malformed content is not displayed as learner work, authored content remains accessible, and raw JSON, keys, stack traces, and internals are not exposed. Failed persistence must not be reported as successful, valid in-memory work remains available where possible, and reset and recovery guidance remains accessible.
+
+#### Write Consistency
+
+Later architecture must ensure:
+
+- artifact updates do not leave knowingly half-updated current state
+- the latest response and matching AI state remain coherent
+- failed writes do not silently replace valid stored data with invalid partial content
+- reset and clear actions complete predictably or report failure
+- one module update cannot corrupt another module artifact
+
+#### Privacy and Data Minimization
+
+Only approved minimum data may be stored:
+
+- current learner content
+- repository-authoritative identifiers
+- bounded AI feedback
+- status values
+- necessary schema and version metadata
+
+Persistence must exclude:
+
+- hidden prompts
+- chain of thought
+- provider internals
+- raw server errors
+- attempt history
+- analytics profiles
+- diagnostic labels
+- unnecessary repository-authored prose
+- cross-module behavioral profiles
+- account or demographic data
+
+#### Learner Visibility and Accessibility
+
+Learners must be able to understand:
+
+- whether work is saved locally
+- whether work is missing, partial, stale, unreadable, or cleared
+- the scope of reset and clearing actions
+- that course completion is separate from saved work
+- that AI feedback requires server transmission
+- that no account or cloud backup exists
+
+The approved brief defines testable accessibility requirements for:
+
+- explicit labels
+- keyboard operation
+- predictable focus
+- destructive-action confirmation
+- announced save, failure, stale, partial, reset, clear, and recovery states
+- programmatically associated errors
+- non-color indicators
+- 320 CSS-pixel mobile support
+- 200% browser zoom and 200% text-only zoom
+- primary controls of at least 44 by 44 CSS pixels
+- screen-reader explanation of stored, missing, partial, invalid, and cleared state
+
+These controls do not yet exist.
+
+#### Public-Claim Governance
+
+Currently supported claims remain limited to:
+
+- local persistence of course completion
+- active-session Design Practice and AI Review
+- Reflection as a separate activity
+- open access without accounts
+
+Claims about saved Design Practice, saved AI feedback, Reverse Build reconnection, persisted Module 4 state, saved Reflection, or learner reset controls become supportable only after implementation and verification.
+
+Prohibited claims include:
+
+- attempt history
+- longitudinal tracking
+- portfolio management
+- cloud backup
+- cross-device synchronization
+- permanent retention
+- analytics
+- scoring
+- diagnosis
+- personalization
+- server-side artifact storage
+- recovery after browser storage has been cleared
+
+#### Acceptance-Criteria Governance
+
+- The brief contains 80 binary `LAP-*` acceptance criteria.
+- No duplicate criterion identifiers were found.
+- Criteria cover artifact identity, replacement, AI linkage, Module 4, Reverse Build, Reflection, resets, progress hardening, versioning, malformed data, storage failure, privacy, accessibility, and product honesty.
+- Each criterion permits an unambiguous pass or fail determination.
+- Later architecture, implementation, tests, and validation must trace to the approved identifiers.
+- Changes to approved criteria require explicit governance approval.
+
+#### Ownership and Handoff
+
+##### Section 4.3 owns
+
+- product behavior
+- artifact lifecycle
+- domain boundaries
+- reset semantics
+- versioning and recovery policy
+- acceptance criteria
+
+##### Section 5 owns
+
+- TypeScript representations
+- storage keys
+- serializers and validators
+- migrations
+- persistence service and hooks
+- event subscriptions
+- progress-store hardening
+- reset APIs
+- technical tests
+
+##### Section 6 owns
+
+- written-response reference implementation
+- learner-artifact integration
+- response and AI-feedback linkage
+- Reverse Build v2 connection in the designated module
+
+##### Later Module 4 implementation owns
+
+- branching artifact integration under the approved shared architecture
+
+##### Section 4.4 owns
+
+- learner-facing local-storage, retention, AI-processing, and privacy disclosures
+
+##### Section 4.5 owns
+
+- validation environments, browsers, assistive technologies, and evidence records
+
+#### Remediation Summary
+
+- `LEARNER_ARTIFACT_AND_PERSISTENCE_IMPLEMENTATION_BRIEF.md` was created.
+- `docs/README.md` was updated to place the brief in the documentation hierarchy.
+- No application or product behavior changed.
+- No content, type, hook, service, persistence, route, API, component, migration, test, or checklist file changed during remediation.
+- Approved Section 4.1 and 4.2 briefs remained unchanged.
+- Existing progress-store risks remain intentionally unmodified.
+- Learner-artifact persistence remains unimplemented.
+
+#### Validation
+
+The following passed:
+
+- `npm run lint` from `web/`
+- `tsc --noEmit`
+- `git diff --check`
+- new-file whitespace review
+- 8-of-8 requirement crosswalk
+- 27-section structure review
+- 80-criterion identifier and uniqueness review
+- one-current-artifact review
+- response and AI-association review
+- stale-feedback review
+- Module 4 mapping review
+- Reverse Build and Reflection-boundary review
+- reset-scope review
+- progress-hardening review
+- version and migration review
+- malformed-record isolation review
+- storage-failure review
+- privacy and accessibility review
+- supported and prohibited claim review
+- approved-brief compatibility review
+- documentation-hierarchy and file-scope review
+
+#### Continuing Governance Considerations
+
+- The approved brief is the controlling Section 4.3 product specification.
+- Section 5 must implement concrete architecture without silently changing the approved product lifecycle.
+- Section 6 must prove the ordinary written-response path before broader rollout.
+- Module 4 must use the shared artifact architecture while preserving server-authoritative deterministic state.
+- Reflection must remain outside Reverse Build.
+- Current persistence claims must remain limited until observable behavior is implemented.
+- Any expansion into attempt history, portfolios, cloud synchronization, analytics, diagnosis, scoring, or personalization requires separate approval.
+- Changes to reset scopes, latest-only replacement, migration policy, domain boundaries, or `LAP-*` criteria require explicit governance approval.
+
+#### Approval Rationale
+
+> Section 4.3 is approved because Future of ID now has an authoritative and testable learner-artifact and persistence specification. The brief defines one current artifact per module, independent prompt entries, latest-response replacement, exact AI-feedback association, Module 4 structured state, separate Reflection persistence, course-progress hardening, scoped reset behavior, schema versioning, migration, malformed-data isolation, storage-failure recovery, privacy, accessibility, and binary acceptance criteria without introducing attempt history, accounts, cloud synchronization, analytics, or personalization.
 
 ## 4.4 Privacy and data-flow brief
 
-- [ ] Define the local browser-persistence disclosure.
-- [ ] Define the disclosure shown before or when learner input is transmitted for AI processing.
-- [ ] Define what the Future of ID application itself retains.
-- [ ] Verify any provider-retention statement against current authoritative sources before using it.
-- [ ] Prohibit claims that learner work remains only in the browser when AI feedback is requested.
-- [ ] Prohibit unverified statements about OpenAI retention behavior.
+- [x] Define the local browser-persistence disclosure.
+- [x] Define the disclosure shown before or when learner input is transmitted for AI processing.
+- [x] Define what the Future of ID application itself retains.
+- [x] Verify any provider-retention statement against current authoritative sources before using it.
+- [x] Prohibit claims that learner work remains only in the browser when AI feedback is requested.
+- [x] Prohibit unverified statements about OpenAI retention behavior.
+
+### Section 4.4 Approval Record
+
+- **Status:** Approved
+- **Approval date:** July 13, 2026
+- **Approved by:** Bradley Pierce
+
+#### Decision
+
+- `docs/experience/PRIVACY_AND_DATA_FLOW_IMPLEMENTATION_BRIEF.md` is complete and approved.
+- The brief becomes the controlling Section 4.4 product-disclosure and data-flow specification.
+- The approved specification is sufficiently specific and testable to govern later implementation, provider and deployment verification, public-copy rollout, accessibility validation, and legal or organizational review.
+- Section 4.4 approval authorizes the disclosure, verification, retention-classification, and claim-governance contract. It does not represent completed disclosure UI, deployment verification, provider configuration, or legal policy.
+- Learner-facing notices and clearing controls remain unimplemented.
+- Deployment logging, infrastructure, observability, security, and request-body handling remain unverified.
+- The actual OpenAI organization, project, and project-level data-control settings remain unverified.
+- A legal or organizational decision about a formal public privacy policy remains outstanding.
+- No categorical deployment-specific provider claim may be made until the approved verification steps are completed.
+- Verified current behavior and approved future behavior must remain visibly distinguished.
+
+#### Evidence Reviewed
+
+Approval was based on:
+
+- creation of `docs/experience/PRIVACY_AND_DATA_FLOW_IMPLEMENTATION_BRIEF.md`
+- alignment of `docs/README.md`
+- coverage of all six Section 4.4 requirements
+- inclusion of all 30 required brief sections
+- inclusion of a complete checklist-to-brief crosswalk
+- definition of the current data inventory
+- separation of approved future artifact and Reflection data from current implementation
+- definition of current course-progress, Design Practice AI, and Reflection AI flows
+- definition of future module-artifact, Reflection, and Module 4 flows
+- definition of local-browser persistence disclosure
+- definition of AI-processing disclosure before or at submission
+- definition of Reflection-specific privacy treatment
+- definition of currently supportable Future of ID retention statements
+- definition of infrastructure and logging verification requirements
+- recording of current official OpenAI provider sources and the July 13, 2026 verification date
+- definition of deployment-specific OpenAI verification requirements
+- definition of provider-language reverification
+- definition of precise reset, clearing, and deletion terminology
+- definition of shared-computer and private-browsing disclosure
+- definition of storage and AI failure language
+- definition of prohibited privacy, anonymity, deletion, retention, training, encryption, confidentiality, and legal claims
+- definition of disclosure accessibility requirements
+- separation of product-disclosure governance from legal policy
+- inclusion of 80 unique binary `PDF-*` acceptance criteria
+- explicit ownership boundaries across Sections 4.4, 4.5, 5, 6, later Module 4 implementation, public-copy rollout, provider verification, and legal review
+
+#### Current Data Inventory
+
+##### Course progress
+
+- Completion identifiers are stored in browser `localStorage`.
+- Persistence is browser-bound.
+- No current repository behavior transmits course progress.
+- No in-product progress reset currently exists.
+
+##### Design Practice responses
+
+- Learner-authored text remains component-local.
+- It is not currently persisted.
+- It leaves the browser only when the learner explicitly requests AI feedback.
+- It is normally lost on navigation, refresh, component unmount, or scenario change.
+
+##### Reflection responses
+
+- Learner-authored text remains component-local.
+- It is not currently persisted.
+- It leaves the browser when AI feedback is requested.
+- It is normally lost on navigation or refresh.
+
+##### Repository-owned context
+
+- Module, scenario, prompt, title, and review context are reconstructed server-side.
+- Required context is transmitted to OpenAI with learner text.
+- Repository-owned context remains authoritative.
+
+##### AI feedback
+
+- Structured provider-generated feedback returns through the application server.
+- Feedback remains component-local.
+- No browser or learner-database persistence is currently implemented.
+
+##### Status and errors
+
+- Loading, success, and error state are transient.
+- Learner-facing error messages must not expose provider operational internals.
+
+##### Logging and infrastructure
+
+- No explicit repository request-body analytics or learner-submission logging was identified.
+- Deployed hosting, runtime, observability, security, and infrastructure behavior remains unverified.
+
+#### Approved Future Data Inventory
+
+The following browser-local target domains remain unimplemented and must not be described as currently persisted.
+
+##### Course progress
+
+Contains completion state only.
+
+##### Module learner artifacts
+
+May include:
+
+- latest written Design Practice response
+- exact AI Review association
+- Module 4 validated decision and pathway state
+- learner rationale
+- bounded AI feedback
+- status and schema metadata
+- no attempt history
+
+##### Reflection
+
+May include:
+
+- current Reflection response
+- exact Reflection-feedback association
+- separate schema and clearing behavior
+- no attempt history
+- strict exclusion from Reverse Build
+
+#### Current Data Flows
+
+##### Course progress
+
+Learner action → browser local storage → same-tab and cross-tab progress displays.
+
+##### Design Practice AI Review
+
+Learner response → Future of ID API route → request validation → repository context reconstruction → OpenAI processing → structured feedback → browser component state.
+
+##### Reflection AI Review
+
+Learner Reflection → Future of ID API route → request validation → repository Reflection-context reconstruction → OpenAI processing → structured feedback → browser component state.
+
+Current-flow boundaries:
+
+- Learner text submitted for AI Review does not remain only in the browser.
+- Local persistence and AI processing are different data events.
+- No learner account or cloud-artifact synchronization exists.
+- Repository code does not currently implement server-side learner-submission persistence.
+- Deployment logging cannot be inferred from repository code alone.
+
+#### Future Data Flows
+
+##### Module learner artifacts
+
+- Approved current learner work will be stored in the current browser.
+- Latest-only replacement applies.
+- Requesting AI feedback still transmits the required learner text and context externally.
+
+##### Reflection
+
+- Future Reflection uses a separate local domain.
+- Reflection remains inaccessible to Reverse Build.
+- Requesting Reflection feedback transmits Reflection text externally.
+- Clearing local Reflection does not establish provider-side deletion.
+
+##### Module 4
+
+- Deterministic state remains repository-authoritative.
+- Minimum validated state and rationale are transmitted only for optional AI critique.
+- AI does not control branches.
+- Local simulation persistence and provider processing remain separate events.
+
+#### Local Browser-Persistence Disclosure
+
+Current disclosure must explain that:
+
+- course progress is saved in the current browser
+- no account is required
+- progress is not backed up or synchronized
+- browser clearing may remove progress
+- private or incognito mode may shorten or prevent retention
+- browser restrictions may prevent saving
+- no current in-product progress reset exists
+- progress may remain visible on shared computers
+
+Expanded disclosure becomes necessary only after implementation of:
+
+- saved Design Practice artifacts
+- saved AI feedback
+- saved Module 4 state
+- separately saved Reflection
+- scoped reset and clearing controls
+
+#### AI-Processing Disclosure
+
+Before or at AI submission, learners must be told that:
+
+- requesting AI feedback sends learner-entered text outside the browser
+- text passes through a Future of ID application server
+- relevant repository-owned context is added
+- OpenAI processes the request
+- AI Review is optional where approved
+- confidential, proprietary, regulated, personally identifying, or sensitive workplace information should not be submitted
+- AI feedback may be incomplete or incorrect
+- AI feedback does not score mastery, diagnose capability gaps, or personalize the learner's professional pathway
+- hidden prompts and internal model reasoning are not displayed
+- provider handling depends on verified provider terms and deployment settings
+
+#### Disclosure Timing and Placement
+
+- General local-storage disclosure must remain available through a persistent product or public-information surface.
+- First-use persistence disclosure must appear when learner-artifact persistence is introduced.
+- Design Practice AI disclosure must be associated with the response and AI-submission control.
+- Reflection must receive a persistent concise notice and an adjacent AI-transmission notice.
+- Reset and clearing controls must state their exact scope.
+- Blocking consent modals are not required unless later legal, organizational, usability, and accessibility review approves them.
+
+#### Reflection Privacy
+
+- Reflection may include personal professional or workplace information.
+- Reflection remains separate from module artifacts and course progress.
+- Reflection remains inaccessible to Reverse Build.
+- Reflection must not automatically resurface elsewhere.
+- Learners must be advised not to enter confidential employer, client, colleague, patient, student, customer, or personally identifying information.
+- Requesting Reflection AI feedback transmits the Reflection text through the application server to OpenAI.
+- Current Reflection is not persisted by repository application code.
+- Approved future Reflection persistence is browser-local and separately clearable.
+- Local clearing must not be described as deleting externally transmitted data.
+- Shared-computer exposure must be disclosed.
+
+#### Future of ID Application Retention
+
+Currently supportable statements include:
+
+- course-completion identifiers are stored in browser local storage
+- current Design Practice responses, Reflection responses, and AI feedback are not persisted by the browser application
+- no learner account or cloud artifact store is implemented
+- repository application code does not currently write learner submissions or feedback to a learner database
+- repository application code does not implement attempt history, learner analytics profiles, or longitudinal tracking
+
+Required qualification:
+
+- Repository behavior alone does not establish hosting, infrastructure, observability, or security-log retention.
+- “No learner database persistence” must not be generalized into “nothing is retained anywhere.”
+- No absolute retention statement may be made without deployment verification.
+
+#### Infrastructure and Logging Verification
+
+Deployment review must verify:
+
+- hosting provider
+- runtime and edge logs
+- request logging and request-body capture
+- error monitoring
+- observability and analytics tools
+- log retention
+- access controls
+- deletion and rotation behavior
+
+Each verification record must identify:
+
+- environment
+- verification date
+- reviewer
+- evidence source
+- verified behavior
+- unresolved uncertainty
+- approved wording
+
+#### OpenAI Provider Record
+
+The approved brief includes a July 13, 2026 official-source record for:
+
+- provider: OpenAI
+- endpoint currently used: `/v1/chat/completions`
+- model currently used: `gpt-4o-mini`
+- official API data-controls documentation
+- official API data-sharing and model-improvement documentation
+
+Provider defaults are recorded carefully:
+
+- API data is not used for model training by default unless an organization opts into sharing.
+- Standard abuse-monitoring logs may include prompts and responses and may generally be retained for up to 30 days, subject to documented exceptions and applicable controls.
+- Endpoint, organization, project, and eligibility settings may change retention behavior.
+- Zero Data Retention and Modified Abuse Monitoring require applicable eligibility, approval, and configuration.
+
+These are provider defaults, not verified Future of ID deployment guarantees.
+
+#### Deployment-Specific OpenAI Verification
+
+Before categorical provider wording is used, Future of ID must verify:
+
+- the actual OpenAI organization and project
+- API input/output sharing or model-improvement settings
+- whether default abuse monitoring, Modified Abuse Monitoring, or Zero Data Retention applies
+- project-level overrides
+- endpoint or model-specific exceptions
+- additional features that may introduce application-state retention
+- verification date and reviewer
+- retained evidence
+- approved learner-facing wording
+
+Until verification is complete, categorical deployment-specific claims remain prohibited.
+
+#### Provider Reverification
+
+Provider language must be rechecked:
+
+- immediately before public launch
+- when provider, endpoint, model, organization, project, or settings change
+- when official provider data-control terms materially change
+- when Future of ID's AI architecture changes
+- at least every six months after launch
+
+Each record must include the date, official source, deployment setting, reviewer, approved wording, and unresolved uncertainty.
+
+#### Retention Classification
+
+The approved brief maintains five separate classifications:
+
+1. Verified current application behavior.
+2. Approved future local behavior.
+3. Verified provider defaults.
+4. Verified deployment-specific configuration.
+5. Unknown or unverified behavior.
+
+These classifications must not be collapsed into one broad privacy claim.
+
+#### Reset, Clearing, and Deletion
+
+- Reset active practice clears its approved local activity scope.
+- Clear module work clears approved local module-artifact data.
+- Clear Reflection clears approved local Reflection data.
+- Reset course progress clears local completion markers only.
+- Browser-storage clearing may remove local Future of ID data.
+- Local clearing does not establish provider deletion.
+- “Delete all Future of ID data” must not be used without complete verified system scope.
+- “Clear local work” is the preferred term when only browser-local data is affected.
+
+#### Shared Computers and Private Browsing
+
+Disclosure must explain that:
+
+- local progress or future learner work may be visible to others using the same browser profile
+- learners should clear local work on shared or public computers when the relevant controls exist
+- private or incognito mode may not retain work after the session
+- browser controls may remove locally saved work
+- Future of ID cannot recover locally cleared work
+- no account-based backup exists
+
+#### Storage and AI Failure Language
+
+- Failed local writes must not be shown as successful saves.
+- Learners must be told when work may remain available only for the active session.
+- Open access remains available where possible.
+- Raw JSON, storage keys, exceptions, stack traces, and browser internals must not be shown.
+- AI failure is described as temporary unavailability.
+- Valid learner-entered work remains available where possible.
+- Deterministic Module 4 state remains valid when AI fails.
+- API keys, billing, project funding, quota internals, provider response bodies, and account details must not appear in learner-facing errors.
+- Current insufficient-quota messaging requires later remediation.
+- AI failure and local-storage failure remain separate states.
+
+#### Privacy and Data Minimization
+
+Only approved minimum data may be stored or transmitted. Unnecessary transmission or persistence excludes:
+
+- hidden prompts
+- chain of thought
+- provider internals
+- API keys
+- raw server errors
+- unrelated repository content
+- attempt histories
+- cross-module behavioral profiles
+- demographic or account data
+- analytics histories
+- diagnostic labels
+- Reflection outside its approved flow
+
+Repository context must be reconstructed server-side rather than accepted from the client as authoritative.
+
+#### Prohibited Claims
+
+Unsupported claims prohibited by the approved brief include:
+
+- learner work always remains in the browser
+- responses never leave the device
+- data is completely private or anonymous
+- Future of ID stores nothing
+- OpenAI retains nothing
+- OpenAI immediately deletes submitted data
+- OpenAI will never use submitted data for training
+- this deployment uses Zero Data Retention
+- local clearing deletes provider data
+- all data is permanently deleted
+- work is backed up or synchronized
+- data is encrypted without a clearly defined and verified claim
+- legal compliance without appropriate review
+- AI feedback is confidential without qualification
+
+#### Supported Statements
+
+Currently supportable statements, subject to implementation verification, include:
+
+- course progress is saved in the current browser
+- no learner account is required
+- current Design Practice and Reflection responses are sent for AI processing only when learners request feedback
+- repository application code currently does not persist learner submissions in a learner database
+- AI feedback remains optional where approved
+- AI feedback does not score, diagnose, or personalize a pathway
+- locally clearing work affects browser-local data only
+
+Statements about saved module work, saved Reflection, Reverse Build reconnection, and reset controls become supportable only after implementation and validation.
+
+#### Accessibility
+
+The approved specification defines testable requirements for:
+
+- plain-language notices
+- semantic headings and grouping
+- programmatic association among the notice, learner input, and AI-submission control
+- keyboard access
+- screen-reader interpretation
+- notice access without hover
+- persistent availability rather than toast-only disclosure
+- 320 CSS-pixel mobile reflow
+- 200% browser and text-only zoom
+- no essential horizontal scrolling
+- non-color-only meaning
+- predictable focus after confirmation, cancellation, failure, or clearing
+- programmatically announced save, failure, reset, and clear outcomes
+- accessible names describing destructive-action scope
+- accessible links where external information is provided
+- no forced inaccessible modal
+
+These disclosure surfaces remain unimplemented.
+
+#### Product Disclosure and Legal Policy Boundary
+
+The brief governs:
+
+- product data inventory
+- data flows
+- disclosure meaning
+- timing and placement
+- provider verification
+- prohibited claims
+- accessibility
+- acceptance criteria
+
+Separate legal or organizational review governs:
+
+- whether a public privacy policy is required
+- jurisdiction and audience requirements
+- legal bases and consent terminology
+- controller, processor, or service-provider terminology
+- contact and privacy-rights workflows
+- contractual commitments
+- external provider links
+- formal policy dates
+
+Section 4.4 approval does not certify legal compliance.
+
+#### Acceptance-Criteria Governance
+
+- The brief contains 80 unique binary `PDF-*` acceptance criteria.
+- Criteria cover inventories, local persistence, AI submission, Reflection, application retention, provider verification, reset and deletion, failure honesty, minimization, accessibility, and product honesty.
+- Each criterion permits an unambiguous pass or fail result.
+- Later implementation, validation, claim review, and launch evidence must trace to these identifiers.
+- Changes to approved criteria require explicit governance approval.
+
+#### Ownership and Handoff
+
+##### Section 4.4 owns
+
+- disclosure requirements
+- data-flow definitions
+- retention classifications
+- provider-verification rules
+- prohibited claims
+- disclosure accessibility
+- acceptance criteria
+
+##### Section 5 owns
+
+- storage implementation
+- safe persistence
+- reset APIs
+- local-domain enforcement
+- technical error handling
+
+##### Section 6 owns
+
+- reference integration of persistence and AI notices
+
+##### Later Module 4 implementation owns
+
+- simulation-specific persistence and AI disclosures
+
+##### Section 4.5 owns
+
+- validation environments
+- browsers
+- assistive technologies
+- evidence records
+- retest requirements
+
+##### Public-copy rollout owns
+
+- implementation of notices and privacy surfaces
+
+##### Provider and project verification owns
+
+- actual OpenAI setting verification and approved provider wording
+
+##### Legal or organizational review owns
+
+- any formal policy and jurisdictional requirements
+
+#### Remediation Summary
+
+- `PRIVACY_AND_DATA_FLOW_IMPLEMENTATION_BRIEF.md` was created.
+- `docs/README.md` was updated to place the brief in the documentation hierarchy.
+- No application or product behavior changed.
+- No content, type, hook, service, persistence, route, API, component, test, checklist, provider-setting, or legal-policy file changed during remediation.
+- Approved Sections 4.1–4.3 briefs remained unchanged.
+- Learner-facing disclosures remain unimplemented.
+- Deployment logging and OpenAI project settings remain unverified.
+
+#### Validation
+
+The following passed:
+
+- `npm run lint`
+- `npx tsc --noEmit`
+- `git diff --check`
+- 6-of-6 requirement crosswalk
+- 30-section structure review
+- 80-criterion identifier and uniqueness review
+- current-versus-future inventory review
+- Design Practice and Reflection flow review
+- browser-local versus AI-transmitted boundary review
+- application-retention qualification review
+- provider-source and verification-date review
+- deployment-uncertainty review
+- reset-versus-deletion review
+- prohibited-claim search
+- insufficient-quota governance review
+- Reflection privacy review
+- accessibility coverage review
+- approved-brief compatibility review
+- documentation-hierarchy review
+- file-scope isolation review
+
+#### Continuing Governance Considerations
+
+- The approved brief is the controlling Section 4.4 product-disclosure specification.
+- Disclosure implementation must track actual behavior rather than target behavior.
+- Provider defaults must not be presented as verified deployment settings.
+- Actual OpenAI organization and project settings must be checked before launch.
+- Deployment logging and observability must be reviewed.
+- Provider language must be reverified before launch and at least every six months.
+- Local clearing must never be described as external deletion.
+- Reflection must retain stronger privacy treatment and remain outside Reverse Build.
+- The current quota error exposing provider operational details must be corrected during later implementation.
+- Legal or organizational review may require a separate public policy.
+- Any material change to data flow, provider, model, endpoint, storage, logging, reset behavior, or `PDF-*` criteria requires explicit governance review.
+
+#### Approval Rationale
+
+> Section 4.4 is approved because Future of ID now has an authoritative and testable privacy and data-flow specification. The brief accurately distinguishes browser-local persistence, learner-initiated AI transmission, repository application retention, deployed infrastructure uncertainty, official provider defaults, and deployment-specific settings that still require verification. It establishes timely and accessible disclosure requirements, stronger Reflection treatment, precise reset and deletion terminology, prohibited privacy claims, provider reverification rules, and binary acceptance criteria without making unsupported legal, anonymity, retention, deletion, training, or confidentiality guarantees.
 
 ## 4.5 Validation brief
 
