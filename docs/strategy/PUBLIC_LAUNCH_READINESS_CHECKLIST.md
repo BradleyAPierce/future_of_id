@@ -3104,13 +3104,246 @@ The following passed during Section 4.6 remediation and final correction:
 
 ### Phase 4 completion evidence
 
-- [ ] Reverse Build v2 brief approved.
-- [ ] Module 4 simulation brief approved.
-- [ ] Learner-artifact and persistence brief approved.
-- [ ] Privacy and data-flow brief approved.
-- [ ] Module 4 AI-contract decisions approved.
-- [ ] Validation brief approved.
-- [ ] Acceptance criteria are specific enough that completion can be tested rather than assumed.
+- [x] Reverse Build v2 brief approved.
+- [x] Module 4 simulation brief approved.
+- [x] Learner-artifact and persistence brief approved.
+- [x] Privacy and data-flow brief approved.
+- [x] Module 4 AI-contract decisions approved.
+- [x] Validation brief approved.
+- [x] Acceptance criteria are specific enough that completion can be tested rather than assumed.
+
+### Phase 4 Completion Record
+
+- **Phase status:** Phase 4 — Complete and Approved
+- **Status:** Complete and Approved
+- **Approval date:** July 13, 2026
+- **Approved by:** Bradley Pierce
+
+#### Decision
+
+Phase 4 launch-readiness implementation briefs, validation governance, and implementation-control requirements are complete and approved. Sections 4.1–4.6 and all seven Phase 4 completion-evidence requirements have been individually reviewed and formally approved. The six controlling specifications are coherent, testable, and represented in the source-of-truth hierarchy. The prior Section 5.1 persistence-domain conflict was corrected before this completion decision.
+
+Phase 4 completion approves specifications and governance. It does not claim completed feature implementation, executed validation, deployment verification, provider configuration, or legal review. Section 5 remains open and may begin only through an approved implementation work order.
+
+#### Approved Section Records
+
+- Section 4.1 — Reverse Build v2 brief
+- Section 4.2 — Module 4 simulation brief
+- Section 4.3 — Learner-artifact and persistence brief
+- Section 4.4 — Privacy and data-flow brief
+- Section 4.5 — Validation and evidence brief
+- Section 4.6 — Implementation-control requirements
+
+#### Approved Controlling Specifications
+
+- `docs/experience/REVERSE_BUILD_V2_IMPLEMENTATION_BRIEF.md`
+- `docs/experience/MODULE_4_SIMULATION_IMPLEMENTATION_BRIEF.md`
+- `docs/experience/LEARNER_ARTIFACT_AND_PERSISTENCE_IMPLEMENTATION_BRIEF.md`
+- `docs/experience/PRIVACY_AND_DATA_FLOW_IMPLEMENTATION_BRIEF.md`
+- `docs/validation/VALIDATION_AND_EVIDENCE_IMPLEMENTATION_BRIEF.md`
+- `docs/IMPLEMENTATION_WORK_ORDER_STANDARD.md`
+
+Each source governs its approved scope and cannot be silently redefined by later implementation work.
+
+#### Reverse Build v2 Contract
+
+The approved Reverse Build v2 brief defines:
+
+- reconnection to the learner's current Design Practice artifact
+- association with AI Review for the exact current learner response
+- authored-versus-dynamic content boundaries
+- multiple-prompt behavior
+- empty, partial, unavailable, failed, stale, and malformed states
+- privacy and accessibility requirements
+- supported and prohibited product claims
+- binary `RB2-*` acceptance criteria
+- strict exclusion of Reflection content and state
+
+The approved instructional sequence is:
+
+**Design Practice → AI Review → Reverse Build → Reflection**
+
+#### Module 4 Simulation Contract
+
+The approved Module 4 brief defines:
+
+- one bounded professional scenario
+- three first-choice options with distinct consequences
+- three dependent second decisions
+- six deterministic pathways and final states
+- repository-authoritative identifiers and state
+- learner rationale and optional refinement
+- bounded, optional AI Review
+- Reverse Build reconstruction
+- privacy, accessibility, failure, and mobile behavior
+- binary `M4SIM-*` acceptance criteria
+
+Deterministic Module 4 state remains independent of AI. AI may review learner reasoning but cannot determine authoritative choices, pathways, consequences, or final state.
+
+#### Learner-Artifact and Persistence Contract
+
+The approved learner-artifact and persistence brief defines:
+
+- one current learner artifact per module
+- independent prompt entries
+- latest-response replacement rather than attempt history
+- exact learner-response and AI-feedback association
+- stale-feedback invalidation
+- Module 4 structured artifact state
+- separate Reflection persistence
+- course-progress hardening
+- reset and clearing boundaries
+- schema versions, migrations, stale data, malformed data, and storage failures
+- binary `LAP-*` acceptance criteria
+
+#### Three Persistence Domains
+
+The approved architecture preserves three separate persistence domains:
+
+- **Course progress:** stores completion markers and approved progress state only.
+- **Module learner artifacts:** store current Design Practice and simulation state only.
+- **Reflection:** stores the current Reflection response and associated Reflection-feedback state in a separate domain.
+
+Each domain must remain independently readable, writable, versioned, validated, resettable, and clearable. Reflection remains outside Reverse Build. Clearing one domain must not silently clear another, and course completion is not evidence that learner work exists. The architecture introduces no attempt history, longitudinal tracking, learner timeline, portfolio management, account, cloud persistence, or synchronization.
+
+#### Section 5.1 Conflict Resolution
+
+Phase 4 completion followed a focused checklist correction resolving the prior Section 5.1 persistence-domain conflict. Section 5.1 now:
+
+- excludes Reflection response, feedback, status, reset, and clearing state from module learner artifacts
+- defines Reflection as a separate versioned persistence domain
+- preserves independent domain read, write, versioning, validation, reset, and clearing boundaries
+- preserves strict Reverse Build exclusion from Reflection
+- makes timestamps conditional on documented technical necessity
+- adds binary domain-boundary requirements
+- aligns with the approved Section 4.3 contract
+
+No contradictory persistence-domain language remains in the revised Section 5.1 planning requirements.
+
+#### Conditional Timestamp Governance
+
+- Timestamps are not mandatory by default.
+- A timestamp may be added only when a documented product, migration, validation, stale-state, conflict-resolution, or display requirement needs it.
+- Every timestamp requires a stated purpose and data-minimization rationale.
+- Timestamps must not create attempt history, longitudinal tracking, learner timelines, or analytics profiles.
+
+#### Privacy and Data-Flow Contract
+
+The approved privacy and data-flow brief defines:
+
+- current and approved-future data inventories
+- browser-local versus AI-transmitted data
+- current application-retention boundaries
+- infrastructure and logging uncertainty
+- provider defaults separated from deployment-specific facts
+- disclosure before or at AI submission
+- Reflection-specific privacy treatment
+- shared-computer and private-browsing warnings
+- reset, clearing, and deletion terminology
+- prohibited privacy, retention, training, anonymity, and legal claims
+- binary `PDF-*` acceptance criteria
+
+Provider behavior, deployed-project settings, and legal conclusions remain subject to later verification and review; Phase 4 does not represent them as verified.
+
+#### Validation and Evidence Contract
+
+The approved validation and evidence brief defines:
+
+- criterion-level automated and manual validation mapping
+- current executability classifications
+- required environments, routes, browsers, viewports, zoom, keyboard, screen-reader, reduced-motion, privacy, provider, and public-claim coverage
+- evidence-record requirements and append-oriented evidence history
+- AI regression governance
+- pass, failure, blocked, and not-yet-executable meanings
+- Critical, High, Medium, and Low defect severity
+- retesting, exceptions, ownership, and completion rules
+- consolidated launch-validation records
+- binary `VE-*` acceptance criteria
+
+Criteria, tests, and retained evidence remain separate artifacts. Documentation, lint, type checking, or build success alone cannot establish feature completion, and manual accessibility verification remains mandatory.
+
+#### Implementation Work Order Contract
+
+The approved Implementation Work Order Standard defines:
+
+- source and acceptance-criterion traceability
+- observable objectives and current-versus-target behavior
+- authorized scope, affected files, explicit non-goals, and scope amendments
+- content and logic separation, reuse, hardcoding controls, architecture decisions, and ADR triggers
+- data, persistence, AI, privacy, accessibility, and public-claim impact reviews
+- blocking conditions and honest implementation-status rules
+- validation plans, result reporting, evidence records, and final closure
+- a mandatory work-order template
+- binary `IWO-*` acceptance criteria
+
+Material implementation cannot begin from a Draft, Under Review, Blocked, Superseded, or Cancelled work order. Unresolved material source conflicts must block implementation. Implementation, validation, acceptance, and final approval remain separate states.
+
+#### Approved Acceptance-Criteria Inventory
+
+| Criterion family | Approved criteria | Controlling scope |
+|---|---:|---|
+| `RB2-*` | 36 | Reverse Build v2 |
+| `M4SIM-*` | 69 | Module 4 simulation |
+| `LAP-*` | 80 | Learner artifacts and persistence |
+| `PDF-*` | 80 | Privacy and data flow |
+| `VE-*` | 29 | Validation and evidence governance |
+| `IWO-*` | 56 | Implementation work orders |
+| **Total** | **350** | **Approved Phase 4 criteria** |
+
+The criteria inventories are unique, binary, and testable within their approved scopes. This completion record does not mark any criterion passed and does not create implementation or validation evidence.
+
+#### Current-versus-Target Integrity
+
+At Phase 4 completion:
+
+- all six controlling sources remain approved target specifications or implementation-governance standards
+- Reverse Build v2 remains unimplemented
+- the Module 4 simulation remains unimplemented
+- learner-artifact and Reflection persistence remain unimplemented
+- learner-facing privacy disclosures remain unimplemented
+- the full validation program remains unexecuted
+- Section 5 and all later implementation phases remain open
+- no implementation work order has begun
+
+These future implementation, validation, deployment, provider-verification, disclosure, and legal-review responsibilities remain visible and do not invalidate completion of the Phase 4 specification gate.
+
+#### Governance and Implementation Readiness
+
+- Section 5 may begin only after this formal Phase 4 approval and through an approved implementation work order.
+- The work order must cite the applicable approved Phase 4 specifications, acceptance criteria, and validation requirements.
+- Unresolved source conflicts must block implementation rather than be resolved through unsupported contributor preference.
+- Section 5 cannot redefine the three-domain persistence contract, Reflection boundary, deterministic Module 4 state, privacy boundaries, or validation meaning.
+- Work orders execute approved contracts; any material contract change requires explicit governance approval.
+- Implementation completion, validation completion, acceptance completion, and final approval remain separate states.
+
+#### Approval-Pass Validation
+
+The Phase 4 completion update was supported by:
+
+- `npm run lint`
+- `npx tsc --noEmit`
+- `git diff --check`
+- seven-of-seven Phase 4 completion-evidence review
+- Section 4.1–4.6 approval-record review
+- 350-criterion count and uniqueness review
+- Section 5.1 three-domain compatibility review
+- current-versus-target integrity review
+- isolated checklist and protected-file scope review
+
+These checks verify documentation integrity for this approval update; they do not execute feature acceptance criteria or the full validation program.
+
+#### Continuing Governance Considerations
+
+- The six controlling sources retain authority within their approved scopes.
+- Later implementation must preserve the three persistence domains, strict Reflection boundary, deterministic Module 4 state, open access, and boundaries against accounts, cloud synchronization, scoring, diagnosis, analytics, and personalization.
+- Provider and deployment facts must be verified before any dependent claim or launch approval.
+- Manual accessibility verification and criterion-level evidence remain mandatory.
+- Blocked, failed, not-run, unavailable, and not-yet-executable work must remain visible.
+- Any material change to approved product contracts, criteria, validation meaning, or implementation-control governance requires explicit approval.
+
+#### Phase 4 Approval Rationale
+
+> Phase 4 is approved because Future of ID now has six coherent and authoritative specifications governing Reverse Build v2, the Module 4 simulation, learner artifacts and persistence, privacy and data flow, validation and evidence, and implementation control. The prior Section 5.1 persistence-domain conflict has been corrected, all seven phase completion-evidence requirements are satisfied, and 350 binary acceptance and governance criteria make later completion testable rather than assumed. This approval completes the specification and governance gate without claiming implementation, validation, deployment verification, provider configuration, or legal review.
 
 ---
 
@@ -3122,31 +3355,109 @@ For this launch, the system stores one current artifact per module. It does not 
 
 ## 5.1 Data model
 
-Define a versioned module artifact capable of representing:
+### Module learner artifact domain
 
-- [ ] module identifier
-- [ ] module slug
+Define a versioned module learner artifact capable of representing only approved Design Practice and simulation work:
+
+- [ ] authoritative module identifier or slug
+- [ ] module-artifact schema version
 - [ ] a current Design Practice entry for each module prompt, keyed by an authoritative interaction identifier
 - [ ] the interaction type for each entry: written response or branching simulation
 - [ ] the authoritative scenario or practice-context identifier
 - [ ] the learner’s latest written response for each written prompt
-- [ ] the AI feedback associated with that latest response
-- [ ] AI feedback summary, strengths, gap when applicable, and recommended next step
+- [ ] the AI Review state and feedback associated with the exact current response or validated simulation state
+- [ ] bounded AI feedback fields required by the applicable approved interaction contract
 - [ ] Module 4’s validated decisions, pathway, consequences, final state, and learner rationale
-- [ ] the learner’s current Reflection response after Reverse Build
-- [ ] Reflection feedback when requested
-- [ ] completion state
-- [ ] creation timestamp
-- [ ] update timestamp
-- [ ] schema version
+- [ ] original and revised rationale only where the approved interaction explicitly requires both
+- [ ] current, partial, unavailable, stale, malformed, or cleared artifact states
+- [ ] metadata only when technically required and documented under the timestamp rules below
 
-Explicitly exclude:
+The module learner artifact must not contain:
+
+- [ ] the learner’s Reflection response
+- [ ] Reflection AI feedback or AI-feedback state
+- [ ] Reflection status
+- [ ] Reflection reset or clearing state
+
+### Reflection persistence domain
+
+Define a separate versioned Reflection persistence domain capable of representing:
+
+- [ ] authoritative module identifier
+- [ ] Reflection schema version
+- [ ] the learner’s current Reflection response after Reverse Build
+- [ ] Reflection AI-feedback state
+- [ ] Reflection feedback associated with the exact current Reflection response when available
+- [ ] stale-feedback invalidation when the Reflection response is revised
+- [ ] current, unavailable, malformed, stale, or cleared Reflection state
+- [ ] independent Reflection reset and clearing behavior
+- [ ] local-browser persistence
+- [ ] no Reflection attempt history
+
+Require that:
+
+- [ ] Reflection is written only through the Reflection experience
+- [ ] Reverse Build cannot read, receive, display, summarize, transmit, or infer from Reflection
+- [ ] clearing module Design Practice or simulation work does not silently clear Reflection
+- [ ] clearing Reflection does not silently clear course progress or module learner artifacts
+- [ ] Reflection does not automatically resurface in dashboards, Reverse Build, other modules, or unrelated product areas
+- [ ] Reflection remains independently versioned and validated
+
+### Three-domain persistence architecture
+
+Preserve three distinct persistence domains:
+
+- [ ] course progress stores only completion markers and approved progress state
+- [ ] module learner artifacts store only current Design Practice and simulation work
+- [ ] Reflection stores only the current Reflection response and associated Reflection-feedback state
+
+The implementation must provide separate boundaries for each domain:
+
+- [ ] independent read behavior
+- [ ] independent write behavior
+- [ ] independent schema versioning
+- [ ] independent validation and malformed-data isolation
+- [ ] independent reset behavior
+- [ ] independent clear behavior
+
+Course completion must not be treated as evidence that a module learner artifact or Reflection exists. Module learner work and Reflection must not be required for course completion or open access.
+
+### Conditional timestamp governance
+
+Timestamps may be included only when a documented product, validation, migration, stale-state, conflict-resolution, or display requirement needs them.
+
+Every proposed timestamp must document:
+
+- [ ] the exact field
+- [ ] its product or technical purpose
+- [ ] whether it is required or optional
+- [ ] how it supports observable behavior
+- [ ] its data-minimization rationale
+- [ ] whether the behavior can be implemented without it
+
+Timestamps must not create or imply:
 
 - [ ] attempt history
-- [ ] version history
-- [ ] longitudinal tracking
-- [ ] portfolio management
-- [ ] cross-device synchronization
+- [ ] longitudinal tracking or learner timelines
+- [ ] analytics profiles
+- [ ] unnecessary retention metadata
+
+### Section 5 domain-boundary acceptance requirements
+
+- [ ] Course progress, module learner artifacts, and Reflection are separate persistence domains.
+- [ ] Each persistence domain is independently readable.
+- [ ] Each persistence domain is independently writable.
+- [ ] Each persistence domain is independently versioned and validated.
+- [ ] Each persistence domain has independent reset and clearing behavior.
+- [ ] Reverse Build cannot access Reflection.
+- [ ] Resetting or clearing module learner artifacts does not silently clear Reflection.
+- [ ] Resetting or clearing Reflection does not silently clear module learner artifacts or course progress.
+- [ ] Resetting course progress does not silently clear module learner artifacts or Reflection.
+- [ ] Timestamps are included only when technically justified and documented.
+- [ ] The architecture introduces no attempt history, learner-visible version history, longitudinal history, portfolio, analytics profile, account, cloud persistence, or cross-device synchronization.
+- [ ] Independent prompt entries use latest-response replacement and preserve exact response and AI-feedback association.
+- [ ] Module 4 identifiers and deterministic state remain repository-authoritative and independent of AI.
+- [ ] The architecture preserves Design Practice → AI Review → Reverse Build → Reflection, browser-local persistence, open access, and boundaries against scoring, diagnosis, analytics, and personalization.
 
 ## 5.2 Architecture
 
