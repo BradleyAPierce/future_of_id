@@ -2363,13 +2363,521 @@ The following passed:
 
 ## 4.5 Validation brief
 
-- [ ] Define which acceptance checks are automated.
-- [ ] Define which acceptance checks require manual review.
-- [ ] Define the exact commands, environments, routes, browsers, viewport sizes, and assistive-technology checks used where applicable.
-- [ ] Define pass, fail, defect-severity, evidence, and retest rules.
-- [ ] Define `docs/validation/ai-feedback-regression/` as the location for exact AI test inputs, outputs, verdicts, reasons, tuning changes, and rerun evidence.
-- [ ] Define the launch-validation record under `docs/validation/` before testing begins.
-- [ ] Confirm that an automated accessibility scan does not by itself close the accessibility gate.
+- [x] Define which acceptance checks are automated.
+- [x] Define which acceptance checks require manual review.
+- [x] Define the exact commands, environments, routes, browsers, viewport sizes, and assistive-technology checks used where applicable.
+- [x] Define pass, fail, defect-severity, evidence, and retest rules.
+- [x] Define `docs/validation/ai-feedback-regression/` as the location for exact AI test inputs, outputs, verdicts, reasons, tuning changes, and rerun evidence.
+- [x] Define the launch-validation record under `docs/validation/` before testing begins.
+- [x] Confirm that an automated accessibility scan does not by itself close the accessibility gate.
+
+### Section 4.5 Approval Record
+
+- **Status:** Approved
+- **Approval date:** July 13, 2026
+- **Approved by:** Bradley Pierce
+
+#### Decision
+
+- `docs/validation/VALIDATION_AND_EVIDENCE_IMPLEMENTATION_BRIEF.md` is complete and approved.
+- The brief becomes the controlling Section 4.5 validation-and-evidence specification.
+- `docs/validation/ai-feedback-regression/README.md` remains approved documentation scaffolding for future validation evidence, not evidence that regression testing has occurred.
+- Section 4.5 approval authorizes the validation strategy, evidence formats, execution-status definitions, severity model, retest rules, exception governance, completion rules, and validation-governance criteria.
+- The full 265-criterion feature acceptance-testing program has not been executed.
+- No feature acceptance criterion is marked passed through this approval.
+- Criteria in **Not implemented**, **Not yet executable**, **In validation**, or **Blocked** status cannot be counted as passed.
+- Feature completion requires implementation, execution of applicable criteria, retained evidence, resolution or approved governance of launch blockers, and formal approval.
+- Future validation records must trace to approved criterion identifiers and evidence requirements.
+- Phase 4 is not complete merely because the Section 4.5 specification is approved.
+
+#### Evidence Reviewed
+
+Approval was based on:
+
+- creation and corrective completion of `docs/validation/VALIDATION_AND_EVIDENCE_IMPLEMENTATION_BRIEF.md`
+- creation of documentation-only scaffolding in `docs/validation/ai-feedback-regression/README.md`
+- alignment of `docs/README.md`
+- coverage of all seven Section 4.5 requirements
+- exactly 35 numbered primary sections
+- restoration and completion of required Sections 26–35
+- inventory of all 265 approved feature criteria
+- confirmation of unique identifiers across all feature-criteria families
+- classification of every approved criterion prefix through the current-executability and validation-method inventory
+- mapping of automated, manual, external, governance, combined, and currently non-executable validation responsibilities
+- definition of validation commands, environments, routes, browsers, viewports, zoom, reduced motion, keyboard, and screen-reader coverage
+- definition of AI, persistence, privacy, provider, accessibility, and public-claim validation
+- definition of the AI regression evidence directory
+- definition of standard criterion-level and feature-level evidence records
+- definition of the future public launch-validation record
+- definition of authoritative result statuses
+- definition of Critical, High, Medium, and Low defect severity
+- definition of retesting and append-oriented evidence history
+- definition of waiver and exception governance
+- definition of safe feature-completion rules
+- definition of section and phase ownership
+- definition of current-executability dependencies
+- definition of explicit non-goals
+- Approved-Boundary Alignment
+- 29 unique binary `VE-*` criteria
+
+#### Acceptance-Criteria Inventory
+
+| Product area | Prefix | Total | Controlling brief |
+|---|---:|---:|---|
+| Reverse Build v2 | `RB2-*` | 36 | `REVERSE_BUILD_V2_IMPLEMENTATION_BRIEF.md` |
+| Module 4 simulation | `M4SIM-*` | 69 | `MODULE_4_SIMULATION_IMPLEMENTATION_BRIEF.md` |
+| Learner artifact and persistence | `LAP-*` | 80 | `LEARNER_ARTIFACT_AND_PERSISTENCE_IMPLEMENTATION_BRIEF.md` |
+| Privacy and data flow | `PDF-*` | 80 | `PRIVACY_AND_DATA_FLOW_IMPLEMENTATION_BRIEF.md` |
+| Validation governance | `VE-*` | 29 | `VALIDATION_AND_EVIDENCE_IMPLEMENTATION_BRIEF.md` |
+
+- The 265 feature criteria remain governed by their respective product briefs.
+- The 29 `VE-*` criteria govern validation execution and evidence.
+- Section 4.5 cannot silently change approved product meaning.
+- Criterion changes require explicit governance updates to the controlling source and approval history.
+
+#### Execution-Status Governance
+
+The authoritative statuses are:
+
+- **Not implemented:** the required behavior does not exist.
+- **Not yet executable:** the behavior may exist partially or a required dependency is unavailable, so meaningful validation cannot yet occur.
+- **Ready for validation:** implementation and the required environment are available.
+- **In validation:** execution is underway without a final result.
+- **Passed:** observed behavior matches the criterion and all required evidence is retained.
+- **Failed:** observed behavior contradicts the criterion or required evidence demonstrates a defect.
+- **Blocked:** validation cannot be completed because an implementation, environment, access, dependency, hardware, provider-configuration, or external-verification requirement is unavailable.
+- **Not applicable:** allowed only through an approved product or governance decision.
+- **Passed with approved exception:** allowed only through the complete approved exception contract.
+
+Execution status and defect severity are separate concepts. **Blocked**, **Not implemented**, **Not yet executable**, and **In validation** do not count as passed. **Not applicable** requires approved rationale, and an approved exception must satisfy every exception field and retest obligation.
+
+#### Automated and Manual Mapping
+
+- Every criterion or meaningful criterion range is classified by likely automated, manual, external, governance, combined, or currently non-executable validation method.
+- Automatable criteria require mappings to commands, tests, fixtures or mocks, environments, expected results, and evidence output.
+- Manual criteria require a scenario, prerequisites, route or feature state, environment, browser or device, viewport or zoom, assistive technology where relevant, tester instructions, expected results, and retained evidence.
+- Automation does not replace required manual accessibility, product-honesty, disclosure, comprehension, or professional-judgment review.
+- External and governance verification cannot be reclassified as an ordinary manual product check merely to make a criterion executable.
+- An unavailable required browser, device, screen-reader, provider, deployment, or legal-review environment is recorded as **Blocked**, not silently skipped.
+
+#### Validation Environments
+
+The approved environment classes are:
+
+- local development
+- production build
+- production-equivalent deployed preview
+- public-production final smoke checks
+
+Environment-dependent evidence must identify the environment URL or identifier, commit or build, date, tester, relevant configuration, and whether live-provider access was enabled. Public production must not be the first environment in which major defects are sought.
+
+#### Route and Experience Coverage
+
+Validation coverage includes:
+
+- `/`
+- `/about`
+- `/course`
+- `/course/orientation`
+- `/course/dashboard`
+- all seven `/course/module/[slug]` routes
+- `/api/scenario-feedback`
+- `/api/reflection-feedback`
+- Design Practice
+- AI Review
+- Reverse Build
+- Reflection
+- completion controls
+- future reset and privacy surfaces when implemented
+- direct module access and deep links
+- open access without prerequisite completion
+- required error, empty, partial, fallback, and recovery states
+
+Future routes, controls, and states remain **Not implemented** until observable and cannot be counted as passed coverage.
+
+#### Browser, Viewport, Zoom, and Motion Coverage
+
+Practical launch coverage includes current approved versions of:
+
+- Chrome desktop
+- Safari desktop
+- Firefox desktop
+- Edge desktop
+- Safari on iOS
+- Chrome on Android
+
+Baseline viewport coverage includes:
+
+- 320 CSS pixels
+- 375 CSS pixels
+- 768 CSS pixels
+- 1280 CSS pixels
+- 1440 CSS pixels where wide-layout behavior materially changes
+
+Validation also covers:
+
+- 200% browser zoom
+- 200% text-only zoom where supported
+- reduced-motion preferences
+- orientation changes where relevant
+- touch targets
+- horizontal overflow
+- long learner content
+- long AI feedback
+- long notices
+- dialog and modal scrolling
+
+Evidence must record actual browser and operating-system versions, exact viewport dimensions, zoom, and relevant device information.
+
+#### Accessibility Validation
+
+- Automated accessibility scanning is supplemental and cannot close the accessibility gate by itself.
+- Manual keyboard validation is mandatory where applicable.
+- Manual screen-reader validation is mandatory where applicable.
+- Required practical combinations include VoiceOver with Safari on macOS, VoiceOver with Safari on iOS, and NVDA with Chrome or Firefox on Windows.
+- Unavailable required hardware or environments are recorded as **Blocked** rather than silently skipped.
+- Validation covers headings, landmarks, dialog semantics, accessible names and descriptions, selected state, focus order, focus containment, Escape behavior, focus return, dynamic announcements, errors, stale and partial states, reset scope, pathway review, reflow, zoom, and reduced motion.
+- Section 4.5 approval does not certify WCAG conformance.
+
+#### AI Validation and Regression Evidence
+
+The four approved AI-validation layers are:
+
+1. deterministic request validation
+2. repository-authoritative reconstruction
+3. structured-output validation
+4. limited live-provider validation
+
+Regression evidence must address:
+
+- valid strong and weak responses
+- vague but meaningful responses
+- minimum- and maximum-length boundaries
+- invalid or trivial responses
+- malformed provider output
+- timeouts and network failure
+- unavailable providers
+- quota or billing failure
+- module-specific reasoning
+- Reflection-specific reasoning
+- future Module 4 validated-pathway critique
+- non-diagnostic and non-personalization boundaries
+- no hidden-prompt or hidden-reasoning exposure
+
+`docs/validation/ai-feedback-regression/` is reserved for future evidence and currently contains documentation scaffolding only. It must not store production learner conversations, API keys, confidential data, hidden prompts, chain of thought, personal data, or unnecessary full provider payloads.
+
+#### Persistence and Recovery Validation
+
+Required validation covers:
+
+- safe parsing and authoritative identifiers
+- same-tab and cross-tab updates
+- schema versions and migrations
+- unsupported versions
+- malformed JSON
+- individual-record corruption and record isolation
+- blocked storage and security exceptions
+- quota failure and interrupted writes
+- stale feedback and exact response association
+- partial prompt state
+- Module 4 partial and completed state
+- Reflection separation from module artifacts and Reverse Build
+- reset scopes
+- cleared data not returning
+- open access during storage or recovery failure
+
+Section 5 owns architecture-level tests. Later browser validation proves the complete end-to-end learner behavior.
+
+#### Privacy and Provider Validation
+
+Validation covers:
+
+- current and future data inventories
+- observed network requests
+- local-storage inspection
+- AI disclosure before or at submission
+- Reflection-specific notice requirements
+- shared-computer and private-browsing disclosure
+- reset-versus-deletion terminology
+- storage and AI failure honesty
+- prohibited-claim searches
+- infrastructure and deployment-logging review
+- official provider-source verification
+- actual OpenAI organization and project-setting verification
+- provider reverification
+- legal or organizational review status
+
+Evidence must distinguish technical, editorial, provider-default, deployment-specific, governance, and legal or organizational verification.
+
+#### Product-Claim Validation
+
+The public-claim audit covers:
+
+- homepage
+- About
+- Orientation
+- all module content
+- Reverse Build
+- Reflection
+- AI controls
+- privacy disclosures
+- README
+- metadata
+- architecture documentation
+- experience documentation
+
+Each relevant claim is classified as **verified current**, **approved target**, **provider default**, **verified deployment-specific**, **unknown**, or **prohibited**. Target behavior presented as current is a failed validation result.
+
+#### Evidence Records
+
+Each criterion-level evidence record includes:
+
+- criterion identifier
+- controlling brief
+- feature or route
+- implementation version or commit
+- environment
+- browser and operating system
+- viewport and zoom
+- assistive technology where applicable
+- date and tester
+- validation method and prerequisites
+- expected and observed results
+- execution status
+- evidence references
+- defect identifier
+- retest reference
+- notes and uncertainty
+
+Separate feature-validation records are created, when authorized, for Reverse Build v2, Module 4 simulation, learner artifacts and persistence, privacy and data flow, AI feedback regression, accessibility, and the public-claim audit.
+
+#### Launch-Validation Record
+
+The future public launch-validation record includes:
+
+- release, commit, or build
+- deployed environment
+- validation date range
+- applicable-criteria totals
+- passed, failed, blocked, and governance-approved not-applicable totals
+- approved exceptions
+- unresolved launch blockers
+- browser, mobile, accessibility, AI, persistence, privacy, provider, public-claim, and legal-review coverage
+- defect and retest summaries
+- unresolved uncertainty
+- final launch recommendation and decision
+- approver and approval date
+
+The record summarizes and links criterion-level evidence. It cannot treat unimplemented criteria, missing evidence, or blocked criteria as passed. It is created only after the relevant implementation and validation work occurs.
+
+#### Defect Severity
+
+##### Critical
+
+Launch-blocking issues include learner-data exposure, destructive corruption, secret or hidden-prompt exposure, materially false privacy claims, server-authoritative-state bypass, inaccessible core experiences without a workaround, and launch-breaking routes or APIs.
+
+##### High
+
+Normally launch-blocking issues include failure of a core criterion, loss of valid saved work, incorrect AI-response association, Reflection leakage into Reverse Build, acceptance of an invalid simulation path, AI submission without required disclosure, and major keyboard or screen-reader blockers.
+
+##### Medium
+
+Medium defects are material functional, usability, accessibility, responsive, disclosure, recovery, or claim degradations with a practical workaround. An unresolved Medium defect requires an explicit launch decision.
+
+##### Low
+
+Low defects are cosmetic or minor clarity issues without material learning, privacy, accessibility, data-integrity, or functional effect. They are not automatically launch blocking.
+
+Historical S0/S1/S2/S3 labels map respectively to Critical/High/Medium/Low while retaining the original historical label.
+
+#### Retest and Evidence History
+
+- Every resolved Critical, High, and Medium defect requires retest.
+- Original failure evidence remains preserved.
+- Retest evidence links to the defect and original criterion record.
+- The exact failing criterion and related regression criteria are rerun.
+- Shared architecture changes trigger cross-feature regression.
+- Persistence changes trigger artifact, Reflection, progress, reset, migration, and recovery regression.
+- Accessibility fixes receive manual keyboard and relevant screen-reader retesting.
+- Privacy or disclosure changes trigger placement, wording, accessibility, data-flow, and prohibited-claim review.
+- Provider, endpoint, model, prompt-contract, or parser changes trigger AI regression and provider-verification review.
+- Public-copy changes trigger claim auditing.
+- Evidence history is append-oriented; failures are never silently overwritten.
+- Factual corrections use explicit amendments, superseded records remain identifiable, and final results remain linked to the complete history.
+
+#### Exception Governance
+
+Every exception records:
+
+- affected criterion and controlling brief
+- defect identifier and severity
+- observed behavior and risk
+- reason remediation is deferred
+- available workaround
+- owner
+- remediation or review date
+- expiry date where applicable
+- approver and approval date
+- public-claim and disclosure impact
+- required retest
+- conditions that automatically reopen the exception
+
+Critical privacy, security, data-integrity, secret-exposure, unsupported-claim, and core-accessibility failures cannot receive routine waivers. They require explicit senior governance approval and a documented launch-risk decision.
+
+#### Completion Rules
+
+A feature may be marked complete only when:
+
+- required behavior is implemented
+- all applicable criteria are executed
+- required evidence is retained
+- Critical and High defects are resolved
+- unresolved Medium defects have an explicit approved launch decision
+- blocked criteria have documented resolution plans and do not conceal missing core validation
+- not-applicable criteria have approved rationale
+- approved exceptions satisfy the complete exception contract
+- required automated checks pass
+- required manual, keyboard, and screen-reader validation is complete
+- privacy and provider checks are complete where relevant
+- public claims match verified behavior
+- completion is formally approved and recorded
+
+**Not implemented**, **Not yet executable**, and **In validation** are not completion-supporting statuses. **Blocked** does not count as passed. Lint, type checking, build success, or documentation completion alone cannot establish feature completion.
+
+#### Ownership and Handoff
+
+- Section 4.5 owns validation strategy, traceability, environments, evidence formats, statuses, severity, retest, exceptions, completion rules, and launch-record requirements.
+- Section 5 owns architecture-level unit and integration tests, persistence parsing, migration, storage-failure, reset, and progress hardening tests.
+- Section 6 owns reference-implementation QA, prompt-artifact persistence, exact AI-feedback linkage, stale-feedback invalidation, Reverse Build connection, initial privacy-notice integration, and reference accessibility validation.
+- Reverse Build v2 implementation owns execution and evidence for applicable `RB2-*` criteria.
+- Module 4 implementation owns execution and evidence for applicable `M4SIM-*` criteria.
+- Learner-artifact architecture and rollout own execution and evidence for applicable `LAP-*` criteria.
+- Privacy, deployment, and provider verification own technical, editorial, infrastructure, provider, and governance evidence for applicable `PDF-*` criteria.
+- Legal or organizational review owns formal policy and jurisdictional questions outside product-validation authority.
+- Final launch governance owns the consolidated launch-validation record, unresolved-risk decision, and final launch approval.
+
+#### Current Executability
+
+The approved brief classifies all 265 feature criteria by dependencies including:
+
+- currently testable existing behavior
+- documentation or governance checks
+- Section 5 implementation
+- Section 6 implementation
+- Reverse Build v2 implementation
+- Module 4 implementation
+- learner-artifact rollout
+- disclosure UI
+- deployed-preview or production-equivalent environment
+- OpenAI project-setting verification
+- deployment logging and infrastructure review
+- legal or organizational review
+
+Most target-state `RB2-*`, `M4SIM-*`, `LAP-*`, and disclosure-UI-dependent `PDF-*` criteria remain **Not implemented** or **Not yet executable** and therefore cannot be passed through Section 4.5 approval.
+
+#### Approved-Boundary Alignment
+
+The validation contract preserves:
+
+- Design Practice → AI Review → Reverse Build → Reflection
+- strict Reflection exclusion from Reverse Build
+- deterministic Module 4 behavior independent of AI
+- repository-authoritative simulation state
+- one current artifact per module with no attempt history
+- independent prompt entries
+- exact response-to-feedback association and stale-feedback invalidation
+- latest-only replacement
+- separate progress, module-artifact, and Reflection domains
+- local-browser persistence without accounts or cloud synchronization
+- disclosure before or at AI transmission
+- provider defaults separate from deployment verification
+- open access
+- no diagnosis, scoring, personalization, or unsupported universal claims
+
+Section 4.5 governs validation and evidence. It does not alter approved product meaning.
+
+#### `VE-*` Governance Criteria
+
+- The brief defines 29 unique binary `VE-*` criteria.
+- The criteria cover inventory, traceability, automated and manual mapping, environments, route coverage, browser and responsive coverage, accessibility, AI regression, persistence, privacy, evidence history, severity, exceptions, completion, hierarchy, alignment, and product honesty.
+- Every `VE-*` criterion permits a pass-or-fail determination.
+- No duplicate `VE-*` identifiers were found.
+- The `VE-*` criteria remain to be executed later where applicable; their existence does not mean they passed.
+
+#### Non-Goals
+
+Section 4.5 approval does not:
+
+- execute the 265 feature criteria
+- mark any acceptance criterion passed
+- implement tests, CI, scripts, or browser automation
+- implement product features or fix current defects
+- certify WCAG conformance
+- certify privacy or legal compliance
+- approve provider settings
+- complete deployment-logging verification
+- implement Reverse Build v2, Module 4, persistence, or disclosure UI
+- create feature evidence records or the final launch-validation record prematurely
+- complete Phase 4
+- begin Section 5
+
+#### Remediation Summary
+
+- `VALIDATION_AND_EVIDENCE_IMPLEMENTATION_BRIEF.md` was created and corrected.
+- `ai-feedback-regression/README.md` was created as documentation-only scaffolding.
+- `docs/README.md` was updated to place both files in the documentation hierarchy.
+- The initial incomplete brief was audited and repaired.
+- Exactly 35 numbered primary sections are present.
+- Sections 26–35 were restored and completed.
+- All 265 feature criteria are inventoried and classified.
+- Twenty-nine unique `VE-*` criteria were added.
+- No full validation pass was executed.
+- No criterion was marked passed.
+- No application, test, CI, script, checklist, or approved Section 4.1–4.4 brief was modified during remediation.
+
+#### Validation
+
+The following passed:
+
+- `npm run lint`
+- `npx tsc --noEmit`
+- `git diff --check`
+- 35-section sequence check
+- seven-of-seven Section 4.5 requirement crosswalk
+- 265-criterion count: 36 `RB2-*`, 69 `M4SIM-*`, 80 `LAP-*`, and 80 `PDF-*`
+- zero duplicate feature criteria
+- zero unmapped criterion prefixes
+- 29 unique `VE-*` criteria
+- automated and manual mapping coverage review
+- current-executability classification review
+- launch-record completeness review
+- execution-status consistency review
+- Critical/High/Medium/Low severity review
+- retest and evidence-history reviews
+- exception-field review
+- completion-rule safety review
+- ownership and explicit-non-goals reviews
+- Approved-Boundary Alignment review
+- route and viewport specificity review
+- AI regression future-tense review
+- documentation-hierarchy review
+- protected-file and checklist-isolation review
+
+#### Continuing Governance Considerations
+
+- The approved brief is the controlling Section 4.5 validation-and-evidence specification.
+- Criteria, tests, and retained evidence remain separate artifacts.
+- No feature may be called complete from documentation, lint, type checking, or build success alone.
+- Manual accessibility verification remains mandatory.
+- Blocked and unimplemented criteria remain visible.
+- Evidence history remains append-oriented.
+- Provider, model, endpoint, prompt contract, parser, storage, architecture, disclosure, or public-copy changes trigger the applicable regression and governance review.
+- Final launch requires a consolidated launch-validation record.
+- Changes to validation statuses, severity, completion rules, evidence formats, or `VE-*` criteria require explicit governance approval.
+
+#### Approval Rationale
+
+> Section 4.5 is approved because Future of ID now has an authoritative and testable validation-and-evidence specification governing all 265 approved feature criteria. The brief defines automated and manual validation mapping, current executability, required environments and accessibility coverage, evidence records, AI regression governance, pass and failure definitions, defect severity, retesting, append-oriented history, exception controls, safe completion rules, launch-validation records, and 29 binary governance criteria without claiming that unimplemented features have passed or that full validation has already occurred.
 
 ## 4.6 Implementation-control requirements
 

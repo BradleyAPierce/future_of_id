@@ -26,7 +26,7 @@ Bradley evaluates external recommendations against the product philosophy, curre
 6. Architecture docs: read `architecture/TECH_ARCHITECTURE.md`, `architecture/CONTENT_ARCHITECTURE.md`, and `architecture/SITE_MAP.md`.
 7. Experience docs: read `experience/EXPERIENCE_PHILOSOPHY.md`, `experience/REVERSE_BUILD_EXPERIENCE.md`, and `experience/VISUAL_COMMUNICATION_SYSTEM.md`; for approved implementation work, also read `experience/REVERSE_BUILD_V2_IMPLEMENTATION_BRIEF.md`, `experience/MODULE_4_SIMULATION_IMPLEMENTATION_BRIEF.md`, `experience/LEARNER_ARTIFACT_AND_PERSISTENCE_IMPLEMENTATION_BRIEF.md`, and `experience/PRIVACY_AND_DATA_FLOW_IMPLEMENTATION_BRIEF.md` as applicable.
 8. Design system docs: read `architecture/DESIGN_SYSTEM.md`, `COMPONENT_ARCHITECTURE_V1.md`, and `architecture/DESIGN_SYSTEM_CHANGELOG.md`.
-9. AI docs: read `decisions/ADR-009-ai-feedback-engines.md` and `validation/scenario-engine-validation-log.md` until dedicated `docs/ai/` docs exist.
+9. Validation and AI docs: read `validation/VALIDATION_AND_EVIDENCE_IMPLEMENTATION_BRIEF.md`, `decisions/ADR-009-ai-feedback-engines.md`, and `validation/scenario-engine-validation-log.md`; exact future AI regression evidence belongs under `validation/ai-feedback-regression/`.
 10. Implementation / contributor guidance: read `SYSTEM-INSTRUCTIONS.md` and `COPILOT-INSTRUCTIONS.md`.
 11. Decisions and validation: read `decisions/` and `validation/` for rationale, audits, QA notes, and evidence.
 12. Historical context: consult documents such as `strategy/STRATEGY.md`, `strategy/PROJECT-BRAIN.md`, and retained alternate README drafts only when historical planning context is useful; they are not current implementation or launch sources of truth.
@@ -81,6 +81,8 @@ Audits, QA notes, review findings, external critiques, validation logs, and read
 
 Current location: `validation/`
 
+After Bradley approval, `validation/VALIDATION_AND_EVIDENCE_IMPLEMENTATION_BRIEF.md` is the controlling Section 4.5 specification for acceptance-criteria traceability, environments, automated and manual validation, accessibility verification, evidence records, defect severity, retesting, and completion decisions. Its approval defines validation governance; it does not mean unimplemented features or acceptance criteria have passed.
+
 ### External Review Evidence
 
 Claude and Grok review folders preserve external analysis, findings, scorecards, proposed plans, and suggested checklists. These artifacts are advisory evidence, not active governance or official launch gates.
@@ -117,11 +119,13 @@ Current status: final archive/reference strategy is not decided yet.
 | Module 4 branching-simulation implementation contract after Bradley approval | `experience/MODULE_4_SIMULATION_IMPLEMENTATION_BRIEF.md` |
 | Learner-artifact and local-persistence product contract after Bradley approval | `experience/LEARNER_ARTIFACT_AND_PERSISTENCE_IMPLEMENTATION_BRIEF.md` |
 | Privacy and data-flow product-disclosure contract after Bradley approval | `experience/PRIVACY_AND_DATA_FLOW_IMPLEMENTATION_BRIEF.md` |
+| Validation execution, evidence, defect, and retest contract after Bradley approval | `validation/VALIDATION_AND_EVIDENCE_IMPLEMENTATION_BRIEF.md` |
+| AI feedback regression evidence format and future case records | `validation/ai-feedback-regression/README.md` |
 | Visual communication | `experience/VISUAL_COMMUNICATION_SYSTEM.md` |
 | Design system | `architecture/DESIGN_SYSTEM.md` |
 | Component architecture | `COMPONENT_ARCHITECTURE_V1.md` |
 | AI feedback engine decisions | `decisions/ADR-009-ai-feedback-engines.md` |
-| AI validation evidence | `validation/scenario-engine-validation-log.md` |
+| Historical scenario-engine validation evidence | `validation/scenario-engine-validation-log.md` |
 | Implementation guidance | `SYSTEM-INSTRUCTIONS.md` |
 | AI assistant guidance | `COPILOT-INSTRUCTIONS.md` |
 | Documentation structure | `DOCUMENTATION_ARCHITECTURE.md` |
