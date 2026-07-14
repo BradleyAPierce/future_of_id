@@ -27,7 +27,7 @@ Bradley evaluates external recommendations against the product philosophy, curre
 7. Experience docs: read `experience/EXPERIENCE_PHILOSOPHY.md`, `experience/REVERSE_BUILD_EXPERIENCE.md`, and `experience/VISUAL_COMMUNICATION_SYSTEM.md`; for approved implementation work, also read `experience/REVERSE_BUILD_V2_IMPLEMENTATION_BRIEF.md`, `experience/MODULE_4_SIMULATION_IMPLEMENTATION_BRIEF.md`, `experience/LEARNER_ARTIFACT_AND_PERSISTENCE_IMPLEMENTATION_BRIEF.md`, and `experience/PRIVACY_AND_DATA_FLOW_IMPLEMENTATION_BRIEF.md` as applicable.
 8. Design system docs: read `architecture/DESIGN_SYSTEM.md`, `COMPONENT_ARCHITECTURE_V1.md`, and `architecture/DESIGN_SYSTEM_CHANGELOG.md`.
 9. Validation and AI docs: read `validation/VALIDATION_AND_EVIDENCE_IMPLEMENTATION_BRIEF.md`, `decisions/ADR-009-ai-feedback-engines.md`, and `validation/scenario-engine-validation-log.md`; exact future AI regression evidence belongs under `validation/ai-feedback-regression/`.
-10. Implementation / contributor guidance: read `SYSTEM-INSTRUCTIONS.md` and `COPILOT-INSTRUCTIONS.md`.
+10. Implementation / contributor guidance: read `IMPLEMENTATION_WORK_ORDER_STANDARD.md`, `SYSTEM-INSTRUCTIONS.md`, and `COPILOT-INSTRUCTIONS.md`. After Bradley approves the standard, every non-trivial implementation assignment must use an approved work order before coding begins.
 11. Decisions and validation: read `decisions/` and `validation/` for rationale, audits, QA notes, and evidence.
 12. Historical context: consult documents such as `strategy/STRATEGY.md`, `strategy/PROJECT-BRAIN.md`, and retained alternate README drafts only when historical planning context is useful; they are not current implementation or launch sources of truth.
 
@@ -67,7 +67,9 @@ Current status: transitional. Dedicated `docs/ai/` docs do not exist yet.
 
 Repository working rules, AI assistant instructions, engineering constraints, file organization expectations, and contributor guidance.
 
-Current files: `SYSTEM-INSTRUCTIONS.md`, `COPILOT-INSTRUCTIONS.md`, and `../web/README.md`.
+Current files: `IMPLEMENTATION_WORK_ORDER_STANDARD.md`, `SYSTEM-INSTRUCTIONS.md`, `COPILOT-INSTRUCTIONS.md`, and `../web/README.md`.
+
+After Bradley approval, `IMPLEMENTATION_WORK_ORDER_STANDARD.md` is the controlling Section 4.6 specification for converting approved product and architecture contracts into bounded coding assignments. It governs work-order status, traceability, authorized scope, architecture reasoning, validation planning, blocking, scope changes, result reporting, consolidated evidence, and closure. Its approval establishes implementation governance; it does not authorize a specific work order or mean product behavior has been implemented.
 
 ### Decisions
 
@@ -121,6 +123,7 @@ Current status: final archive/reference strategy is not decided yet.
 | Privacy and data-flow product-disclosure contract after Bradley approval | `experience/PRIVACY_AND_DATA_FLOW_IMPLEMENTATION_BRIEF.md` |
 | Validation execution, evidence, defect, and retest contract after Bradley approval | `validation/VALIDATION_AND_EVIDENCE_IMPLEMENTATION_BRIEF.md` |
 | AI feedback regression evidence format and future case records | `validation/ai-feedback-regression/README.md` |
+| Implementation work-order structure, scope control, blocking, validation planning, result and evidence reporting, and closure after Bradley approval | `IMPLEMENTATION_WORK_ORDER_STANDARD.md` |
 | Visual communication | `experience/VISUAL_COMMUNICATION_SYSTEM.md` |
 | Design system | `architecture/DESIGN_SYSTEM.md` |
 | Component architecture | `COMPONENT_ARCHITECTURE_V1.md` |
@@ -157,6 +160,8 @@ AI assistants should:
 - read `strategy/PUBLIC_LAUNCH_READINESS_CHECKLIST.md` before planning or executing launch-readiness work
 - treat the launch checklist as authoritative over unrelated roadmap initiatives and external review recommendations during launch readiness
 - treat Claude, Grok, and other external reviews as advisory evidence that requires evaluation rather than automatic implementation
+- for non-trivial implementation work, read `IMPLEMENTATION_WORK_ORDER_STANDARD.md`, use an approved work order, do not begin coding while it is Draft or Under Review, and do not continue implementation while it is Blocked, Superseded, or Cancelled
+- cite applicable approved briefs and acceptance criteria rather than restating or silently changing their product contracts
 - avoid inventing new patterns when an existing doc applies
 - avoid moving files unless specifically instructed
 - preserve historical context where documents are marked transitional, historical, or superseded
@@ -165,5 +170,6 @@ AI assistants should:
 ## Related Governance Docs
 
 - `strategy/PUBLIC_LAUNCH_READINESS_CHECKLIST.md`
+- `IMPLEMENTATION_WORK_ORDER_STANDARD.md`
 - `DOCUMENTATION_ARCHITECTURE.md`
 - `DOCUMENTATION_INVENTORY.md`

@@ -2883,16 +2883,224 @@ The following passed:
 
 Each implementation work order must:
 
-- [ ] identify the relevant source-of-truth documents
-- [ ] identify affected files and components
-- [ ] preserve content and logic separation
-- [ ] use reusable components
-- [ ] avoid one-off hardcoded module logic where a reusable model is appropriate
-- [ ] explain architectural decisions
-- [ ] include validation requirements
-- [ ] prohibit unrelated visual or architectural changes
-- [ ] require a final change summary
-- [ ] require build and test results
+- [x] identify the relevant source-of-truth documents
+- [x] identify affected files and components
+- [x] preserve content and logic separation
+- [x] use reusable components
+- [x] avoid one-off hardcoded module logic where a reusable model is appropriate
+- [x] explain architectural decisions
+- [x] include validation requirements
+- [x] prohibit unrelated visual or architectural changes
+- [x] require a final change summary
+- [x] require build and test results
+
+### Section 4.6 Approval Record
+
+- **Status:** Approved
+- **Approval date:** July 13, 2026
+- **Approved by:** Bradley Pierce
+
+#### Decision
+
+- `docs/IMPLEMENTATION_WORK_ORDER_STANDARD.md` is complete and approved.
+- The standard becomes the controlling Section 4.6 implementation-control specification.
+- Material implementation work requires an approved work order before coding begins.
+- Draft, Under Review, Blocked, Superseded, and Cancelled work orders do not authorize implementation.
+- Work orders execute approved contracts and cannot silently redefine product meaning, architecture boundaries, acceptance criteria, or validation meaning.
+- Implementation completion, validation completion, acceptance completion, and final approval remain distinct states.
+- Section 4.6 approval authorizes implementation governance only and does not begin Section 5.
+- No `RB2-*`, `M4SIM-*`, `LAP-*`, `PDF-*`, `VE-*`, or `IWO-*` criterion was executed or marked passed through this approval.
+- No product feature is approved as implemented or complete through this approval.
+- Phase 4 remains open until its completion evidence is separately reviewed and approved.
+
+#### Evidence Reviewed
+
+Approval was based on:
+
+- creation and corrective completion of `docs/IMPLEMENTATION_WORK_ORDER_STANDARD.md`
+- alignment of `docs/SYSTEM-INSTRUCTIONS.md`
+- alignment of `docs/COPILOT-INSTRUCTIONS.md`
+- alignment of `docs/README.md`
+- coverage of all ten Section 4.6 requirements
+- exactly 35 required numbered primary sections
+- a mandatory reusable work-order template spanning planning, implementation, validation, reporting, evidence, and closure
+- a consolidated work-order evidence record
+- complete blocking, scope-amendment, result-reporting, validation-state, closure, and non-goal contracts
+- explicit approved-boundary alignment for Sections 4.1–4.5
+- 56 unique binary `IWO-*` acceptance criteria
+- correction of stale JSON/MDX guidance
+- correction of stale route guidance
+- correction of contributor authority and conflict-resolution rules
+- prohibition of implementation under Draft, Under Review, Blocked, Superseded, or Cancelled work orders
+- honest reporting requirements for Passed, Failed, Blocked, Not run, and Not applicable through approved governance
+- explicit treatment of unavailable tests as unavailable rather than passing
+
+#### Controlling Sources and Criteria
+
+Every material implementation work order must identify:
+
+- exact controlling file paths
+- relevant sections and criteria
+- authority level and role of each source
+- the conflict-resolution rule
+- applicable `RB2-*`, `M4SIM-*`, `LAP-*`, `PDF-*`, `VE-*`, and `IWO-*` criteria
+- implementation responsibility
+- current executability
+- validation method
+- required evidence
+
+Advisory, historical, draft, and superseded sources cannot override approved controlling sources.
+
+#### Scope and Affected-File Governance
+
+Every material implementation work order must define:
+
+- an observable objective
+- current observable behavior
+- approved target behavior
+- required changes
+- permitted supporting changes
+- prohibited changes
+- explicit non-goals
+- an initial affected-file inventory and each file's expected responsibility
+- the scope-amendment process
+- the final affected-file inventory
+
+Unrelated visual, content, routing, architecture, dependency, formatting, renaming, cleanup, and speculative-feature changes are prohibited unless separately approved.
+
+#### Architecture and Reuse Governance
+
+Implementation work orders must preserve:
+
+- content and logic separation
+- structured TypeScript as the current content approach
+- MDX as an optional future direction rather than a current mandate
+- reusable components, services, hooks, types, and utilities
+- data-driven module architecture
+- justified module-specific behavior only where appropriate
+- persistence outside presentation components
+- repository-authoritative identifiers and state
+- approved AI service and contract boundaries
+- documentation of architecture alternatives and trade-offs
+- ADR evaluation and creation when required
+
+Nested experience and reverse-engineering routes remain optional future possibilities rather than required current routes.
+
+#### Data, AI, Privacy, Accessibility, and Public-Claim Impact
+
+Applicable work orders must separately document:
+
+- **Data and persistence:** data read, written, transmitted, cleared, reconstructed, and versioned; authoritative identifiers; persistence domain; reset scope; migrations; malformed-data handling; and failure behavior.
+- **AI:** route and provider; request and output contracts; server reconstruction; optionality; failure behavior; disclosure and provider-verification dependencies; non-diagnostic and non-personalization boundaries; and deterministic state independence from AI unless expressly authorized by a controlling source.
+- **Privacy and disclosure:** local-storage effects; learner-text transmission; Reflection effects; shared-computer risks; reset and deletion language; required notices; provider or deployment verification; and legal or organizational dependencies.
+- **Accessibility:** keyboard behavior; focus; semantic structure; announcements; errors; selected states; non-color indicators; mobile behavior; zoom and reflow; reduced motion; exact browser and assistive-technology coverage; and explicit manual-validation scenarios.
+- **Public claims:** newly supported claims; claims requiring qualification; claims prohibited until implementation and validation; affected public surfaces; required claim audits; provider-verification dependencies; and any required legal or organizational review.
+
+Implementation does not automatically authorize public-copy changes, and target behavior must not be presented as current before implementation and validation.
+
+#### Blocking and Scope-Amendment Governance
+
+Implementation must pause and the work order must become Blocked when applicable controlling sources conflict materially, a required decision is missing, approved criteria would be violated, approved product meaning would be redefined, material privacy or security risk remains unresolved, required provider or deployment facts are unavailable, a required environment or dependency is unavailable, scope expansion requires approval, an approved brief must be reopened, a Critical defect is discovered, or required validation cannot be executed safely.
+
+Blocked work must report the reason, affected sources or criteria, current risk, work completed, files touched, required decision or dependency, owner, next action, and rollback need. Blocked work cannot be reported complete or resumed without resolution or explicit governance approval.
+
+#### Validation, Evidence, and Result Reporting
+
+Every work order must define applicable:
+
+- criterion identifiers
+- automated and manual checks
+- commands and working directories
+- environments, routes, browsers, operating systems, viewports, zoom, keyboard, assistive technologies, and reduced-motion coverage
+- expected results
+- evidence locations and owners
+- failure, privacy, provider, and public-claim checks
+
+Results must distinguish Passed, Failed, Blocked, Not run, and Not applicable through approved governance. Lint and TypeScript checks are not tests, unavailable test infrastructure cannot be reported as passing, and failed or blocked checks cannot be omitted.
+
+The consolidated work-order evidence record must link approval, controlling sources, criteria, initial and final scope, approved amendments, architecture decisions, validation plans, command and manual results, accessibility and privacy evidence, public-claim review, defects, retests, completion reporting, validation status, and the final reviewer decision.
+
+#### Completion and Closure Governance
+
+- Implementation Complete — Validation Pending does not mean acceptance or final approval.
+- Failed validation returns work to remediation or Blocked status.
+- Blocked validation remains visible.
+- Acceptance completion requires execution of applicable criteria and retained evidence.
+- Complete and Approved requires every closure condition and a recorded reviewer decision.
+- Command status, criterion status, defect severity, validation status, acceptance status, and work-order status remain distinct.
+- Unimplemented or not-yet-executable criteria cannot support successful closure.
+
+#### Approved Section 4.1–4.5 Boundaries
+
+Future work orders must preserve, as applicable:
+
+- Design Practice → AI Review → Reverse Build → Reflection
+- Reflection exclusion from Reverse Build
+- deterministic Module 4 behavior independent of AI
+- repository-authoritative Module 4 state
+- one current artifact per module
+- independent prompt entries
+- latest-only replacement
+- exact learner-response and AI-feedback association
+- separate course-progress, module-artifact, and Reflection domains
+- browser-local persistence
+- AI disclosure before or at transmission
+- provider defaults separated from deployment-specific verification
+- open access
+- no accounts, cloud synchronization, scoring, diagnosis, personalization, external validation, or unsupported universal claims
+
+Section 4.6 governs implementation control and cannot silently reinterpret or replace approved product contracts.
+
+#### Remediation Summary
+
+- `docs/IMPLEMENTATION_WORK_ORDER_STANDARD.md` was created, structurally audited, corrected, and finalized.
+- `docs/SYSTEM-INSTRUCTIONS.md`, `docs/COPILOT-INSTRUCTIONS.md`, and `docs/README.md` were aligned with the approved standard.
+- The standard contains exactly 35 required numbered primary sections.
+- The mandatory template supports planning through final closure.
+- The consolidated work-order evidence record is defined.
+- Final corrective work completed Section 35 non-goals, deterministic AI-state governance, browser and assistive-technology coverage, explicit manual scenarios, and the `IWO-SOURCE-02` authority reference.
+- The standard defines 56 unique binary `IWO-*` criteria.
+- No application, test, CI, script, route, API, component, content, type, hook, service, persistence, provider-setting, or legal-policy file changed during the final approval pass.
+- No implementation work began and no criterion was executed or marked passed.
+
+#### Validation
+
+The following passed during Section 4.6 remediation and final correction:
+
+- `npm run lint`
+- `npx tsc --noEmit`
+- `git diff --check`
+- exactly 35 numbered primary sections
+- 35-section required-title review
+- mandatory-template completeness review
+- blocking-condition review
+- status and closure-state review
+- result-table and honest-test-language review
+- work-order evidence-record completeness review
+- approved-boundary alignment review
+- contributor authority-hierarchy review
+- work-order status prohibition review
+- public-claim and AI-impact review
+- browser and manual-validation coverage review
+- 56-criterion count and uniqueness review
+- all ten Section 4.6 requirements crosswalk
+- contributor-instruction and documentation-hierarchy review
+- protected-file and checklist-isolation review
+
+#### Continuing Governance Considerations
+
+- The approved standard controls future material implementation work.
+- Work orders require approval before coding and must remain traceable to controlling sources and criteria.
+- Product briefs continue to control product meaning; Section 4.5 continues to control validation meaning.
+- Scope expansion, contract changes, and unresolved material conflicts require explicit approval or blocking.
+- Work-order evidence must remain reviewable, and failed, blocked, not-run, and unavailable checks must remain visible.
+- Public claims must remain aligned with observable and validated behavior.
+- Changes to work-order statuses, authority, closure rules, evidence formats, or `IWO-*` criteria require explicit governance approval.
+- Phase 4 completion evidence remains a separate approval gate.
+
+#### Approval Rationale
+
+> Section 4.6 is approved because Future of ID now has an authoritative implementation-control standard that converts approved product and validation specifications into bounded, traceable, and reviewable work orders. The standard governs source authority, acceptance criteria, scope, affected files, architecture, reuse, data, AI, privacy, accessibility, public claims, blocking, validation, evidence, honest result reporting, and final closure through a mandatory template and 56 unique binary criteria without beginning implementation, executing criteria, approving product features, or completing Phase 4.
 
 ### Phase 4 completion evidence
 

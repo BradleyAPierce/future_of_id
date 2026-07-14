@@ -27,6 +27,8 @@ For any work described, requested, or scheduled as public launch readiness, `doc
 
 Core architecture documents still govern how checklist-approved work is implemented. Claude reviews, Grok reviews, and other external evaluations are advisory evidence only. They do not override or replace the launch checklist and do not create separate official launch gates. Bradley evaluates their recommendations against the product philosophy, architecture, learner experience, and professional integrity standard.
 
+After Bradley approval, `docs/IMPLEMENTATION_WORK_ORDER_STANDARD.md` controls how non-trivial implementation assignments are defined and executed, blocked, reported, evidenced, and closed. Coding may begin only when the applicable work order is **Approved for Implementation**. Draft or Under Review work orders authorize planning and review only; Blocked, Superseded, and Cancelled work orders prohibit continued implementation. Applicable approved product briefs and their acceptance criteria continue to define product behavior, while `docs/validation/VALIDATION_AND_EVIDENCE_IMPLEMENTATION_BRIEF.md` governs validation status, evidence meaning, defects, and retesting.
+
 ### Tier 1 — Core System Contracts (Non-Negotiable)
 
 1. `docs/architecture/CONTENT_ARCHITECTURE.md` → module structure and learning model  
@@ -63,6 +65,14 @@ Used to guide implementation decisions and resolve ambiguity.
 - `docs/claudefeedback/*` and `docs/grokfeedback/*` → external advisory analysis and recommendations
 
 Helpful context, but must not override Tier 1 or Tier 2.
+
+### Approved Implementation Governance
+
+- `docs/IMPLEMENTATION_WORK_ORDER_STANDARD.md` → work-order structure, status, scope, architecture reasoning, validation planning, blocking, scope-change control, result reporting, consolidated evidence, and closure
+- applicable approved briefs under `docs/experience/` → authoritative product behavior and acceptance criteria
+- `docs/validation/VALIDATION_AND_EVIDENCE_IMPLEMENTATION_BRIEF.md` → validation execution, evidence, severity, retest, and completion rules
+
+An implementation work order cites these sources; it does not rewrite or override them. If an assignment requires a product-contract or acceptance-criterion change, reopen the controlling source through governance before coding that change.
 
 ---
 
@@ -103,18 +113,16 @@ AI must NEVER:
 
 ## 5. Content System Rules
 
-All modules must follow the 3-layer structure:
+All modules must follow three core content layers plus Reflection:
 
 1. Theory  
 2. Experience  
 3. Reverse Build
+4. Reflection
 
 Reverse Build is the user-facing product term for the layer that reveals the reverse engineering, design rationale, instructional strategy, prompt architecture, and implementation decisions behind each experience.
 
-Content must be:
-
-- JSON-driven OR  
-- MDX-based for long-form  
+Current launch content is primarily structured TypeScript under `web/content/` and `web/data/`. Continue using the existing structured content model unless an approved work order and governing architecture source authorize a different format. MDX remains a possible future option for long-form content; it is not a current implementation requirement.
 
 ❌ NEVER hardcode learning content inside components  
 
@@ -146,11 +154,9 @@ Do not introduce new frameworks without justification.
 
 Follow:
 
-- `/course/module/[slug]`  
-- `/course/module/[slug]/experience`  
-- `/course/module/[slug]/reverse-engineering`  
+- `/course/module/[slug]` for the current implemented module route
 
-Do not deviate from routing patterns. Technical route names may remain unchanged even when user-facing labels use **Reverse Build**.
+`/course/module/[slug]/experience` and `/course/module/[slug]/reverse-engineering` are optional future routes documented in `docs/architecture/SITE_MAP.md`; they are not current implementation requirements. Do not add or restructure routes unless an approved work order authorizes the change. Technical route names may remain unchanged even when user-facing labels use **Reverse Build**.
 
 ---
 
@@ -170,7 +176,8 @@ For any meaningful task, AI must follow this process:
 ### Step 1 — Context Alignment
 - Read relevant Tier 1 and Tier 2 documents  
 - If the task is related to public launch readiness, read `docs/strategy/PUBLIC_LAUNCH_READINESS_CHECKLIST.md` first and confirm that the work is the next approved execution item
-- Identify affected areas (UI, data, routing, content)
+- For non-trivial implementation, read the applicable approved work order and confirm its status is **Approved for Implementation**; do not code from a Draft or Under Review work order, and do not continue from a Blocked, Superseded, or Cancelled work order
+- Identify controlling sources, applicable acceptance criteria, and affected files and systems
 
 ---
 
@@ -178,7 +185,7 @@ For any meaningful task, AI must follow this process:
 Ensure the solution follows:
 - modular architecture  
 - separation of concerns  
-- content strategy (JSON/MDX)  
+- the current structured content strategy
 - existing patterns  
 
 ---
@@ -187,6 +194,7 @@ Ensure the solution follows:
 - Propose structure before coding  
 - Identify reusable components  
 - Identify data structures  
+- Confirm the plan remains within authorized scope and explicit non-goals
 
 ---
 
@@ -194,6 +202,7 @@ Ensure the solution follows:
 - Write clean, modular code  
 - Avoid shortcuts  
 - Follow existing patterns  
+- Stop and request an approved scope amendment before making an unlisted or contract-changing implementation change
 
 ---
 
@@ -204,6 +213,15 @@ Confirm:
 - components are reusable  
 - architecture is preserved  
 - solution aligns with system docs  
+- every applicable criterion has the required validation method and evidence status
+- failed, blocked, not-run, unavailable, and governance-approved not-applicable checks remain visible in their correct fields
+
+### Step 6 — Completion Reporting
+- Provide the exact changed-file summary and observable behavior delivered
+- Report every planned build, lint, type, test, and manual check with its method, environment, result, and evidence reference
+- Distinguish implementation completion from validation approval
+- Report absent applicable test commands as **Command availability: unavailable** with result **Not run**, unless governance approved **Not applicable through approved governance**; never report them as Passed
+- Identify remaining defects, blocked criteria, scope amendments, and required follow-up
 
 ---
 
@@ -216,10 +234,12 @@ AI must not skip these steps for meaningful development.
 For any feature or change:
 
 1. Review Tier 1 and Tier 2 docs  
-2. Align with architecture  
-3. Plan structure (if multi-file or complex)  
-4. Implement using existing patterns  
-5. Validate against system rules  
+2. For non-trivial implementation, confirm an approved work order under `docs/IMPLEMENTATION_WORK_ORDER_STANDARD.md`
+3. Align with architecture and applicable approved briefs
+4. Plan structure, validation, and evidence
+5. Implement using existing patterns and authorized scope
+6. Validate against system rules and applicable criteria
+7. Submit the required completion and result report
 
 ---
 
@@ -239,14 +259,18 @@ Avoid introducing new patterns unless clearly justified.
 
 ## 10. Conflict Resolution
 
-If conflicts occur:
+For implementation work, resolve conflicts in this authority order:
 
-1. Follow Tier 1 documents  
-2. Then Tier 2  
-3. Then choose the solution that:
-   - improves modularity  
-   - improves scalability  
-   - maintains clarity  
+1. Public Launch Readiness Checklist where it establishes launch requirements or approval status
+2. Approved implementation brief controlling the feature
+3. Approved implementation work order
+4. Approved validation and evidence brief for validation meaning
+5. Tier 1 canonical strategy and architecture sources
+6. Tier 2 supporting documentation
+7. ADRs and approved local decisions within their scope
+8. Architectural preference only when no controlling decision exists
+
+Contributors must not choose a lower-authority source over a higher-authority approved source. Advisory, draft, historical, or superseded documents cannot override approved sources. If the hierarchy does not resolve a material conflict, set the work order to **Blocked**, report the affected sources, criteria, and required decision, and pause implementation. **Blocked**, **Superseded**, and **Cancelled** work orders prohibit implementation.
 
 ---
 
@@ -305,7 +329,7 @@ A solution is correct ONLY if:
 
 At the start of development sessions, instruct:
 
-"Follow docs/SYSTEM-INSTRUCTIONS.md and docs/COPILOT-INSTRUCTIONS.md."
+"Follow docs/SYSTEM-INSTRUCTIONS.md, docs/COPILOT-INSTRUCTIONS.md, docs/IMPLEMENTATION_WORK_ORDER_STANDARD.md, and the approved work order for this assignment."
 
 This ensures consistent AI behavior across tools.
 

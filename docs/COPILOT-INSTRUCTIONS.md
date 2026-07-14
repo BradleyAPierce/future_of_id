@@ -7,10 +7,12 @@ This project is a **Next.js + TypeScript** learning platform for `future_of_id`,
 Copilot must align its work with the source-of-truth hierarchy in `docs/SYSTEM-INSTRUCTIONS.md`:
 
 - Public launch readiness authority: `docs/strategy/PUBLIC_LAUNCH_READINESS_CHECKLIST.md` controls launch scope, execution order, evidence, gates, and approval
+- Implementation governance after Bradley approval: `docs/IMPLEMENTATION_WORK_ORDER_STANDARD.md` controls work-order status, traceability, scope, architecture reasoning, validation planning, blocking, scope changes, result reporting, consolidated evidence, and closure
 - Tier 1: `docs/architecture/CONTENT_ARCHITECTURE.md`, `docs/architecture/SITE_MAP.md`, `docs/architecture/TECH_ARCHITECTURE.md`, `docs/architecture/DESIGN_SYSTEM.md`, `docs/COMPONENT_ARCHITECTURE_V1.md`
 - Tier 2: `docs/strategy/DECISIONS.md`, `docs/strategy/BLUEPRINT.md`, `docs/strategy/FUTURE_READY_CAPABILITY_MODEL.md`
 - Tier 3: `docs/strategy/ROADMAP.md`, `docs/strategy/LANDING_PAGE_STRATEGY.md`, `docs/reference/INITIAL_REPO_STRUCTURE.md`, `README.md`
 - Evidence records: `docs/decisions/*` and `docs/validation/*`
+- Approved product and validation contracts: applicable briefs under `docs/experience/` and `docs/validation/VALIDATION_AND_EVIDENCE_IMPLEMENTATION_BRIEF.md`
 
 When making decisions, prefer consistency with those files over inventing new patterns.
 
@@ -18,7 +20,9 @@ For capability positioning, treat `docs/strategy/FUTURE_READY_CAPABILITY_MODEL.m
 
 For launch-readiness work, read the public launch checklist before planning or editing. Follow its approved order, and do not pull unrelated roadmap work into launch scope. Claude reviews, Grok reviews, and other external evaluations are advisory evidence only; Bradley decides whether their recommendations fit the product, and they do not create official launch gates.
 
-If documentation and existing code disagree, do not assume the code is correct by default. Inspect both, identify the conflict, and choose the path that best matches the long-term architecture and documented intent.
+For non-trivial implementation work, read the applicable work order and confirm that its status is **Approved for Implementation** before coding. Draft or Under Review work orders authorize planning and review only; Blocked, Superseded, and Cancelled work orders prohibit continued implementation. Cite applicable approved briefs and acceptance criteria; do not silently rewrite their product contracts inside an implementation assignment.
+
+If documentation and existing code disagree, do not assume either is correct by default and do not choose an interpretation from architectural preference alone. Apply the implementation authority order in `docs/SYSTEM-INSTRUCTIONS.md`: launch-checklist requirements or approval status; the controlling approved implementation brief; the approved work order; the validation brief for validation meaning; Tier 1 sources; Tier 2 sources; scoped ADRs or approved local decisions; then architectural preference only when no controlling decision exists. A material conflict that remains unresolved makes the work order **Blocked** and pauses implementation.
 
 ## Local Development Anchor
 
@@ -63,7 +67,7 @@ Avoid introducing new patterns unless all of the following are true:
 - the change can be applied consistently across the project
 - the new pattern does not create unnecessary cognitive overhead
 
-When uncertain, prefer the option that makes future work easier to reason about.
+When the authority order and approved scope leave multiple valid options, prefer the option that makes future work easier to reason about. If a material authority conflict remains, block rather than choosing by preference.
 
 ---
 
@@ -78,6 +82,25 @@ Before making meaningful changes, Copilot should:
 5. Prefer focused, maintainable changes over broad churn
 
 Copilot should not behave like a rapid code generator that invents architecture on the fly. It should behave like a careful implementation partner working inside an already-defined system.
+
+## Implementation Work Order Compliance
+
+For every non-trivial implementation assignment, Copilot must:
+
+1. Confirm work-order identity, status, owner, approver, and controlling branch or target.
+2. Read the cited controlling sources and applicable acceptance criteria.
+3. Keep verified current behavior separate from approved target behavior.
+4. Change only authorized files and bounded supporting files, while preserving explicit non-goals.
+5. Preserve content, presentation, behavior, state, persistence, provider integration, and validation boundaries.
+6. Review existing components, services, hooks, types, utilities, and patterns before creating new abstractions.
+7. Record material architecture decisions and their tradeoffs instead of introducing unexplained structure.
+8. Map validation methods, environments, expected results, and evidence before representing work as complete.
+9. Stop and request an approved scope amendment before making an unlisted implementation change.
+10. Stop for every blocking condition in the work-order standard and provide the required blocked report.
+11. Provide the required final change summary and honest result report, including failed, blocked, not-run, unavailable, and governance-approved not-applicable checks in their correct fields.
+12. Keep command results, criterion status, defect severity, validation status, acceptance status, and work-order status separate.
+
+Unrelated visual, content, architecture, dependency, route, formatting, or feature changes are prohibited. Implementation completion is not validation approval, and an acceptance criterion is not passed until its required validation has occurred and evidence exists.
 
 ---
 
@@ -339,6 +362,14 @@ Even when formal tests are not yet present, code should be written with validati
 
 If tests are added, they should reinforce architecture and intended behavior rather than merely increasing file count.
 
+For work governed by an implementation work order:
+
+- report the exact command or manual method, working directory or environment, result, and evidence reference
+- keep failed, blocked, not-run, unavailable, and governance-approved not-applicable checks visible in their correct fields
+- report a missing applicable test command as **Command availability: unavailable** with result **Not run**, unless governance approved **Not applicable through approved governance**; never report it as Passed
+- do not treat lint, type checking, or build success as proof of complete product, accessibility, privacy, or AI validation
+- distinguish command results, criterion status, defect severity, validation status, implementation completion, acceptance, and final governance approval
+
 ---
 
 ## Debugging Approach
@@ -460,12 +491,14 @@ Prioritize learner clarity, clean navigation, strong content structure, accessib
 When contributing to this repo:
 
 1. Read surrounding code and relevant docs before making structural changes
-2. Match existing project patterns unless there is a clear improvement with strong justification
-3. Prefer surgical, maintainable changes over broad churn
-4. Preserve a clean foundation for future modules, AI interactions, analytics, and content growth
-5. If a request conflicts with the project’s modular architecture, choose the cleaner long-term implementation rather than the fastest patch
-6. Treat each change as part of a larger system, not an isolated task
-7. When making a significant structural decision, make the reasoning legible in the code and file organization
+2. Confirm that any non-trivial implementation work order is Approved for Implementation
+3. Match existing project patterns unless there is a clear improvement with strong justification
+4. Prefer surgical, maintainable changes over broad churn
+5. Preserve a clean foundation for future modules, AI interactions, analytics, and content growth
+6. If a request conflicts with the project’s modular architecture, follow the controlling sources and approved scope rather than silently expanding the assignment
+7. Treat each change as part of a larger system, not an isolated task
+8. When making a significant structural decision, record the reasoning and contract impact
+9. Finish with the work order's required change summary, validation results, evidence, defects, and remaining work
 
 ---
 
@@ -475,4 +508,4 @@ Every change should move the project toward a **modular, reusable, scalable, cle
 
 If there is a choice between a fast workaround and a durable architecture-aligned solution, choose the architecture-aligned solution.
 
-When in doubt, choose the solution that strengthens the system, preserves clarity, and makes future development easier to reason about.
+When no controlling decision or blocking condition exists and multiple options remain valid, choose the solution that strengthens the system, preserves clarity, and makes future development easier to reason about.
