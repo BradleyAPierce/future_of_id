@@ -5,13 +5,14 @@
 - **Work-order ID:** IWO-5-001
 - **Title:** Section 5 Shared Learner-Artifact Architecture
 - **Checklist phase:** `docs/strategy/PUBLIC_LAUNCH_READINESS_CHECKLIST.md`, Section 5
-- **Status:** Implementation Complete — Validation Pending
+- **Status:** Complete and Approved
 - **Requester:** Bradley Pierce
 - **Approver:** Bradley Pierce
 - **Approval date:** July 15, 2026
 - **Implementation owner:** Codex
 - **Branch/target:** `codex/section-5-learner-artifacts`, based on approved planning baseline `72fd487`
 - **Exact implementation commit:** `03542c78fbea090b092b9e7aa8f15a165f49c5db`, parent `72fd487a8840be512e39a488fda2012030ede7d8`
+- **Evidence commit:** `8fedeb8ff51afab949226e471bedfcdcee2e5d5b`, parent `03542c78fbea090b092b9e7aa8f15a165f49c5db`
 - **Related issue/task/decision:** Phase 4 completion approval dated July 13, 2026; Section 5 implementation planning request dated July 15, 2026
 - **Planning baseline:** Clean working tree observed on July 15, 2026 before this work-order document was created
 - **Authorization boundary:** Bradley approved implementation on July 15, 2026, only within the required, permitted, prohibited, and affected-file boundaries of this work order. Section 6–8 feature integrations remain excluded.
@@ -22,6 +23,24 @@
 - ADR-010 must be created and reviewed against this work order before store implementation begins.
 - Section 5 may reach technical completion with later feature-specific criteria still explicitly `Not implemented` or `Not yet executable`; broader Phase 5 completion must remain open when later learner-facing disclosure evidence is still required.
 - Any file or system outside the approved inventory requires the amendment or blocking procedure before work continues.
+
+### Closure approval record
+
+- **Closure decision:** Section 5 Complete and Approved with documented external blockers
+- **Closure approver:** Bradley Pierce
+- **Closure approval date:** July 15, 2026
+- **Approved baseline:** `72fd487a8840be512e39a488fda2012030ede7d8`
+- **Implementation commit:** `03542c78fbea090b092b9e7aa8f15a165f49c5db`
+- **Evidence commit:** `8fedeb8ff51afab949226e471bedfcdcee2e5d5b`
+- **Approved amendment:** `IWO-5-001-A1`
+
+Bradley approves the bounded Section 5 Shared Learner-Artifact Architecture under `IWO-5-001` and Amendment `IWO-5-001-A1`. The approved architecture includes three independent versioned persistence domains; safe injected storage and event adapters; deterministic migration and authoritative validation; record and domain isolation; opaque revision association and stale-feedback invalidation; non-destructive unreadable-record handling; baseline-aware session-only fallback and coherent retry; structural Reflection exclusion; scoped clearing and reset behavior; hardened course progress; accessible current progress controls; honest completion-save results; automated validation; and Bradley's available macOS/VoiceOver manual validation.
+
+The bounded Passed scope is the scope recorded as Passed in the criterion records: `LAP-MODEL-01`–`06`; authorized Section 5 portions of `LAP-RESET-01`–`07`, `LAP-PROG-01`–`06`, `LAP-VER-01`–`07`, and `LAP-FAIL-01`–`07`; `LAP-PRIV-01`–`05`; `LAP-HONEST-01`–`03` and `05`; `PDF-DATA-01`–`06`; Section 5 persistence portions of `PDF-MIN-03`–`04`; the technical clear-boundary portion of `PDF-REF-06`; authorized Section 5 portions of `PDF-RESET-01`–`07` and `PDF-FAIL-01`–`03`, `06`–`07`; `PDF-HONEST-01`–`06` for changed Section 5 surfaces; and applicable bounded `VE-*` and `IWO-*` implementation/evidence criteria.
+
+Windows/NVDA, physical iOS/Android, deployed-preview, provider, and infrastructure validation remain external blockers. Complete `LAP-A11Y-*`, `PDF-A11Y-*`, `PDF-LOCAL-*`, and external-environment validation remain In validation or Blocked as recorded. Design Practice persistence UI, Reflection persistence UI, Reverse Build v2, Module 4, rendered feature-specific AI association, and later contextual local-storage and AI-transmission disclosures remain Not implemented or Not yet executable under their later owners. Broader Phase 5 remains incomplete. The pre-existing Next.js/PostCSS advisories remain a separately governed repository-level security and launch dependency.
+
+This closure does not constitute broader Phase 5 completion, accessibility conformance, security approval, provider verification, production readiness, or public-launch approval.
 
 ## Objective
 
@@ -506,18 +525,18 @@ Every criterion-level record must include criterion, source, implementation comm
 
 ## Implementation Completion Report
 
-- **Objective achieved:** Authorized Section 5 architecture and current progress integration are implemented. Automated/static checks and Bradley's available macOS/VoiceOver manual scenarios pass; acceptance remains open for an evidence-only documentation commit and Bradley's closure review.
+- **Objective achieved:** Authorized Section 5 architecture and current progress integration are implemented, validated within the approved bounded scope, and formally approved by Bradley Pierce with documented external blockers.
 - **Behavior implemented:** Three versioned persistence domains; safe storage/events; module-artifact and Reflection stores/hooks; exact written, Reflection, and branching review association; stale/pending/malformed/failure handling; non-destructive unreadable-record updates; baseline-aware session retry; scoped clears/resets; legacy progress migration and cleanup reporting; dashboard progress disclosure/reset; bounded completion-save failure notices on the amended module and Orientation surfaces; approved Vitest/jsdom coverage.
 - **Behavior unchanged:** Course access remains open; current module content, AI routes/prompts/providers/models, Reverse Build rendering, Module 4 content/logic/UI/API, and Design Practice/Reflection UI behavior were not changed.
 - **Architecture decisions:** `docs/decisions/ADR-010-shared-learner-artifact-persistence.md` is Accepted and was reviewed against this work order before store implementation.
 - **Deviations/amendments:** No unapproved scope deviation. Amendment `IWO-5-001-A1` authorizes only the two current completion-consumer files required for failure honesty. `npx tsc --noEmit --incremental false` was used because the sandbox prevents the incremental cache write; the production build independently ran TypeScript. Coverage output is sent to the operating-system temporary directory so generated reports do not alter the authorized repository inventory.
-- **Criteria implemented:** Section 5 technical/current-surface portions under `LAP-MODEL-*`, `LAP-RESET-*`, `LAP-PROG-*`, `LAP-VER-*`, `LAP-FAIL-*`, `LAP-PRIV-*`, applicable `LAP-HONEST-*`, and corresponding data/minimization/reset/current-failure/honesty criteria have sufficient automated and manual evidence for bounded Section 5 closure review. Service contracts without visible integration remain In validation or Not yet executable. No criterion is promoted solely from commands.
+- **Criteria implemented:** Section 5 technical/current-surface portions under `LAP-MODEL-*`, `LAP-RESET-*`, `LAP-PROG-*`, `LAP-VER-*`, `LAP-FAIL-*`, `LAP-PRIV-*`, applicable `LAP-HONEST-*`, and corresponding data/minimization/reset/current-failure/honesty criteria are approved within the bounded Passed scope recorded above. Service contracts without visible integration remain In validation or Not yet executable. No criterion is promoted solely from commands or this closure decision.
 - **Criteria not executable:** Feature-specific `RB2-*`, `M4SIM-*`, learner-facing artifact/Reflection/AI disclosure, and complete accessibility families remain Not implemented or Not yet executable under Sections 6–8 and later validation.
 - **Known defects/dependencies:** The closure-readiness findings are retained and remediated. Bradley's attestation supersedes `IWO5-VAL-001` for available local scenarios. Windows/NVDA, physical mobile, deployed preview, and the remaining external matrix stay Blocked under `IWO5-VAL-002`. The pre-existing one-high/one-moderate Next.js/PostCSS advisories require a separate security/launch decision under `IWO5-DEP-001`; neither dependency blocks bounded Section 5 architecture closure.
 - **Public-claim impact:** Only current progress disclosure/reset and bounded completion-result copy changed. The audit found no unsupported new claim; broader Phase 5 remains open.
-- **Follow-up owner:** Codex completed implementation and prepared the evidence update; validation environment owners retain external checks; Bradley owns the evidence commit authorization, dependency risk disposition, and closure approval.
+- **Follow-up owner:** Codex completed implementation and evidence preparation; Bradley recorded closure approval; validation environment owners retain external checks, and Bradley retains the separate dependency-security and launch-risk decisions.
 - **Unrelated changes:** None made. No dependency upgrade or audit fix was applied beyond the approved development-only Vitest/jsdom/coverage harness.
-- **Evidence-update working tree:** Six governance/evidence documents are modified after the exact implementation commit. No application, test, API, content, dependency, or configuration file changed in this closure-readiness pass; an evidence-only commit is required before closure review.
+- **Evidence and closure sequence:** The evidence commit is recorded above and remains separate from the implementation commit. This closure-only documentation update changes no application, test, API, content, dependency, lockfile, or configuration file.
 
 ## Final File Inventory
 
@@ -613,12 +632,12 @@ The July 15, 2026 closure-readiness audit remains part of the append-oriented re
 
 ## Final Status and Closure
 
-- **Implementation status:** Implementation Complete — Validation Pending
+- **Implementation status:** Complete and Approved
 - **Validation status:** Automated/static checks and all Bradley-performed available macOS/VoiceOver scenarios passed; external platform/deployment checks remain Blocked
-- **Acceptance status:** Ready for an evidence-only documentation commit, then bounded Section 5 closure review with documented external blockers; later feature families and broader Phase 5 remain incomplete
-- **Closure decision:** Open pending evidence documentation commit and Bradley's dated closure approval
-- **Closure reviewer:** Bradley Pierce, pending
-- **Approval date:** Pending closure review
+- **Acceptance status:** Acceptance Complete for the bounded Section 5 scope; later feature families, external criteria, and broader Phase 5 remain non-passed as recorded
+- **Closure decision:** Section 5 Complete and Approved with documented external blockers
+- **Closure reviewer:** Bradley Pierce
+- **Approval date:** July 15, 2026
 - **Evidence-record location:** `docs/validation/work-orders/IWO-5-001.md`
 
-Successful closure requires every Section 32 condition in the standard, exact final file reconciliation, approved ADR/amendments, all commands/results, required automated and manual evidence, accessibility/privacy/claim review, defect/retest records, criterion statuses, and Bradley's dated closure decision. Implementation completion alone cannot produce `Complete and Approved`.
+Bradley's dated decision completes the bounded Section 5 work-order closure under Section 32. Blocked, In validation, Not implemented, and Not yet executable work remains visible and cannot support broader Phase 5 or launch closure.

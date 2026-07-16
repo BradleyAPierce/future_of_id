@@ -5,6 +5,7 @@
 - **Work order:** `IWO-5-001`
 - **Applicable sources:** `LAP-A11Y-*`, `PDF-A11Y-*`, applicable `VE-A11Y-*`
 - **Implementation/build:** Exact commit `03542c78fbea090b092b9e7aa8f15a165f49c5db` on `codex/section-5-learner-artifacts`, parent `72fd487a8840be512e39a488fda2012030ede7d8`; production build passed July 15, 2026
+- **Evidence/closure state:** Evidence commit `8fedeb8ff51afab949226e471bedfcdcee2e5d5b`; bounded Section 5 status `Complete and Approved`; Bradley Pierce; July 15, 2026
 - **Testers/environments:** Codex automated/static checks on macOS 26.3; Bradley Pierce manual checks in his available macOS browser environment with VoiceOver on July 15, 2026. Exact macOS, browser, and VoiceOver versions were not captured; evidence is a written attestation with no screenshots or recordings.
 
 ## Progress reset control
@@ -36,4 +37,4 @@ Design Practice persistence, Reflection persistence, Reverse Build v2, Module 4 
 
 Bradley's exact-commit attestation closes the available macOS keyboard, focus, VoiceOver, responsive, zoom, reduced-motion, and failure-state retest for the current Section 5 surfaces. The earlier disabled-focus-target finding remains preserved as `IWO5-REM-003` and is now manually retested for that environment.
 
-The complete `LAP-A11Y-*` and `PDF-A11Y-*` families remain In validation because later feature controls and the external matrix are absent. This record makes no WCAG conformance or full accessibility claim and does not make broader Phase 5 complete.
+The complete `LAP-A11Y-*` and `PDF-A11Y-*` families remain In validation because later feature controls and the external matrix are absent. Bradley's bounded Section 5 closure approval does not change those statuses. This record makes no WCAG conformance or full accessibility claim and does not make broader Phase 5 or launch readiness complete.

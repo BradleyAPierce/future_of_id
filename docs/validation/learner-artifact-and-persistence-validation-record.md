@@ -5,6 +5,7 @@
 - **Work order:** `IWO-5-001`
 - **Source:** `docs/experience/LEARNER_ARTIFACT_AND_PERSISTENCE_IMPLEMENTATION_BRIEF.md`
 - **Implementation state:** Exact commit `03542c78fbea090b092b9e7aa8f15a165f49c5db` on `codex/section-5-learner-artifacts`, parent baseline `72fd487a8840be512e39a488fda2012030ede7d8`
+- **Evidence/closure state:** Evidence commit `8fedeb8ff51afab949226e471bedfcdcee2e5d5b`; bounded Section 5 status `Complete and Approved`; Bradley Pierce; July 15, 2026
 - **Environment/date/testers:** Automated/static — Codex, macOS 26.3, July 15, 2026. Manual — Bradley Pierce, available macOS browser environment and VoiceOver, July 15, 2026.
 - **Browser/viewport/zoom/AT:** Bradley exercised 320 CSS pixels, 200% zoom where supported, reduced motion, and VoiceOver. Exact macOS/browser/VoiceOver versions were not captured. Windows 11 browsers, NVDA, physical iOS/Android, and deployed preview remain Blocked under `IWO5-VAL-002`.
 - **Method:** Vitest/jsdom store/parser/adapter tests, TypeScript, build, static export/field inspection, local route markup check, and Bradley's written exact-commit manual attestation. No screenshots or recordings were supplied.
@@ -37,7 +38,7 @@ No timestamp, account, profile, attempt array, prompt prose, scenario prose, pro
 
 ## Conclusion
 
-The authorized Section 5 architecture, current progress integration, automated checks, and available macOS/VoiceOver manual scenarios pass. The evidence is ready for a documentation commit and Bradley's Section 5 closure review with the external matrix recorded as Blocked. Later feature families and broader Phase 5 remain incomplete.
+The authorized Section 5 architecture, current progress integration, automated checks, and available macOS/VoiceOver manual scenarios pass within the bounded scope recorded above. Bradley approved Section 5 as `Complete and Approved` with documented external blockers on July 15, 2026. Later feature families, complete accessibility coverage, and broader Phase 5 remain incomplete; this closure does not equal launch readiness.
 
 ## Closure-readiness audit remediation
 
