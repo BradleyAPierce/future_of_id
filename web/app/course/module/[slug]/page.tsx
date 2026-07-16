@@ -1,7 +1,7 @@
 "use client";
 
 import { notFound } from "next/navigation";
-import { use } from "react";
+import { use, useState } from "react";
 import ModuleContentFlow from "@/components/course/ModuleContentFlow";
 import ModulePageHeader from "@/components/course/ModulePageHeader";
 import ModuleCompletionPanel from "@/components/course/ModuleCompletionPanel";
@@ -19,7 +19,11 @@ interface ModulePageProps {
 
 export default function ModulePage({ params }: ModulePageProps) {
   const { slug } = use(params);
-  const { markComplete, isCompleted } = useCourseProgress();
+  const { markComplete, isCompleted, persistence } = useCourseProgress();
+  const [completionMessage, setCompletionMessage] = useState<{
+    tone: "status" | "error";
+    text: string;
+  } | null>(null);
 
   const currentModule = modules.find((m) => m.slug === slug);
   const moduleContent = moduleContentBySlug[slug];
@@ -34,6 +38,26 @@ export default function ModulePage({ params }: ModulePageProps) {
   const scenarioDecisions = SCENARIO_DECISIONS_BY_MODULE[slug] ?? [];
   const completed = isCompleted(slug);
 
+  function handleMarkComplete() {
+    const result = markComplete(slug);
+    if (result.ok) {
+      setCompletionMessage(null);
+      return;
+    }
+
+    setCompletionMessage(
+      result.sessionValue
+        ? {
+            tone: "status",
+            text: "Completion is available for this session, but it could not be saved in this browser. You can keep using the course and try again.",
+          }
+        : {
+            tone: "error",
+            text: "Completion could not be saved in this browser. Your course remains available. Please try again, or reset unreadable completion progress from the Capability Map.",
+          },
+    );
+  }
+
   return (
     <div className="space-y-14">
       <ModulePageHeader module={currentModule} moduleContent={moduleContent} />
@@ -44,12 +68,25 @@ export default function ModulePage({ params }: ModulePageProps) {
         scenarioDecisions={scenarioDecisions}
       />
 
-      <ModuleCompletionPanel
-        isCompleted={completed}
-        onMarkComplete={() => markComplete(slug)}
-        nextModule={nextModule}
-        nextModuleHref={nextModule ? `/course/module/${nextModule.slug}` : undefined}
-      />
+      <div className="space-y-3">
+        <ModuleCompletionPanel
+          isCompleted={completed && persistence !== "session-only"}
+          onMarkComplete={handleMarkComplete}
+          nextModule={nextModule}
+          nextModuleHref={nextModule ? `/course/module/${nextModule.slug}` : undefined}
+        />
+        {completionMessage && (
+          <p
+            role={completionMessage.tone === "error" ? "alert" : "status"}
+            className={`text-sm font-medium ${
+              completionMessage.tone === "error"
+                ? "text-[var(--danger)]"
+                : "text-[var(--muted)]"
+            }`}>
+            {completionMessage.text}
+          </p>
+        )}
+      </div>
       <BackToTopButton />
     </div>
   );

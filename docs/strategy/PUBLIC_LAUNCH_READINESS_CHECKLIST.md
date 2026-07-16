@@ -42,7 +42,7 @@ These principles remain in force throughout the work.
 
 - [x] Future of ID will not be publicly introduced merely because it is visually polished.
 - [ ] Future of ID will not make a claim that cannot be observed or defended in the actual experience.
-  - **Open dependency:** Repository governance now enforces claim accuracy, but implementation evidence is still required for Reverse Build v2 learner reconstruction, learner-artifact persistence, and the Module 4 simulation experience.
+  - **Open dependency:** The Section 5 shared persistence architecture is implemented and approved. Learner-facing Design Practice and Reflection persistence integration, Reverse Build v2 learner reconstruction, the Module 4 simulation, complete contextual disclosures, and end-to-end validation remain open.
 - [ ] Core product gaps will not be hidden through careful marketing language.
   - **Open dependency:** The current experience still requires implementation work before all learner-facing claims are supported by observable behavior.
 - [x] Product integrity takes priority over launch speed.
@@ -3359,66 +3359,69 @@ For this launch, the system stores one current artifact per module. It does not 
 
 Define a versioned module learner artifact capable of representing only approved Design Practice and simulation work:
 
-- [ ] authoritative module identifier or slug
-- [ ] module-artifact schema version
-- [ ] a current Design Practice entry for each module prompt, keyed by an authoritative interaction identifier
-- [ ] the interaction type for each entry: written response or branching simulation
-- [ ] the authoritative scenario or practice-context identifier
-- [ ] the learner’s latest written response for each written prompt
-- [ ] the AI Review state and feedback associated with the exact current response or validated simulation state
-- [ ] bounded AI feedback fields required by the applicable approved interaction contract
-- [ ] Module 4’s validated decisions, pathway, consequences, final state, and learner rationale
-- [ ] original and revised rationale only where the approved interaction explicitly requires both
-- [ ] current, partial, unavailable, stale, malformed, or cleared artifact states
-- [ ] metadata only when technically required and documented under the timestamp rules below
+- [x] authoritative module identifier or slug
+- [x] module-artifact schema version
+- [x] a current Design Practice entry for each module prompt, keyed by an authoritative interaction identifier
+- [x] the interaction type for each entry: written response or branching simulation
+- [x] the authoritative scenario or practice-context identifier
+- [x] the learner’s latest written response for each written prompt
+- [x] the AI Review state and feedback associated with the exact current response or validated simulation state
+- [x] bounded AI feedback fields required by the applicable approved interaction contract
+- [x] Module 4’s validated decisions, pathway, consequences, final state, and learner rationale at the approved structural-model and injected-authority boundary; concrete Module 4 state integration remains Section 7 work
+- [x] original and revised rationale only where the approved interaction explicitly requires both
+- [x] current, partial, unavailable, stale, malformed, or cleared artifact states
+- [x] metadata only when technically required and documented under the timestamp rules below; schema version 1 intentionally contains no timestamps
 
 The module learner artifact must not contain:
 
-- [ ] the learner’s Reflection response
-- [ ] Reflection AI feedback or AI-feedback state
-- [ ] Reflection status
-- [ ] Reflection reset or clearing state
+- [x] the learner’s Reflection response
+- [x] Reflection AI feedback or AI-feedback state
+- [x] Reflection status
+- [x] Reflection reset or clearing state
 
 ### Reflection persistence domain
 
 Define a separate versioned Reflection persistence domain capable of representing:
 
-- [ ] authoritative module identifier
-- [ ] Reflection schema version
-- [ ] the learner’s current Reflection response after Reverse Build
-- [ ] Reflection AI-feedback state
-- [ ] Reflection feedback associated with the exact current Reflection response when available
-- [ ] stale-feedback invalidation when the Reflection response is revised
-- [ ] current, unavailable, malformed, stale, or cleared Reflection state
-- [ ] independent Reflection reset and clearing behavior
-- [ ] local-browser persistence
-- [ ] no Reflection attempt history
+- [x] authoritative module identifier
+- [x] Reflection schema version
+- [x] the learner’s current Reflection response after Reverse Build at the persistence-model boundary; learner-facing Reflection integration remains open
+- [x] Reflection AI-feedback state at the persistence-model boundary
+- [x] Reflection feedback associated with the exact current Reflection response when available at the persistence-model boundary
+- [x] stale-feedback invalidation when the Reflection response is revised
+- [x] current, unavailable, malformed, stale, or cleared Reflection state
+- [x] independent Reflection reset and clearing behavior at the service/API boundary
+- [x] local-browser persistence at the service/API boundary
+- [x] no Reflection attempt history
 
 Require that:
 
 - [ ] Reflection is written only through the Reflection experience
+  - **Open dependency:** The separate Reflection store/hook contract exists, but learner-facing Reflection persistence integration remains assigned to a later section.
 - [ ] Reverse Build cannot read, receive, display, summarize, transmit, or infer from Reflection
-- [ ] clearing module Design Practice or simulation work does not silently clear Reflection
-- [ ] clearing Reflection does not silently clear course progress or module learner artifacts
+  - **Architecture result:** Reverse Build-facing module-artifact exports structurally exclude Reflection. Runtime Reverse Build v2 verification remains Section 6 work.
+- [x] clearing module Design Practice or simulation work does not silently clear Reflection
+- [x] clearing Reflection does not silently clear course progress or module learner artifacts
 - [ ] Reflection does not automatically resurface in dashboards, Reverse Build, other modules, or unrelated product areas
-- [ ] Reflection remains independently versioned and validated
+  - **Architecture result:** No aggregate reader or current resurfacing integration exists; later rendered integrations still require runtime evidence.
+- [x] Reflection remains independently versioned and validated
 
 ### Three-domain persistence architecture
 
 Preserve three distinct persistence domains:
 
-- [ ] course progress stores only completion markers and approved progress state
-- [ ] module learner artifacts store only current Design Practice and simulation work
-- [ ] Reflection stores only the current Reflection response and associated Reflection-feedback state
+- [x] course progress stores only completion markers and approved progress state
+- [x] module learner artifacts store only current Design Practice and simulation work
+- [x] Reflection stores only the current Reflection response and associated Reflection-feedback state
 
 The implementation must provide separate boundaries for each domain:
 
-- [ ] independent read behavior
-- [ ] independent write behavior
-- [ ] independent schema versioning
-- [ ] independent validation and malformed-data isolation
-- [ ] independent reset behavior
-- [ ] independent clear behavior
+- [x] independent read behavior
+- [x] independent write behavior
+- [x] independent schema versioning
+- [x] independent validation and malformed-data isolation
+- [x] independent reset behavior
+- [x] independent clear behavior
 
 Course completion must not be treated as evidence that a module learner artifact or Reflection exists. Module learner work and Reflection must not be required for course completion or open access.
 
@@ -3426,118 +3429,151 @@ Course completion must not be treated as evidence that a module learner artifact
 
 Timestamps may be included only when a documented product, validation, migration, stale-state, conflict-resolution, or display requirement needs them.
 
-Every proposed timestamp must document:
+Every proposed timestamp must document. For schema version 1, no timestamp was proposed or approved, so these governance checks are satisfied as not applicable to the implemented schema:
 
-- [ ] the exact field
-- [ ] its product or technical purpose
-- [ ] whether it is required or optional
-- [ ] how it supports observable behavior
-- [ ] its data-minimization rationale
-- [ ] whether the behavior can be implemented without it
+- [x] the exact field — no timestamp field exists in schema version 1
+- [x] its product or technical purpose — no timestamp purpose was required
+- [x] whether it is required or optional — no timestamp was approved
+- [x] how it supports observable behavior — approved observable behavior does not depend on time metadata
+- [x] its data-minimization rationale — omitting timestamps is the approved minimum-data decision
+- [x] whether the behavior can be implemented without it — the approved architecture implements the behavior without timestamps
 
 Timestamps must not create or imply:
 
-- [ ] attempt history
-- [ ] longitudinal tracking or learner timelines
-- [ ] analytics profiles
-- [ ] unnecessary retention metadata
+- [x] attempt history
+- [x] longitudinal tracking or learner timelines
+- [x] analytics profiles
+- [x] unnecessary retention metadata
 
 ### Section 5 domain-boundary acceptance requirements
 
-- [ ] Course progress, module learner artifacts, and Reflection are separate persistence domains.
-- [ ] Each persistence domain is independently readable.
-- [ ] Each persistence domain is independently writable.
-- [ ] Each persistence domain is independently versioned and validated.
-- [ ] Each persistence domain has independent reset and clearing behavior.
-- [ ] Reverse Build cannot access Reflection.
-- [ ] Resetting or clearing module learner artifacts does not silently clear Reflection.
-- [ ] Resetting or clearing Reflection does not silently clear module learner artifacts or course progress.
-- [ ] Resetting course progress does not silently clear module learner artifacts or Reflection.
-- [ ] Timestamps are included only when technically justified and documented.
-- [ ] The architecture introduces no attempt history, learner-visible version history, longitudinal history, portfolio, analytics profile, account, cloud persistence, or cross-device synchronization.
-- [ ] Independent prompt entries use latest-response replacement and preserve exact response and AI-feedback association.
-- [ ] Module 4 identifiers and deterministic state remain repository-authoritative and independent of AI.
-- [ ] The architecture preserves Design Practice → AI Review → Reverse Build → Reflection, browser-local persistence, open access, and boundaries against scoring, diagnosis, analytics, and personalization.
+- [x] Course progress, module learner artifacts, and Reflection are separate persistence domains.
+- [x] Each persistence domain is independently readable.
+- [x] Each persistence domain is independently writable.
+- [x] Each persistence domain is independently versioned and validated.
+- [x] Each persistence domain has independent reset and clearing behavior.
+- [x] Reverse Build-facing module-artifact exports cannot access Reflection; runtime Reverse Build v2 verification remains Section 6 work.
+- [x] Resetting or clearing module learner artifacts does not silently clear Reflection.
+- [x] Resetting or clearing Reflection does not silently clear module learner artifacts or course progress.
+- [x] Resetting course progress does not silently clear module learner artifacts or Reflection.
+- [x] Timestamps are included only when technically justified and documented; schema version 1 includes none.
+- [x] The architecture introduces no attempt history, learner-visible version history, longitudinal history, portfolio, analytics profile, account, cloud persistence, or cross-device synchronization.
+- [x] Independent prompt entries use latest-response replacement and preserve exact response and AI-feedback association at the architecture/service boundary.
+- [x] Module 4 identifier and deterministic-state contracts remain repository-authoritative and independent of AI; concrete Section 7 integration remains open.
+- [x] The architecture preserves Design Practice → AI Review → Reverse Build → Reflection, browser-local persistence, open access, and boundaries against scoring, diagnosis, analytics, and personalization.
 
 ## 5.2 Architecture
 
-- [ ] Create a shared typed artifact interface.
-- [ ] Create a shared artifact-management hook or service.
-- [ ] Keep artifact logic separate from presentation components.
-- [ ] Keep module-specific instructional language in structured content.
-- [ ] Support written-response artifacts.
-- [ ] Support branching-decision artifacts.
-- [ ] Support partially completed artifacts.
-- [ ] Support revised responses.
-- [ ] Update the current prompt entry and associated feedback when a learner revises a response.
-- [ ] Prevent feedback from an earlier response from being presented as feedback on a later revision.
-- [ ] Support current-artifact replacement or updating without creating an archive.
-- [ ] Prevent malformed stored data from breaking a module.
-- [ ] Add schema-version handling.
-- [ ] Add safe parsing.
-- [ ] Add graceful degradation when browser storage is unavailable.
-- [ ] Treat stale, unsupported, or incomplete stored data as unavailable when it cannot be migrated safely.
-- [ ] Prevent one module from reading or displaying another module’s artifact.
-- [ ] Do not add account, authentication, database, or cloud persistence requirements.
+- [x] Create shared typed artifact models.
+- [x] Create shared artifact-management services and hooks.
+- [x] Keep artifact logic separate from presentation components.
+- [x] Keep module-specific instructional language in structured content; persistence stores only validated identifiers and bounded learner/feedback fields.
+- [x] Support written-response artifacts at the architecture/service boundary.
+- [x] Support branching-decision artifacts at the architecture/service boundary.
+- [x] Support partially completed artifacts.
+- [x] Support revised responses.
+- [x] Update the current prompt entry and invalidate its prior feedback when a learner revises a response at the architecture/service boundary.
+- [x] Prevent feedback from an earlier response from being accepted as current for a later revision; rendered feature verification remains assigned later.
+- [x] Support current-artifact replacement or updating without creating an archive.
+- [x] Prevent malformed stored data from breaking a module.
+- [x] Add schema-version handling.
+- [x] Add safe parsing.
+- [x] Add graceful degradation when browser storage is unavailable.
+- [x] Treat stale, unsupported, or incomplete stored data as unavailable when it cannot be migrated safely.
+- [x] Prevent one module from reading another module’s artifact; rendered cross-module behavior remains subject to later integration regression.
+- [x] Do not add account, authentication, database, or cloud persistence requirements.
 
 ## 5.3 Existing course-progress hardening
 
-- [ ] Add safe parsing to the existing course-progress store.
-- [ ] Catch failures from browser-storage reads and writes.
-- [ ] Handle malformed, stale, incomplete, and unsupported progress data without breaking navigation or module access.
-- [ ] Define and implement learner-controlled progress reset behavior.
-- [ ] Preserve same-tab and cross-tab update behavior without allowing synchronization failures to break the experience.
-- [ ] Keep all modules available when progress persistence fails or is cleared.
+- [x] Add safe parsing to the existing course-progress store.
+- [x] Catch failures from browser-storage reads and writes.
+- [x] Handle malformed, stale, incomplete, and unsupported progress data without breaking navigation or module access.
+- [x] Define and implement learner-controlled progress reset behavior.
+- [x] Preserve same-tab and cross-tab update behavior without allowing synchronization failures to break the experience.
+- [x] Keep all modules available when progress persistence fails or is cleared.
 
 ## 5.4 Learner trust and control
 
 - [ ] Clearly explain that saved progress and learner artifacts are persisted locally in the current browser.
-- [ ] Do not imply that work is connected to an account.
-- [ ] Do not imply that work is synchronized across devices.
-- [ ] Provide a way to clear stored module work.
-- [ ] Provide a way to reset the active practice.
-- [ ] Provide the approved way to reset course-progress data.
+  - **Current result:** Course-progress disclosure is implemented and validated. Learner-artifact and Reflection disclosure remains dependent on their later learner-facing integrations.
+- [x] Do not imply that work is connected to an account.
+- [x] Do not imply that work is synchronized across devices.
+- [ ] Provide a learner-facing way to clear stored module work.
+  - **Architecture result:** The scoped service API and preservation tests pass; the learner-facing control remains assigned to a later integration.
+- [ ] Provide a learner-facing way to reset the active practice.
+  - **Architecture result:** The scoped service API and preservation tests pass; the learner-facing control remains assigned to a later integration.
+- [x] Provide the approved way to reset course-progress data.
 - [ ] Explain when learner input is transmitted for AI processing.
-- [ ] Explain what the Future of ID application itself retains.
-- [ ] Use provider-retention language only when it has been verified from current authoritative sources.
-- [ ] Do not claim that work remains only in the browser when AI feedback is requested.
+  - **Open dependency:** Contextual AI-processing disclosures remain assigned to later feature/privacy integration.
+- [ ] Explain what the Future of ID application itself retains across all applicable learner-artifact and Reflection surfaces.
+  - **Current result:** Current progress scope is disclosed; later artifact and Reflection retention disclosures remain open.
+- [x] Do not use provider-retention language unless it has been verified from current authoritative sources; Section 5 added no unverified provider claim.
+- [x] Do not claim that work remains only in the browser when AI feedback is requested.
 - [ ] Persist Reflection after Reverse Build according to the approved artifact model.
+  - **Architecture result:** The separate model/store/hook is complete; learner-facing Reflection persistence remains assigned later.
 - [ ] Do not display Reflection inside Reverse Build.
-- [ ] Avoid unexpectedly resurfacing sensitive personal reflection.
-- [ ] Handle shared-computer use responsibly.
-- [ ] Ensure the storage approach is consistent with Module 7’s trust principles.
+  - **Architecture result:** Reverse Build-facing exports structurally exclude Reflection; rendered Reverse Build v2 verification remains Section 6 work.
+- [ ] Avoid unexpectedly resurfacing sensitive personal reflection in later learner-facing integrations.
+  - **Architecture result:** No aggregate reader or current resurfacing behavior exists; later integrations require privacy/runtime evidence.
+- [ ] Handle shared-computer use responsibly on future learner-artifact and Reflection surfaces.
+  - **Current result:** Current progress disclosure is bounded; future artifact/Reflection shared-computer guidance remains open.
+- [ ] Ensure the completed learner-facing storage and disclosure experience is consistent with Module 7’s trust principles.
+  - **Open dependency:** Requires the later learner-facing controls and disclosures before final review.
 
 ## 5.5 Artifact and progress behavior
 
 Test:
 
-- [ ] first attempt
-- [ ] saved attempt
-- [ ] revised attempt
-- [ ] partial attempt
-- [ ] AI feedback failure
-- [ ] empty artifact
-- [ ] malformed stored artifact
-- [ ] outdated schema
-- [ ] cleared browser storage
-- [ ] storage blocked by the browser
-- [ ] multiple module artifacts
-- [ ] multiple Design Practice prompts within one module artifact
-- [ ] refresh during the experience
-- [ ] course-progress read failure
-- [ ] course-progress write failure
-- [ ] malformed course-progress data
+- [x] first artifact save at the architecture/store level; rendered Design Practice integration remains later
+- [x] saved artifact read/update at the architecture/store level; rendered Design Practice integration remains later
+- [x] revised artifact replacement and stale-feedback invalidation at the architecture/store level
+- [x] partial artifact states at the architecture/store level
+- [x] AI review failure and restored-pending recovery states at the architecture/store level; rendered AI Review integration remains later
+- [x] empty or absent artifact behavior at the architecture/store level
+- [x] malformed stored artifact isolation
+- [x] outdated or unsupported schema handling
+- [x] cleared browser-storage behavior for authorized stores/current progress surfaces
+- [x] storage blocked by the browser for authorized stores/current progress surfaces
+- [x] multiple module-artifact isolation at the architecture/store level
+- [x] multiple Design Practice prompts within one module artifact at the architecture/store level
+- [ ] refresh during the learner-facing artifact or Reflection experience
+  - **Current result:** Course-progress refresh persistence passed manually; learner-facing Design Practice and Reflection refresh behavior remains assigned later.
+- [x] course-progress read failure
+- [x] course-progress write failure
+- [x] malformed course-progress data
 - [ ] learner-initiated module-work reset
-- [ ] learner-initiated course-progress reset
+  - **Architecture result:** Module reset/clear APIs, cache invalidation, failure handling, and domain-preservation tests pass; the learner-facing control remains open.
+- [x] learner-initiated course-progress reset
 
 ### Phase 5 completion evidence
 
-- [ ] Artifact architecture is reusable.
-- [ ] Artifact behavior is documented.
-- [ ] No module-specific content is hardcoded into the storage system.
-- [ ] Learner control, local-persistence disclosure, and AI-processing disclosure are implemented accurately.
-- [ ] Course progress and module access remain usable when persistence fails.
+- [x] Artifact architecture is reusable.
+- [x] Artifact behavior is documented.
+- [x] No module-specific content is hardcoded into the storage system.
+- [ ] Learner control, local-persistence disclosure, and AI-processing disclosure are implemented accurately across all required learner-facing surfaces.
+  - **Open dependency:** Module-artifact/Reflection controls and local/AI contextual disclosures remain assigned to Sections 6–8 and later privacy rollout.
+- [x] Course progress and module access remain usable when persistence fails.
 - [ ] Required automated and manual persistence test cases pass and are recorded in the approved launch-validation record.
+  - **Current result:** The bounded `IWO-5-001` automated suite and Bradley's available macOS/VoiceOver scenarios passed. Windows/NVDA, physical mobile, deployed-preview, later-feature, and final launch-validation-record dependencies remain open.
+
+### Bounded Section 5 Closure Record
+
+- **Work-order status:** Complete and Approved
+- **Closure decision:** Section 5 Shared Learner-Artifact Architecture Complete and Approved with documented external blockers
+- **Approval date:** July 15, 2026
+- **Approved by:** Bradley Pierce
+- **Implementation commit:** `03542c78fbea090b092b9e7aa8f15a165f49c5db`
+- **Evidence commit:** `8fedeb8ff51afab949226e471bedfcdcee2e5d5b`
+- **Closure commit:** `3f9263c8f07eb0baf13a939ff806d5d0e27ade3a`
+- **Approved baseline:** `72fd487a8840be512e39a488fda2012030ede7d8`
+- **Work order:** `IWO-5-001`
+- **Amendment:** `IWO-5-001-A1`
+
+The bounded architecture work is approved. Broader Phase 5 remains incomplete. Later learner-facing Design Practice and Reflection persistence, Reverse Build v2, Module 4, rendered feature-specific AI association, learner-facing clearing/reset controls, and contextual local-storage and AI-transmission disclosures remain open under Sections 6–8 or later privacy/validation work.
+
+Windows/NVDA, physical iOS/Android, deployed-preview, provider, and infrastructure validation remain Blocked and do not inherit Passed status from the available macOS/VoiceOver evidence. The pre-existing Next.js/PostCSS advisories remain a separately governed repository-level security and launch dependency requiring an authorized remediation work item and launch-risk decision.
+
+Section 5 closure does not equal broader Phase 5 completion, full accessibility conformance, security approval, provider verification, production readiness, or public-launch approval.
 
 ---
 
@@ -4403,9 +4439,10 @@ For each completed phase, record:
 | Phase                                           | Completion date | Commit or PR | Personally verified by | Evidence location                                                                                            | Notes                                                                                          |
 | ----------------------------------------------- | --------------- | ------------ | ---------------------- | ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------- |
 | Checklist revision and approval                 | 2026-07-11      | —            | Bradley Pierce         | Section 2 of this checklist; `docs/README.md`; `docs/SYSTEM-INSTRUCTIONS.md`; `docs/COPILOT-INSTRUCTIONS.md` | Section 2 governance remediation completed. Implementation-dependent launch gates remain open. |
-| Capability positioning                          |                 |              |                        |                                                                                                              |                                                                                                |
-| Implementation briefs                           |                 |              |                        |                                                                                                              |                                                                                                |
-| Learner-artifact and progress persistence       |                 |              |                        |                                                                                                              |                                                                                                |
+| Capability positioning                          | 2026-07-12      | `30e0fbddb4c87d4bba1705a708604894c173acfa` | Bradley Pierce         | Phase 3 Completion Record in Section 3; `docs/strategy/FUTURE_READY_CAPABILITY_MODEL.md`; `docs/README.md`   | Phase 3 capability-system positioning, pathway rationale, documentation governance, and evidence governance completed and approved. |
+| Implementation briefs                           | 2026-07-13      | `72fd487a8840be512e39a488fda2012030ede7d8` | Bradley Pierce         | Phase 4 Completion Record in Section 4; `docs/experience/REVERSE_BUILD_V2_IMPLEMENTATION_BRIEF.md`; `docs/experience/MODULE_4_SIMULATION_IMPLEMENTATION_BRIEF.md`; `docs/experience/LEARNER_ARTIFACT_AND_PERSISTENCE_IMPLEMENTATION_BRIEF.md`; `docs/experience/PRIVACY_AND_DATA_FLOW_IMPLEMENTATION_BRIEF.md`; `docs/validation/VALIDATION_AND_EVIDENCE_IMPLEMENTATION_BRIEF.md`; `docs/IMPLEMENTATION_WORK_ORDER_STANDARD.md` | Six implementation, privacy, validation, and work-order specifications completed and approved without claiming feature implementation. |
+| Section 5 bounded architecture work order       | 2026-07-15      | `3f9263c8f07eb0baf13a939ff806d5d0e27ade3a` | Bradley Pierce         | `docs/SECTION_5_SHARED_LEARNER_ARTIFACT_ARCHITECTURE_WORK_ORDER.md`; `docs/validation/work-orders/IWO-5-001.md` | `IWO-5-001` Complete and Approved with documented external blockers; this row does not complete broader Phase 5. |
+| Learner-artifact and progress persistence       |                 |              |                        | `docs/validation/learner-artifact-and-persistence-validation-record.md`                                      | Broader Phase 5 remains open pending later learner-facing integrations, disclosures, external validation, and the approved launch-validation record. |
 | Module 2 Reverse Build v2 reference             |                 |              |                        |                                                                                                              |                                                                                                |
 | Module 4 simulation and Reverse Build           |                 |              |                        |                                                                                                              |                                                                                                |
 | Remaining Reverse Build v2 rollout              |                 |              |                        |                                                                                                              |                                                                                                |
