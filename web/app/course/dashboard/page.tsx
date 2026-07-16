@@ -3,6 +3,7 @@
 import { modules } from "@/data/modules";
 import { useCourseProgress } from "@/lib/useCourseProgress";
 import ModuleCard from "@/components/course/ModuleCard";
+import CourseProgressResetControl from "@/components/course/CourseProgressResetControl";
 import CurrentModuleWidget from "@/components/dashboard/CurrentModuleWidget";
 import LearningProgressPanel from "@/components/dashboard/LearningProgressPanel";
 import PageBanner from "@/components/ui/PageBanner";
@@ -90,6 +91,8 @@ export default function Dashboard() {
           })}
         </div>
       </section>
+
+      <CourseProgressResetControl />
     </div>
   );
 }

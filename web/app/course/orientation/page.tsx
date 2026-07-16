@@ -1,5 +1,7 @@
 "use client";
 
+import { useState } from "react";
+
 import { landingContent } from "@/content/landing";
 import { learningFrameworksById } from "@/data/learningFrameworks";
 import { orientationBanner } from "@/data/pageBanners";
@@ -65,8 +67,32 @@ function SectionFrame({
 }
 
 export default function OrientationPage() {
-  const { markComplete, isCompleted } = useCourseProgress();
+  const { markComplete, isCompleted, persistence } = useCourseProgress();
+  const [completionMessage, setCompletionMessage] = useState<{
+    tone: "status" | "error";
+    text: string;
+  } | null>(null);
   const completed = isCompleted("orientation");
+
+  function handleMarkComplete() {
+    const result = markComplete("orientation");
+    if (result.ok) {
+      setCompletionMessage(null);
+      return;
+    }
+
+    setCompletionMessage(
+      result.sessionValue
+        ? {
+            tone: "status",
+            text: "Orientation completion is available for this session, but it could not be saved in this browser. You can keep using the course and try again.",
+          }
+        : {
+            tone: "error",
+            text: "Orientation completion could not be saved in this browser. Your course remains available. Please try again, or reset unreadable completion progress from the Capability Map.",
+          },
+    );
+  }
 
   return (
     <div className="space-y-14 text-[var(--text)]">
@@ -234,10 +260,12 @@ export default function OrientationPage() {
         <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
           <Button
             type="button"
-            variant={completed ? "secondary" : "accent"}
-            onClick={() => markComplete("orientation")}
-            disabled={completed}>
-            {completed ? "Orientation Completed" : "Mark Orientation Complete"}
+            variant={completed && persistence !== "session-only" ? "secondary" : "accent"}
+            onClick={handleMarkComplete}
+            disabled={completed && persistence !== "session-only"}>
+            {completed && persistence !== "session-only"
+              ? "Orientation Completed"
+              : "Mark Orientation Complete"}
           </Button>
 
           <Button href="/course/module/ai-literacy" variant="primary">
@@ -248,6 +276,17 @@ export default function OrientationPage() {
             Open Capability Map
           </Button>
         </div>
+        {completionMessage && (
+          <p
+            role={completionMessage.tone === "error" ? "alert" : "status"}
+            className={`mt-4 text-sm font-medium ${
+              completionMessage.tone === "error"
+                ? "text-[var(--danger)]"
+                : "text-[var(--muted)]"
+            }`}>
+            {completionMessage.text}
+          </p>
+        )}
       </section>
     </div>
   );
