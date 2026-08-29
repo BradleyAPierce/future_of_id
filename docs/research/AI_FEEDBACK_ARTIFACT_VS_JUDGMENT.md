@@ -1,9 +1,12 @@
 # Research Design Record: AI Feedback, Artifact Quality, and Professional Judgment
 
 **Project:** Future of Instructional Design  
-**Status:** Accepted project evidence and design constraint  
+**Status:** Reference only — non-authoritative and outside current launch scope  
 **Captured:** August 29, 2026  
-**Relevant work:** Reverse Build v2, AI Review, ReflectionFeedbackAI, ScenarioDecisionAI, AI Interaction Taxonomy, launch validation
+**Possible future relevance:** Post-launch consideration of Reverse Build, AI Review, ReflectionFeedbackAI, ScenarioDecisionAI, and the AI Interaction Taxonomy
+
+> [!IMPORTANT]
+> This document is research reference material only. It does not modify, reinterpret, expand, reprioritize, or add requirements to the Public Launch Readiness Checklist, any approved implementation brief, ADR, implementation work order, validation requirement, or current product behavior. It must not be used as authority for current launch planning, implementation, validation, or claims. Any future adoption of an idea from this record requires Bradley's explicit approval and the formal reopening and update of the applicable controlling document through existing project governance.
 
 ## Source
 
@@ -27,24 +30,26 @@ Future of ID is intended to develop professional judgment, not merely help a lea
 
 An AI review can improve the visible product while concealing whether the learner understood the problem, evaluated the feedback, made defensible trade-offs, or could transfer the reasoning to a new situation. If Future of ID evaluates only the final artifact, it may overstate what the learner has demonstrated.
 
-This directly supports the approved Reverse Build v2 sequence:
+This is conceptually consistent with the approved Reverse Build v2 sequence:
 
 **Design Practice → AI Review → Reverse Build → Reflection**
 
-The sequence is valuable because it can preserve the learner’s authored reasoning, expose what the AI suggested, and require the learner to explain how and why the design changed. Reflection remains outside the Reverse Build boundary, consistent with the controlling specification.
+The sequence may help preserve the learner’s authored reasoning and make the relationship between learner work and AI feedback inspectable. Reflection remains outside the Reverse Build boundary, consistent with the controlling specification. This research record does not change that sequence or its approved product contract.
 
-## Project decision
+## Research interpretation — not a project decision
 
-Future of ID will treat **artifact quality** and **evidence of professional judgment** as separate evaluation dimensions.
+The study suggests that a future design review could consider **artifact quality** and **evidence of professional judgment** as separate evaluation dimensions. Future of ID has not adopted the following table as a new launch requirement through this document.
 
 | Dimension | Core question | Possible evidence |
 | --- | --- | --- |
 | Artifact quality | Did the learner produce a stronger design? | Alignment, clarity, usability, evidence, completeness, and quality of the revised artifact |
 | Professional judgment | Can the learner explain and defend the decisions? | Accepted, modified, and rejected recommendations; rationale; trade-offs; contextual constraints; transfer to a new case |
 
-Improvement in the first dimension must not be presented as proof of the second.
+As a research interpretation, improvement in the first dimension should not automatically be treated as proof of the second. Any product requirement or public-claim rule based on this interpretation must be approved in the applicable controlling document.
 
-## Design requirements
+## Possible post-launch design considerations — not requirements
+
+The ideas below are retained for later evaluation only. They are not approved requirements, do not amend existing acceptance criteria, and must not be added to current launch work unless Bradley explicitly reopens the relevant controlling documentation after the current launch process.
 
 ### Reverse Build v2
 
@@ -76,26 +81,29 @@ Classify these interactions as:
 - **The learner must make, contextualize, and defend the final judgment.**
 - **AI output alone cannot serve as evidence of learner competence.**
 
-## Acceptance criteria
+## Possible future evaluation questions — not acceptance criteria
 
-- [ ] Artifact-quality evidence and judgment evidence are stored and evaluated separately.
-- [ ] The original learner response remains recoverable after AI Review and revision.
-- [ ] Material AI recommendations can be marked accepted, modified, or rejected.
-- [ ] The learner provides a rationale for consequential decisions.
-- [ ] Reverse Build uses the correct learner artifact and its exact associated AI Review.
-- [ ] A polished AI-assisted artifact is never labeled as demonstrated expertise without independent judgment evidence.
-- [ ] Regression tests include learners who accept, modify, reject, or partially act on AI feedback.
-- [ ] Launch claims remain qualified until these behaviors are implemented and validated.
+- Could artifact-quality evidence and judgment evidence be stored and evaluated separately in a future release?
+- Should the original learner response remain recoverable after AI Review and revision?
+- Would marking material AI recommendations accepted, modified, or rejected improve the reasoning trail?
+- When would a learner-authored rationale be appropriate for consequential decisions?
+- How should a future implementation ensure that Reverse Build uses the correct learner artifact and its exact associated AI Review?
+- What evidence would be needed before describing an AI-assisted artifact as evidence of demonstrated expertise?
+- Should future regression tests include learners who accept, modify, reject, or partially act on AI feedback?
+
+These questions create no current launch gate, test obligation, or implementation scope.
 
 ## Evidence strength and limits
 
 This is useful supporting evidence, not universal proof. The reported study is small, involves pre-service teachers in one context, and may depend on how both artifact quality and broader competencies were measured. Its strongest contribution to Future of ID is therefore not a claim that AI feedback is equivalent to teacher feedback. It is the demonstrated need to distinguish **better work produced with feedback** from **stronger professional capability demonstrated by the learner**.
 
-## Recommended project use
+## Permitted future use
 
-Use this record as:
+After the current launch process, this record may be revisited as:
 
-1. A research rationale for Reverse Build v2.
-2. A source for the AI Interaction Taxonomy’s human-judgment boundary.
-3. A basis for AI-feedback regression tests and launch acceptance criteria.
-4. A guardrail for public claims about learner capability and AI-assisted artifact quality.
+1. Research context during a formally authorized future review of Reverse Build or AI feedback.
+2. A possible source for a future review of the AI Interaction Taxonomy’s human-judgment boundary.
+3. Input to future regression-test design only if the applicable validation scope is formally reopened and approved.
+4. Background for a future discussion of claims about learner capability and AI-assisted artifact quality.
+
+Until that future review is explicitly authorized, this record is not an implementation source, validation source, launch-readiness source, or product decision.
