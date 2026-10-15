@@ -1,15 +1,16 @@
 # Next.js security update — October 14, 2026
 
-## Current status after follow-up
+## Current release status
 
-Bradley subsequently authorized investigation and focused remediation of the Turbopack blocker and the two production dependency findings on the same branch. The original preparation results below are retained as history; the follow-up results supersede the original open items 1 and 2.
+Bradley accepted the documented limitations and authorized merging PR #13 and verifying production. The update is merged and production smoke verification passed. Earlier preparation, authorization boundaries, and intermediate results below are historical; the final release section supersedes their pending-merge/deployment statements.
 
 - Default Turbopack production build now passes after isolating stale generated `.next` state. No source, build script, or configuration change was required.
-- Production dependency audit now reports **zero vulnerabilities** after compatible lockfile-only updates of `nanoid` and `source-map-js`.
+- The final premerge production dependency audit reported **zero vulnerabilities** after compatible lockfile-only updates of `nanoid` and `source-map-js`.
 - Next.js 16.4.1 and Sharp 0.35.5 remain unchanged. A further authorized development-dependency remediation reduced the full audit from 13 findings to **five high-severity entries**, all tracing to one unpatched `braces` advisory. See the final section for current evidence and remaining limits.
-- All work remains local on `codex/nextjs-security-2026-10-14`. Bradley authorized a local commit after final diff review; push, merge, and deployment remain unauthorized.
+- [PR #13](https://github.com/BradleyAPierce/future_of_id/pull/13) merged to `main` as `eee6f10c365838a03e395ca7732574720bd3362f`. Vercel's matching Production deployment succeeded, and the public site served the patched Next.js release.
+- The merged security branch has been deleted locally and on `origin`. Unrelated branches and worktrees were preserved.
 
-## Scope and authorization
+## Initial scope and authorization (historical)
 
 Bradley requested this local security update in chat on October 14, 2026, including an isolated branch, focused dependency changes, lockfile verification, build/lint/existing tests, and course/image smoke checks. That direct instruction authorizes this bounded maintenance assignment. It does not approve pushing, merging, deployment, launch, or general dependency remediation. This record is implementation evidence, not reviewer acceptance or a claim of complete product validation.
 
@@ -172,8 +173,59 @@ Evidence logs: `/private/tmp/future-id-dev-audit-before.json`, `/private/tmp/fut
 
 Final changed files remain `web/package.json`, `web/package-lock.json`, and this record. In this development-dependency slice, only the Vitest and coverage minimum declarations changed in the manifest. No new tests were added; existing tests and the changed coverage provider were exercised. Prior browser/product validation is historical and was not repeated for these dev-tool-only changes. No commit, push, merge, deployment, global tooling update, or acceptance decision was performed.
 
-## Final diff review and local commit authorization
+## Final diff review and local commit authorization (historical)
 
 Bradley requested review of the final diff and a local commit on this branch. Reviewed the manifest diff, every changed lockfile package record, registry destinations, and the full validation record. The final scope is exactly three files: the dependency manifest, generated lockfile, and this evidence record. No unrelated application code, content, configuration, generated build output, temporary probe, credential, or global tooling change is included. The lockfile's transitive Next.js, image-processing, ESLint, and Vitest/Vite changes are documented above; all changed package download URLs use the npm registry.
 
 Final review found no additional implementation changes needed. `git diff --check` passed. The previously completed clean install, lint, 34 tests with coverage, and default Turbopack build remain the validation evidence; only this documentation clarification followed those checks. The unresolved braces advisory and its five propagated development audit entries remain explicitly documented. Local commit authorization does not approve those remaining risks for deployment or establish full product acceptance. No push, merge, or deployment is authorized.
+
+## Merge, production verification, and branch cleanup
+
+### Approval and release identity
+
+After both automated reviews completed, Bradley explicitly accepted the documented limitations and requested the merge and production verification. This acceptance covers the known development-only braces finding and the previously untested Linux native-image behavior; it does not assert that the vulnerability is fixed or that exhaustive product/security validation occurred.
+
+| Release evidence | Verified result |
+| --- | --- |
+| Security commit | `47578c7dc44b369f02b357d20b486e7556fbec01` — `fix: update Next.js and tooling for security advisories` |
+| Pull request | [PR #13](https://github.com/BradleyAPierce/future_of_id/pull/13), merged October 14, 2026, 9:13 p.m. PDT (October 15, 04:13:39 UTC) |
+| Merge commit | `eee6f10c365838a03e395ca7732574720bd3362f` on `main` |
+| Reviews | Codex code review completed with no findings reported; Copilot completed successfully with 0 open findings. Copilot highlighted the documented risks for human acceptance. No unresolved inline review threads were present. |
+| Premerge hosted checks | Vercel and Vercel Preview Comments passed. No required checks were configured; local build/lint/tests are separate evidence, not additional CI test jobs. |
+| Production deployment | GitHub deployment `7083681748`, environment `Production`, exact merge SHA above, status `success` at October 14, 2026, 9:14 p.m. PDT (October 15, 04:14:22 UTC) |
+| Deployment inspector | [Vercel production deployment](https://vercel.com/bradleyapierce-9870s-projects/future-of-id/8qdfnabFaixoAgwSjYDjRqXum2sS) |
+| Public verification target | [https://future-of-id.vercel.app](https://future-of-id.vercel.app) |
+
+The unique deployment hostname redirected unauthenticated requests to Vercel login; functional verification used the public canonical production domain. GitHub/Vercel status ties the successful Production deployment to the merge SHA. The public site's served JavaScript chunk `/_next/static/immutable/chunks/2xo_fdnlt2smn.js` contained the patched Next.js version string `16.4.1`. This corroborates the live framework release without claiming that the protected deployment URL was directly tested.
+
+### Production smoke verification results
+
+Verification ran after the successful deployment on the public production domain. Browser interactions used the Codex in-app browser. Live feedback requests used synthetic, non-sensitive verification responses.
+
+| Check | Result | Observed evidence and limits |
+| --- | --- | --- |
+| Public and course routes | Passed | HTTP 200 for `/`, `/about`, `/course`, `/course/orientation`, `/course/dashboard`, and all seven documented module routes: `ai-literacy`, `performance-consulting`, `learning-analytics`, `simulation-design`, `adaptive-learning`, `content-systems`, and `human-centered-change` (12 routes total). |
+| Navigation | Passed | Landing → Capability Map → Orientation; Continue Course opened AI Literacy; Explore Next Capability opened Performance Consulting; sidebar navigation and all seven module pages rendered with expected headings/completion controls. |
+| Completion persistence | Passed | Initial test-browser state was 0/8. Orientation completion survived reload and Dashboard showed 1/8 (13%). AI Literacy completion survived reload as a disabled Complete control; Dashboard showed 2/8 (25%). |
+| Scenario AI feedback | Passed | AI Literacy scenario submission returned structured feedback, strengths, a gap, and a next step through the live provider-backed flow. This was one synthetic scenario, not every module/scenario. |
+| Reflection AI feedback | Passed | A separate synthetic AI Literacy reflection returned structured feedback and a next step. This confirms the live request/display path; it does not assert saved feedback or draft persistence. |
+| Practice selection | Passed | Performance Consulting focus 2 changed the displayed scenario to Stakeholder Pressure. Simulation Design practice controls and page content also rendered. |
+| Reverse Build | Passed | Reveal the Thinking opened the expected dialog; Close dismissed it. |
+| Optimized images | Passed | 16 optimized-image requests covering 15 distinct source images across public/course pages returned HTTP 200, valid image content types, and nonempty bytes. Coverage included every rendered banner and framework image at one selected size; the portrait framework appeared at two sizes. Separate checks covered three 640-pixel banner responses. This is not exhaustive coverage of every responsive width. |
+| Browser image rendering | Passed | Landing hero/proof images loaded. AI Literacy's enlarged Human Judgment framework loaded through `/_next/image` and was visually inspected in the lightbox. |
+| Browser console | Passed, bounded observation | No captured warnings/errors during observed production checks. |
+| Test-state cleanup | Passed | Reset only the test-created completion markers through the normal Dashboard UI, then reloaded and confirmed 0%. No learner accounts or cloud persistence were involved. |
+
+The original structured evidence is attached to this local task at `/Users/bradleypierce/.codex/visualizations/2026/10/15/01a13dad-4098-7201-8ced-85c05fe7255d/future-of-id-production-verification.json`. Its route/image results and browser observations are summarized here so the repository record remains usable without that machine-local artifact. The production verification did not change application files or require a follow-up application deployment.
+
+### Remaining accepted finding and validation limits
+
+The **unresolved** [braces advisory GHSA-vfj7-8cjw-p6xm](https://github.com/advisories/GHSA-vfj7-8cjw-p6xm) remains in the development dependency chain documented above. The final premerge full audit had five high-severity entries, all propagated from this advisory; the production audit had zero findings. No patched braces release was available at the recorded verification. Bradley accepted this known limitation before merge. This is a release decision, not remediation or a standing exemption from future security review. Revisit when an upstream fix or compatible chain change becomes available; no ongoing monitoring was scheduled.
+
+Production image responses demonstrate that the hosted image path worked for the tested assets. They do not independently prove which native library or Linux libc processed each request, nor do they constitute vulnerability/exploit testing. Full cross-browser/mobile/accessibility regression, all-module interaction completion, long-term availability, and exhaustive provider validation remain outside this bounded smoke verification.
+
+### Repository cleanup
+
+After Bradley requested cleanup, confirmed that `codex/nextjs-security-2026-10-14` pointed to `47578c7`, was fully merged into `main`, and was not attached to a worktree. Deleted the local branch with `git branch -d` and its remote ref with `git push origin --delete`. The security changes remain in `main` and PR #13's history. Unrelated branches and worktrees were left unchanged.
+
+This closeout updates only the validation record. No application checks were rerun solely for this documentation change; the verified production results and earlier technical validation remain the evidence. The documentation update is retained in a local commit on `main`; publishing that additional commit is separate from the completed security release.
